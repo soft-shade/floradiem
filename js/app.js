@@ -64,7 +64,7 @@
   const defaultStats = () => ({
     version: 1,
     daily: { history: {}, streak: 0, best_streak: 0, last_play_date: null },
-    unlimited: { games: 0, perfect: 0, total_depth: 0, distribution: {} },
+    unlimited: { games: 0, perfect: 0, total_correct: 0, distribution: {} },
   });
 
   let stats = loadStats();
@@ -245,7 +245,8 @@
       return `<li class="${cls}" title="${esc(cap(r))}"><b>${cap(r).slice(0, 4)}</b>${esc(label)}</li>`;
     }).join('');
   }
-  const runOver = () => game.picks.length === RANKS.length ||
+  // A daily run ends at the first miss; an unlimited run always goes to Species.
+  const runOver = () => game.picks.length === RANKS.length || game.mode === 'daily' &&
     game.picks.some((p, i) => p !== game.ranks[i].answer);
 
   function optionHTML(o, i, stateCls) {
@@ -306,15 +307,16 @@
         'locked ' + (o.id === r.answer ? 'correct' : o.id === chosenId ? 'chosen-wrong' : ''))).join('')}</div>
       <div class="verdict ${ok ? 'ok' : 'miss'}">${ok ? '✓ Correct' : '✗ Not quite'} — the ${r.rank} is
         <i>${esc(answer.name)}</i>${answer.common ? ` (${esc(answer.common)})` : ''}.</div>
-      <div class="explain" id="explain"><p class="note">Loading notes…</p></div>
-      <div class="actions"><button class="btn" id="btn-next">${over ? 'See results' : 'Next: ' + cap(RANKS[level + 1]) + ' →'}</button></div>`;
+      <div class="actions"><button class="btn" id="btn-next">${over ? 'See results' : 'Next: ' + cap(RANKS[level + 1]) + ' →'}</button></div>
+      <div class="explain" id="explain"><p class="note">Loading notes…</p></div>`;
     $('stage').querySelectorAll('.opt-info').forEach((b) => {
       b.onclick = () => { const c = b.parentElement.querySelector('.common'); c.hidden = !c.hidden; };
     });
     $('btn-next').onclick = () => (over ? finishRun() : renderQuestion());
 
     const ex = game.mode === 'daily' ? dailyExplanation(level) : await unlimitedExplanation(level);
-    if (game.picks.length !== level + 1) return;   // player moved on meanwhile
+    // The player may have moved on while the notes were loading.
+    if (game.picks.length !== level + 1 || !$('explain')) return;
     const order = [answer, ...opts.filter((o) => o.id !== r.answer)];
     $('explain').innerHTML = (ex.summary ? `<p>${esc(ex.summary)}</p>` : '') +
       `<ul>${order.map((o) => {
@@ -412,8 +414,8 @@
 
   // ---------------------------------------------------------------- results
   function finishRun(alreadySaved) {
+    if (game.mode === 'unlimited') return finishUnlimited();
     const depth = runDepth(game.picks, game.ranks);
-    if (game.mode === 'unlimited') return finishUnlimited(depth);
 
     const today = todayISO();
     const p = game.puzzle;
@@ -616,24 +618,28 @@
     };
     const options = {};
     for (const o of r.options) options[o.id] = redact(game.uWiki[o.id]);
-    return { summary: '', options, footer: '<p class="src">Summaries from Wikipedia via iNaturalist.</p>' };
+    return { summary: '', options, footer: '<p class="src">Unlimited mode shows each group\'s Wikipedia summary (via iNaturalist), not researched notes. Names of the answers still to come are hidden (…).</p>' };
   }
 
-  function finishUnlimited(depth) {
+  function finishUnlimited() {
+    const marks = game.picks.map((p, i) => p === game.ranks[i].answer);
+    const correct = marks.filter(Boolean).length;
     const u = stats.unlimited;
     u.games += 1;
-    u.total_depth += depth;
-    if (depth === 7) u.perfect += 1;
-    u.distribution[depth] = (u.distribution[depth] || 0) + 1;
+    u.total_correct = (u.total_correct || 0) + correct;
+    if (correct === 7) u.perfect += 1;
+    u.distribution[correct] = (u.distribution[correct] || 0) + 1;
     saveStats();
-    track('pd_unlimited', { depth });
+    track('pd_unlimited', { correct });
     renderLadder();
     setPhotos(game.uPhotos, true);
     const sp = treeOpt(game.uSid);
+    const emoji = marks.map((m) => (m ? '🌿' : '🍂')).join('');
     $('stage').innerHTML = `
       <div class="result">
-        <div class="note">Unlimited</div>
-        <div class="big">${depth}/7</div>
+        <div class="note">Unlimited · ranks correct</div>
+        <div class="big">${correct}/7</div>
+        <div style="font-size:1.4rem">${emoji}</div>
         <p class="species">It was <i>${esc(sp.name)}</i>${sp.common ? ` — ${esc(cap(sp.common))}` : ''}.
           <a href="https://www.inaturalist.org/taxa/${sp.id}" target="_blank" rel="noopener">About this plant ↗</a></p>
         <div class="actions" style="justify-content:center">
@@ -642,7 +648,7 @@
         </div>
       </div>`;
     $('btn-again').onclick = newUnlimited;
-    $('btn-share').onclick = () => share(`Plantdiem Unlimited — ${depth}/7\n${ladderEmoji(depth)}\n${SITE}`);
+    $('btn-share').onclick = () => share(`Plantdiem Unlimited — ${correct}/7\n${emoji}\n${SITE}`);
   }
 
   // ---------------------------------------------------------------- modal: stats / help
@@ -718,10 +724,10 @@
       const u = stats.unlimited;
       body = `<div class="statgrid">
           <div><b>${u.games}</b><span>Played</span></div>
-          <div><b>${u.games ? (u.total_depth / u.games).toFixed(1) : '—'}</b><span>Avg depth</span></div>
+          <div><b>${u.games ? ((u.total_correct || 0) / u.games).toFixed(1) : '—'}</b><span>Avg correct</span></div>
           <div><b>${u.perfect}</b><span>Perfect</span></div>
           <div><b>${u.games ? Math.round((100 * u.perfect) / u.games) + '%' : '—'}</b><span>Perfect %</span></div>
-        </div><h3>Depth reached</h3>${bars(u.distribution, u.games)}`;
+        </div><h3>Ranks correct</h3>${bars(u.distribution, u.games)}`;
     } else {
       body = !world ? '<p class="note">Loading…</p>'
         : world.error ? `<p class="note">${esc(world.error)}</p>`
@@ -758,7 +764,7 @@
          Each day's run becomes the next decimal digit — 1 → 1.2 → 1.22 → … A perfect 7 locks the puzzle.</p>
       <p>Scores like <b>7.0</b> (perfect first try), <b>6.7</b> (nailed it on day two) or <b>1.224554</b> are all possible.</p>
       <h3>Unlimited</h3>
-      <p>Random plants from all research-grade BC observations on iNaturalist, as many as you like.</p>
+      <p>Random plants from all research-grade BC observations on iNaturalist, as many as you like. A miss doesn't end the run: you see the right answer and keep going to Species, scoring one point per rank you get right.</p>
       <p class="note">New daily puzzle at midnight Pacific time.</p>`;
   }
   $('btn-help').onclick = () => openModal(helpView);
