@@ -240,7 +240,7 @@
         const ok = game.picks[i] === game.ranks[i].answer;
         cls = ok ? 'ok' : 'miss';
         const ans = game.ranks[i].options.find((o) => o.id === game.ranks[i].answer);
-        label = ans ? ans.name : '';
+        label = ans ? shortName(ans.name, RANKS[i]) : '';
       } else if (i === depthDone && !runOver()) cls = 'current';
       return `<li class="${cls}" title="${esc(cap(r))}"><b>${cap(r)}</b>${esc(label)}</li>`;
     }).join('');
@@ -249,10 +249,16 @@
   const runOver = () => game.picks.length === RANKS.length || game.mode === 'daily' &&
     game.picks.some((p, i) => p !== game.ranks[i].answer);
 
-  function optionHTML(o, i, stateCls) {
+  // Species are shown with the genus abbreviated, field-guide style: "E. cicutarium".
+  const shortName = (name, rank) => {
+    const w = name.split(' ');
+    return rank === 'species' && w.length > 1 ? `${w[0][0]}. ${w.slice(1).join(' ')}` : name;
+  };
+
+  function optionHTML(o, i, stateCls, rank) {
     const tip = o.common ? cap(o.common) : '';
     return `<div class="opt ${stateCls}" data-common="${esc(tip)}">
-      <button class="opt-main" data-i="${i}" data-tip="${esc(tip)}">${esc(o.name)}<span class="common" hidden>${esc(tip)}</span></button>
+      <button class="opt-main" data-i="${i}" data-tip="${esc(tip)}">${esc(shortName(o.name, rank))}<span class="common" hidden>${esc(tip)}</span></button>
       <button class="opt-info" data-info="${i}" aria-label="Show common name">i</button>
     </div>`;
   }
@@ -267,7 +273,7 @@
       : `Unlimited · rank ${level + 1} of 7`;
     $('stage').innerHTML = `
       <div class="prompt">${cap(r.rank)}?<small>${esc(attemptNote)}</small></div>
-      <div class="options">${opts.map((o, i) => optionHTML(o, i, '')).join('')}</div>`;
+      <div class="options">${opts.map((o, i) => optionHTML(o, i, '', r.rank)).join('')}</div>`;
     $('stage').querySelectorAll('.opt-main').forEach((b) => { b.onclick = () => choose(opts[+b.dataset.i]); });
     $('stage').querySelectorAll('.opt-info').forEach((b) => {
       b.onclick = (e) => {
@@ -304,7 +310,7 @@
     $('stage').innerHTML = `
       <div class="prompt">${cap(r.rank)}?</div>
       <div class="options">${opts.map((o, i) => optionHTML(o, i,
-        'locked ' + (o.id === r.answer ? 'correct' : o.id === chosenId ? 'chosen-wrong' : ''))).join('')}</div>
+        'locked ' + (o.id === r.answer ? 'correct' : o.id === chosenId ? 'chosen-wrong' : ''), r.rank)).join('')}</div>
       <div class="verdict ${ok ? 'ok' : 'miss'}">${ok ? '✓ Correct' : '✗ Not quite'} — the ${r.rank} is
         <i>${esc(answer.name)}</i>${answer.common ? ` (${esc(answer.common)})` : ''}.</div>
       <div class="actions"><button class="btn" id="btn-next">${over ? 'See results' : 'Next: ' + cap(RANKS[level + 1]) + ' →'}</button></div>
@@ -323,7 +329,10 @@
         const note = ex.options[o.id] || ex.options[String(o.id)];
         const cls = o.id === r.answer ? 'is-answer' : o.id === chosenId ? 'is-chosen' : '';
         const extra = (ex.extra && ex.extra[o.id]) || '';   // pre-escaped HTML
-        return `<li class="${cls}"><span class="nm">${esc(o.name)}</span>${o.common ? ` · ${esc(o.common)}` : ''}${note ? `<br>${esc(note)}` : ''}${extra}</li>`;
+        const nm = ex.link
+          ? `<a class="nm" href="https://www.inaturalist.org/taxa/${o.id}" target="_blank" rel="noopener">${esc(o.name)}</a>`
+          : `<span class="nm">${esc(o.name)}</span>`;
+        return `<li class="${cls}">${nm}${o.common ? ` · ${esc(o.common)}` : ''}${note ? `<br>${esc(note)}` : ''}${extra}</li>`;
       }).join('')}</ul>` + (ex.footer || '');
   }
 
@@ -642,15 +651,11 @@
       options[o.id] = summary;
       if (!summary) extra[o.id] = noSummaryLine(o.id);
     }
-    return { summary: '', options, extra,
-      footer: '<p class="src">Unlimited mode shows each group\'s Wikipedia summary (via iNaturalist), not researched notes. Names of the answers still to come are hidden (…).</p>' };
+    return { summary: '', options, extra, link: true, footer: '' };
   }
 
-  // Options with no Wikipedia summary get a pointer to iNaturalist instead of a blank.
-  function noSummaryLine(id) {
-    return `<div class="facts"><em>No Wikipedia summary yet.</em>
-      <a href="https://www.inaturalist.org/taxa/${id}" target="_blank" rel="noopener">See on iNaturalist ↗</a></div>`;
-  }
+  // The option name already links to iNaturalist, so just say why the text is missing.
+  const noSummaryLine = () => '<div class="facts"><em>No Wikipedia summary yet.</em></div>';
 
   function finishUnlimited() {
     const marks = game.picks.map((p, i) => p === game.ranks[i].answer);
@@ -672,7 +677,7 @@
         <div class="big">${correct}/7</div>
         <div style="font-size:1.4rem">${emoji}</div>
         <p class="species">It was <i>${esc(sp.name)}</i>${sp.common ? ` — ${esc(cap(sp.common))}` : ''}.
-          <a href="https://www.inaturalist.org/taxa/${sp.id}" target="_blank" rel="noopener">About this plant ↗</a></p>
+          <a href="https://www.inaturalist.org/taxa/${sp.id}" target="_blank" rel="noopener">About this species ↗</a></p>
         <div class="actions" style="justify-content:center">
           <button class="btn" id="btn-again">Next species</button>
           <button class="btn ghost" id="btn-share">Share</button>

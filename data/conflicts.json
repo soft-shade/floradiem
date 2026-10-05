@@ -1,1 +1,32 @@
-[]
+[
+ {
+  "a": 1369716,
+  "b": 55851,
+  "why": "E-Flora BC treats Lamium hybridum as L. purpureum var. incisum"
+ },
+ {
+  "a": 470430,
+  "b": 85424,
+  "why": "Often treated as one species / subspecies; both called White Hellebore"
+ },
+ {
+  "a": 62232,
+  "b": 48442,
+  "why": "Both called wintergreens"
+ },
+ {
+  "a": 372735,
+  "b": 47685,
+  "why": "Mycetozoa is nested within Amoebozoa, so Amoebozoa is also correct"
+ },
+ {
+  "a": 334923,
+  "b": 603361,
+  "why": "Clover powdery mildew long treated under E. polygoni sensu lato"
+ },
+ {
+  "a": 125717,
+  "b": 59968,
+  "why": "Davydov et al. 2017 merge Lasallia into Umbilicaria as a subgenus"
+ }
+]

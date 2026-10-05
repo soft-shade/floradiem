@@ -2,19 +2,19 @@
  "date": "2026-10-24",
  "number": 20,
  "species": {
-  "id": 340457,
-  "name": "Nephrophyllidium crista-galli",
-  "common": "Deer-cabbage"
+  "id": 54573,
+  "name": "Schizophyllum commune",
+  "common": "splitgill mushroom"
  },
  "ranks": [
   {
    "rank": "kingdom",
-   "answer": 47126,
+   "answer": 47170,
    "options": [
     {
-     "id": 47126,
-     "name": "Plantae",
-     "common": "Plants"
+     "id": 47686,
+     "name": "Protozoa",
+     "common": "protozoans"
     },
     {
      "id": 47170,
@@ -22,9 +22,9 @@
      "common": "Fungi Including Lichens"
     },
     {
-     "id": 47686,
-     "name": "Protozoa",
-     "common": "protozoans"
+     "id": 47126,
+     "name": "Plantae",
+     "common": "Plants"
     },
     {
      "id": 48222,
@@ -35,157 +35,157 @@
   },
   {
    "rank": "phylum",
-   "answer": 211194,
+   "answer": 47169,
    "options": [
     {
-     "id": 211194,
-     "name": "Tracheophyta",
-     "common": "Vascular Plants"
+     "id": 1094433,
+     "name": "Mucoromycota",
+     "common": ""
     },
     {
-     "id": 64615,
-     "name": "Marchantiophyta",
-     "common": "liverworts"
+     "id": 47169,
+     "name": "Basidiomycota",
+     "common": "Basidiomycete Fungi"
     },
     {
-     "id": 311249,
-     "name": "Bryophyta",
-     "common": "Mosses"
+     "id": 1094423,
+     "name": "Blastocladiomycota",
+     "common": ""
     },
     {
-     "id": 311313,
-     "name": "Charophyta",
-     "common": "charophyte algae"
+     "id": 125609,
+     "name": "Chytridiomycota",
+     "common": "Chytrids"
     }
    ]
   },
   {
    "rank": "class",
-   "answer": 47124,
+   "answer": 50814,
    "options": [
     {
-     "id": 47124,
-     "name": "Magnoliopsida",
-     "common": "Dicots"
+     "id": 69967,
+     "name": "Pucciniomycetes",
+     "common": ""
     },
     {
-     "id": 47163,
-     "name": "Liliopsida",
-     "common": "monocots"
+     "id": 83712,
+     "name": "Ustilaginomycetes",
+     "common": "Smut fungi"
     },
     {
-     "id": 121943,
-     "name": "Polypodiopsida",
-     "common": "Ferns"
+     "id": 50814,
+     "name": "Agaricomycetes",
+     "common": "Mushrooms, Bracket Fungi, Puffballs, and Allies"
     },
     {
-     "id": 47623,
-     "name": "Lycopodiopsida",
-     "common": "Lycophytes"
+     "id": 152040,
+     "name": "Cystobasidiomycetes",
+     "common": ""
     }
    ]
   },
   {
    "rank": "order",
-   "answer": 47605,
+   "answer": 47167,
    "options": [
     {
-     "id": 48232,
-     "name": "Ranunculales",
-     "common": "Buttercups, Poppies, and Allies"
+     "id": 47350,
+     "name": "Cantharellales",
+     "common": ""
     },
     {
-     "id": 47605,
-     "name": "Asterales",
-     "common": "Sunflowers, Bellflowers, Fanflowers, and Allies"
+     "id": 55154,
+     "name": "Gomphales",
+     "common": ""
     },
     {
-     "id": 47132,
-     "name": "Rosales",
-     "common": "Roses, Elms, Figs, and Allies"
+     "id": 47167,
+     "name": "Agaricales",
+     "common": "Common Gilled Mushrooms and Allies"
     },
     {
-     "id": 47123,
-     "name": "Fabales",
-     "common": "Legumes, Milkworts, and Allies"
+     "id": 48427,
+     "name": "Boletales",
+     "common": "boletes and allies"
     }
    ]
   },
   {
    "rank": "family",
-   "answer": 62369,
+   "answer": 54574,
    "options": [
     {
-     "id": 62369,
-     "name": "Menyanthaceae",
-     "common": "bogbean family"
+     "id": 55920,
+     "name": "Mycenaceae",
+     "common": ""
     },
     {
-     "id": 145472,
-     "name": "Goodeniaceae",
-     "common": "fanflower family"
+     "id": 516951,
+     "name": "Coprinaceae",
+     "common": ""
     },
     {
-     "id": 48040,
-     "name": "Campanulaceae",
-     "common": "bellflower family"
+     "id": 54574,
+     "name": "Schizophyllaceae",
+     "common": ""
     },
     {
-     "id": 47604,
-     "name": "Asteraceae",
-     "common": "Sunflowers, Daisies, Asters, and Allies"
+     "id": 48705,
+     "name": "Cortinariaceae",
+     "common": "Webcaps"
     }
    ]
   },
   {
    "rank": "genus",
-   "answer": 340458,
+   "answer": 54575,
    "options": [
     {
-     "id": 560461,
-     "name": "Ornduffia",
+     "id": 54575,
+     "name": "Schizophyllum",
      "common": ""
     },
     {
-     "id": 72235,
-     "name": "Menyanthes",
+     "id": 55922,
+     "name": "Mycena",
+     "common": "Bonnets"
+    },
+    {
+     "id": 118140,
+     "name": "Nidula",
      "common": ""
     },
     {
-     "id": 340458,
-     "name": "Nephrophyllidium",
-     "common": ""
-    },
-    {
-     "id": 62370,
-     "name": "Nymphoides",
-     "common": ""
+     "id": 47393,
+     "name": "Coprinus",
+     "common": "inky caps"
     }
    ]
   },
   {
    "rank": "species",
-   "answer": 340457,
+   "answer": 54573,
    "options": [
     {
-     "id": 340457,
-     "name": "Nephrophyllidium crista-galli",
-     "common": "Deer-cabbage"
+     "id": 54573,
+     "name": "Schizophyllum commune",
+     "common": "splitgill mushroom"
     },
     {
-     "id": 78016,
-     "name": "Menyanthes trifoliata",
-     "common": "Bogbean"
+     "id": 451041,
+     "name": "Schizophyllum amplum",
+     "common": "poplar bells"
     },
     {
-     "id": 78237,
-     "name": "Nymphoides peltata",
-     "common": "water fringe"
+     "id": 352359,
+     "name": "Schizophyllum umbrinum",
+     "common": ""
     },
     {
-     "id": 165759,
-     "name": "Nymphoides indica",
-     "common": "Water Snowflake"
+     "id": 352358,
+     "name": "Schizophyllum fasciatum",
+     "common": ""
     }
    ]
   }
@@ -193,39 +193,51 @@
  "photos": [
   {
    "src": "assets/daily/2026-10-24/01.jpg",
-   "obs": "https://www.inaturalist.org/observations/301087411",
+   "obs": "https://www.inaturalist.org/observations/201837152",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
-   "observed": "2025-07-25"
+   "observed": "2024-03-09"
   },
   {
    "src": "assets/daily/2026-10-24/02.jpg",
-   "obs": "https://www.inaturalist.org/observations/295417814",
+   "obs": "https://www.inaturalist.org/observations/201837152",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
-   "observed": "2025-07-05"
+   "observed": "2024-03-09"
   },
   {
    "src": "assets/daily/2026-10-24/03.jpg",
-   "obs": "https://www.inaturalist.org/observations/295417814",
+   "obs": "https://www.inaturalist.org/observations/201837152",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
-   "observed": "2025-07-05"
+   "observed": "2024-03-09"
   },
   {
    "src": "assets/daily/2026-10-24/04.jpg",
-   "obs": "https://www.inaturalist.org/observations/222915002",
+   "obs": "https://www.inaturalist.org/observations/201837152",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
-   "observed": "2024-06-15"
+   "observed": "2024-03-09"
   },
   {
    "src": "assets/daily/2026-10-24/05.jpg",
-   "obs": "https://www.inaturalist.org/observations/222915002",
+   "obs": "https://www.inaturalist.org/observations/201837152",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
-   "observed": "2024-06-15"
+   "observed": "2024-03-09"
   },
   {
    "src": "assets/daily/2026-10-24/06.jpg",
-   "obs": "https://www.inaturalist.org/observations/222915002",
+   "obs": "https://www.inaturalist.org/observations/194292796",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
-   "observed": "2024-06-15"
+   "observed": "2023-12-17"
+  },
+  {
+   "src": "assets/daily/2026-10-24/07.jpg",
+   "obs": "https://www.inaturalist.org/observations/194292796",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2023-12-17"
+  },
+  {
+   "src": "assets/daily/2026-10-24/08.jpg",
+   "obs": "https://www.inaturalist.org/observations/194292796",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2023-12-17"
   }
  ]
 }

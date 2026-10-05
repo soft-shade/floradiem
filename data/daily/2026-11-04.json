@@ -2,14 +2,14 @@
  "date": "2026-11-04",
  "number": 31,
  "species": {
-  "id": 57081,
-  "name": "Trifolium willdenovii",
-  "common": "tomcat clover"
+  "id": 125058,
+  "name": "Umbilicaria polyphylla",
+  "common": "Petalled Rocktripe Lichen"
  },
  "ranks": [
   {
    "rank": "kingdom",
-   "answer": 47126,
+   "answer": 47170,
    "options": [
     {
      "id": 47170,
@@ -22,170 +22,170 @@
      "common": "protozoans"
     },
     {
-     "id": 47126,
-     "name": "Plantae",
-     "common": "Plants"
-    },
-    {
      "id": 48222,
      "name": "Chromista",
      "common": "kelp, diatoms, and allies"
+    },
+    {
+     "id": 47126,
+     "name": "Plantae",
+     "common": "Plants"
     }
    ]
   },
   {
    "rank": "phylum",
-   "answer": 211194,
+   "answer": 48250,
    "options": [
     {
-     "id": 211194,
-     "name": "Tracheophyta",
-     "common": "Vascular Plants"
+     "id": 125609,
+     "name": "Chytridiomycota",
+     "common": "Chytrids"
     },
     {
-     "id": 50863,
-     "name": "Chlorophyta",
-     "common": "green algae"
+     "id": 47169,
+     "name": "Basidiomycota",
+     "common": "Basidiomycete Fungi"
     },
     {
-     "id": 57774,
-     "name": "Rhodophyta",
-     "common": "red algae"
+     "id": 1094433,
+     "name": "Mucoromycota",
+     "common": ""
     },
     {
-     "id": 311249,
-     "name": "Bryophyta",
-     "common": "Mosses"
+     "id": 48250,
+     "name": "Ascomycota",
+     "common": "Ascomycete Fungi"
     }
    ]
   },
   {
    "rank": "class",
-   "answer": 47124,
+   "answer": 54743,
    "options": [
     {
-     "id": 47623,
-     "name": "Lycopodiopsida",
-     "common": "Lycophytes"
+     "id": 54743,
+     "name": "Lecanoromycetes",
+     "common": "Common Lichens"
     },
     {
-     "id": 121943,
-     "name": "Polypodiopsida",
-     "common": "Ferns"
+     "id": 152028,
+     "name": "Arthoniomycetes",
+     "common": ""
     },
     {
-     "id": 47124,
-     "name": "Magnoliopsida",
-     "common": "Dicots"
+     "id": 152032,
+     "name": "Pezizomycetes",
+     "common": "Operculate Ascomycetes"
     },
     {
-     "id": 136329,
-     "name": "Pinopsida",
-     "common": "conifers"
+     "id": 53539,
+     "name": "Sordariomycetes",
+     "common": ""
     }
    ]
   },
   {
    "rank": "order",
-   "answer": 47123,
+   "answer": 1094443,
    "options": [
     {
-     "id": 47132,
-     "name": "Rosales",
-     "common": "Roses, Elms, Figs, and Allies"
+     "id": 125752,
+     "name": "Lecideales",
+     "common": ""
     },
     {
-     "id": 71289,
-     "name": "Saxifragales",
-     "common": "saxifrages, stonecrops, and allies"
+     "id": 117423,
+     "name": "Pertusariales",
+     "common": "wart lichens, water lichens, and allies"
     },
     {
-     "id": 47181,
-     "name": "Ericales",
-     "common": "Heathers, Balsams, Primroses, and Allies"
+     "id": 48712,
+     "name": "Peltigerales",
+     "common": ""
     },
     {
-     "id": 47123,
-     "name": "Fabales",
-     "common": "Legumes, Milkworts, and Allies"
+     "id": 1094443,
+     "name": "Umbilicariales",
+     "common": "rocktripes, bloodspot lichens, and allies"
     }
    ]
   },
   {
    "rank": "family",
-   "answer": 47122,
+   "answer": 59970,
    "options": [
     {
-     "id": 71608,
-     "name": "Quillajaceae",
-     "common": "soapbark family"
+     "id": 117989,
+     "name": "Ophioparmaceae",
+     "common": "bloodspot lichens and clam lichens"
     },
     {
-     "id": 61207,
-     "name": "Polygalaceae",
-     "common": "milkworts"
+     "id": 59970,
+     "name": "Umbilicariaceae",
+     "common": "Rocktripes, Toadskin Lichens, and allies"
     },
     {
-     "id": 47122,
-     "name": "Fabaceae",
-     "common": "Legumes"
+     "id": 175583,
+     "name": "Fuscideaceae",
+     "common": "fuscidia lichens and allies"
     },
     {
-     "id": 71636,
-     "name": "Surianaceae",
-     "common": "baycedar family"
+     "id": 175171,
+     "name": "Ropalosporaceae",
+     "common": "ropalospora lichen family"
     }
    ]
   },
   {
    "rank": "genus",
-   "answer": 51876,
+   "answer": 59968,
    "options": [
     {
-     "id": 51876,
-     "name": "Trifolium",
-     "common": "clovers"
+     "id": 59968,
+     "name": "Umbilicaria",
+     "common": "Rock Tripes"
     },
     {
-     "id": 50321,
-     "name": "Lathyrus",
-     "common": "sweet peas and vetchlings"
+     "id": 1520781,
+     "name": "Omphalodium",
+     "common": ""
     },
     {
-     "id": 47121,
-     "name": "Lupinus",
-     "common": "lupines"
+     "id": 532743,
+     "name": "Xylopsora",
+     "common": "Old-growth Clam Lichens"
     },
     {
-     "id": 53152,
-     "name": "Medicago",
-     "common": "medicks"
+     "id": 474428,
+     "name": "Fulgidea",
+     "common": ""
     }
    ]
   },
   {
    "rank": "species",
-   "answer": 57081,
+   "answer": 125058,
    "options": [
     {
-     "id": 57081,
-     "name": "Trifolium willdenovii",
-     "common": "tomcat clover"
+     "id": 182508,
+     "name": "Umbilicaria americana",
+     "common": "Frosted Rock Tripe"
     },
     {
-     "id": 71146,
-     "name": "Trifolium wormskioldii",
-     "common": "springbank clover"
+     "id": 936572,
+     "name": "Umbilicaria polyrrhiza",
+     "common": "Ballpoint Rocktripe Lichen"
     },
     {
-     "id": 55745,
-     "name": "Trifolium repens",
-     "common": "white clover"
+     "id": 125058,
+     "name": "Umbilicaria polyphylla",
+     "common": "Petalled Rocktripe Lichen"
     },
     {
-     "id": 79409,
-     "name": "Trifolium aureum",
-     "common": "large hop clover"
+     "id": 233242,
+     "name": "Umbilicaria cylindrica",
+     "common": "Fringed Rocktripe Lichen"
     }
    ]
   }
@@ -193,15 +193,15 @@
  "photos": [
   {
    "src": "assets/daily/2026-11-04/01.jpg",
-   "obs": "https://www.inaturalist.org/observations/223587067",
+   "obs": "https://www.inaturalist.org/observations/204466561",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
-   "observed": "2024-06-18"
+   "observed": "2024-03-29"
   },
   {
    "src": "assets/daily/2026-11-04/02.jpg",
-   "obs": "https://www.inaturalist.org/observations/223587067",
+   "obs": "https://www.inaturalist.org/observations/204466561",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
-   "observed": "2024-06-18"
+   "observed": "2024-03-29"
   }
  ]
 }
