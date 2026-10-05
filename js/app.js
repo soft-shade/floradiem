@@ -16,6 +16,7 @@
   const SITE = 'https://soft-shade.github.io/plantdiem/';
   const STATS_KEY = 'plantdiem_stats';
   const BC_PLACE = 7085;
+  const SOFTSHADE_SHARE = 0.8;   // Unlimited: chance of drawing from softshade's identifications
   const API = 'https://api.inaturalist.org/v1/';
   const KINGDOMS = [
     { id: 47126, name: 'Plantae', common: 'Plants' },
@@ -519,9 +520,10 @@
   // ---------------------------------------------------------------- unlimited mode
   async function loadTree() {
     if (game.tree) return;
-    const [data, pairs] = await Promise.all([
+    const [data, pairs, mine] = await Promise.all([
       getJSON('data/bc_tree.json?v=' + VER),
       getJSON('data/conflicts.json?v=' + VER).catch(() => []),
+      getJSON('data/softshade_ids.json?v=' + VER).catch(() => []),
     ]);
     game.conflicts = new Set(pairs.map((p) => [p.a, p.b].sort().join('|')));
     game.tree = data.taxa;
@@ -530,6 +532,8 @@
       (game.children[t[3]] = game.children[t[3]] || []).push(+id);
     }
     game.uSpecies = Object.keys(data.taxa).filter((id) => data.taxa[id][2] === 6 && lineage(+id).length === 7).map(Number);
+    const usable = new Set(game.uSpecies);
+    game.uMine = mine.filter((id) => usable.has(id));
   }
   function lineage(id) {
     const out = [];
@@ -599,7 +603,9 @@
     $('stage').innerHTML = '<p class="note">Finding a species…</p>';
     try { await loadTree(); } catch (e) { $('stage').innerHTML = '<p>Could not load the species list.</p>'; return; }
     for (let tries = 0; tries < 5; tries++) {
-      const sid = game.uSpecies[Math.floor(Math.random() * game.uSpecies.length)];
+      // 80% of the time, something softshade has identified; otherwise any BC species.
+      const pool = game.uMine.length && Math.random() < SOFTSHADE_SHARE ? game.uMine : game.uSpecies;
+      const sid = pool[Math.floor(Math.random() * pool.length)];
       let obs;
       try {
         obs = await getJSON(`${API}observations?taxon_id=${sid}&place_id=${BC_PLACE}&quality_grade=research&photos=true&per_page=12&order_by=votes`);
