@@ -1,0 +1,207 @@
+{
+ "date": "2026-10-18",
+ "number": 14,
+ "species": {
+  "id": 55727,
+  "name": "Cymbalaria muralis",
+  "common": "Ivy-leaved toadflax"
+ },
+ "ranks": [
+  {
+   "rank": "kingdom",
+   "answer": 47126,
+   "options": [
+    {
+     "id": 47686,
+     "name": "Protozoa",
+     "common": "protozoans"
+    },
+    {
+     "id": 48222,
+     "name": "Chromista",
+     "common": "kelp, diatoms, and allies"
+    },
+    {
+     "id": 47170,
+     "name": "Fungi",
+     "common": "Fungi Including Lichens"
+    },
+    {
+     "id": 47126,
+     "name": "Plantae",
+     "common": "Plants"
+    }
+   ]
+  },
+  {
+   "rank": "phylum",
+   "answer": 211194,
+   "options": [
+    {
+     "id": 57774,
+     "name": "Rhodophyta",
+     "common": "red algae"
+    },
+    {
+     "id": 311313,
+     "name": "Charophyta",
+     "common": "charophyte algae"
+    },
+    {
+     "id": 211194,
+     "name": "Tracheophyta",
+     "common": "Vascular Plants"
+    },
+    {
+     "id": 56327,
+     "name": "Anthocerotophyta",
+     "common": "hornworts"
+    }
+   ]
+  },
+  {
+   "rank": "class",
+   "answer": 47124,
+   "options": [
+    {
+     "id": 47124,
+     "name": "Magnoliopsida",
+     "common": "Dicots"
+    },
+    {
+     "id": 47163,
+     "name": "Liliopsida",
+     "common": "monocots"
+    },
+    {
+     "id": 121943,
+     "name": "Polypodiopsida",
+     "common": "Ferns"
+    },
+    {
+     "id": 136329,
+     "name": "Pinopsida",
+     "common": "conifers"
+    }
+   ]
+  },
+  {
+   "rank": "order",
+   "answer": 48151,
+   "options": [
+    {
+     "id": 47605,
+     "name": "Asterales",
+     "common": "Sunflowers, Bellflowers, Fanflowers, and Allies"
+    },
+    {
+     "id": 48151,
+     "name": "Lamiales",
+     "common": "Mints, Plantains, Olives, and Allies"
+    },
+    {
+     "id": 47366,
+     "name": "Caryophyllales",
+     "common": "pinks, cactuses, and allies"
+    },
+    {
+     "id": 48232,
+     "name": "Ranunculales",
+     "common": "Buttercups, Poppies, and Allies"
+    }
+   ]
+  },
+  {
+   "rank": "family",
+   "answer": 50638,
+   "options": [
+    {
+     "id": 57860,
+     "name": "Lentibulariaceae",
+     "common": "bladderwort family"
+    },
+    {
+     "id": 48623,
+     "name": "Lamiaceae",
+     "common": "Mint Family"
+    },
+    {
+     "id": 50638,
+     "name": "Plantaginaceae",
+     "common": "Plantain Family"
+    },
+    {
+     "id": 47733,
+     "name": "Oleaceae",
+     "common": "olive family"
+    }
+   ]
+  },
+  {
+   "rank": "genus",
+   "answer": 55728,
+   "options": [
+    {
+     "id": 47324,
+     "name": "Collinsia",
+     "common": "Blue-eyed Marys"
+    },
+    {
+     "id": 48367,
+     "name": "Penstemon",
+     "common": "beardtongues"
+    },
+    {
+     "id": 55728,
+     "name": "Cymbalaria",
+     "common": "Cancerworts"
+    },
+    {
+     "id": 72258,
+     "name": "Nothochelone",
+     "common": ""
+    }
+   ]
+  },
+  {
+   "rank": "species",
+   "answer": 55727,
+   "options": [
+    {
+     "id": 485794,
+     "name": "Cymbalaria longipes",
+     "common": "Long-stemmed Cancerwort"
+    },
+    {
+     "id": 55727,
+     "name": "Cymbalaria muralis",
+     "common": "Ivy-leaved toadflax"
+    },
+    {
+     "id": 333851,
+     "name": "Cymbalaria pallida",
+     "common": "Italian Toadflax"
+    },
+    {
+     "id": 485795,
+     "name": "Cymbalaria aequitriloba",
+     "common": ""
+    }
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "src": "assets/daily/2026-10-18/01.jpg",
+   "obs": "https://www.inaturalist.org/observations/229084309",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-07-13"
+  },
+  {
+   "src": "assets/daily/2026-10-18/02.jpg",
+   "obs": "https://www.inaturalist.org/observations/225955010",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-06-29"
+  }
+ ]
+}

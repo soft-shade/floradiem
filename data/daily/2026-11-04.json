@@ -1,0 +1,207 @@
+{
+ "date": "2026-11-04",
+ "number": 31,
+ "species": {
+  "id": 57081,
+  "name": "Trifolium willdenovii",
+  "common": "tomcat clover"
+ },
+ "ranks": [
+  {
+   "rank": "kingdom",
+   "answer": 47126,
+   "options": [
+    {
+     "id": 47170,
+     "name": "Fungi",
+     "common": "Fungi Including Lichens"
+    },
+    {
+     "id": 47686,
+     "name": "Protozoa",
+     "common": "protozoans"
+    },
+    {
+     "id": 47126,
+     "name": "Plantae",
+     "common": "Plants"
+    },
+    {
+     "id": 48222,
+     "name": "Chromista",
+     "common": "kelp, diatoms, and allies"
+    }
+   ]
+  },
+  {
+   "rank": "phylum",
+   "answer": 211194,
+   "options": [
+    {
+     "id": 211194,
+     "name": "Tracheophyta",
+     "common": "Vascular Plants"
+    },
+    {
+     "id": 50863,
+     "name": "Chlorophyta",
+     "common": "green algae"
+    },
+    {
+     "id": 57774,
+     "name": "Rhodophyta",
+     "common": "red algae"
+    },
+    {
+     "id": 311249,
+     "name": "Bryophyta",
+     "common": "Mosses"
+    }
+   ]
+  },
+  {
+   "rank": "class",
+   "answer": 47124,
+   "options": [
+    {
+     "id": 47623,
+     "name": "Lycopodiopsida",
+     "common": "Lycophytes"
+    },
+    {
+     "id": 121943,
+     "name": "Polypodiopsida",
+     "common": "Ferns"
+    },
+    {
+     "id": 47124,
+     "name": "Magnoliopsida",
+     "common": "Dicots"
+    },
+    {
+     "id": 136329,
+     "name": "Pinopsida",
+     "common": "conifers"
+    }
+   ]
+  },
+  {
+   "rank": "order",
+   "answer": 47123,
+   "options": [
+    {
+     "id": 47132,
+     "name": "Rosales",
+     "common": "Roses, Elms, Figs, and Allies"
+    },
+    {
+     "id": 71289,
+     "name": "Saxifragales",
+     "common": "saxifrages, stonecrops, and allies"
+    },
+    {
+     "id": 47181,
+     "name": "Ericales",
+     "common": "Heathers, Balsams, Primroses, and Allies"
+    },
+    {
+     "id": 47123,
+     "name": "Fabales",
+     "common": "Legumes, Milkworts, and Allies"
+    }
+   ]
+  },
+  {
+   "rank": "family",
+   "answer": 47122,
+   "options": [
+    {
+     "id": 71608,
+     "name": "Quillajaceae",
+     "common": "soapbark family"
+    },
+    {
+     "id": 61207,
+     "name": "Polygalaceae",
+     "common": "milkworts"
+    },
+    {
+     "id": 47122,
+     "name": "Fabaceae",
+     "common": "Legumes"
+    },
+    {
+     "id": 71636,
+     "name": "Surianaceae",
+     "common": "baycedar family"
+    }
+   ]
+  },
+  {
+   "rank": "genus",
+   "answer": 51876,
+   "options": [
+    {
+     "id": 51876,
+     "name": "Trifolium",
+     "common": "clovers"
+    },
+    {
+     "id": 50321,
+     "name": "Lathyrus",
+     "common": "sweet peas and vetchlings"
+    },
+    {
+     "id": 47121,
+     "name": "Lupinus",
+     "common": "lupines"
+    },
+    {
+     "id": 53152,
+     "name": "Medicago",
+     "common": "medicks"
+    }
+   ]
+  },
+  {
+   "rank": "species",
+   "answer": 57081,
+   "options": [
+    {
+     "id": 57081,
+     "name": "Trifolium willdenovii",
+     "common": "tomcat clover"
+    },
+    {
+     "id": 71146,
+     "name": "Trifolium wormskioldii",
+     "common": "springbank clover"
+    },
+    {
+     "id": 55745,
+     "name": "Trifolium repens",
+     "common": "white clover"
+    },
+    {
+     "id": 79409,
+     "name": "Trifolium aureum",
+     "common": "large hop clover"
+    }
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "src": "assets/daily/2026-11-04/01.jpg",
+   "obs": "https://www.inaturalist.org/observations/223587067",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-06-18"
+  },
+  {
+   "src": "assets/daily/2026-11-04/02.jpg",
+   "obs": "https://www.inaturalist.org/observations/223587067",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-06-18"
+  }
+ ]
+}

@@ -1,0 +1,219 @@
+{
+ "date": "2026-10-07",
+ "number": 3,
+ "species": {
+  "id": 79484,
+  "name": "Veratrum viride",
+  "common": "green false hellebore"
+ },
+ "ranks": [
+  {
+   "rank": "kingdom",
+   "answer": 47126,
+   "options": [
+    {
+     "id": 48222,
+     "name": "Chromista",
+     "common": "kelp, diatoms, and allies"
+    },
+    {
+     "id": 47126,
+     "name": "Plantae",
+     "common": "Plants"
+    },
+    {
+     "id": 47170,
+     "name": "Fungi",
+     "common": "Fungi Including Lichens"
+    },
+    {
+     "id": 47686,
+     "name": "Protozoa",
+     "common": "protozoans"
+    }
+   ]
+  },
+  {
+   "rank": "phylum",
+   "answer": 211194,
+   "options": [
+    {
+     "id": 311249,
+     "name": "Bryophyta",
+     "common": "Mosses"
+    },
+    {
+     "id": 50863,
+     "name": "Chlorophyta",
+     "common": "green algae"
+    },
+    {
+     "id": 56327,
+     "name": "Anthocerotophyta",
+     "common": "hornworts"
+    },
+    {
+     "id": 211194,
+     "name": "Tracheophyta",
+     "common": "Vascular Plants"
+    }
+   ]
+  },
+  {
+   "rank": "class",
+   "answer": 47163,
+   "options": [
+    {
+     "id": 47163,
+     "name": "Liliopsida",
+     "common": "monocots"
+    },
+    {
+     "id": 136329,
+     "name": "Pinopsida",
+     "common": "conifers"
+    },
+    {
+     "id": 121943,
+     "name": "Polypodiopsida",
+     "common": "Ferns"
+    },
+    {
+     "id": 47124,
+     "name": "Magnoliopsida",
+     "common": "Dicots"
+    }
+   ]
+  },
+  {
+   "rank": "order",
+   "answer": 47329,
+   "options": [
+    {
+     "id": 47162,
+     "name": "Poales",
+     "common": "grasses, sedges, cattails, and allies"
+    },
+    {
+     "id": 48866,
+     "name": "Arecales",
+     "common": "palms, bullanocks, and allies"
+    },
+    {
+     "id": 71270,
+     "name": "Acorales",
+     "common": "Sweet-Flags"
+    },
+    {
+     "id": 47329,
+     "name": "Liliales",
+     "common": "lilies, supplejacks, and allies"
+    }
+   ]
+  },
+  {
+   "rank": "family",
+   "answer": 49464,
+   "options": [
+    {
+     "id": 71433,
+     "name": "Alstroemeriaceae",
+     "common": "Peruvian Lily family"
+    },
+    {
+     "id": 67773,
+     "name": "Colchicaceae",
+     "common": "Bellworts and allies"
+    },
+    {
+     "id": 49464,
+     "name": "Melanthiaceae",
+     "common": "Herb-Paris, False Hellebores, Trilliums and allies"
+    },
+    {
+     "id": 47328,
+     "name": "Liliaceae",
+     "common": "lily family"
+    }
+   ]
+  },
+  {
+   "rank": "genus",
+   "answer": 60502,
+   "options": [
+    {
+     "id": 49650,
+     "name": "Toxicoscordion",
+     "common": "Deathcamas"
+    },
+    {
+     "id": 60502,
+     "name": "Veratrum",
+     "common": "false hellebores"
+    },
+    {
+     "id": 118831,
+     "name": "Anticlea",
+     "common": "Anticlea Deathcamas"
+    },
+    {
+     "id": 49465,
+     "name": "Trillium",
+     "common": "trilliums"
+    }
+   ]
+  },
+  {
+   "rank": "species",
+   "answer": 79484,
+   "options": [
+    {
+     "id": 470430,
+     "name": "Veratrum lobelianum",
+     "common": "White Hellebore"
+    },
+    {
+     "id": 60500,
+     "name": "Veratrum californicum",
+     "common": "Corn Lily"
+    },
+    {
+     "id": 79484,
+     "name": "Veratrum viride",
+     "common": "green false hellebore"
+    },
+    {
+     "id": 85424,
+     "name": "Veratrum album",
+     "common": "White Hellebore"
+    }
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "src": "assets/daily/2026-10-07/01.jpg",
+   "obs": "https://www.inaturalist.org/observations/241892642",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-09-15"
+  },
+  {
+   "src": "assets/daily/2026-10-07/02.jpg",
+   "obs": "https://www.inaturalist.org/observations/241892642",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-09-15"
+  },
+  {
+   "src": "assets/daily/2026-10-07/03.jpg",
+   "obs": "https://www.inaturalist.org/observations/226477052",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-07-01"
+  },
+  {
+   "src": "assets/daily/2026-10-07/04.jpg",
+   "obs": "https://www.inaturalist.org/observations/222911092",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-06-15"
+  }
+ ]
+}

@@ -1,0 +1,216 @@
+{
+ "date": "2026-10-24",
+ "number": 20,
+ "species": {
+  "id": 340457,
+  "name": "Nephrophyllidium crista-galli",
+  "common": "Deer-cabbage"
+ },
+ "ranks": [
+  {
+   "rank": "kingdom",
+   "answer": 47126,
+   "options": [
+    {
+     "id": 47126,
+     "name": "Plantae",
+     "common": "Plants"
+    },
+    {
+     "id": 47170,
+     "name": "Fungi",
+     "common": "Fungi Including Lichens"
+    },
+    {
+     "id": 47686,
+     "name": "Protozoa",
+     "common": "protozoans"
+    },
+    {
+     "id": 48222,
+     "name": "Chromista",
+     "common": "kelp, diatoms, and allies"
+    }
+   ]
+  },
+  {
+   "rank": "phylum",
+   "answer": 211194,
+   "options": [
+    {
+     "id": 211194,
+     "name": "Tracheophyta",
+     "common": "Vascular Plants"
+    },
+    {
+     "id": 64615,
+     "name": "Marchantiophyta",
+     "common": "liverworts"
+    },
+    {
+     "id": 311249,
+     "name": "Bryophyta",
+     "common": "Mosses"
+    },
+    {
+     "id": 311313,
+     "name": "Charophyta",
+     "common": "charophyte algae"
+    }
+   ]
+  },
+  {
+   "rank": "class",
+   "answer": 47124,
+   "options": [
+    {
+     "id": 47124,
+     "name": "Magnoliopsida",
+     "common": "Dicots"
+    },
+    {
+     "id": 47163,
+     "name": "Liliopsida",
+     "common": "monocots"
+    },
+    {
+     "id": 121943,
+     "name": "Polypodiopsida",
+     "common": "Ferns"
+    },
+    {
+     "id": 47623,
+     "name": "Lycopodiopsida",
+     "common": "Lycophytes"
+    }
+   ]
+  },
+  {
+   "rank": "order",
+   "answer": 47605,
+   "options": [
+    {
+     "id": 48232,
+     "name": "Ranunculales",
+     "common": "Buttercups, Poppies, and Allies"
+    },
+    {
+     "id": 47605,
+     "name": "Asterales",
+     "common": "Sunflowers, Bellflowers, Fanflowers, and Allies"
+    },
+    {
+     "id": 47132,
+     "name": "Rosales",
+     "common": "Roses, Elms, Figs, and Allies"
+    },
+    {
+     "id": 47123,
+     "name": "Fabales",
+     "common": "Legumes, Milkworts, and Allies"
+    }
+   ]
+  },
+  {
+   "rank": "family",
+   "answer": 62369,
+   "options": [
+    {
+     "id": 62369,
+     "name": "Menyanthaceae",
+     "common": "bogbean family"
+    },
+    {
+     "id": 145472,
+     "name": "Goodeniaceae",
+     "common": "fanflower family"
+    },
+    {
+     "id": 48040,
+     "name": "Campanulaceae",
+     "common": "bellflower family"
+    },
+    {
+     "id": 47604,
+     "name": "Asteraceae",
+     "common": "Sunflowers, Daisies, Asters, and Allies"
+    }
+   ]
+  },
+  {
+   "rank": "genus",
+   "answer": 340458,
+   "options": [
+    {
+     "id": 560461,
+     "name": "Ornduffia",
+     "common": ""
+    },
+    {
+     "id": 72235,
+     "name": "Menyanthes",
+     "common": ""
+    },
+    {
+     "id": 340458,
+     "name": "Nephrophyllidium",
+     "common": ""
+    },
+    {
+     "id": 62370,
+     "name": "Nymphoides",
+     "common": ""
+    }
+   ]
+  },
+  {
+   "rank": "species",
+   "answer": 340457,
+   "options": [
+    {
+     "id": 340457,
+     "name": "Nephrophyllidium crista-galli",
+     "common": "Deer-cabbage"
+    }
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "src": "assets/daily/2026-10-24/01.jpg",
+   "obs": "https://www.inaturalist.org/observations/301087411",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2025-07-25"
+  },
+  {
+   "src": "assets/daily/2026-10-24/02.jpg",
+   "obs": "https://www.inaturalist.org/observations/295417814",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2025-07-05"
+  },
+  {
+   "src": "assets/daily/2026-10-24/03.jpg",
+   "obs": "https://www.inaturalist.org/observations/295417814",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2025-07-05"
+  },
+  {
+   "src": "assets/daily/2026-10-24/04.jpg",
+   "obs": "https://www.inaturalist.org/observations/222915002",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-06-15"
+  },
+  {
+   "src": "assets/daily/2026-10-24/05.jpg",
+   "obs": "https://www.inaturalist.org/observations/222915002",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-06-15"
+  },
+  {
+   "src": "assets/daily/2026-10-24/06.jpg",
+   "obs": "https://www.inaturalist.org/observations/222915002",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-06-15"
+  }
+ ]
+}

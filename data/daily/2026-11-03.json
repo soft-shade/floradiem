@@ -1,0 +1,219 @@
+{
+ "date": "2026-11-03",
+ "number": 30,
+ "species": {
+  "id": 55745,
+  "name": "Trifolium repens",
+  "common": "white clover"
+ },
+ "ranks": [
+  {
+   "rank": "kingdom",
+   "answer": 47126,
+   "options": [
+    {
+     "id": 47170,
+     "name": "Fungi",
+     "common": "Fungi Including Lichens"
+    },
+    {
+     "id": 47126,
+     "name": "Plantae",
+     "common": "Plants"
+    },
+    {
+     "id": 48222,
+     "name": "Chromista",
+     "common": "kelp, diatoms, and allies"
+    },
+    {
+     "id": 47686,
+     "name": "Protozoa",
+     "common": "protozoans"
+    }
+   ]
+  },
+  {
+   "rank": "phylum",
+   "answer": 211194,
+   "options": [
+    {
+     "id": 311313,
+     "name": "Charophyta",
+     "common": "charophyte algae"
+    },
+    {
+     "id": 311249,
+     "name": "Bryophyta",
+     "common": "Mosses"
+    },
+    {
+     "id": 211194,
+     "name": "Tracheophyta",
+     "common": "Vascular Plants"
+    },
+    {
+     "id": 64615,
+     "name": "Marchantiophyta",
+     "common": "liverworts"
+    }
+   ]
+  },
+  {
+   "rank": "class",
+   "answer": 47124,
+   "options": [
+    {
+     "id": 136329,
+     "name": "Pinopsida",
+     "common": "conifers"
+    },
+    {
+     "id": 47124,
+     "name": "Magnoliopsida",
+     "common": "Dicots"
+    },
+    {
+     "id": 47623,
+     "name": "Lycopodiopsida",
+     "common": "Lycophytes"
+    },
+    {
+     "id": 121943,
+     "name": "Polypodiopsida",
+     "common": "Ferns"
+    }
+   ]
+  },
+  {
+   "rank": "order",
+   "answer": 47123,
+   "options": [
+    {
+     "id": 47123,
+     "name": "Fabales",
+     "common": "Legumes, Milkworts, and Allies"
+    },
+    {
+     "id": 47605,
+     "name": "Asterales",
+     "common": "Sunflowers, Bellflowers, Fanflowers, and Allies"
+    },
+    {
+     "id": 48232,
+     "name": "Ranunculales",
+     "common": "Buttercups, Poppies, and Allies"
+    },
+    {
+     "id": 47132,
+     "name": "Rosales",
+     "common": "Roses, Elms, Figs, and Allies"
+    }
+   ]
+  },
+  {
+   "rank": "family",
+   "answer": 47122,
+   "options": [
+    {
+     "id": 47122,
+     "name": "Fabaceae",
+     "common": "Legumes"
+    },
+    {
+     "id": 71636,
+     "name": "Surianaceae",
+     "common": "baycedar family"
+    },
+    {
+     "id": 61207,
+     "name": "Polygalaceae",
+     "common": "milkworts"
+    },
+    {
+     "id": 71608,
+     "name": "Quillajaceae",
+     "common": "soapbark family"
+    }
+   ]
+  },
+  {
+   "rank": "genus",
+   "answer": 51876,
+   "options": [
+    {
+     "id": 50321,
+     "name": "Lathyrus",
+     "common": "sweet peas and vetchlings"
+    },
+    {
+     "id": 52472,
+     "name": "Vicia",
+     "common": "Vetches"
+    },
+    {
+     "id": 47436,
+     "name": "Lotus",
+     "common": "bird's-foot trefoils"
+    },
+    {
+     "id": 51876,
+     "name": "Trifolium",
+     "common": "clovers"
+    }
+   ]
+  },
+  {
+   "rank": "species",
+   "answer": 55745,
+   "options": [
+    {
+     "id": 61824,
+     "name": "Trifolium hybridum",
+     "common": "Alsike clover"
+    },
+    {
+     "id": 79408,
+     "name": "Trifolium arvense",
+     "common": "rabbitfoot clover"
+    },
+    {
+     "id": 55745,
+     "name": "Trifolium repens",
+     "common": "white clover"
+    },
+    {
+     "id": 57081,
+     "name": "Trifolium willdenovii",
+     "common": "tomcat clover"
+    }
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "src": "assets/daily/2026-11-03/01.jpg",
+   "obs": "https://www.inaturalist.org/observations/383019108",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2026-07-19"
+  },
+  {
+   "src": "assets/daily/2026-11-03/02.jpg",
+   "obs": "https://www.inaturalist.org/observations/282473758",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2025-05-19"
+  },
+  {
+   "src": "assets/daily/2026-11-03/03.jpg",
+   "obs": "https://www.inaturalist.org/observations/211135053",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-04-28"
+  },
+  {
+   "src": "assets/daily/2026-11-03/04.jpg",
+   "obs": "https://www.inaturalist.org/observations/192741468",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2023-12-01"
+  }
+ ]
+}

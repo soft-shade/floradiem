@@ -1,0 +1,201 @@
+{
+ "date": "2026-10-17",
+ "number": 13,
+ "species": {
+  "id": 69155,
+  "name": "Fucus distichus",
+  "common": "Rockweed"
+ },
+ "ranks": [
+  {
+   "rank": "kingdom",
+   "answer": 48222,
+   "options": [
+    {
+     "id": 47170,
+     "name": "Fungi",
+     "common": "Fungi Including Lichens"
+    },
+    {
+     "id": 48222,
+     "name": "Chromista",
+     "common": "kelp, diatoms, and allies"
+    },
+    {
+     "id": 47126,
+     "name": "Plantae",
+     "common": "Plants"
+    },
+    {
+     "id": 47686,
+     "name": "Protozoa",
+     "common": "protozoans"
+    }
+   ]
+  },
+  {
+   "rank": "phylum",
+   "answer": 48221,
+   "options": [
+    {
+     "id": 52595,
+     "name": "Oomycota",
+     "common": "Water Molds"
+    },
+    {
+     "id": 48221,
+     "name": "Ochrophyta",
+     "common": ""
+    },
+    {
+     "id": 118996,
+     "name": "Ciliophora",
+     "common": "Ciliates"
+    },
+    {
+     "id": 792744,
+     "name": "Miozoa",
+     "common": "dinoflagellates and allies"
+    }
+   ]
+  },
+  {
+   "rank": "class",
+   "answer": 48220,
+   "options": [
+    {
+     "id": 48220,
+     "name": "Phaeophyceae",
+     "common": "brown algae"
+    },
+    {
+     "id": 123880,
+     "name": "Bacillariophyceae",
+     "common": "Diatoms"
+    },
+    {
+     "id": 51943,
+     "name": "Chrysophyceae",
+     "common": "Golden algae"
+    },
+    {
+     "id": 53659,
+     "name": "Xanthophyceae",
+     "common": "Yellow-green algae"
+    }
+   ]
+  },
+  {
+   "rank": "order",
+   "answer": 48219,
+   "options": [
+    {
+     "id": 152254,
+     "name": "Desmarestiales",
+     "common": ""
+    },
+    {
+     "id": 706026,
+     "name": "Ralfsiales",
+     "common": ""
+    },
+    {
+     "id": 48219,
+     "name": "Fucales",
+     "common": "Fucoids"
+    },
+    {
+     "id": 51022,
+     "name": "Dictyotales",
+     "common": ""
+    }
+   ]
+  },
+  {
+   "rank": "family",
+   "answer": 48218,
+   "options": [
+    {
+     "id": 48218,
+     "name": "Fucaceae",
+     "common": "rockweeds"
+    },
+    {
+     "id": 126125,
+     "name": "Sargassaceae",
+     "common": "Sargassum and Allies"
+    },
+    {
+     "id": 197106,
+     "name": "Durvillaeaceae",
+     "common": ""
+    },
+    {
+     "id": 342808,
+     "name": "Hormosiraceae",
+     "common": ""
+    }
+   ]
+  },
+  {
+   "rank": "genus",
+   "answer": 48217,
+   "options": [
+    {
+     "id": 68769,
+     "name": "Ascophyllum",
+     "common": ""
+    },
+    {
+     "id": 117830,
+     "name": "Silvetia",
+     "common": ""
+    },
+    {
+     "id": 48217,
+     "name": "Fucus",
+     "common": "vesicled rockweeds"
+    },
+    {
+     "id": 125339,
+     "name": "Pelvetiopsis",
+     "common": ""
+    }
+   ]
+  },
+  {
+   "rank": "species",
+   "answer": 69155,
+   "options": [
+    {
+     "id": 118817,
+     "name": "Fucus spiralis",
+     "common": "Spiral Wrack"
+    },
+    {
+     "id": 48216,
+     "name": "Fucus vesiculosus",
+     "common": "bladder wrack"
+    },
+    {
+     "id": 69155,
+     "name": "Fucus distichus",
+     "common": "Rockweed"
+    },
+    {
+     "id": 57772,
+     "name": "Fucus serratus",
+     "common": "Saw Wrack"
+    }
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "src": "assets/daily/2026-10-17/01.jpg",
+   "obs": "https://www.inaturalist.org/observations/217095192",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-05-20"
+  }
+ ]
+}

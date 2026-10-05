@@ -1,0 +1,213 @@
+{
+ "date": "2026-10-23",
+ "number": 19,
+ "species": {
+  "id": 55021,
+  "name": "Arabidopsis thaliana",
+  "common": "mouse-ear cress"
+ },
+ "ranks": [
+  {
+   "rank": "kingdom",
+   "answer": 47126,
+   "options": [
+    {
+     "id": 47126,
+     "name": "Plantae",
+     "common": "Plants"
+    },
+    {
+     "id": 48222,
+     "name": "Chromista",
+     "common": "kelp, diatoms, and allies"
+    },
+    {
+     "id": 47170,
+     "name": "Fungi",
+     "common": "Fungi Including Lichens"
+    },
+    {
+     "id": 47686,
+     "name": "Protozoa",
+     "common": "protozoans"
+    }
+   ]
+  },
+  {
+   "rank": "phylum",
+   "answer": 211194,
+   "options": [
+    {
+     "id": 64615,
+     "name": "Marchantiophyta",
+     "common": "liverworts"
+    },
+    {
+     "id": 50863,
+     "name": "Chlorophyta",
+     "common": "green algae"
+    },
+    {
+     "id": 311313,
+     "name": "Charophyta",
+     "common": "charophyte algae"
+    },
+    {
+     "id": 211194,
+     "name": "Tracheophyta",
+     "common": "Vascular Plants"
+    }
+   ]
+  },
+  {
+   "rank": "class",
+   "answer": 47124,
+   "options": [
+    {
+     "id": 47623,
+     "name": "Lycopodiopsida",
+     "common": "Lycophytes"
+    },
+    {
+     "id": 47124,
+     "name": "Magnoliopsida",
+     "common": "Dicots"
+    },
+    {
+     "id": 121943,
+     "name": "Polypodiopsida",
+     "common": "Ferns"
+    },
+    {
+     "id": 47163,
+     "name": "Liliopsida",
+     "common": "monocots"
+    }
+   ]
+  },
+  {
+   "rank": "order",
+   "answer": 71275,
+   "options": [
+    {
+     "id": 71275,
+     "name": "Brassicales",
+     "common": "Mustards, Capers, and Allies"
+    },
+    {
+     "id": 47605,
+     "name": "Asterales",
+     "common": "Sunflowers, Bellflowers, Fanflowers, and Allies"
+    },
+    {
+     "id": 47181,
+     "name": "Ericales",
+     "common": "Heathers, Balsams, Primroses, and Allies"
+    },
+    {
+     "id": 48151,
+     "name": "Lamiales",
+     "common": "Mints, Plantains, Olives, and Allies"
+    }
+   ]
+  },
+  {
+   "rank": "family",
+   "answer": 47204,
+   "options": [
+    {
+     "id": 54330,
+     "name": "Tropaeolaceae",
+     "common": "nasturtium family"
+    },
+    {
+     "id": 47204,
+     "name": "Brassicaceae",
+     "common": "mustard family"
+    },
+    {
+     "id": 51337,
+     "name": "Limnanthaceae",
+     "common": "meadowfoam family"
+    },
+    {
+     "id": 71420,
+     "name": "Resedaceae",
+     "common": "mignonette family"
+    }
+   ]
+  },
+  {
+   "rank": "genus",
+   "answer": 48016,
+   "options": [
+    {
+     "id": 72390,
+     "name": "Teesdalia",
+     "common": "Shepherdscress"
+    },
+    {
+     "id": 48016,
+     "name": "Arabidopsis",
+     "common": ""
+    },
+    {
+     "id": 47203,
+     "name": "Lepidium",
+     "common": "Pepperweeds"
+    },
+    {
+     "id": 55326,
+     "name": "Lunaria",
+     "common": "honesties"
+    }
+   ]
+  },
+  {
+   "rank": "species",
+   "answer": 55021,
+   "options": [
+    {
+     "id": 490658,
+     "name": "Arabidopsis halleri",
+     "common": ""
+    },
+    {
+     "id": 371920,
+     "name": "Arabidopsis arenosa",
+     "common": "Sand Rock-cress"
+    },
+    {
+     "id": 119826,
+     "name": "Arabidopsis lyrata",
+     "common": "Lyreleaf Rockcress"
+    },
+    {
+     "id": 55021,
+     "name": "Arabidopsis thaliana",
+     "common": "mouse-ear cress"
+    }
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "src": "assets/daily/2026-10-23/01.jpg",
+   "obs": "https://www.inaturalist.org/observations/342821652",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2026-03-13"
+  },
+  {
+   "src": "assets/daily/2026-10-23/02.jpg",
+   "obs": "https://www.inaturalist.org/observations/205562924",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-04-05"
+  },
+  {
+   "src": "assets/daily/2026-10-23/03.jpg",
+   "obs": "https://www.inaturalist.org/observations/205562924",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-04-05"
+  }
+ ]
+}

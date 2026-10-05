@@ -1,0 +1,213 @@
+{
+ "date": "2026-10-06",
+ "number": 2,
+ "species": {
+  "id": 55851,
+  "name": "Lamium purpureum",
+  "common": "red deadnettle"
+ },
+ "ranks": [
+  {
+   "rank": "kingdom",
+   "answer": 47126,
+   "options": [
+    {
+     "id": 47126,
+     "name": "Plantae",
+     "common": "Plants"
+    },
+    {
+     "id": 48222,
+     "name": "Chromista",
+     "common": "kelp, diatoms, and allies"
+    },
+    {
+     "id": 47686,
+     "name": "Protozoa",
+     "common": "protozoans"
+    },
+    {
+     "id": 47170,
+     "name": "Fungi",
+     "common": "Fungi Including Lichens"
+    }
+   ]
+  },
+  {
+   "rank": "phylum",
+   "answer": 211194,
+   "options": [
+    {
+     "id": 64615,
+     "name": "Marchantiophyta",
+     "common": "liverworts"
+    },
+    {
+     "id": 311313,
+     "name": "Charophyta",
+     "common": "charophyte algae"
+    },
+    {
+     "id": 211194,
+     "name": "Tracheophyta",
+     "common": "Vascular Plants"
+    },
+    {
+     "id": 56327,
+     "name": "Anthocerotophyta",
+     "common": "hornworts"
+    }
+   ]
+  },
+  {
+   "rank": "class",
+   "answer": 47124,
+   "options": [
+    {
+     "id": 47623,
+     "name": "Lycopodiopsida",
+     "common": "Lycophytes"
+    },
+    {
+     "id": 47163,
+     "name": "Liliopsida",
+     "common": "monocots"
+    },
+    {
+     "id": 121943,
+     "name": "Polypodiopsida",
+     "common": "Ferns"
+    },
+    {
+     "id": 47124,
+     "name": "Magnoliopsida",
+     "common": "Dicots"
+    }
+   ]
+  },
+  {
+   "rank": "order",
+   "answer": 48151,
+   "options": [
+    {
+     "id": 47123,
+     "name": "Fabales",
+     "common": "Legumes, Milkworts, and Allies"
+    },
+    {
+     "id": 71289,
+     "name": "Saxifragales",
+     "common": "saxifrages, stonecrops, and allies"
+    },
+    {
+     "id": 48151,
+     "name": "Lamiales",
+     "common": "Mints, Plantains, Olives, and Allies"
+    },
+    {
+     "id": 47366,
+     "name": "Caryophyllales",
+     "common": "pinks, cactuses, and allies"
+    }
+   ]
+  },
+  {
+   "rank": "family",
+   "answer": 48623,
+   "options": [
+    {
+     "id": 48623,
+     "name": "Lamiaceae",
+     "common": "Mint Family"
+    },
+    {
+     "id": 49194,
+     "name": "Verbenaceae",
+     "common": "Verbena Family"
+    },
+    {
+     "id": 50638,
+     "name": "Plantaginaceae",
+     "common": "Plantain Family"
+    },
+    {
+     "id": 57860,
+     "name": "Lentibulariaceae",
+     "common": "bladderwort family"
+    }
+   ]
+  },
+  {
+   "rank": "genus",
+   "answer": 55460,
+   "options": [
+    {
+     "id": 55831,
+     "name": "Glechoma",
+     "common": "ground-ivies"
+    },
+    {
+     "id": 53914,
+     "name": "Scutellaria",
+     "common": "skullcaps"
+    },
+    {
+     "id": 55460,
+     "name": "Lamium",
+     "common": "deadnettles and archangels"
+    },
+    {
+     "id": 48624,
+     "name": "Nepeta",
+     "common": "catmints"
+    }
+   ]
+  },
+  {
+   "rank": "species",
+   "answer": 55851,
+   "options": [
+    {
+     "id": 55828,
+     "name": "Lamium maculatum",
+     "common": "Spotted deadnettle"
+    },
+    {
+     "id": 1369716,
+     "name": "Lamium hybridum",
+     "common": "cutleaf deadnettle"
+    },
+    {
+     "id": 55851,
+     "name": "Lamium purpureum",
+     "common": "red deadnettle"
+    },
+    {
+     "id": 55459,
+     "name": "Lamium amplexicaule",
+     "common": "henbit deadnettle"
+    }
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "src": "assets/daily/2026-10-06/01.jpg",
+   "obs": "https://www.inaturalist.org/observations/263647411",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2025-03-02"
+  },
+  {
+   "src": "assets/daily/2026-10-06/02.jpg",
+   "obs": "https://www.inaturalist.org/observations/217142732",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-05-20"
+  },
+  {
+   "src": "assets/daily/2026-10-06/03.jpg",
+   "obs": "https://www.inaturalist.org/observations/195941378",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-01-06"
+  }
+ ]
+}

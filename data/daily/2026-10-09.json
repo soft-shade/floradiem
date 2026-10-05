@@ -1,0 +1,213 @@
+{
+ "date": "2026-10-09",
+ "number": 5,
+ "species": {
+  "id": 124544,
+  "name": "Anthriscus sylvestris",
+  "common": "Cow Parsley"
+ },
+ "ranks": [
+  {
+   "rank": "kingdom",
+   "answer": 47126,
+   "options": [
+    {
+     "id": 48222,
+     "name": "Chromista",
+     "common": "kelp, diatoms, and allies"
+    },
+    {
+     "id": 47126,
+     "name": "Plantae",
+     "common": "Plants"
+    },
+    {
+     "id": 47686,
+     "name": "Protozoa",
+     "common": "protozoans"
+    },
+    {
+     "id": 47170,
+     "name": "Fungi",
+     "common": "Fungi Including Lichens"
+    }
+   ]
+  },
+  {
+   "rank": "phylum",
+   "answer": 211194,
+   "options": [
+    {
+     "id": 50863,
+     "name": "Chlorophyta",
+     "common": "green algae"
+    },
+    {
+     "id": 64615,
+     "name": "Marchantiophyta",
+     "common": "liverworts"
+    },
+    {
+     "id": 211194,
+     "name": "Tracheophyta",
+     "common": "Vascular Plants"
+    },
+    {
+     "id": 57774,
+     "name": "Rhodophyta",
+     "common": "red algae"
+    }
+   ]
+  },
+  {
+   "rank": "class",
+   "answer": 47124,
+   "options": [
+    {
+     "id": 47623,
+     "name": "Lycopodiopsida",
+     "common": "Lycophytes"
+    },
+    {
+     "id": 47163,
+     "name": "Liliopsida",
+     "common": "monocots"
+    },
+    {
+     "id": 136329,
+     "name": "Pinopsida",
+     "common": "conifers"
+    },
+    {
+     "id": 47124,
+     "name": "Magnoliopsida",
+     "common": "Dicots"
+    }
+   ]
+  },
+  {
+   "rank": "order",
+   "answer": 48700,
+   "options": [
+    {
+     "id": 47181,
+     "name": "Ericales",
+     "common": "Heathers, Balsams, Primroses, and Allies"
+    },
+    {
+     "id": 47123,
+     "name": "Fabales",
+     "common": "Legumes, Milkworts, and Allies"
+    },
+    {
+     "id": 47366,
+     "name": "Caryophyllales",
+     "common": "pinks, cactuses, and allies"
+    },
+    {
+     "id": 48700,
+     "name": "Apiales",
+     "common": "carrots, ivies, and allies"
+    }
+   ]
+  },
+  {
+   "rank": "family",
+   "answer": 48699,
+   "options": [
+    {
+     "id": 51596,
+     "name": "Pittosporaceae",
+     "common": "cheesewood family"
+    },
+    {
+     "id": 52849,
+     "name": "Araliaceae",
+     "common": "ivy family"
+    },
+    {
+     "id": 71524,
+     "name": "Griseliniaceae",
+     "common": "Griselinia family"
+    },
+    {
+     "id": 48699,
+     "name": "Apiaceae",
+     "common": "carrot family"
+    }
+   ]
+  },
+  {
+   "rank": "genus",
+   "answer": 52847,
+   "options": [
+    {
+     "id": 53095,
+     "name": "Heracleum",
+     "common": "hogweeds"
+    },
+    {
+     "id": 53053,
+     "name": "Foeniculum",
+     "common": ""
+    },
+    {
+     "id": 55343,
+     "name": "Lomatium",
+     "common": "Biscuitroots"
+    },
+    {
+     "id": 52847,
+     "name": "Anthriscus",
+     "common": "Chervils"
+    }
+   ]
+  },
+  {
+   "rank": "species",
+   "answer": 124544,
+   "options": [
+    {
+     "id": 158434,
+     "name": "Anthriscus cerefolium",
+     "common": "Garden Chervil"
+    },
+    {
+     "id": 485932,
+     "name": "Anthriscus nitidus",
+     "common": "Shiny anthriscus"
+    },
+    {
+     "id": 52846,
+     "name": "Anthriscus caucalis",
+     "common": "Bur Parsley"
+    },
+    {
+     "id": 124544,
+     "name": "Anthriscus sylvestris",
+     "common": "Cow Parsley"
+    }
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "src": "assets/daily/2026-10-09/01.jpg",
+   "obs": "https://www.inaturalist.org/observations/205787934",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-04-06"
+  },
+  {
+   "src": "assets/daily/2026-10-09/02.jpg",
+   "obs": "https://www.inaturalist.org/observations/205787934",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-04-06"
+  },
+  {
+   "src": "assets/daily/2026-10-09/03.jpg",
+   "obs": "https://www.inaturalist.org/observations/190845965",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2023-11-12"
+  }
+ ]
+}

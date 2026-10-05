@@ -1,0 +1,233 @@
+{
+ "date": "2026-10-05",
+ "number": 1,
+ "species": {
+  "id": 47687,
+  "name": "Erodium cicutarium",
+  "common": "Redstem Stork's-bill"
+ },
+ "ranks": [
+  {
+   "rank": "kingdom",
+   "answer": 47126,
+   "options": [
+    {
+     "id": 48222,
+     "name": "Chromista",
+     "common": "kelp, diatoms, and allies"
+    },
+    {
+     "id": 47126,
+     "name": "Plantae",
+     "common": "Plants"
+    },
+    {
+     "id": 47170,
+     "name": "Fungi",
+     "common": "Fungi Including Lichens"
+    },
+    {
+     "id": 47686,
+     "name": "Protozoa",
+     "common": "protozoans"
+    }
+   ]
+  },
+  {
+   "rank": "phylum",
+   "answer": 211194,
+   "options": [
+    {
+     "id": 56327,
+     "name": "Anthocerotophyta",
+     "common": "hornworts"
+    },
+    {
+     "id": 211194,
+     "name": "Tracheophyta",
+     "common": "Vascular Plants"
+    },
+    {
+     "id": 50863,
+     "name": "Chlorophyta",
+     "common": "green algae"
+    },
+    {
+     "id": 311249,
+     "name": "Bryophyta",
+     "common": "Mosses"
+    }
+   ]
+  },
+  {
+   "rank": "class",
+   "answer": 47124,
+   "options": [
+    {
+     "id": 47623,
+     "name": "Lycopodiopsida",
+     "common": "Lycophytes"
+    },
+    {
+     "id": 136329,
+     "name": "Pinopsida",
+     "common": "conifers"
+    },
+    {
+     "id": 47163,
+     "name": "Liliopsida",
+     "common": "monocots"
+    },
+    {
+     "id": 47124,
+     "name": "Magnoliopsida",
+     "common": "Dicots"
+    }
+   ]
+  },
+  {
+   "rank": "order",
+   "answer": 47690,
+   "options": [
+    {
+     "id": 48151,
+     "name": "Lamiales",
+     "common": "Mints, Plantains, Olives, and Allies"
+    },
+    {
+     "id": 47690,
+     "name": "Geraniales",
+     "common": "geraniums, bridal wreaths, and allies"
+    },
+    {
+     "id": 47123,
+     "name": "Fabales",
+     "common": "Legumes, Milkworts, and Allies"
+    },
+    {
+     "id": 47181,
+     "name": "Ericales",
+     "common": "Heathers, Balsams, Primroses, and Allies"
+    }
+   ]
+  },
+  {
+   "rank": "family",
+   "answer": 47689,
+   "options": [
+    {
+     "id": 47689,
+     "name": "Geraniaceae",
+     "common": "Geranium family"
+    },
+    {
+     "id": 71516,
+     "name": "Francoaceae",
+     "common": "bridal wreath family"
+    }
+   ]
+  },
+  {
+   "rank": "genus",
+   "answer": 47688,
+   "options": [
+    {
+     "id": 120328,
+     "name": "Monsonia",
+     "common": "Parasol"
+    },
+    {
+     "id": 47688,
+     "name": "Erodium",
+     "common": "stork's-bills"
+    },
+    {
+     "id": 72281,
+     "name": "Pelargonium",
+     "common": "geraniums and storksbills"
+    },
+    {
+     "id": 47701,
+     "name": "Geranium",
+     "common": "geraniums and cranesbills"
+    }
+   ]
+  },
+  {
+   "rank": "species",
+   "answer": 47687,
+   "options": [
+    {
+     "id": 77056,
+     "name": "Erodium malacoides",
+     "common": "Soft Stork's-bill"
+    },
+    {
+     "id": 57092,
+     "name": "Erodium moschatum",
+     "common": "musk stork's-bill"
+    },
+    {
+     "id": 47687,
+     "name": "Erodium cicutarium",
+     "common": "Redstem Stork's-bill"
+    },
+    {
+     "id": 57090,
+     "name": "Erodium botrys",
+     "common": "Mediterranean Stork's-bill"
+    }
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "src": "assets/daily/2026-10-05/01.jpg",
+   "obs": "https://www.inaturalist.org/observations/268472404",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2025-04-03"
+  },
+  {
+   "src": "assets/daily/2026-10-05/02.jpg",
+   "obs": "https://www.inaturalist.org/observations/210287458",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-04-26"
+  },
+  {
+   "src": "assets/daily/2026-10-05/03.jpg",
+   "obs": "https://www.inaturalist.org/observations/210287458",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-04-26"
+  },
+  {
+   "src": "assets/daily/2026-10-05/04.jpg",
+   "obs": "https://www.inaturalist.org/observations/210253280",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-04-26"
+  },
+  {
+   "src": "assets/daily/2026-10-05/05.jpg",
+   "obs": "https://www.inaturalist.org/observations/210253280",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-04-26"
+  },
+  {
+   "src": "assets/daily/2026-10-05/06.jpg",
+   "obs": "https://www.inaturalist.org/observations/210253280",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-04-26"
+  },
+  {
+   "src": "assets/daily/2026-10-05/07.jpg",
+   "obs": "https://www.inaturalist.org/observations/205109513",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-04-01"
+  },
+  {
+   "src": "assets/daily/2026-10-05/08.jpg",
+   "obs": "https://www.inaturalist.org/observations/198249824",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-02-02"
+  }
+ ]
+}

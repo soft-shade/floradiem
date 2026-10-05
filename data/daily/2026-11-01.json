@@ -1,0 +1,201 @@
+{
+ "date": "2026-11-01",
+ "number": 28,
+ "species": {
+  "id": 56153,
+  "name": "Juncus effusus",
+  "common": "Soft Rush"
+ },
+ "ranks": [
+  {
+   "rank": "kingdom",
+   "answer": 47126,
+   "options": [
+    {
+     "id": 48222,
+     "name": "Chromista",
+     "common": "kelp, diatoms, and allies"
+    },
+    {
+     "id": 47126,
+     "name": "Plantae",
+     "common": "Plants"
+    },
+    {
+     "id": 47686,
+     "name": "Protozoa",
+     "common": "protozoans"
+    },
+    {
+     "id": 47170,
+     "name": "Fungi",
+     "common": "Fungi Including Lichens"
+    }
+   ]
+  },
+  {
+   "rank": "phylum",
+   "answer": 211194,
+   "options": [
+    {
+     "id": 57774,
+     "name": "Rhodophyta",
+     "common": "red algae"
+    },
+    {
+     "id": 311249,
+     "name": "Bryophyta",
+     "common": "Mosses"
+    },
+    {
+     "id": 211194,
+     "name": "Tracheophyta",
+     "common": "Vascular Plants"
+    },
+    {
+     "id": 50863,
+     "name": "Chlorophyta",
+     "common": "green algae"
+    }
+   ]
+  },
+  {
+   "rank": "class",
+   "answer": 47163,
+   "options": [
+    {
+     "id": 47124,
+     "name": "Magnoliopsida",
+     "common": "Dicots"
+    },
+    {
+     "id": 47163,
+     "name": "Liliopsida",
+     "common": "monocots"
+    },
+    {
+     "id": 136329,
+     "name": "Pinopsida",
+     "common": "conifers"
+    },
+    {
+     "id": 47623,
+     "name": "Lycopodiopsida",
+     "common": "Lycophytes"
+    }
+   ]
+  },
+  {
+   "rank": "order",
+   "answer": 47162,
+   "options": [
+    {
+     "id": 48073,
+     "name": "Alismatales",
+     "common": "Aroids, Water Plantains, Seagrass, and allies"
+    },
+    {
+     "id": 49146,
+     "name": "Commelinales",
+     "common": "Spiderworts and Allies"
+    },
+    {
+     "id": 47329,
+     "name": "Liliales",
+     "common": "lilies, supplejacks, and allies"
+    },
+    {
+     "id": 47162,
+     "name": "Poales",
+     "common": "grasses, sedges, cattails, and allies"
+    }
+   ]
+  },
+  {
+   "rank": "family",
+   "answer": 52642,
+   "options": [
+    {
+     "id": 48694,
+     "name": "Typhaceae",
+     "common": "bulrushes, cattails, and allies"
+    },
+    {
+     "id": 52642,
+     "name": "Juncaceae",
+     "common": "Rushes and Allies"
+    },
+    {
+     "id": 47161,
+     "name": "Cyperaceae",
+     "common": "Sedges"
+    },
+    {
+     "id": 47434,
+     "name": "Poaceae",
+     "common": "grasses"
+    }
+   ]
+  },
+  {
+   "rank": "genus",
+   "answer": 52643,
+   "options": [
+    {
+     "id": 52643,
+     "name": "Juncus",
+     "common": "Rushes"
+    },
+    {
+     "id": 55796,
+     "name": "Luzula",
+     "common": "woodrushes"
+    },
+    {
+     "id": 180328,
+     "name": "Distichia",
+     "common": ""
+    },
+    {
+     "id": 355751,
+     "name": "Oreojuncus",
+     "common": ""
+    }
+   ]
+  },
+  {
+   "rank": "species",
+   "answer": 56153,
+   "options": [
+    {
+     "id": 77584,
+     "name": "Juncus mertensianus",
+     "common": "mertens' rush"
+    },
+    {
+     "id": 320881,
+     "name": "Juncus gerardi",
+     "common": "Saltmeadow Rush"
+    },
+    {
+     "id": 56153,
+     "name": "Juncus effusus",
+     "common": "Soft Rush"
+    },
+    {
+     "id": 77552,
+     "name": "Juncus articulatus",
+     "common": "Jointed rush"
+    }
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "src": "assets/daily/2026-11-01/01.jpg",
+   "obs": "https://www.inaturalist.org/observations/225962031",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-06-29"
+  }
+ ]
+}

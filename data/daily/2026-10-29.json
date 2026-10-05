@@ -1,0 +1,225 @@
+{
+ "date": "2026-10-29",
+ "number": 25,
+ "species": {
+  "id": 58907,
+  "name": "Melilotus albus",
+  "common": "White Sweetclover"
+ },
+ "ranks": [
+  {
+   "rank": "kingdom",
+   "answer": 47126,
+   "options": [
+    {
+     "id": 47686,
+     "name": "Protozoa",
+     "common": "protozoans"
+    },
+    {
+     "id": 47126,
+     "name": "Plantae",
+     "common": "Plants"
+    },
+    {
+     "id": 48222,
+     "name": "Chromista",
+     "common": "kelp, diatoms, and allies"
+    },
+    {
+     "id": 47170,
+     "name": "Fungi",
+     "common": "Fungi Including Lichens"
+    }
+   ]
+  },
+  {
+   "rank": "phylum",
+   "answer": 211194,
+   "options": [
+    {
+     "id": 211194,
+     "name": "Tracheophyta",
+     "common": "Vascular Plants"
+    },
+    {
+     "id": 57774,
+     "name": "Rhodophyta",
+     "common": "red algae"
+    },
+    {
+     "id": 56327,
+     "name": "Anthocerotophyta",
+     "common": "hornworts"
+    },
+    {
+     "id": 311249,
+     "name": "Bryophyta",
+     "common": "Mosses"
+    }
+   ]
+  },
+  {
+   "rank": "class",
+   "answer": 47124,
+   "options": [
+    {
+     "id": 47124,
+     "name": "Magnoliopsida",
+     "common": "Dicots"
+    },
+    {
+     "id": 47163,
+     "name": "Liliopsida",
+     "common": "monocots"
+    },
+    {
+     "id": 121943,
+     "name": "Polypodiopsida",
+     "common": "Ferns"
+    },
+    {
+     "id": 47623,
+     "name": "Lycopodiopsida",
+     "common": "Lycophytes"
+    }
+   ]
+  },
+  {
+   "rank": "order",
+   "answer": 47123,
+   "options": [
+    {
+     "id": 47123,
+     "name": "Fabales",
+     "common": "Legumes, Milkworts, and Allies"
+    },
+    {
+     "id": 48232,
+     "name": "Ranunculales",
+     "common": "Buttercups, Poppies, and Allies"
+    },
+    {
+     "id": 71289,
+     "name": "Saxifragales",
+     "common": "saxifrages, stonecrops, and allies"
+    },
+    {
+     "id": 47605,
+     "name": "Asterales",
+     "common": "Sunflowers, Bellflowers, Fanflowers, and Allies"
+    }
+   ]
+  },
+  {
+   "rank": "family",
+   "answer": 47122,
+   "options": [
+    {
+     "id": 71608,
+     "name": "Quillajaceae",
+     "common": "soapbark family"
+    },
+    {
+     "id": 61207,
+     "name": "Polygalaceae",
+     "common": "milkworts"
+    },
+    {
+     "id": 71636,
+     "name": "Surianaceae",
+     "common": "baycedar family"
+    },
+    {
+     "id": 47122,
+     "name": "Fabaceae",
+     "common": "Legumes"
+    }
+   ]
+  },
+  {
+   "rank": "genus",
+   "answer": 57067,
+   "options": [
+    {
+     "id": 57067,
+     "name": "Melilotus",
+     "common": "melilots and sweetclovers"
+    },
+    {
+     "id": 49370,
+     "name": "Astragalus",
+     "common": "milkvetches"
+    },
+    {
+     "id": 50321,
+     "name": "Lathyrus",
+     "common": "sweet peas and vetchlings"
+    },
+    {
+     "id": 51876,
+     "name": "Trifolium",
+     "common": "clovers"
+    }
+   ]
+  },
+  {
+   "rank": "species",
+   "answer": 58907,
+   "options": [
+    {
+     "id": 58907,
+     "name": "Melilotus albus",
+     "common": "White Sweetclover"
+    },
+    {
+     "id": 165287,
+     "name": "Melilotus altissimus",
+     "common": "tall melilot"
+    },
+    {
+     "id": 57066,
+     "name": "Melilotus officinalis",
+     "common": "Yellow Sweetclover"
+    },
+    {
+     "id": 57065,
+     "name": "Melilotus indicus",
+     "common": "small melilot"
+    }
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "src": "assets/daily/2026-10-29/01.jpg",
+   "obs": "https://www.inaturalist.org/observations/373675418",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2026-06-20"
+  },
+  {
+   "src": "assets/daily/2026-10-29/02.jpg",
+   "obs": "https://www.inaturalist.org/observations/228744341",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-07-11"
+  },
+  {
+   "src": "assets/daily/2026-10-29/03.jpg",
+   "obs": "https://www.inaturalist.org/observations/228744341",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-07-11"
+  },
+  {
+   "src": "assets/daily/2026-10-29/04.jpg",
+   "obs": "https://www.inaturalist.org/observations/224294310",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-06-21"
+  },
+  {
+   "src": "assets/daily/2026-10-29/05.jpg",
+   "obs": "https://www.inaturalist.org/observations/221719596",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2024-06-09"
+  }
+ ]
+}

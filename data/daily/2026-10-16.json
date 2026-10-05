@@ -1,0 +1,201 @@
+{
+ "date": "2026-10-16",
+ "number": 12,
+ "species": {
+  "id": 47751,
+  "name": "Polystichum munitum",
+  "common": "western sword fern"
+ },
+ "ranks": [
+  {
+   "rank": "kingdom",
+   "answer": 47126,
+   "options": [
+    {
+     "id": 47686,
+     "name": "Protozoa",
+     "common": "protozoans"
+    },
+    {
+     "id": 48222,
+     "name": "Chromista",
+     "common": "kelp, diatoms, and allies"
+    },
+    {
+     "id": 47126,
+     "name": "Plantae",
+     "common": "Plants"
+    },
+    {
+     "id": 47170,
+     "name": "Fungi",
+     "common": "Fungi Including Lichens"
+    }
+   ]
+  },
+  {
+   "rank": "phylum",
+   "answer": 211194,
+   "options": [
+    {
+     "id": 311249,
+     "name": "Bryophyta",
+     "common": "Mosses"
+    },
+    {
+     "id": 50863,
+     "name": "Chlorophyta",
+     "common": "green algae"
+    },
+    {
+     "id": 57774,
+     "name": "Rhodophyta",
+     "common": "red algae"
+    },
+    {
+     "id": 211194,
+     "name": "Tracheophyta",
+     "common": "Vascular Plants"
+    }
+   ]
+  },
+  {
+   "rank": "class",
+   "answer": 121943,
+   "options": [
+    {
+     "id": 136329,
+     "name": "Pinopsida",
+     "common": "conifers"
+    },
+    {
+     "id": 121943,
+     "name": "Polypodiopsida",
+     "common": "Ferns"
+    },
+    {
+     "id": 47623,
+     "name": "Lycopodiopsida",
+     "common": "Lycophytes"
+    },
+    {
+     "id": 47124,
+     "name": "Magnoliopsida",
+     "common": "Dicots"
+    }
+   ]
+  },
+  {
+   "rank": "order",
+   "answer": 47754,
+   "options": [
+    {
+     "id": 47754,
+     "name": "Polypodiales",
+     "common": "Polypod Ferns"
+    },
+    {
+     "id": 332901,
+     "name": "Osmundales",
+     "common": "Royal Ferns"
+    },
+    {
+     "id": 55328,
+     "name": "Ophioglossales",
+     "common": "adder's-tongues and allies"
+    },
+    {
+     "id": 332905,
+     "name": "Salviniales",
+     "common": "Aquatic Ferns"
+    }
+   ]
+  },
+  {
+   "rank": "family",
+   "answer": 47753,
+   "options": [
+    {
+     "id": 332916,
+     "name": "Cystopteridaceae",
+     "common": ""
+    },
+    {
+     "id": 332930,
+     "name": "Athyriaceae",
+     "common": "lady ferns and allies"
+    },
+    {
+     "id": 52682,
+     "name": "Dennstaedtiaceae",
+     "common": "bracken family"
+    },
+    {
+     "id": 47753,
+     "name": "Dryopteridaceae",
+     "common": "shieldfern family"
+    }
+   ]
+  },
+  {
+   "rank": "genus",
+   "answer": 47752,
+   "options": [
+    {
+     "id": 72085,
+     "name": "Cyrtomium",
+     "common": "Holly Ferns"
+    },
+    {
+     "id": 47752,
+     "name": "Polystichum",
+     "common": "shield ferns"
+    },
+    {
+     "id": 67932,
+     "name": "Elaphoglossum",
+     "common": "tongueferns"
+    },
+    {
+     "id": 52672,
+     "name": "Dryopteris",
+     "common": "wood ferns"
+    }
+   ]
+  },
+  {
+   "rank": "species",
+   "answer": 47751,
+   "options": [
+    {
+     "id": 78697,
+     "name": "Polystichum lonchitis",
+     "common": "northern holly fern"
+    },
+    {
+     "id": 63867,
+     "name": "Polystichum californicum",
+     "common": "California shield fern"
+    },
+    {
+     "id": 47751,
+     "name": "Polystichum munitum",
+     "common": "western sword fern"
+    },
+    {
+     "id": 167282,
+     "name": "Polystichum setigerum",
+     "common": "Alaska holly fern"
+    }
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "src": "assets/daily/2026-10-16/01.jpg",
+   "obs": "https://www.inaturalist.org/observations/189481537",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2023-10-30"
+  }
+ ]
+}

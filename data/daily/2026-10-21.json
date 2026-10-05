@@ -1,0 +1,207 @@
+{
+ "date": "2026-10-21",
+ "number": 17,
+ "species": {
+  "id": 76342,
+  "name": "Circaea alpina",
+  "common": "Alpine Enchanter's-nightshade"
+ },
+ "ranks": [
+  {
+   "rank": "kingdom",
+   "answer": 47126,
+   "options": [
+    {
+     "id": 48222,
+     "name": "Chromista",
+     "common": "kelp, diatoms, and allies"
+    },
+    {
+     "id": 47686,
+     "name": "Protozoa",
+     "common": "protozoans"
+    },
+    {
+     "id": 47170,
+     "name": "Fungi",
+     "common": "Fungi Including Lichens"
+    },
+    {
+     "id": 47126,
+     "name": "Plantae",
+     "common": "Plants"
+    }
+   ]
+  },
+  {
+   "rank": "phylum",
+   "answer": 211194,
+   "options": [
+    {
+     "id": 50863,
+     "name": "Chlorophyta",
+     "common": "green algae"
+    },
+    {
+     "id": 311313,
+     "name": "Charophyta",
+     "common": "charophyte algae"
+    },
+    {
+     "id": 56327,
+     "name": "Anthocerotophyta",
+     "common": "hornworts"
+    },
+    {
+     "id": 211194,
+     "name": "Tracheophyta",
+     "common": "Vascular Plants"
+    }
+   ]
+  },
+  {
+   "rank": "class",
+   "answer": 47124,
+   "options": [
+    {
+     "id": 121943,
+     "name": "Polypodiopsida",
+     "common": "Ferns"
+    },
+    {
+     "id": 47163,
+     "name": "Liliopsida",
+     "common": "monocots"
+    },
+    {
+     "id": 47124,
+     "name": "Magnoliopsida",
+     "common": "Dicots"
+    },
+    {
+     "id": 47623,
+     "name": "Lycopodiopsida",
+     "common": "Lycophytes"
+    }
+   ]
+  },
+  {
+   "rank": "order",
+   "answer": 47791,
+   "options": [
+    {
+     "id": 47123,
+     "name": "Fabales",
+     "common": "Legumes, Milkworts, and Allies"
+    },
+    {
+     "id": 71289,
+     "name": "Saxifragales",
+     "common": "saxifrages, stonecrops, and allies"
+    },
+    {
+     "id": 48232,
+     "name": "Ranunculales",
+     "common": "Buttercups, Poppies, and Allies"
+    },
+    {
+     "id": 47791,
+     "name": "Myrtales",
+     "common": "myrtles, evening primroses, and allies"
+    }
+   ]
+  },
+  {
+   "rank": "family",
+   "answer": 47790,
+   "options": [
+    {
+     "id": 58935,
+     "name": "Lythraceae",
+     "common": "lythrum family"
+    },
+    {
+     "id": 47790,
+     "name": "Onagraceae",
+     "common": "evening primrose family"
+    },
+    {
+     "id": 51816,
+     "name": "Myrtaceae",
+     "common": "myrtle family"
+    },
+    {
+     "id": 48889,
+     "name": "Melastomataceae",
+     "common": "Melastomes"
+    }
+   ]
+  },
+  {
+   "rank": "genus",
+   "answer": 47933,
+   "options": [
+    {
+     "id": 52972,
+     "name": "Epilobium",
+     "common": "willowherbs"
+    },
+    {
+     "id": 47789,
+     "name": "Clarkia",
+     "common": "Clarkias"
+    },
+    {
+     "id": 47933,
+     "name": "Circaea",
+     "common": "enchanter's nightshades"
+    },
+    {
+     "id": 48626,
+     "name": "Oenothera",
+     "common": "evening primroses, sundrops, and beeblossoms"
+    }
+   ]
+  },
+  {
+   "rank": "species",
+   "answer": 76342,
+   "options": [
+    {
+     "id": 51843,
+     "name": "Circaea lutetiana",
+     "common": "enchanter's-nightshade"
+    },
+    {
+     "id": 204271,
+     "name": "Circaea canadensis",
+     "common": "broadleaf enchanter's nightshade"
+    },
+    {
+     "id": 566011,
+     "name": "Circaea cordata",
+     "common": ""
+    },
+    {
+     "id": 76342,
+     "name": "Circaea alpina",
+     "common": "Alpine Enchanter's-nightshade"
+    }
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "src": "assets/daily/2026-10-21/01.jpg",
+   "obs": "https://www.inaturalist.org/observations/367095058",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2026-05-31"
+  },
+  {
+   "src": "assets/daily/2026-10-21/02.jpg",
+   "obs": "https://www.inaturalist.org/observations/367095058",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2026-05-31"
+  }
+ ]
+}

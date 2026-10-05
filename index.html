@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plantdiem — Daily Plant ID Game by Softshade</title>
+    <meta name="description" content="Plantdiem is a free daily plant identification game by Softshade. Study photos of a British Columbia plant and work down the tree of life — kingdom, phylum, class, order, family, genus, species — learning what sets each group apart.">
+    <link rel="canonical" href="https://soft-shade.github.io/plantdiem/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Plantdiem">
+    <meta property="og:title" content="Plantdiem — Daily Plant ID Game by Softshade">
+    <meta property="og:description" content="Identify a BC plant from kingdom down to species. A new plant every day.">
+    <meta property="og:url" content="https://soft-shade.github.io/plantdiem/">
+    <meta property="og:image" content="https://soft-shade.github.io/plantdiem/favicon.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <script>window.PD_VER = '20261005a';</script>
+    <link rel="stylesheet" href="css/style.css?v=20261005a">
+
+    <!-- Firebase: shared with worm-game (project worm-game-bdd29). Plantdiem
+         only touches its own collections: plantdiem_stats/{uid} and
+         plantdiem_aggregates/{date}. -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+      import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged }
+        from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
+      import { getFirestore, doc, getDoc, setDoc, serverTimestamp, increment }
+        from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyA2LKtkUF580OX4zBxOB_rw3UfMcUjg5no",
+        authDomain: "worm-game-bdd29.firebaseapp.com",
+        projectId: "worm-game-bdd29",
+        storageBucket: "worm-game-bdd29.firebasestorage.app",
+        messagingSenderId: "645517475620",
+        appId: "1:645517475620:web:17217da083f0065730bdb1",
+        measurementId: "G-6NGQQXZ01X"
+      };
+
+      try {
+        const app  = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db   = getFirestore(app);
+        window.PD_AUTH = {
+          auth, db,
+          provider: new GoogleAuthProvider(),
+          signInWithPopup, signOut, onAuthStateChanged,
+          doc, getDoc, setDoc, serverTimestamp, increment,
+        };
+        window.dispatchEvent(new Event('pd-auth-ready'));
+      } catch (e) {
+        console.warn("Firebase init failed:", e);
+      }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6NGQQXZ01X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6NGQQXZ01X');
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <img src="favicon.svg" alt="" class="brand-icon">
+        <span class="brand-name">Plantdiem</span>
+      </div>
+      <nav class="modes" role="tablist">
+        <button class="mode-tab active" data-mode="daily" role="tab">Daily</button>
+        <button class="mode-tab" data-mode="unlimited" role="tab">Unlimited</button>
+      </nav>
+      <div class="top-actions">
+        <button class="icon-btn" id="btn-help" aria-label="How to play" title="How to play">?</button>
+        <button class="icon-btn" id="btn-stats" aria-label="Statistics" title="Statistics">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M4 20h3V10H4v10Zm6.5 0h3V4h-3v16ZM17 20h3v-7h-3v7Z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="app">
+      <section id="daily-picker" class="picker" aria-label="Available daily puzzles"></section>
+
+      <section class="card photo-card">
+        <div class="carousel" id="carousel" tabindex="0" aria-label="Observation photos"></div>
+        <button class="car-btn prev" id="car-prev" aria-label="Previous photo">&#8249;</button>
+        <button class="car-btn next" id="car-next" aria-label="Next photo">&#8250;</button>
+        <div class="car-meta"><span id="car-count"></span><span id="car-attr"></span></div>
+      </section>
+
+      <section class="card play-card">
+        <ol class="ladder" id="ladder" aria-label="Progress"></ol>
+        <div id="stage"></div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      Photos and identifications from <a href="https://www.inaturalist.org" target="_blank" rel="noopener">iNaturalist</a>.
+      A <a href="https://github.com/soft-shade" target="_blank" rel="noopener">Softshade</a> game.
+    </footer>
+
+    <div class="modal" id="modal" hidden>
+      <div class="modal-box" role="dialog" aria-modal="true">
+        <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+    <div class="toast" id="toast" hidden></div>
+
+    <script src="js/app.js?v=20261005a"></script>
+  </body>
+</html>

@@ -1,0 +1,201 @@
+{
+ "date": "2026-11-02",
+ "number": 29,
+ "species": {
+  "id": 51809,
+  "name": "Lysimachia nummularia",
+  "common": "creeping Jenny"
+ },
+ "ranks": [
+  {
+   "rank": "kingdom",
+   "answer": 47126,
+   "options": [
+    {
+     "id": 47126,
+     "name": "Plantae",
+     "common": "Plants"
+    },
+    {
+     "id": 47686,
+     "name": "Protozoa",
+     "common": "protozoans"
+    },
+    {
+     "id": 48222,
+     "name": "Chromista",
+     "common": "kelp, diatoms, and allies"
+    },
+    {
+     "id": 47170,
+     "name": "Fungi",
+     "common": "Fungi Including Lichens"
+    }
+   ]
+  },
+  {
+   "rank": "phylum",
+   "answer": 211194,
+   "options": [
+    {
+     "id": 64615,
+     "name": "Marchantiophyta",
+     "common": "liverworts"
+    },
+    {
+     "id": 57774,
+     "name": "Rhodophyta",
+     "common": "red algae"
+    },
+    {
+     "id": 311249,
+     "name": "Bryophyta",
+     "common": "Mosses"
+    },
+    {
+     "id": 211194,
+     "name": "Tracheophyta",
+     "common": "Vascular Plants"
+    }
+   ]
+  },
+  {
+   "rank": "class",
+   "answer": 47124,
+   "options": [
+    {
+     "id": 47623,
+     "name": "Lycopodiopsida",
+     "common": "Lycophytes"
+    },
+    {
+     "id": 121943,
+     "name": "Polypodiopsida",
+     "common": "Ferns"
+    },
+    {
+     "id": 136329,
+     "name": "Pinopsida",
+     "common": "conifers"
+    },
+    {
+     "id": 47124,
+     "name": "Magnoliopsida",
+     "common": "Dicots"
+    }
+   ]
+  },
+  {
+   "rank": "order",
+   "answer": 47181,
+   "options": [
+    {
+     "id": 47366,
+     "name": "Caryophyllales",
+     "common": "pinks, cactuses, and allies"
+    },
+    {
+     "id": 47181,
+     "name": "Ericales",
+     "common": "Heathers, Balsams, Primroses, and Allies"
+    },
+    {
+     "id": 48232,
+     "name": "Ranunculales",
+     "common": "Buttercups, Poppies, and Allies"
+    },
+    {
+     "id": 47132,
+     "name": "Rosales",
+     "common": "Roses, Elms, Figs, and Allies"
+    }
+   ]
+  },
+  {
+   "rank": "family",
+   "answer": 48064,
+   "options": [
+    {
+     "id": 48064,
+     "name": "Primulaceae",
+     "common": "primrose family"
+    },
+    {
+     "id": 133387,
+     "name": "Ericaceae",
+     "common": "heath family"
+    },
+    {
+     "id": 48932,
+     "name": "Polemoniaceae",
+     "common": "phlox family"
+    },
+    {
+     "id": 52649,
+     "name": "Sarraceniaceae",
+     "common": "New World pitcher plants"
+    }
+   ]
+  },
+  {
+   "rank": "genus",
+   "answer": 48063,
+   "options": [
+    {
+     "id": 55820,
+     "name": "Primula",
+     "common": "Primroses"
+    },
+    {
+     "id": 132619,
+     "name": "Soldanella",
+     "common": "Snowbells"
+    },
+    {
+     "id": 58298,
+     "name": "Androsace",
+     "common": "rock-jasmines"
+    },
+    {
+     "id": 48063,
+     "name": "Lysimachia",
+     "common": "Loosestrifes"
+    }
+   ]
+  },
+  {
+   "rank": "species",
+   "answer": 51809,
+   "options": [
+    {
+     "id": 62441,
+     "name": "Lysimachia ciliata",
+     "common": "fringed loosestrife"
+    },
+    {
+     "id": 716947,
+     "name": "Lysimachia europaea",
+     "common": "Arctic Starflower"
+    },
+    {
+     "id": 51809,
+     "name": "Lysimachia nummularia",
+     "common": "creeping Jenny"
+    },
+    {
+     "id": 496537,
+     "name": "Lysimachia latifolia",
+     "common": "Western Starflower"
+    }
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "src": "assets/daily/2026-11-02/01.jpg",
+   "obs": "https://www.inaturalist.org/observations/189512758",
+   "attribution": "Photo: softshade, no rights reserved (CC0)",
+   "observed": "2023-10-30"
+  }
+ ]
+}
