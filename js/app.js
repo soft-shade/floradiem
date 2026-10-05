@@ -242,7 +242,7 @@
         const ans = game.ranks[i].options.find((o) => o.id === game.ranks[i].answer);
         label = ans ? ans.name : '';
       } else if (i === depthDone && !runOver()) cls = 'current';
-      return `<li class="${cls}" title="${esc(cap(r))}"><b>${cap(r).slice(0, 4)}</b>${esc(label)}</li>`;
+      return `<li class="${cls}" title="${esc(cap(r))}"><b>${cap(r)}</b>${esc(label)}</li>`;
     }).join('');
   }
   // A daily run ends at the first miss; an unlimited run always goes to Species.
@@ -322,7 +322,8 @@
       `<ul>${order.map((o) => {
         const note = ex.options[o.id] || ex.options[String(o.id)];
         const cls = o.id === r.answer ? 'is-answer' : o.id === chosenId ? 'is-chosen' : '';
-        return `<li class="${cls}"><span class="nm">${esc(o.name)}</span>${o.common ? ` · ${esc(o.common)}` : ''}${note ? `<br>${esc(note)}` : ''}</li>`;
+        const extra = (ex.extra && ex.extra[o.id]) || '';   // pre-escaped HTML
+        return `<li class="${cls}"><span class="nm">${esc(o.name)}</span>${o.common ? ` · ${esc(o.common)}` : ''}${note ? `<br>${esc(note)}` : ''}${extra}</li>`;
       }).join('')}</ul>` + (ex.footer || '');
   }
 
@@ -603,7 +604,7 @@
     if (ids.length) {
       try {
         const d = await getJSON(`${API}taxa/${ids.join(',')}`);
-        for (const t of d.results) game.uWiki[t.id] = t.wikipedia_summary || '';
+        for (const t of d.results) game.uWiki[t.id] = t;
       } catch (e) {}
     }
     const deeper = [];
@@ -616,9 +617,21 @@
       for (const w of deeper) if (w && w.length > 3) s = s.split(new RegExp(w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi')).join('…');
       return s.length > 320 ? s.slice(0, 317).replace(/\s\S*$/, '') + '…' : s;
     };
-    const options = {};
-    for (const o of r.options) options[o.id] = redact(game.uWiki[o.id]);
-    return { summary: '', options, footer: '<p class="src">Unlimited mode shows each group\'s Wikipedia summary (via iNaturalist), not researched notes. Names of the answers still to come are hidden (…).</p>' };
+    const options = {}, extra = {};
+    for (const o of r.options) {
+      const t = game.uWiki[o.id] || {};
+      const summary = redact(t.wikipedia_summary);
+      options[o.id] = summary;
+      if (!summary) extra[o.id] = noSummaryLine(o.id);
+    }
+    return { summary: '', options, extra,
+      footer: '<p class="src">Unlimited mode shows each group\'s Wikipedia summary (via iNaturalist), not researched notes. Names of the answers still to come are hidden (…).</p>' };
+  }
+
+  // Options with no Wikipedia summary get a pointer to iNaturalist instead of a blank.
+  function noSummaryLine(id) {
+    return `<div class="facts"><em>No Wikipedia summary yet.</em>
+      <a href="https://www.inaturalist.org/taxa/${id}" target="_blank" rel="noopener">See on iNaturalist ↗</a></div>`;
   }
 
   function finishUnlimited() {

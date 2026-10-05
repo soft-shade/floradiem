@@ -91,7 +91,7 @@ main { max-width: 760px; margin: 0 auto; padding: 12px 16px 24px; }
   font-size: .68rem; text-align: center; padding: 4px 2px; line-height: 1.2;
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
-.ladder li b { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .4px; }
+.ladder li b { display: block; font-size: .74rem; letter-spacing: .2px; }
 .ladder li.current { outline: 2px solid var(--green); background: #fff; color: var(--ink); }
 .ladder li.ok { background: var(--green); color: #fff; }
 .ladder li.miss { background: var(--miss); color: #fff; }
@@ -141,6 +141,7 @@ main { max-width: 760px; margin: 0 auto; padding: 12px 16px 24px; }
 .explain li.is-answer { border-left-color: var(--green); background: var(--green-pale); }
 .explain li.is-chosen { border-left-color: var(--miss); }
 .explain li .nm { font-style: italic; font-weight: 700; }
+.explain .facts { font-size: .8rem; color: var(--muted); margin-top: 3px; }
 .explain .src { font-size: .78rem; color: var(--muted); }
 .explain .src a { color: var(--muted); }
 .actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
@@ -190,6 +191,7 @@ main { max-width: 760px; margin: 0 auto; padding: 12px 16px 24px; }
   .mode-tab { padding: 4px 10px; font-size: .9rem; }
   .topbar { gap: 8px; padding: 8px 10px; }
   .prompt { font-size: 1.3rem; }
-  .ladder li { font-size: 0; }
-  .ladder li b { font-size: .62rem; }
+  .ladder { gap: 2px; }
+  .ladder li { font-size: 0; padding: 4px 0; }
+  .ladder li b { font-size: .6rem; letter-spacing: 0; }
 }
