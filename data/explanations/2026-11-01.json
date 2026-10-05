@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-01",
+  "ranks": {
+    "kingdom": {
+      "summary": "Green leaves and stems that grow in one place and make food from sunlight point to the plant kingdom. Fungi lack chlorophyll and absorb their food, Chromista are mostly brown seaweeds and microscopic golden algae, and protozoa are mostly single-celled. Plants share chlorophylls a and b, starch for storage and cellulose cell walls.",
+      "options": {
+        "47126": "Multicellular organisms that make their own food by photosynthesis using chlorophylls a and b, store starch, and have cellulose cell walls. Most are green and grow anchored in one place.",
+        "47170": "Absorb food from their surroundings instead of photosynthesising, and have chitin in their cell walls. Seen as mushrooms, brackets, moulds or (with algal partners) lichens, never as green leafy shoots.",
+        "48222": "Mostly aquatic: kelps and other brown seaweeds, diatoms and their relatives. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden-brown to olive colours.",
+        "47686": "Mostly single-celled organisms such as amoebae and slime moulds that usually feed on other organisms. They never form leafy, rooted, photosynthetic bodies."
+      }
+    },
+    "phylum": {
+      "summary": "This plant has true roots, upright stems and leaves with veins, which come from vascular tissue (xylem and phloem). Algae, mosses, liverworts and hornworts lack that plumbing, so they stay small, flat or live in water. Veined leaves and sturdy stems are the easiest giveaway.",
+      "options": {
+        "57774": "Red algae: mostly marine seaweeds coloured red to purple by phycoerythrin pigment. No vascular tissue, true roots or leaves, and no swimming (flagellated) cells.",
+        "311249": "Mosses: small leafy shoots anchored by thread-like rhizoids, without true roots or xylem and phloem. The green leafy plant is the long-lived stage; spores come from a capsule on a stalk.",
+        "211194": "Vascular plants: they have xylem and phloem, tissues that carry water and food, so they can grow tall with true roots, stems and veined leaves. Includes lycophytes, ferns, conifers and flowering plants.",
+        "50863": "Green algae, living mostly in water, from single cells to sheets like sea lettuce. They share plant pigments but have no roots, vascular tissue or embryos nourished by a parent plant."
+      }
+    },
+    "class": {
+      "summary": "This plant produces flowers and seeds, so it is not a spore-bearing lycophyte or a cone-bearing conifer. Its long, narrow, grass-like stems and leaves with parallel veins, and small flowers built on a plan of three (six tepals), mark it as a monocot rather than a dicot.",
+      "options": {
+        "47124": "Dicots: flowering plants usually with net-veined leaves, flower parts in fours or fives, and two seed leaves. Includes most broad-leaved trees, shrubs and wildflowers.",
+        "47163": "Monocots: flowering plants usually with parallel-veined, often strap-like leaves, flower parts in threes and a single seed leaf. Grasses, sedges, lilies and orchids belong here.",
+        "136329": "Conifers: seed plants with needle- or scale-like leaves and seeds carried on cone scales rather than inside a fruit. No flowers.",
+        "47623": "Lycophytes (clubmosses, spikemosses, quillworts): spore-bearing vascular plants with small single-veined leaves, often with spores in cone-like tips. No flowers or seeds."
+      }
+    },
+    "order": {
+      "summary": "Poales are mostly grass-like plants with long narrow leaves and small, dull, wind-pollinated flowers, often in heads or spikelets. Alismatales are mostly aquatic or aroids with a spathe; Commelinales have showy three-petalled flowers; Liliales have large, colourful six-tepalled flowers. Small brownish flowers on tough, grass-like stems point to Poales.",
+      "options": {
+        "48073": "Water plantains, arrowheads, aroids and seagrasses: many aquatic or marsh plants; aroids carry tiny flowers on a fleshy spike wrapped by a spathe.",
+        "49146": "Spiderworts and relatives: flowers usually with three showy, colourful petals and three green sepals; mostly tropical and warm-temperate.",
+        "47329": "Lilies and relatives: showy flowers with six large, often spotted or brightly coloured tepals; many grow from bulbs or corms.",
+        "47162": "Grasses, sedges, cattails and relatives: grass-like leaves and small, chaffy or brownish, mostly wind-pollinated flowers."
+      }
+    },
+    "family": {
+      "summary": "Members of the rush family have flowers that look like miniature lilies, with six small brownish or greenish tepals, and a capsule fruit. Grasses have hollow, jointed stems and flowers hidden in spikelets; sedges usually have triangular solid stems and a single nutlet per flower; cattails have dense brown sausage-shaped spikes.",
+      "options": {
+        "48694": "Cattails and bur-reeds: tall marsh plants with flat leaves and flowers in dense brown cylindrical spikes or round burs.",
+        "52642": "Rush family: grass-like plants with round or flat leaves and open or closed sheaths; tiny flowers with six chaffy tepals; fruit a capsule with three or more seeds.",
+        "47161": "Sedges: stems often triangular and solid, leaves in three ranks with closed sheaths; flowers each with a scale, producing a single nutlet.",
+        "47434": "Grasses: stems usually round and hollow with swollen joints; leaves in two ranks with split sheaths; flowers enclosed in spikelets of chaffy bracts."
+      }
+    },
+    "genus": {
+      "summary": "Juncus has hairless leaves (round, flat or reduced to sheaths) and capsules with many tiny seeds. Woodrushes have flat leaves fringed with long white hairs, closed sheaths and only three seeds per capsule. Distichia is a cushion plant of the Andes, and Oreojuncus is a small tufted alpine plant of rocky places with only a few flowers.",
+      "options": {
+        "52643": "Hairless plants with leaves round, flat or reduced to basal sheaths, usually open sheaths; capsules with many small seeds.",
+        "55796": "Woodrushes: flat, grass-like leaves edged with long white hairs; closed sheaths; capsules with just three seeds.",
+        "180328": "Dense, hard cushion plants of high-elevation bogs in the Andes of South America; not found in BC.",
+        "355751": "Small tufted alpine plants of rocky ground in the Arctic and northern mountains, with thread-like leaves and only a few flowers at the stem tip."
+      }
+    },
+    "species": {
+      "summary": "Soft rush forms large tussocks of smooth, round, leafless green stems up to about a metre tall; leaves are reduced to brownish basal sheaths. Its many-flowered cluster seems to burst from the side of the stem, because the bract above it looks like the stem continuing. The other three have flower clusters clearly at the stem tip, and are smaller.",
+      "options": {
+        "77584": "Mertens' rush: small (15 to 25 cm) montane to alpine plant of wet meadows and snowbeds, common across BC; a single dark brown, hemispheric head at the stem tip.",
+        "320881": "Saltmeadow rush: spreads by rhizomes in salt marshes and brackish flats; narrow leaves up the stem; branched terminal cluster with dark brown tepals.",
+        "56153": "Soft rush: dense clumps of glossy, round stems with no leaf blades; branched flower cluster appearing to sprout from the side of the stem; wet fields, ditches and shores.",
+        "77552": "Jointed rush: leaves with internal cross-walls (septa) that can be felt as bumpy joints when pinched; terminal branched cluster of many small dark heads; wet places."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "E-Flora BC: Juncus mertensianus",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Juncus%20mertensianus"
+    },
+    {
+      "title": "Go Botany: Juncus effusus",
+      "url": "https://gobotany.nativeplanttrust.org/species/juncus/effusus/"
+    },
+    {
+      "title": "Go Botany: Juncus gerardii",
+      "url": "https://gobotany.nativeplanttrust.org/species/juncus/gerardii/"
+    },
+    {
+      "title": "Wikipedia: Juncus articulatus",
+      "url": "https://en.wikipedia.org/wiki/Juncus_articulatus"
+    },
+    {
+      "title": "Wikipedia: Juncaceae",
+      "url": "https://en.wikipedia.org/wiki/Juncaceae"
+    }
+  ]
+}

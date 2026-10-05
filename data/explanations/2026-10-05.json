@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-05",
+  "ranks": {
+    "kingdom": {
+      "summary": "This is a green, rooted plant that makes its own food, which puts it in Plantae. Chromista photosynthesizers (kelps, diatoms) are brownish or golden, fungi don't photosynthesize and have chitin walls, and protozoa are mostly microscopic single cells.",
+      "options": {
+        "48222": "Chromista includes kelps and other brown seaweeds, diatoms and water moulds. Photosynthetic members use chlorophylls a and c, plus brownish pigments such as fucoxanthin, so they look olive-brown or golden rather than grass-green.",
+        "47126": "Plants are multicellular organisms that make their own food by photosynthesis, using chloroplasts with chlorophylls a and b. Their cell walls are made of cellulose and they store energy as starch. Most are green and rooted in place.",
+        "47170": "Fungi (including lichens) cannot photosynthesize on their own; they absorb food from their surroundings. Their cell walls contain chitin, and most grow as networks of thread-like hyphae, showing up as mushrooms, moulds, brackets or crusts.",
+        "47686": "Protozoa are mostly single-celled organisms such as amoebae and slime moulds, which feed by engulfing or absorbing food. They lack cellulose walls and chloroplasts and are usually microscopic, though slime moulds can form visible blobs."
+      }
+    },
+    "phylum": {
+      "summary": "The plant has true roots, stems, branching leaves and flowers, all of which need internal vascular tissue. Hornworts and mosses are small non-vascular plants that stay close to the ground, and green algae (Chlorophyta) live mostly in water without any roots or leaves.",
+      "options": {
+        "56327": "Hornworts are tiny non-vascular plants with a flat, ribbon-like green body (thallus). Their spores are made in upright, horn-shaped sporophytes that keep growing from the base.",
+        "211194": "Vascular plants have xylem and phloem, internal tubes that carry water and sugars, letting them grow tall with true roots, stems and leaves. The large, long-lived plant you see is the spore- or seed-producing generation.",
+        "50863": "Green algae (Chlorophyta) are mostly aquatic, from single cells to sheets like sea lettuce. They share plant pigments but have no roots, stems, leaves or vascular tissue.",
+        "311249": "Mosses are small, leafy, non-vascular plants that need moisture to reproduce. The green leafy shoots are the gametophyte; spores come from a capsule held up on a thin stalk."
+      }
+    },
+    "class": {
+      "summary": "Look at the leaves and flowers: the leaves are net-veined and the flowers have 5 petals, both typical of dicots. Monocots have parallel veins and parts in threes, while conifers and lycophytes never flower at all.",
+      "options": {
+        "47623": "Lycophytes (clubmosses, spikemosses, quillworts) have small leaves with a single unbranched vein. They reproduce by spores, often in cone-like tips, and never produce flowers or seeds.",
+        "136329": "Conifers bear naked seeds on the scales of woody cones and have needle- or scale-like leaves. They never produce flowers or fruit, and most are evergreen trees or shrubs.",
+        "47163": "Monocots typically have one seed leaf, leaves with parallel veins (often long and strap-like with a sheathing base), flower parts in threes, scattered vascular bundles and fibrous roots.",
+        "47124": "Dicots typically have two seed leaves, net-veined leaves, flower parts in fours or fives, and a taproot. Their stem vascular bundles form a ring, so woody members can make true wood."
+      }
+    },
+    "order": {
+      "summary": "The flower has 5 separate, equal petals and the fruit grows into a long, pointed beak, a signature of Geraniales. Lamiales have fused, often two-lipped corollas, Fabales have pea-like flowers and pods, and Ericales usually have petals fused into bells or urns.",
+      "options": {
+        "48151": "Lamiales usually have petals fused into a tube that is often two-lipped (bilaterally symmetrical), with 2 or 4 stamens. Leaves are commonly opposite; the order includes mints, plantains, snapdragons and olives.",
+        "47690": "Geraniales usually have radially symmetrical flowers with 5 separate petals and 5 sepals, leaves often with stipules, and frequently glandular, aromatic hairs. Fruits are often beaked, splitting from a central column.",
+        "47123": "Fabales are mostly legumes: flowers often pea-like with a banner, two wings and a keel, fruits in pods, and leaves usually compound with stipules. Many fix nitrogen in root nodules.",
+        "47181": "Ericales is a very diverse order including heathers, blueberries, primroses, balsams and tea. Many members have petals fused into bells, urns or tubes, and in heather relatives the anthers often open by small pores."
+      }
+    },
+    "family": {
+      "summary": "The long, needle-like beak on the fruit points to Geraniaceae: its five one-seeded segments split away from a central column at maturity. Francoaceae, the other Geraniales family here, are southern-hemisphere plants not wild in BC. Saxifragaceae (different order) have small capsules, and Fabaceae have pea flowers and pods.",
+      "options": {
+        "47689": "Geraniaceae have 5-parted flowers and a fruit drawn out into a long beak; at maturity five one-seeded segments peel away from the central column, each keeping a tail. Leaves are often lobed or divided, with stipules at the base.",
+        "71516": "Francoaceae (bridal wreath family, including honeybush, Melianthus) are shrubs and herbs of South America and southern Africa. They lack the long-beaked fruit of the geranium family and do not grow wild in BC.",
+        "48386": "Saxifragaceae (saxifrages, alumroots, fringecups) are in a different order, Saxifragales. Their 5 separate petals look similar, but the fruit is a small capsule, never a long beak, and many have basal rosettes of rounded, lobed leaves.",
+        "47122": "Fabaceae (legumes) belong to Fabales, not Geraniales: flowers are usually pea-like, with a banner, two wings and a keel, and the fruit is a pod. Leaves are often compound with stipules."
+      }
+    },
+    "genus": {
+      "summary": "Erodium leaves are usually pinnately divided (feather-like) and each fruit segment has a tail that twists into a tight corkscrew. Geranium has palmately lobed leaves and tails that curl rather than coil; Pelargonium has lopsided flowers with a hidden nectar spur; Monsonia is an African genus with 15 stamens.",
+      "options": {
+        "120328": "Monsonia is an African and southwest Asian genus, now including the succulent 'bushman candles'. Its flowers have 15 stamens rather than the 5 or 10 of its relatives.",
+        "47688": "Stork's-bills have 5 fertile stamens alternating with 5 sterile ones, leaves that are usually pinnately lobed or divided, and fruit tails that coil like a corkscrew when dry, helping drill the seed into the ground.",
+        "72281": "Pelargonium includes the garden 'geraniums'. Flowers are bilaterally symmetrical, with the upper petals differing from the lower ones, and a nectar spur fused along the flower stalk. Mostly South African; not wild in BC.",
+        "47701": "Geranium (cranesbills) usually has palmately lobed or divided leaves, 10 fertile stamens, and fruit tails that curl upward or fling seeds rather than twisting into a long spiral."
+      }
+    },
+    "species": {
+      "summary": "Redstem stork's-bill has leaves divided right to the midrib into separate leaflets that are themselves finely cut, giving a fern-like look, plus reddish stems and small pink petals. Musk stork's-bill has leaflets only shallowly lobed, while soft and Mediterranean stork's-bills have leaves that are lobed but not split into separate leaflets.",
+      "options": {
+        "77056": "Erodium malacoides has simple, heart-shaped leaves with round-toothed or shallowly lobed edges rather than separate leaflets. Petals are short (about sepal length) and the fruit beak is only 2-3 cm.",
+        "57092": "Erodium moschatum also has pinnately compound leaves, but its 11-15 leaflets are only shallowly lobed or toothed. It is larger, with a musky smell, and its fruit tops carry glandular pits.",
+        "47687": "Erodium cicutarium: low annual with reddish stems and feathery, pinnately compound leaves whose leaflets are deeply dissected. Petals pink-purple, 3-8 mm; beaks about 2-4 cm. Common in fields and waste places in southern BC.",
+        "57090": "Erodium botrys has lobed to dissected leaves that are not split into true leaflets, and much bigger fruits: the fruit body is 8-11 mm with a beak 5-12 cm long, far longer than its relatives'."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "E-Flora BC: Erodium cicutarium",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Erodium%20cicutarium"
+    },
+    {
+      "title": "Jepson eFlora: Key to Erodium",
+      "url": "https://herbariadb.berkeley.edu/eflora/eflora_keys.php?key=9883"
+    },
+    {
+      "title": "Jepson eFlora: Erodium botrys",
+      "url": "https://herbariadb.berkeley.edu/eflora/eflora_display.php?tid=25037"
+    },
+    {
+      "title": "Jepson eFlora: Erodium moschatum",
+      "url": "https://herbariadb.berkeley.edu/eflora/eflora_display.php?tid=25048"
+    },
+    {
+      "title": "Jepson eFlora: Erodium malacoides",
+      "url": "https://herbariadb.berkeley.edu/eflora/eflora_display.php?tid=76818"
+    },
+    {
+      "title": "Wikipedia: Geraniaceae",
+      "url": "https://en.wikipedia.org/wiki/Geraniaceae"
+    },
+    {
+      "title": "Wikipedia: Francoaceae",
+      "url": "https://en.wikipedia.org/wiki/Francoaceae"
+    }
+  ]
+}

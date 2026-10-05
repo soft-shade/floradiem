@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-31",
+  "ranks": {
+    "kingdom": {
+      "summary": "Green leaves and stems that grow in one place and make food from sunlight point to the plant kingdom. Fungi lack chlorophyll and absorb their food, Chromista are mostly brown seaweeds and microscopic golden algae, and protozoa are mostly single-celled. Plants share chlorophylls a and b, starch for storage and cellulose cell walls.",
+      "options": {
+        "47126": "Multicellular organisms that make their own food by photosynthesis using chlorophylls a and b, store starch, and have cellulose cell walls. Most are green and grow anchored in one place.",
+        "47170": "Absorb food from their surroundings instead of photosynthesising, and have chitin in their cell walls. Seen as mushrooms, brackets, moulds or (with algal partners) lichens, never as green leafy shoots.",
+        "48222": "Mostly aquatic: kelps and other brown seaweeds, diatoms and their relatives. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden-brown to olive colours.",
+        "47686": "Mostly single-celled organisms such as amoebae and slime moulds that usually feed on other organisms. They never form leafy, rooted, photosynthetic bodies."
+      }
+    },
+    "phylum": {
+      "summary": "This plant has true roots, upright stems and leaves with veins, which come from vascular tissue (xylem and phloem). Algae, mosses, liverworts and hornworts lack that plumbing, so they stay small, flat or live in water. Veined leaves and sturdy stems are the easiest giveaway.",
+      "options": {
+        "211194": "Vascular plants: they have xylem and phloem, tissues that carry water and food, so they can grow tall with true roots, stems and veined leaves. Includes lycophytes, ferns, conifers and flowering plants.",
+        "311313": "Charophyte algae such as stoneworts and desmids: freshwater green algae that are the closest algal relatives of land plants, but without vascular tissue, true roots or leaves.",
+        "56327": "Hornworts: small, flat green bodies (thalli) with no leaves, sending up thin horn-shaped spore capsules. No vascular tissue.",
+        "64615": "Liverworts: either flat, lobed thalli or leafy shoots with leaves in two or three rows, often lobed and without a midrib. No vascular tissue."
+      }
+    },
+    "class": {
+      "summary": "Flowers and fruits mark this as a flowering plant, which rules out the spore-bearing lycophytes and ferns and the cone-bearing conifers. Broad leaves with a branching network of veins, and flower parts in fours or fives, point to the dicots rather than the monocots, whose leaves usually have parallel veins and whose flower parts come in threes.",
+      "options": {
+        "136329": "Conifers: seed plants with needle- or scale-like leaves and seeds carried on cone scales rather than inside a fruit. No flowers.",
+        "47623": "Lycophytes (clubmosses, spikemosses, quillworts): spore-bearing vascular plants with small single-veined leaves, often with spores in cone-like tips. No flowers or seeds.",
+        "47163": "Monocots: flowering plants usually with parallel-veined, often strap-like leaves, flower parts in threes and a single seed leaf. Grasses, sedges, lilies and orchids belong here.",
+        "47124": "Dicots: flowering plants usually with net-veined leaves, flower parts in fours or fives, and two seed leaves. Includes most broad-leaved trees, shrubs and wildflowers."
+      }
+    },
+    "order": {
+      "summary": "Lamiales typically have opposite leaves and flowers whose petals are fused into a tube, usually two-lipped or otherwise irregular, with only two or four stamens. Rosales have five free petals and many stamens; Asterales pack tiny flowers into daisy-like heads or have bell-shaped flowers; Saxifragales usually have separate petals and a few stamens.",
+      "options": {
+        "47132": "Roses, elms, figs and relatives: flowers with five free petals and many stamens on a cup-like rim, or tiny wind-pollinated flowers; leaves usually alternate with stipules.",
+        "47605": "Sunflowers, bellflowers and relatives: tiny flowers packed into daisy-like heads, or bell-shaped five-lobed flowers; anthers often joined around the style.",
+        "48151": "Mints, plantains, olives, snapdragons and relatives: leaves often opposite; petals fused, often two-lipped; only two or four stamens.",
+        "71289": "Saxifrages, stonecrops and relatives: mostly herbs or succulents with separate, radially symmetric petals and often a two-beaked ovary."
+      }
+    },
+    "family": {
+      "summary": "After a major DNA-based reshuffle, Plantaginaceae now holds many former figwort-family plants: herbs with fused, often irregular corollas and two or four stamens, and capsule fruits. The broomrape family is mostly parasitic on other plants' roots; the foxglove-tree family is woody with huge leaves; the lopseed family includes monkeyflowers with a sensitive two-lobed stigma and an angled calyx.",
+      "options": {
+        "47322": "Broomrape family: parasites or partial parasites that tap other plants' roots, such as paintbrushes, louseworts and broomrapes; some lack chlorophyll.",
+        "71586": "Foxglove-tree family: Asian trees with very large, heart-shaped opposite leaves and big purple, foxglove-like flowers in upright clusters.",
+        "64552": "Lopseed family: mostly monkeyflowers, with tubular two-lipped flowers, a five-angled calyx and a two-lobed stigma that closes when touched.",
+        "50638": "Plantain family in its modern broad sense: herbs (some aquatic) with opposite or alternate leaves, fused corollas that are two-lipped or nearly flat, two or four stamens, and capsules."
+      }
+    },
+    "genus": {
+      "summary": "Speedwells have small, nearly flat, saucer-shaped flowers with four petal lobes (the lowest usually narrowest) and only two stamens, mostly in shades of blue or white. Toadflaxes have snapdragon-like flowers with a spur; foxgloves have tall spikes of large tubular bells; Nothochelone has tubular, two-lipped pink-purple flowers like a penstemon.",
+      "options": {
+        "50791": "Toadflaxes: narrow leaves and two-lipped, snapdragon-like flowers with a closed throat and a long spur, often yellow.",
+        "53984": "Foxgloves: tall spikes of large, drooping, tubular bell-shaped flowers, usually pink-purple and spotted inside.",
+        "72258": "Woodland beardtongue: a single species of western forests with toothed opposite leaves and tubular, two-lipped, pink-purple flowers.",
+        "51611": "Speedwells: small four-lobed, almost flat corollas, usually blue, violet or white, with two protruding stamens; leaves usually opposite; capsules often heart-shaped."
+      }
+    },
+    "species": {
+      "summary": "Slender speedwell is a creeping, mat-forming lawn weed with small, rounded, kidney-shaped leaves and single pale blue flowers held on very long, thread-like stalks from the leaf axils. American brooklime and marsh speedwell grow in wet places and carry flowers in side racemes; Cusick's speedwell is an alpine plant with a compact terminal cluster of deep blue-violet flowers.",
+      "options": {
+        "55825": "Slender speedwell: introduced, creeping and rooting at the nodes in lawns; leaves small, rounded and scalloped; flowers single on thread-like stalks longer than the leaves, pale blue with darker lines.",
+        "79497": "Cusick's speedwell: upright alpine perennial of moist meadows and rocky slopes, infrequent in extreme south-central BC; deep blue-violet flowers in a compact terminal raceme, with a long protruding style.",
+        "61112": "Marsh speedwell: slender plant of marshes with narrow, linear leaves; few pale blue or white flowers on zigzag stalks in racemes from alternate leaf axils.",
+        "57277": "American brooklime: fleshy, hairless plant of streams and ditches with stalked, toothed, lance-shaped opposite leaves; blue flowers in racemes from the leaf axils."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "E-Flora BC: Veronica cusickii",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Veronica%20cusickii"
+    },
+    {
+      "title": "E-Flora BC: Veronica filiformis",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Veronica%20filiformis"
+    },
+    {
+      "title": "Wikipedia: Veronica filiformis",
+      "url": "https://en.wikipedia.org/wiki/Veronica_filiformis"
+    },
+    {
+      "title": "Wikipedia: Veronica scutellata",
+      "url": "https://en.wikipedia.org/wiki/Veronica_scutellata"
+    },
+    {
+      "title": "Wikipedia: Plantaginaceae",
+      "url": "https://en.wikipedia.org/wiki/Plantaginaceae"
+    }
+  ]
+}

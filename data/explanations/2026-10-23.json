@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-23",
+  "ranks": {
+    "kingdom": {
+      "summary": "This is a green, leafy organism that makes its own food by photosynthesis, so it belongs with the plants. Fungi lack chlorophyll and absorb their food, protozoa are mostly microscopic single cells, and chromists include kelps and diatoms that are coloured brown or golden by different pigments.",
+      "options": {
+        "47126": "Multicellular organisms that make their own food with chlorophylls a and b, store starch and have cellulose cell walls. Green leaves, stems and roots are the giveaway.",
+        "48222": "Kelps, diatoms, water moulds and relatives, mostly aquatic. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden to olive-brown colours rather than grass-green.",
+        "47170": "Fungi absorb food from their surroundings instead of photosynthesising, and have chitin cell walls. Seen as mushrooms, moulds and brackets, or as lichens when partnered with algae; never leafy and green.",
+        "47686": "Mostly single-celled, often mobile organisms such as amoebae, plus slime moulds; they feed by engulfing food and have no leaves, stems or roots."
+      }
+    },
+    "phylum": {
+      "summary": "Its stems and leaves contain veins of xylem and phloem that conduct water and food, and it produces flowers and seeds. Liverworts are small non-vascular plants that reproduce by spores, and green algae and charophytes lack true roots, stems and leaves.",
+      "options": {
+        "64615": "Liverworts: small non-vascular plants, either flat ribbon-like sheets (thalli) or leafy stems with leaves in 2–3 rows that are often lobed. Spores come from capsules on short-lived, translucent stalks.",
+        "50863": "Green algae: grass-green like plants but with no roots, stems, leaves or vascular tissue. They live in water or on damp surfaces, from single cells to seaweeds like sea lettuce.",
+        "311313": "Charophyte algae: freshwater green algae most closely related to land plants, such as stoneworts with whorled branches and microscopic desmids. No vascular tissue or true leaves.",
+        "211194": "Plants with xylem and phloem, internal tubes that carry water and sugars. This lets them grow true roots, stems and leaves and reach large sizes; it includes lycophytes, horsetails, conifers and flowering plants, among others."
+      }
+    },
+    "class": {
+      "summary": "Net-veined leaves and flower parts in 4s or 5s point to the dicots. Monocots usually have parallel-veined leaves and flower parts in 3s, while lycophytes, ferns and conifers never produce flowers.",
+      "options": {
+        "47623": "Clubmosses, spikemosses and quillworts: small, simple leaves (microphylls) with a single vein, often densely clothing the stem; spores borne in cones or leaf axils; no flowers or seeds.",
+        "47124": "Flowering plants usually with net-veined leaves, flower parts in 4s or 5s, two seed leaves (cotyledons), and often a taproot.",
+        "121943": "Spore-bearing vascular plants, usually with large, often divided fronds that unroll from fiddleheads and carry spore clusters underneath; no flowers or seeds. Horsetails are included here too.",
+        "47163": "Flowering plants with one seed leaf, usually parallel-veined leaves, flower parts in 3s and fibrous roots; examples include lilies, orchids, sedges and palms."
+      }
+    },
+    "order": {
+      "summary": "Brassicales mostly contain mustard oils (glucosinolates) that give a peppery, cabbage-like taste and smell, and many have flowers with 4 separate petals arranged in a cross. Asterales, Ericales and Lamiales all generally have petals fused together: flower heads or bells in Asterales, bells and urns in Ericales, and two-lipped tubes in Lamiales.",
+      "options": {
+        "71275": "Mustards, capers, papaya and nasturtiums: chemically united by mustard-oil glucosinolates that give a peppery taste; flowers often have 4 separate petals in a cross.",
+        "47605": "Sunflowers, bellflowers, lobelias and relatives: petals fused into a tube or bell, ovary often below the flower, and many store inulin rather than starch. The largest family packs tiny flowers into heads.",
+        "47181": "Heathers, blueberries, primroses and balsams. Corollas are often fused into bells or urns, but stamens commonly equal or double the petal number and leaves are usually alternate.",
+        "48151": "Mostly herbs and shrubs with opposite leaves and fused, often two-lipped or wheel-shaped corollas; stamens usually 2 or 4, fewer than the corolla lobes. Includes mints, snapdragons, plantains and olives."
+      }
+    },
+    "family": {
+      "summary": "Brassicaceae flowers have 4 petals in a cross, 6 stamens (4 long, 2 short), and a pod divided lengthwise by a papery partition. Nasturtiums have round, shield-like leaves and spurred flowers, meadowfoams (Limnanthaceae) have 5 petals and nutlet fruits, and mignonettes (Resedaceae) have fringed, irregular petals and capsules open at the top.",
+      "options": {
+        "54330": "Nasturtiums: round, shield-like (peltate) leaves with the stalk attached in the middle, and showy, spurred, 5-petalled orange to red flowers.",
+        "47204": "Crucifers: flowers with 4 petals in a cross shape and 6 stamens (4 long, 2 short); fruits are long pods (siliques) or short pods (silicles) divided by a papery central partition; often peppery-tasting.",
+        "51337": "Meadowfoams and false mermaid: small, soft herbs of wet ground with divided leaves, flower parts in 5s (or 3s), and fruits that split into separate rounded nutlets.",
+        "71420": "Mignonettes: spikes of small, irregular flowers with deeply cut, fringed petals and many stamens; the capsule stays open at the top even before it is ripe."
+      }
+    },
+    "genus": {
+      "summary": "Arabidopsis are small cresses with a basal rosette, forked or branched hairs, small white to lilac flowers and long, slender pods (siliques). Lepidium and Teesdalia have short, flattened, notched pods, while Lunaria has huge, round, papery pods.",
+      "options": {
+        "72390": "Shepherd's cress: a tiny rosette annual of sandy ground with small white flowers whose outer petals are larger than the inner ones, and small, flattened, notched pods.",
+        "48016": "Small annual to perennial cresses with a basal rosette, simple and forked hairs, white to pale purple 4-petalled flowers and long, narrow siliques.",
+        "47203": "Pepperweeds: short, flat, round to oval pods often notched at the tip, with one seed per chamber; flowers tiny and white, sometimes lacking petals.",
+        "55326": "Honesty: a tall plant with large, heart-shaped toothed leaves, purple or white flowers, and big, flat, round pods whose silvery papery partition persists like a coin."
+      }
+    },
+    "species": {
+      "summary": "Mouse-ear cress is a small weedy annual, 10–40 cm, with a rosette of small, sparsely toothed leaves, tiny white petals about 3 mm long and very slender pods 1–1.5 cm long. Lyreleaf rockcress is a biennial or perennial with lyre-shaped basal leaves and larger petals (6–8 mm); A. arenosa and A. halleri are European perennials, the latter spreading by runners.",
+      "options": {
+        "490658": "A European and East Asian perennial that spreads by above-ground runners (stolons); famous for growing on, and storing zinc and cadmium from, metal-polluted soils. Not found in BC.",
+        "371920": "A European biennial or short-lived perennial with white to lilac petals larger than mouse-ear cress's; occurs in both diploid and tetraploid forms. Not native to BC.",
+        "119826": "Biennial or short-lived perennial with lyre-shaped (pinnately lobed with a large end lobe) basal leaves and white to pale pink petals 6–8 mm; rare on gravel slopes in central and southwestern BC.",
+        "55021": "Introduced annual of disturbed ground near towns; rosette leaves oblanceolate, 1–4 cm, with simple and forked hairs; white petals about 3 mm; siliques under 1 mm wide. The world's best-studied laboratory plant."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "Burke Herbarium Image Collection: Arabidopsis thaliana",
+      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Arabidopsis%20thaliana"
+    },
+    {
+      "title": "E-Flora BC: Arabidopsis lyrata",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Arabidopsis%20lyrata"
+    },
+    {
+      "title": "Wikipedia: Arabidopsis lyrata",
+      "url": "https://en.wikipedia.org/wiki/Arabidopsis_lyrata"
+    },
+    {
+      "title": "Wikipedia: Arabidopsis halleri",
+      "url": "https://en.wikipedia.org/wiki/Arabidopsis_halleri"
+    },
+    {
+      "title": "Wikipedia: Arabidopsis arenosa",
+      "url": "https://en.wikipedia.org/wiki/Arabidopsis_arenosa"
+    },
+    {
+      "title": "Wikipedia: Brassicaceae",
+      "url": "https://en.wikipedia.org/wiki/Brassicaceae"
+    }
+  ]
+}

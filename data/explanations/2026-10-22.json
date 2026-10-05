@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-22",
+  "ranks": {
+    "kingdom": {
+      "summary": "This is a green, leafy organism that makes its own food by photosynthesis, so it belongs with the plants. Fungi lack chlorophyll and absorb their food, protozoa are mostly microscopic single cells, and chromists include kelps and diatoms that are coloured brown or golden by different pigments.",
+      "options": {
+        "47126": "Multicellular organisms that make their own food with chlorophylls a and b, store starch and have cellulose cell walls. Green leaves, stems and roots are the giveaway.",
+        "47170": "Fungi absorb food from their surroundings instead of photosynthesising, and have chitin cell walls. Seen as mushrooms, moulds and brackets, or as lichens when partnered with algae; never leafy and green.",
+        "47686": "Mostly single-celled, often mobile organisms such as amoebae, plus slime moulds; they feed by engulfing food and have no leaves, stems or roots.",
+        "48222": "Kelps, diatoms, water moulds and relatives, mostly aquatic. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden to olive-brown colours rather than grass-green."
+      }
+    },
+    "phylum": {
+      "summary": "Its stems and leaves contain veins of xylem and phloem that conduct water and food, and it produces flowers and seeds. Liverworts and hornworts are small non-vascular plants that reproduce by spores, and charophytes are algae without true roots, stems or leaves.",
+      "options": {
+        "211194": "Plants with xylem and phloem, internal tubes that carry water and sugars. This lets them grow true roots, stems and leaves and reach large sizes; it includes lycophytes, horsetails, conifers and flowering plants, among others.",
+        "56327": "Hornworts: non-vascular plants with a flat, dark-green thallus from which grow upright, horn-like spore-bearing structures that split lengthwise as they release spores.",
+        "311313": "Charophyte algae: freshwater green algae most closely related to land plants, such as stoneworts with whorled branches and microscopic desmids. No vascular tissue or true leaves.",
+        "64615": "Liverworts: small non-vascular plants, either flat ribbon-like sheets (thalli) or leafy stems with leaves in 2–3 rows that are often lobed. Spores come from capsules on short-lived, translucent stalks."
+      }
+    },
+    "class": {
+      "summary": "Long, narrow leaves with parallel veins, fibrous roots and flowers built on a plan of 3 point to the monocots. Dicots usually have net-veined leaves, lycophytes have tiny single-veined leaves and reproduce by spores, and conifers bear seeds in cones rather than flowers.",
+      "options": {
+        "136329": "Conifers: woody trees and shrubs with needle- or scale-like leaves and seeds borne in cones; no flowers or fruits.",
+        "47623": "Clubmosses, spikemosses and quillworts: small, simple leaves (microphylls) with a single vein, often densely clothing the stem; spores borne in cones or leaf axils; no flowers or seeds.",
+        "47124": "Flowering plants usually with net-veined leaves, flower parts in 4s or 5s, two seed leaves (cotyledons), and often a taproot.",
+        "47163": "Flowering plants with one seed leaf, usually parallel-veined leaves, flower parts in 3s and fibrous roots; examples include lilies, orchids, sedges and palms."
+      }
+    },
+    "order": {
+      "summary": "Poales are mostly grass-like plants with long, narrow, parallel-veined leaves and small, dull, chaffy flowers, often wind-pollinated and lacking showy petals. The other orders usually have more conspicuous flowers: three coloured petals in spiderworts, a spathe and spadix in aroids, or six bright tepals in lilies and trilliums (Liliales).",
+      "options": {
+        "49146": "Spiderworts and relatives: soft, often succulent stems with sheathing leaves, and flowers with three showy, short-lived petals and often hairy stamen filaments.",
+        "47162": "Grass, sedge, rush, cattail and bromeliad relatives: mostly long, narrow, parallel-veined leaves and small, chaffy, often wind-pollinated flowers in spikes or heads.",
+        "48073": "Aroids, water plantains, pondweeds and seagrasses: many aquatic or wetland plants. Aroids bear tiny flowers on a fleshy spike (spadix) wrapped by a hood-like spathe, as in skunk cabbage.",
+        "47329": "Lilies, trilliums, fritillaries and relatives: showy flowers with six often spotted or striped tepals, frequently from bulbs."
+      }
+    },
+    "family": {
+      "summary": "Poaceae have round, usually hollow stems with solid, swollen joints (nodes), leaves in two rows with a sheath and a ligule, and tiny flowers packed into spikelets between scale-like bracts. Sedges have solid, often triangular stems and three-ranked leaves; rushes have round pithy stems and small six-tepalled flowers; cattails bear dense brown cylindrical spikes.",
+      "options": {
+        "47434": "True grasses: round, usually hollow stems with swollen solid nodes, two-ranked leaves with a ligule (small flap or fringe where blade meets sheath), and tiny florets enclosed by two bracts (lemma and palea), grouped in spikelets.",
+        "52642": "Rushes and wood-rushes: round, pithy or leafless-looking stems; small but complete flowers with six papery tepals, and capsules holding many seeds.",
+        "47161": "Sedges: stems usually solid and triangular ('sedges have edges'), leaves in three ranks with closed sheaths; each tiny flower sits behind a single scale and produces a small nut-like achene.",
+        "48694": "Cattails and bur-reeds: tall wetland plants with flat strap-like leaves; flowers in dense brown sausage-shaped spikes (cattails) or spherical burr-like heads (bur-reeds)."
+      }
+    },
+    "genus": {
+      "summary": "Hordeum spikes have three one-flowered spikelets at each joint, with glumes reduced to stiff bristles, giving a bristly, foxtail-like head that often breaks into segments when ripe. Leymus also has a spike but with several-flowered spikelets, Dactylis has dense one-sided clusters on a branched panicle, and Anthoxanthum smells sweetly of hay or vanilla.",
+      "options": {
+        "71973": "Sweet vernal grass and sweetgrasses: fragrant with coumarin (smells of fresh hay or vanilla when crushed); spikelets have 3 florets with only the top one bisexual, and sweet vernal grass has just 2 stamens.",
+        "52797": "Barleys: a dense, bristly spike with three single-flowered spikelets per node (the central one fertile, the lateral two often reduced), needle-like glumes and long awns.",
+        "57185": "Wildryes: tall, often bluish, rhizomatous grasses with a stiff spike bearing usually two or more several-flowered spikelets at each node, such as dune wildrye on BC beaches.",
+        "52721": "Tufted perennials with flattened, keeled sheaths and spikelets crowded in dense, one-sided lumps at the tips of stiff panicle branches; lemmas keeled with stiff hairs and a short awn tip."
+      }
+    },
+    "species": {
+      "summary": "Wall barley is a weedy annual with conspicuous claw-like auricles at the leaf base and dense, bristly spikes; the central spikelet's glumes have hairy (ciliate) margins. Salt barley lacks auricles and has a winged glume on its side spikelets; meadow barley is a native perennial with short awns and no auricles; common barley is the robust crop with plump grain and a spike that doesn't fall apart.",
+      "options": {
+        "52796": "Introduced annual of roadsides and waste places, 20–60 cm; well-developed auricles; spike 4–7 cm, often partly sheathed by the inflated upper leaf sheath; awns 2–4 cm; central glumes fringed with hairs.",
+        "57182": "Cultivated barley: a robust annual with broad leaves and large auricles; the spike does not break apart at maturity and the grains are plump; seen in BC as a crop or short-lived escape.",
+        "57181": "Introduced annual of disturbed and saline ground; auricles absent or tiny; the lower glume of each side spikelet is flattened into a narrow wing; awns shorter (6–18 mm) than wall barley's.",
+        "57173": "Native tufted perennial of moist meadows, beaches and mountain slopes; no auricles; bristle-like glumes and fairly short lemma awns (3.5–14 mm)."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "Burke Herbarium Image Collection: Hordeum murinum",
+      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Hordeum%20murinum"
+    },
+    {
+      "title": "Burke Herbarium Image Collection: Hordeum marinum",
+      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Hordeum%20marinum"
+    },
+    {
+      "title": "Burke Herbarium Image Collection: Hordeum brachyantherum",
+      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Hordeum%20brachyantherum"
+    },
+    {
+      "title": "E-Flora BC: Hordeum murinum",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Hordeum%20murinum"
+    },
+    {
+      "title": "Wikipedia: Hordeum vulgare",
+      "url": "https://en.wikipedia.org/wiki/Hordeum_vulgare"
+    },
+    {
+      "title": "Wikipedia: Poaceae",
+      "url": "https://en.wikipedia.org/wiki/Poaceae"
+    }
+  ]
+}

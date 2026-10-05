@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-18",
+  "ranks": {
+    "kingdom": {
+      "summary": "This is a green, leafy organism that makes its own food by photosynthesis, so it belongs with the plants. Fungi lack chlorophyll and absorb their food, protozoa are mostly microscopic single cells, and chromists include kelps and diatoms that are coloured brown or golden by different pigments.",
+      "options": {
+        "47686": "Mostly single-celled, often mobile organisms such as amoebae, plus slime moulds; they feed by engulfing food and have no leaves, stems or roots.",
+        "48222": "Kelps, diatoms, water moulds and relatives, mostly aquatic. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden to olive-brown colours rather than grass-green.",
+        "47170": "Fungi absorb food from their surroundings instead of photosynthesising, and have chitin cell walls. Seen as mushrooms, moulds and brackets, or as lichens when partnered with algae; never leafy and green.",
+        "47126": "Multicellular organisms that make their own food with chlorophylls a and b, store starch and have cellulose cell walls. Green leaves, stems and roots are the giveaway."
+      }
+    },
+    "phylum": {
+      "summary": "Its stems and leaves contain veins of xylem and phloem that conduct water and food, and it produces flowers and seeds. Red algae and charophytes are algae without true roots, stems or leaves, and hornworts are small non-vascular plants that reproduce by spores.",
+      "options": {
+        "57774": "Red algae: mostly marine seaweeds coloured red to purple by the pigment phycoerythrin; no vascular tissue, roots or leaves.",
+        "311313": "Charophyte algae: freshwater green algae most closely related to land plants, such as stoneworts with whorled branches and microscopic desmids. No vascular tissue or true leaves.",
+        "211194": "Plants with xylem and phloem, internal tubes that carry water and sugars. This lets them grow true roots, stems and leaves and reach large sizes; it includes lycophytes, horsetails, conifers and flowering plants, among others.",
+        "56327": "Hornworts: non-vascular plants with a flat, dark-green thallus from which grow upright, horn-like spore-bearing structures that split lengthwise as they release spores."
+      }
+    },
+    "class": {
+      "summary": "Net-veined leaves and flower parts in 4s or 5s point to the dicots. Monocots usually have parallel-veined leaves and flower parts in 3s, while lycophytes, ferns and conifers never produce flowers.",
+      "options": {
+        "47124": "Flowering plants usually with net-veined leaves, flower parts in 4s or 5s, two seed leaves (cotyledons), and often a taproot.",
+        "47163": "Flowering plants with one seed leaf, usually parallel-veined leaves, flower parts in 3s and fibrous roots; examples include lilies, orchids, sedges and palms.",
+        "121943": "Spore-bearing vascular plants, usually with large, often divided fronds that unroll from fiddleheads and carry spore clusters underneath; no flowers or seeds. Horsetails are included here too.",
+        "136329": "Conifers: woody trees and shrubs with needle- or scale-like leaves and seeds borne in cones; no flowers or fruits."
+      }
+    },
+    "order": {
+      "summary": "Two-lipped flowers with a fused corolla and few stamens fit Lamiales. Asterales mostly pack tiny flowers into heads or have bells with the ovary below the flower; Caryophyllales often have succulent leaves, swollen nodes or notched separate petals; Ranunculales usually have separate petals, many stamens and several separate pistils.",
+      "options": {
+        "47605": "Sunflowers, bellflowers, lobelias and relatives: petals fused into a tube or bell, ovary often below the flower, and many store inulin rather than starch. The largest family packs tiny flowers into heads.",
+        "48151": "Mostly herbs and shrubs with opposite leaves and fused, often two-lipped or wheel-shaped corollas; stamens usually 2 or 4, fewer than the corolla lobes. Includes mints, snapdragons, plantains and olives.",
+        "47366": "Pinks, chickweeds, cacti, docks and amaranths: often swollen stem nodes, succulent leaves or separate notched petals; many use betalain pigments instead of anthocyanins.",
+        "48232": "Buttercups, poppies and barberries: flowers usually with separate petals, many spirally arranged stamens and often several separate pistils."
+      }
+    },
+    "family": {
+      "summary": "Spurred, snapdragon-like flowers and a many-seeded capsule fit the broad Plantaginaceae. Mints (Lamiaceae) have square stems, aromatic opposite leaves and fruits of four nutlets; Lentibulariaceae are carnivorous; and the olive family is woody with small 4-lobed flowers and 2 stamens.",
+      "options": {
+        "57860": "Carnivorous plants: butterworts with sticky, greasy-looking basal leaves, and bladderworts with tiny underwater traps; flowers spurred and two-lipped.",
+        "48623": "Mints: square stems, opposite, often aromatic leaves, two-lipped flowers, and an ovary that splits into four nutlets with the style arising between them.",
+        "50638": "Mostly herbs with opposite or basal leaves; flowers range from flat 4-lobed wheels to two-lipped, spurred or tubular forms, and the fruit is usually a capsule with many seeds. Now includes plantains, foxgloves and snapdragon relatives.",
+        "47733": "Olives, ashes and lilacs: trees and shrubs with opposite leaves, small 4-lobed flowers with only 2 stamens; fruits are drupes, winged samaras or capsules."
+      }
+    },
+    "genus": {
+      "summary": "Cymbalaria are trailing plants with long-stalked, rounded, palmately lobed leaves and single spurred, snapdragon-like flowers arising from the leaf axils. Collinsia has two-coloured flowers in whorls, while Penstemon and Nothochelone are upright plants with open-mouthed tubular flowers and a sterile fifth stamen.",
+      "options": {
+        "47324": "Blue-eyed Marys: small annuals with opposite leaves and two-lipped, often blue-and-white flowers in whorls; the middle lobe of the lower lip is folded into a pouch that hides the stamens.",
+        "48367": "Beardtongues: tubular, two-lipped flowers with 5 lobes, 4 fertile stamens and a fifth sterile stamen (staminode) that is often bearded with hairs.",
+        "55728": "Low, creeping or trailing perennials of walls and rocks with long-stalked, kidney-shaped to palmately lobed leaves; solitary flowers have a short spur and a closed, bulging palate (personate), like a tiny snapdragon.",
+        "72258": "Woodland beardtongue of Pacific Northwest mountain forests: a single species resembling Penstemon, with toothed opposite leaves and pink, tubular two-lipped flowers over 3 cm long with a hairy sterile stamen and winged seeds."
+      }
+    },
+    "species": {
+      "summary": "Ivy-leaved toadflax, the species naturalised on walls in southwestern BC, is usually hairless, with ivy-shaped leaves of 5–9 rounded lobes and lilac to violet flowers with a yellow palate, 9–15 mm long. Italian toadflax is hairy with flowers about twice as large; C. aequitriloba is a tiny mat-former; C. longipes is hairless with small fleshy leaves and grows on eastern Mediterranean coasts.",
+      "options": {
+        "485794": "From coasts of Greece, the Aegean and the eastern Mediterranean: hairless, with small (under 2 cm), fleshy, 5–9-lobed leaves on long stalks; grows on limestone cliffs, walls and shingle.",
+        "55727": "Trailing, usually hairless plant with long-stalked, ivy-shaped leaves (5–9 rounded lobes) and lilac to violet flowers with a yellow palate, 9–15 mm long. Mediterranean in origin; naturalised on walls and disturbed sites in southwestern BC.",
+        "333851": "A mountain species of Italy: stems and calyx hairy, leaves kidney-shaped and fleshy, and pale violet flowers with a white-and-yellow centre, noticeably larger (about twice the size) than ivy-leaved toadflax's.",
+        "485795": "From the western Mediterranean islands (Corsica, Sardinia, the Balearics) and nearby Italy: a very small plant forming flat mats of tiny scalloped leaves (the name means 'equally three-lobed') with miniature mauve flowers; grown in rock gardens."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "E-Flora BC: Cymbalaria muralis",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Cymbalaria%20muralis"
+    },
+    {
+      "title": "Wikipedia: Cymbalaria muralis",
+      "url": "https://en.wikipedia.org/wiki/Cymbalaria_muralis"
+    },
+    {
+      "title": "Wikipedia: Cymbalaria pallida",
+      "url": "https://en.wikipedia.org/wiki/Cymbalaria_pallida"
+    },
+    {
+      "title": "BSBI Plant Crib: Cymbalaria",
+      "url": "https://bsbi.org/learn/resources/plant-crib/cymbalaria"
+    },
+    {
+      "title": "Flora of Crete: Cymbalaria longipes",
+      "url": "https://www.cretanflora.com/cymbalaria_longipes_text.html"
+    },
+    {
+      "title": "Perennials.com: Cymbalaria aequitriloba",
+      "url": "https://www.perennials.com/plants/cymbalaria-aequitriloba.html"
+    },
+    {
+      "title": "Wikipedia: Nothochelone",
+      "url": "https://en.wikipedia.org/wiki/Nothochelone"
+    }
+  ]
+}

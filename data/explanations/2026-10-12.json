@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-12",
+  "ranks": {
+    "kingdom": {
+      "summary": "This is a green, rooted plant that makes its own food, which puts it in Plantae. Chromista photosynthesizers (kelps, diatoms) are brownish or golden, fungi don't photosynthesize and have chitin walls, and protozoa are mostly microscopic single cells.",
+      "options": {
+        "47170": "Fungi (including lichens) cannot photosynthesize on their own; they absorb food from their surroundings. Their cell walls contain chitin, and most grow as networks of thread-like hyphae, showing up as mushrooms, moulds, brackets or crusts.",
+        "47686": "Protozoa are mostly single-celled organisms such as amoebae and slime moulds, which feed by engulfing or absorbing food. They lack cellulose walls and chloroplasts and are usually microscopic, though slime moulds can form visible blobs.",
+        "47126": "Plants are multicellular organisms that make their own food by photosynthesis, using chloroplasts with chlorophylls a and b. Their cell walls are made of cellulose and they store energy as starch. Most are green and rooted in place.",
+        "48222": "Chromista includes kelps and other brown seaweeds, diatoms and water moulds. Photosynthetic members use chlorophylls a and c, plus brownish pigments such as fucoxanthin, so they look olive-brown or golden rather than grass-green."
+      }
+    },
+    "phylum": {
+      "summary": "A woody climbing plant with leaves and flowers relies on vascular tissue, including wood (xylem), to carry water. Liverworts are tiny non-vascular plants, and green and charophyte algae live in water without true roots, stems or leaves.",
+      "options": {
+        "64615": "Liverworts are small non-vascular plants that are either flat, lobed thalli or leafy shoots with leaves in neat rows. Their spore capsules sit on short-lived, translucent stalks and they lack true roots.",
+        "50863": "Green algae (Chlorophyta) are mostly aquatic, from single cells to sheets like sea lettuce. They share plant pigments but have no roots, stems, leaves or vascular tissue.",
+        "311313": "Charophyte algae are freshwater green algae, such as stoneworts, desmids and Spirogyra, that are the closest algal relatives of land plants. They lack vascular tissue, roots and true leaves.",
+        "211194": "Vascular plants have xylem and phloem, internal tubes that carry water and sugars, letting them grow tall with true roots, stems and leaves. The large, long-lived plant you see is the spore- or seed-producing generation."
+      }
+    },
+    "class": {
+      "summary": "Net-veined leaves in opposite pairs, a woody stem and flowers with 5 fused petals all point to dicots. Monocots have parallel-veined leaves and parts in threes, while lycophytes and ferns reproduce by spores and never flower.",
+      "options": {
+        "47163": "Monocots typically have one seed leaf, leaves with parallel veins (often long and strap-like with a sheathing base), flower parts in threes, scattered vascular bundles and fibrous roots.",
+        "47623": "Lycophytes (clubmosses, spikemosses, quillworts) have small leaves with a single unbranched vein. They reproduce by spores, often in cone-like tips, and never produce flowers or seeds.",
+        "47124": "Dicots typically have two seed leaves, net-veined leaves, flower parts in fours or fives, and a taproot. Their stem vascular bundles form a ring, so woody members can make true wood.",
+        "121943": "Ferns reproduce by spores, usually made in clusters (sori) on the underside of the fronds. New fronds unroll as fiddleheads, and they produce no flowers or seeds."
+      }
+    },
+    "order": {
+      "summary": "Opposite leaves, long tubular flowers with fused petals, and an ovary sitting below the flower (inferior) fit Dipsacales. Ranunculales usually have separate petals and many stamens, Fabales have pea flowers and pods, and Ericales typically have bell- or urn-shaped flowers with a superior ovary.",
+      "options": {
+        "48232": "Ranunculales (buttercups, poppies, columbines, barberries) usually have separate petals, many stamens, and often several separate pistils. Poppies may have milky or coloured sap.",
+        "48526": "Dipsacales usually have opposite leaves, petals fused into a tube, bell or funnel, and an ovary below the flower (inferior). The order includes elderberries, viburnums, valerians, teasels and snowberries.",
+        "47123": "Fabales are mostly legumes: flowers often pea-like with a banner, two wings and a keel, fruits in pods, and leaves usually compound with stipules. Many fix nitrogen in root nodules.",
+        "47181": "Ericales is a very diverse order including heathers, blueberries, primroses, balsams and tea. Many members have petals fused into bells, urns or tubes, and in heather relatives the anthers often open by small pores."
+      }
+    },
+    "family": {
+      "summary": "Caprifoliaceae flowers are often tubular or two-lipped, frequently paired or whorled, with longer corolla tubes. Viburnaceae (elders, viburnums) have small, shallow, radially symmetrical flowers crowded into flat or domed clusters and drupe fruits. Plantaginaceae (Lamiales) have a superior ovary and capsules, and Asteraceae pack tiny flowers into daisy-like heads.",
+      "options": {
+        "48527": "Caprifoliaceae (in the broad sense: snowberries, twinflower, valerians, teasels and kin): opposite leaves, flowers often tubular, bell-shaped or two-lipped, frequently in pairs, with berries, capsules or dry seed-like fruits.",
+        "781703": "Viburnaceae (also called Adoxaceae): elderberries, viburnums and moschatel. Flowers small, open and radially symmetrical in dense flat or domed clusters; fruit a juicy drupe; elders have pinnately compound leaves.",
+        "50638": "Plantaginaceae (plantains, speedwells, penstemons, foxgloves) belong to Lamiales, not Dipsacales. The ovary sits above the petals (superior) and the fruit is usually a capsule with many seeds; most are herbs.",
+        "47604": "Asteraceae (daisies, sunflowers, asters) belong to Asterales: many tiny flowers are packed into a head that looks like one flower, and the fruits are dry and one-seeded, often topped by bristles or scales."
+      }
+    },
+    "genus": {
+      "summary": "Lonicera is the only woody option: shrubs or twining vines with simple opposite leaves, tubular flowers with 5 stamens, and fleshy berries. Valeriana, Valerianella and Centranthus are herbs with small flowers in clusters and dry fruits.",
+      "options": {
+        "55754": "Valerianella (corn salads): small annual herbs with repeatedly forked stems and tiny pale blue or white flowers in flat clusters. Eaten as a salad green.",
+        "51874": "Lonicera: woody shrubs or twining vines with opposite simple leaves (sometimes the top pair fused around the stem), tubular or two-lipped flowers with 5 stamens, and juicy red, orange, blue or black berries.",
+        "57286": "Centranthus (red valerian): a herb with fleshy grey-green leaves and pink, red or white flowers bearing a slender spur and only 1 stamen. Naturalised on rocks and walls in SW BC.",
+        "56161": "Valeriana: perennial herbs with opposite, often pinnately divided leaves, small white to pink flowers in rounded clusters with 3 stamens, and fruits topped by feathery bristles. Sitka valerian is common in BC."
+      }
+    },
+    "species": {
+      "summary": "Orange honeysuckle has bright orange, trumpet-shaped flowers 2.5-4 cm long and hairs fringing the leaf edges, with the uppermost leaf pair fused into a disc. Pink honeysuckle has smaller pinkish flowers and stiffly hairy leaves, Tatarian honeysuckle is an upright shrub with paired flowers, and common honeysuckle has fragrant creamy flowers.",
+      "options": {
+        "77832": "Lonicera ciliosa: deciduous twining vine to 6 m; leaves with a fringe of long hairs, pale beneath, the top pair fused into a disc; orange-yellow to red flowers 2.5-4 cm in tight clusters; orange-red berries. Southern BC.",
+        "53416": "Lonicera hispidula: semi-evergreen vine with stiffly hairy leaves and fused stipules forming discs; whitish to pink or purplish flowers 12-20 mm in interrupted spikes. Southern Vancouver Island and Gulf Islands.",
+        "77836": "Lonicera tatarica: introduced upright shrub to 3 m, not a vine; pink, red or white flowers borne in pairs on stalks in the leaf joints; red or orange berries.",
+        "55885": "Lonicera periclymenum (woodbine): European climbing vine with creamy-white to yellowish flowers, often flushed pink, strongly fragrant at night, in clusters at shoot tips; red berries."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "E-Flora BC: Lonicera ciliosa",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Lonicera%20ciliosa"
+    },
+    {
+      "title": "E-Flora BC: Lonicera hispidula",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Lonicera%20hispidula"
+    },
+    {
+      "title": "E-Flora BC: Lonicera tatarica",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Lonicera%20tatarica"
+    },
+    {
+      "title": "Wikipedia: Lonicera periclymenum",
+      "url": "https://en.wikipedia.org/wiki/Lonicera_periclymenum"
+    },
+    {
+      "title": "Wikipedia: Viburnaceae",
+      "url": "https://en.wikipedia.org/wiki/Viburnaceae"
+    },
+    {
+      "title": "Wikipedia: Caprifoliaceae",
+      "url": "https://en.wikipedia.org/wiki/Caprifoliaceae"
+    }
+  ]
+}

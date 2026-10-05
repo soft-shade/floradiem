@@ -176,6 +176,16 @@
      "id": 48537,
      "name": "Lysichiton americanus",
      "common": "western skunk cabbage"
+    },
+    {
+     "id": 77656,
+     "name": "Lemna turionifera",
+     "common": "turion duckweed"
+    },
+    {
+     "id": 77655,
+     "name": "Lemna trisulca",
+     "common": "Ivy-leaved Duckweed"
     }
    ]
   }

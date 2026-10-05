@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-26",
+  "ranks": {
+    "kingdom": {
+      "summary": "Green leaves and stems that grow in one place and make food from sunlight point to the plant kingdom. Fungi lack chlorophyll and absorb their food, Chromista are mostly brown seaweeds and microscopic golden algae, and protozoa are mostly single-celled. Plants share chlorophylls a and b, starch for storage and cellulose cell walls.",
+      "options": {
+        "47126": "Multicellular organisms that make their own food by photosynthesis using chlorophylls a and b, store starch, and have cellulose cell walls. Most are green and grow anchored in one place.",
+        "47170": "Absorb food from their surroundings instead of photosynthesising, and have chitin in their cell walls. Seen as mushrooms, brackets, moulds or (with algal partners) lichens, never as green leafy shoots.",
+        "48222": "Mostly aquatic: kelps and other brown seaweeds, diatoms and their relatives. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden-brown to olive colours.",
+        "47686": "Mostly single-celled organisms such as amoebae and slime moulds that usually feed on other organisms. They never form leafy, rooted, photosynthetic bodies."
+      }
+    },
+    "phylum": {
+      "summary": "This is a small leafy shoot with no xylem and phloem, anchored by thread-like rhizoids: a moss. Liverworts are flat thalli or have leaves in two or three rows, often lobed and without a midrib; hornworts are flat thalli with horn-shaped capsules; vascular plants have true roots and veined leaves. Moss leaves spiral around the stem and often have a midrib.",
+      "options": {
+        "311249": "Mosses: small leafy shoots anchored by thread-like rhizoids, without true roots or xylem and phloem. The green leafy plant is the long-lived stage; spores come from a capsule on a stalk.",
+        "211194": "Vascular plants: they have xylem and phloem, tissues that carry water and food, so they can grow tall with true roots, stems and veined leaves. Includes lycophytes, ferns, conifers and flowering plants.",
+        "64615": "Liverworts: either flat, lobed thalli or leafy shoots with leaves in two or three rows, often lobed and without a midrib. No vascular tissue.",
+        "56327": "Hornworts: small, flat green bodies (thalli) with no leaves, sending up thin horn-shaped spore capsules. No vascular tissue."
+      }
+    },
+    "class": {
+      "summary": "Most mosses belong to Bryopsida, whose capsule mouth is ringed by jointed peristome teeth that open and close with humidity. Peat mosses have branches in clusters and a dense head at the top; Tetraphidopsida have just four solid teeth; Oedipodiopsida is a single soft-leaved species with no teeth at all. An ordinary-looking leafy moss is almost always Bryopsida.",
+      "options": {
+        "785242": "Tiny mosses whose capsules have only four solid, unjointed peristome teeth. Tetraphis often carries little cups of asexual buds (gemmae) at its shoot tips, common on rotting wood.",
+        "54698": "Peat mosses: branches in clusters along the stem and a crowded head at the top; leaves contain large empty water-storing cells. Capsules lack peristome teeth and burst open explosively.",
+        "1529727": "A single species of damp, shaded rock crevices with soft, rounded leaves; its capsule has no peristome teeth.",
+        "48372": "The largest moss class. Capsules open by a lid to reveal a peristome of jointed teeth built from thin cell-wall plates, which flex with humidity to release spores."
+      }
+    },
+    "order": {
+      "summary": "This moss grows on rock and has leaves ending in long, colourless hair-points that give a frosted look, typical of Grimmiales. Its leaf cells have thick, wavy walls. Dicranales usually have long, narrow, often sickle-shaped leaves; Aulacomniales are soft, wetland mosses with blunt leaves; Pottiales are mostly soil mosses with papillose leaves that curl and twist when dry.",
+      "options": {
+        "56118": "Mostly dark green to blackish mosses of exposed rock, often with colourless hair-points on the leaf tips; leaf cells are small with thick, often wavy walls.",
+        "67877": "Mosses with long, narrow, often sickle-curved leaves and a strong midrib; peristome teeth are often split into two prongs. Common on soil, rotting wood and rock faces.",
+        "1122196": "Mosses of fens, bogs and wet ground, with bluntly pointed leaves of rounded, papillose cells; often with clusters of gemmae on a bare stalk at the stem tip.",
+        "48370": "Mostly small mosses of soil and rock whose leaves are crowded with tiny papillae and curl or twist when dry; peristome teeth are often long and spirally twisted."
+      }
+    },
+    "family": {
+      "summary": "Grimmiaceae are the classic rock-dwelling mosses with hair-pointed leaves, thick-walled small cells and often wavy cell walls. Seligeriaceae are minute mosses of shaded limestone; Scouleriaceae are dark aquatic mosses of stream rocks with blunt leaves; Saelaniaceae is a small group with distinctive bluish-green, waxy-looking leaves on soil.",
+      "options": {
+        "56119": "Mosses of rock surfaces forming cushions or mats, often dark below with colourless hair-points on the leaves; leaf cells small and thick-walled, frequently with wavy walls.",
+        "156125": "Tiny mosses only a few millimetres tall, mostly on damp, shaded limestone or other rock, with very small capsules.",
+        "1037541": "Dark, coarse aquatic mosses of rocks in fast streams, with blunt, hair-pointless leaves and short capsules.",
+        "1124032": "A small family whose best-known member forms bluish, waxy-looking (glaucous) turfs on soil and in rock crevices."
+      }
+    },
+    "genus": {
+      "summary": "Racomitrium forms loose, spreading mats rather than tight cushions, with long shoots bearing short side branches, and its leaf cells have strongly wavy (sinuose) walls. Grimmia usually forms neat dark cushions; Schistidium has capsules sunk among the leaves whose central column falls off with the lid; Coscinodon has pleated leaves and a bell-shaped hood (calyptra) over the capsule.",
+      "options": {
+        "157097": "Small cushion mosses of dry rock with hair-pointed leaves that are pleated, and a large pleated bell-shaped calyptra covering the capsule.",
+        "56120": "Tight, rounded dark cushions on dry rock, leaves often with hair-points; capsules on short or curved stalks, some sunk among leaves.",
+        "119160": "Loose spreading mats or wefts with long, irregularly branched shoots; leaf cells with distinctly wavy walls; capsules held on long, straight stalks.",
+        "156230": "Dark cushion mosses whose capsules are immersed among the leaves; when the lid falls, the central column falls with it."
+      }
+    },
+    "species": {
+      "summary": "Elongate rock moss forms hoary mats on rock and sand, from the coast to high mountains. Its long, white hair-points are rough with papillae and bent back from the leaf tip, and the leaf cells are also papillose. Yellow fringe-moss has no hair-point at all and grows in stream splash zones. Yellow-green rock moss and Lawton's rock moss have smooth (non-papillose) cells; microscope work is often needed.",
+      "options": {
+        "167685": "Lawton's rock moss: a robust moss of rocks, frequent from Washington to Alaska, with large leaves (over 4 mm) and strong hair-points that run down the leaf edges; unusually, its capsule stalk twists to the right.",
+        "167681": "Elongate rock moss: hoary mats on rock and sand. Hair-points are long, white, papillose and bent back; leaf cells papillose; the slender midrib sits in a narrow channel.",
+        "167683": "Yellow-green rock moss: small shoots, blackish-green below and yellowish-olive at the tips, with long white hair-points; very common on dry rock. Its leaf cells lack papillae.",
+        "129655": "Yellow fringe-moss: grows on rocks in the splash zone of streams. Leaves have no hair-point; instead their blunt tips carry small teeth visible with a hand lens."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "Wagner, Guide to Racomitrium in Oregon: R. elongatum",
+      "url": "https://herbarium.science.oregonstate.edu/wagner/racomitrium/racelo.htm"
+    },
+    {
+      "title": "Wagner, Guide to Racomitrium in Oregon: R. heterostichum",
+      "url": "https://herbarium.science.oregonstate.edu/wagner/racomitrium/rachet.htm"
+    },
+    {
+      "title": "Wagner, Guide to Racomitrium in Oregon: R. lawtoniae",
+      "url": "https://herbarium.science.oregonstate.edu/wagner/racomitrium/raclaw.htm"
+    },
+    {
+      "title": "Wagner, Guide to Racomitrium in Oregon: R. aciculare",
+      "url": "https://herbarium.science.oregonstate.edu/wagner/racomitrium/racaci.htm"
+    },
+    {
+      "title": "Wikipedia: Grimmiaceae",
+      "url": "https://en.wikipedia.org/wiki/Grimmiaceae"
+    },
+    {
+      "title": "Wikipedia: Bryopsida",
+      "url": "https://en.wikipedia.org/wiki/Bryopsida"
+    }
+  ]
+}

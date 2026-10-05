@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-13",
+  "ranks": {
+    "kingdom": {
+      "summary": "This is a green, rooted plant that makes its own food, which puts it in Plantae. Chromista photosynthesizers (kelps, diatoms) are brownish or golden, fungi don't photosynthesize and have chitin walls, and protozoa are mostly microscopic single cells.",
+      "options": {
+        "47686": "Protozoa are mostly single-celled organisms such as amoebae and slime moulds, which feed by engulfing or absorbing food. They lack cellulose walls and chloroplasts and are usually microscopic, though slime moulds can form visible blobs.",
+        "48222": "Chromista includes kelps and other brown seaweeds, diatoms and water moulds. Photosynthetic members use chlorophylls a and c, plus brownish pigments such as fucoxanthin, so they look olive-brown or golden rather than grass-green.",
+        "47170": "Fungi (including lichens) cannot photosynthesize on their own; they absorb food from their surroundings. Their cell walls contain chitin, and most grow as networks of thread-like hyphae, showing up as mushrooms, moulds, brackets or crusts.",
+        "47126": "Plants are multicellular organisms that make their own food by photosynthesis, using chloroplasts with chlorophylls a and b. Their cell walls are made of cellulose and they store energy as starch. Most are green and rooted in place."
+      }
+    },
+    "phylum": {
+      "summary": "A flowering plant with roots, stems and leaves has vascular tissue for moving water and sugars. Mosses are small non-vascular plants, and charophyte and red algae are aquatic, lacking true roots, stems and leaves.",
+      "options": {
+        "311249": "Mosses are small, leafy, non-vascular plants that need moisture to reproduce. The green leafy shoots are the gametophyte; spores come from a capsule held up on a thin stalk.",
+        "311313": "Charophyte algae are freshwater green algae, such as stoneworts, desmids and Spirogyra, that are the closest algal relatives of land plants. They lack vascular tissue, roots and true leaves.",
+        "211194": "Vascular plants have xylem and phloem, internal tubes that carry water and sugars, letting them grow tall with true roots, stems and leaves. The large, long-lived plant you see is the spore- or seed-producing generation.",
+        "57774": "Red algae are mostly marine seaweeds coloured red, pink or purplish by the pigment phycoerythrin. They have no vascular tissue, roots or flowers, and are usually found attached to rocks in the sea."
+      }
+    },
+    "class": {
+      "summary": "Narrow, grass-like leaves with parallel veins, a bulb, and flowers with 6 tepals (parts in threes) are monocot features. Dicots usually have net-veined leaves and parts in fours or fives, conifers bear cones, and ferns reproduce by spores.",
+      "options": {
+        "47163": "Monocots typically have one seed leaf, leaves with parallel veins (often long and strap-like with a sheathing base), flower parts in threes, scattered vascular bundles and fibrous roots.",
+        "121943": "Ferns reproduce by spores, usually made in clusters (sori) on the underside of the fronds. New fronds unroll as fiddleheads, and they produce no flowers or seeds.",
+        "136329": "Conifers bear naked seeds on the scales of woody cones and have needle- or scale-like leaves. They never produce flowers or fruit, and most are evergreen trees or shrubs.",
+        "47124": "Dicots typically have two seed leaves, net-veined leaves, flower parts in fours or fives, and a taproot. Their stem vascular bundles form a ring, so woody members can make true wood."
+      }
+    },
+    "order": {
+      "summary": "This plant grows from a bulb and has unspotted tepals and flowers clustered on a leafless stalk, typical of Asparagales. Liliales usually have spotted or striped tepals with nectar at their bases, Alismatales are mostly aquatic, and Commelinales have 3 green sepals and 3 coloured petals.",
+      "options": {
+        "47329": "Liliales have showy flowers with 6 petal-like tepals (often spotted or striped), 6 stamens, and usually a superior ovary. Many grow from bulbs or rhizomes and carry nectar at the base of the tepals.",
+        "48073": "Alismatales are mostly wetland and aquatic plants: aroids with a spadix (fleshy flower spike) wrapped in a spathe (hood-like bract), water-plantains with 3 white petals, and submerged pondweeds and seagrasses.",
+        "49146": "Commelinales (spiderworts, pickerelweeds) have flowers with 3 green sepals and 3 coloured, often blue or purple, short-lived petals. They are mainly tropical and warm-temperate.",
+        "47218": "Asparagales is a huge order including irises, agaves, asparagus, daffodils and camas. Many grow from bulbs or corms; their tepals are rarely spotted and nectar is usually made in the ovary walls rather than at tepal bases."
+      }
+    },
+    "family": {
+      "summary": "Amaryllidaceae carry their flowers in an umbel (all stalks from one point) atop a leafless stalk, wrapped in papery bracts when young, and grow from true bulbs. Asparagaceae relatives often grow from corms or rhizomes, Iridaceae have 3 stamens, and Asphodelaceae carry their flowers in spikes or racemes.",
+      "options": {
+        "47781": "Iridaceae (irises, crocuses, blue-eyed grasses) have only 3 stamens, an inferior ovary, and flat sword-shaped leaves usually arranged edge-on in a fan.",
+        "55849": "Amaryllidaceae: bulbs, leafless flowering stalk (scape), and an umbel of flowers enclosed in bud by one or more papery spathe bracts. Includes daffodils, snowdrops and familiar kitchen vegetables.",
+        "47599": "Asparagaceae (camas, brodiaeas, hyacinths, asparagus): 6 tepals and 6 stamens; BC's umbel-flowered brodiaeas grow from corms, and camas has a raceme of blue flowers.",
+        "71400": "Asphodelaceae (aloes, red-hot pokers, daylilies) often have fleshy or strap-shaped leaves in rosettes and flowers in spikes or racemes, not umbels."
+      }
+    },
+    "genus": {
+      "summary": "Allium has an umbel of many small flowers, papery bracts beneath, and a sharp onion or garlic smell when crushed. Leucojum has a few nodding white bells with green tips, Amaryllis has huge pink trumpets on a leafless stalk, and Ipheion has a single star-shaped flower per stalk.",
+      "options": {
+        "55810": "Leucojum (snowflakes): nodding white bell-shaped flowers, each of the 6 equal tepals tipped with a green spot, on a hollow stalk. A garden plant.",
+        "47357": "Allium: bulbs with a characteristic sulphurous smell, narrow or flat leaves, and many small 6-tepalled flowers in an umbel subtended by papery bracts.",
+        "61828": "Amaryllis (belladonna lily) is a South African bulb producing a cluster of large, fragrant pink trumpet flowers on a bare stalk, before its leaves appear.",
+        "72194": "Ipheion (spring starflower) is a small South American bulb with one star-shaped, pale blue to white flower on each stalk. Its leaves also smell slightly oniony when bruised."
+      }
+    },
+    "species": {
+      "summary": "Nodding onion is the only option whose flower stalk bends over near the top so the pink umbel hangs downward, with the stamens poking out of the flowers. Hooker's onion and narrowleaf onion hold their umbels upright, and garlic is a cultivated plant whose umbel often bears small bulbils.",
+      "options": {
+        "60267": "Allium amplectens: erect, compact head-like umbel of white to pink star-shaped flowers whose tepals turn papery in fruit; leaves wither early. Blue-listed; SE Vancouver Island and Gulf Islands.",
+        "75363": "Allium sativum: cultivated plant whose bulb splits into cloves; umbel held erect, often with small bulbils mixed among or replacing the flowers. Not wild in BC.",
+        "59782": "Allium acuminatum: erect, open umbel of rose-pink flowers whose pointed tepal tips spread or curl backward. Dry rocky bluffs and Garry oak woodlands of SE Vancouver Island, Gulf Islands and Fraser Valley.",
+        "116364": "Allium cernuum: clustered elongated bulbs; flat leaves; stalk 10-50 cm, curved down at the top; nodding umbel of pink to rose-purple or whitish bell-shaped flowers with protruding stamens. Common on dry slopes and meadows in BC south of 56°N."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "E-Flora BC: Allium cernuum",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Allium%20cernuum"
+    },
+    {
+      "title": "E-Flora BC: Allium acuminatum",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Allium%20acuminatum"
+    },
+    {
+      "title": "E-Flora BC: Allium amplectens",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Allium%20amplectens"
+    },
+    {
+      "title": "Wikipedia: Garlic",
+      "url": "https://en.wikipedia.org/wiki/Garlic"
+    },
+    {
+      "title": "Wikipedia: Amaryllidaceae",
+      "url": "https://en.wikipedia.org/wiki/Amaryllidaceae"
+    },
+    {
+      "title": "Wikipedia: Ipheion",
+      "url": "https://en.wikipedia.org/wiki/Ipheion"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-27",
+  "ranks": {
+    "kingdom": {
+      "summary": "Green leaves and stems that grow in one place and make food from sunlight point to the plant kingdom. Fungi lack chlorophyll and absorb their food, Chromista are mostly brown seaweeds and microscopic golden algae, and protozoa are mostly single-celled. Plants share chlorophylls a and b, starch for storage and cellulose cell walls.",
+      "options": {
+        "47126": "Multicellular organisms that make their own food by photosynthesis using chlorophylls a and b, store starch, and have cellulose cell walls. Most are green and grow anchored in one place.",
+        "47170": "Absorb food from their surroundings instead of photosynthesising, and have chitin in their cell walls. Seen as mushrooms, brackets, moulds or (with algal partners) lichens, never as green leafy shoots.",
+        "48222": "Mostly aquatic: kelps and other brown seaweeds, diatoms and their relatives. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden-brown to olive colours.",
+        "47686": "Mostly single-celled organisms such as amoebae and slime moulds that usually feed on other organisms. They never form leafy, rooted, photosynthetic bodies."
+      }
+    },
+    "phylum": {
+      "summary": "This plant has true roots, upright stems and leaves with veins, which come from vascular tissue (xylem and phloem). Algae, mosses, liverworts and hornworts lack that plumbing, so they stay small, flat or live in water. Veined leaves and sturdy stems are the easiest giveaway.",
+      "options": {
+        "311313": "Charophyte algae such as stoneworts and desmids: freshwater green algae that are the closest algal relatives of land plants, but without vascular tissue, true roots or leaves.",
+        "211194": "Vascular plants: they have xylem and phloem, tissues that carry water and food, so they can grow tall with true roots, stems and veined leaves. Includes lycophytes, ferns, conifers and flowering plants.",
+        "56327": "Hornworts: small, flat green bodies (thalli) with no leaves, sending up thin horn-shaped spore capsules. No vascular tissue.",
+        "50863": "Green algae, living mostly in water, from single cells to sheets like sea lettuce. They share plant pigments but have no roots, vascular tissue or embryos nourished by a parent plant."
+      }
+    },
+    "class": {
+      "summary": "Flowers and fruits mark this as a flowering plant, which rules out the spore-bearing lycophytes and ferns and the cone-bearing conifers. Broad leaves with a branching network of veins, and flower parts in fours or fives, point to the dicots rather than the monocots, whose leaves usually have parallel veins and whose flower parts come in threes.",
+      "options": {
+        "47623": "Lycophytes (clubmosses, spikemosses, quillworts): spore-bearing vascular plants with small single-veined leaves, often with spores in cone-like tips. No flowers or seeds.",
+        "47163": "Monocots: flowering plants usually with parallel-veined, often strap-like leaves, flower parts in threes and a single seed leaf. Grasses, sedges, lilies and orchids belong here.",
+        "136329": "Conifers: seed plants with needle- or scale-like leaves and seeds carried on cone scales rather than inside a fruit. No flowers.",
+        "47124": "Dicots: flowering plants usually with net-veined leaves, flower parts in fours or fives, and two seed leaves. Includes most broad-leaved trees, shrubs and wildflowers."
+      }
+    },
+    "order": {
+      "summary": "Ericales often have petals fused into a bell or urn, and many are woody plants of acidic soils, with evergreen leaves. Caryophyllales are mostly herbs or succulents; Saxifragales are mostly herbs or succulents with separate petals; Rosales typically have five free petals on a cup-like base, or tiny wind-pollinated flowers.",
+      "options": {
+        "47181": "Heaths, primroses, balsams, phloxes and relatives: petals often fused into a tube, bell or urn, and stamens often attached to the petals or opening by pores.",
+        "47366": "Pinks, cacti, amaranths and relatives: mostly herbs or succulents, often with swollen nodes or fleshy leaves; many use betalain pigments for red and purple colours.",
+        "71289": "Saxifrages, stonecrops, currants and relatives: mostly herbs or succulents with separate petals; ovary often of two partly joined parts with diverging beaks.",
+        "47132": "Roses, elms, figs and relatives: leaves usually with stipules; flowers either with five free petals on a cup-like hypanthium or small and wind-pollinated."
+      }
+    },
+    "family": {
+      "summary": "The heath family is mostly woody, with tough, often evergreen leaves and small bell- or urn-shaped flowers that hang in clusters; the anthers often open by pores. Pitcher plants have tubular trap leaves, the phlox family has flat-faced, five-lobed flowers with a three-branched style, and the kiwifruit family is mostly climbing vines with many-seeded berries.",
+      "options": {
+        "52649": "New World pitcher plants: carnivorous herbs of bogs whose leaves form hollow tubes that trap insects; flowers nodding on leafless stalks.",
+        "48932": "Phlox family: mostly herbs with funnel- or saucer-shaped five-lobed flowers, a three-branched style and a three-chambered capsule.",
+        "133387": "Heath family: shrubs, trees and some leafless herbs, often of acidic soils; flowers often urn- or bell-shaped, anthers opening by pores, fruit a capsule or berry.",
+        "55150": "Kiwifruit family: mostly climbing vines or shrubs of eastern Asia with many-seeded juicy berries; not native to BC."
+      }
+    },
+    "genus": {
+      "summary": "Of these heath-family genera, only madrones are trees, with smooth, peeling, reddish bark, large glossy evergreen leaves and orange-red berries with a grainy, warty skin. Gaultheria and Chimaphila are low evergreen shrubs or subshrubs, and Monotropa is a white, leafless plant without chlorophyll.",
+      "options": {
+        "51047": "Madrones: evergreen trees or shrubs with peeling red-brown bark, leathery alternate leaves, clusters of white urn-shaped flowers and round, granular-skinned red or orange berries.",
+        "48442": "Wintergreens such as salal: low to medium shrubs with urn-shaped flowers; the fruit is a capsule wrapped in a fleshy calyx that looks like a dark berry.",
+        "49478": "Indian pipes: waxy white (or pinkish) plants without chlorophyll or green leaves, taking food from fungi; flowers nod at the stem tip.",
+        "62232": "Prince's pines: small evergreen subshrubs with leathery, toothed leaves in whorls and pink saucer-shaped flowers held in small clusters."
+      }
+    },
+    "species": {
+      "summary": "Pacific madrone is the only one native to BC, growing on dry, rocky sites near the south coast, Vancouver Island and the Gulf Islands. It is a tree with large, broad, glossy leaves (toothed on young shoots, mostly smooth-edged on mature ones), spring flowers and orange-red berries. Strawberry tree is a Mediterranean ornamental with toothed leaves that flowers in autumn; the other two are southwestern US and Mexican species.",
+      "options": {
+        "82689": "Strawberry tree: native to the Mediterranean and western Ireland, sometimes planted in BC. Leaves finely toothed; it flowers in autumn while last year's red fruits ripen.",
+        "158551": "Arizona madrone: mountains of southern Arizona, New Mexico and Mexico. Narrow, lance-shaped leaves; older trunks pale grey and checkered.",
+        "158552": "Texas madrone: Texas, New Mexico and Mexico. Often a small multi-stemmed tree; leaves smaller and frequently hairy beneath.",
+        "51046": "Pacific madrone: tree of the Pacific coast from southwest BC to California. Bark smooth and red-brown, peeling in thin sheets; leaves 7 to 15 cm, shiny above, pale beneath; flowers in spring."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "E-Flora BC: Arbutus menziesii",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Arbutus%20menziesii"
+    },
+    {
+      "title": "Wikipedia: Arbutus menziesii",
+      "url": "https://en.wikipedia.org/wiki/Arbutus_menziesii"
+    },
+    {
+      "title": "Wikipedia: Arbutus unedo",
+      "url": "https://en.wikipedia.org/wiki/Arbutus_unedo"
+    },
+    {
+      "title": "Wikipedia: Arbutus arizonica",
+      "url": "https://en.wikipedia.org/wiki/Arbutus_arizonica"
+    },
+    {
+      "title": "Wikipedia: Arbutus xalapensis",
+      "url": "https://en.wikipedia.org/wiki/Arbutus_xalapensis"
+    },
+    {
+      "title": "Wikipedia: Ericaceae",
+      "url": "https://en.wikipedia.org/wiki/Ericaceae"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-14",
+  "ranks": {
+    "kingdom": {
+      "summary": "This is a green, rooted plant that makes its own food, which puts it in Plantae. Chromista photosynthesizers (kelps, diatoms) are brownish or golden, fungi don't photosynthesize and have chitin walls, and protozoa are mostly microscopic single cells.",
+      "options": {
+        "47126": "Plants are multicellular organisms that make their own food by photosynthesis, using chloroplasts with chlorophylls a and b. Their cell walls are made of cellulose and they store energy as starch. Most are green and rooted in place.",
+        "47170": "Fungi (including lichens) cannot photosynthesize on their own; they absorb food from their surroundings. Their cell walls contain chitin, and most grow as networks of thread-like hyphae, showing up as mushrooms, moulds, brackets or crusts.",
+        "47686": "Protozoa are mostly single-celled organisms such as amoebae and slime moulds, which feed by engulfing or absorbing food. They lack cellulose walls and chloroplasts and are usually microscopic, though slime moulds can form visible blobs.",
+        "48222": "Chromista includes kelps and other brown seaweeds, diatoms and water moulds. Photosynthetic members use chlorophylls a and c, plus brownish pigments such as fucoxanthin, so they look olive-brown or golden rather than grass-green."
+      }
+    },
+    "phylum": {
+      "summary": "This woody shrub has roots, stems, leaves and flowers supplied by vascular tissue. Liverworts are tiny non-vascular plants, and green and red algae are aquatic, without true roots, stems or leaves.",
+      "options": {
+        "50863": "Green algae (Chlorophyta) are mostly aquatic, from single cells to sheets like sea lettuce. They share plant pigments but have no roots, stems, leaves or vascular tissue.",
+        "57774": "Red algae are mostly marine seaweeds coloured red, pink or purplish by the pigment phycoerythrin. They have no vascular tissue, roots or flowers, and are usually found attached to rocks in the sea.",
+        "211194": "Vascular plants have xylem and phloem, internal tubes that carry water and sugars, letting them grow tall with true roots, stems and leaves. The large, long-lived plant you see is the spore- or seed-producing generation.",
+        "64615": "Liverworts are small non-vascular plants that are either flat, lobed thalli or leafy shoots with leaves in neat rows. Their spore capsules sit on short-lived, translucent stalks and they lack true roots."
+      }
+    },
+    "class": {
+      "summary": "The leaves have a central midrib with net-like side veins, the stems are woody, and the flowers are five-parted: dicot features. Monocots have parallel veins and parts in threes, conifers bear cones and needles, and lycophytes reproduce by spores.",
+      "options": {
+        "136329": "Conifers bear naked seeds on the scales of woody cones and have needle- or scale-like leaves. They never produce flowers or fruit, and most are evergreen trees or shrubs.",
+        "47623": "Lycophytes (clubmosses, spikemosses, quillworts) have small leaves with a single unbranched vein. They reproduce by spores, often in cone-like tips, and never produce flowers or seeds.",
+        "47124": "Dicots typically have two seed leaves, net-veined leaves, flower parts in fours or fives, and a taproot. Their stem vascular bundles form a ring, so woody members can make true wood.",
+        "47163": "Monocots typically have one seed leaf, leaves with parallel veins (often long and strap-like with a sheathing base), flower parts in threes, scattered vascular bundles and fibrous roots."
+      }
+    },
+    "order": {
+      "summary": "The saucer-shaped flowers have petals fused into one piece, and the plant is an evergreen shrub of acidic, wet ground, fitting Ericales. Asterales mostly pack tiny flowers into daisy-like heads, Lamiales have two-lipped tubular flowers, and Ranunculales usually have separate petals and many stamens.",
+      "options": {
+        "47181": "Ericales is a very diverse order including heathers, blueberries, primroses, balsams and tea. Many members have petals fused into bells, urns or tubes, and in heather relatives the anthers often open by small pores.",
+        "47605": "Asterales are dominated by daisies and sunflowers, whose many tiny flowers are packed into a single head that looks like one flower. Bellflowers have fused, bell-shaped corollas.",
+        "48151": "Lamiales usually have petals fused into a tube that is often two-lipped (bilaterally symmetrical), with 2 or 4 stamens. Leaves are commonly opposite; the order includes mints, plantains, snapdragons and olives.",
+        "48232": "Ranunculales (buttercups, poppies, columbines, barberries) usually have separate petals, many stamens, and often several separate pistils. Poppies may have milky or coloured sap."
+      }
+    },
+    "family": {
+      "summary": "Ericaceae are mostly shrubs with tough or evergreen leaves, fused bell-, urn- or saucer-shaped corollas, and stamens that often open by pores; they thrive on acidic soils. Polemoniaceae are mainly herbs with a three-lobed stigma, Balsaminaceae have spurred flowers and exploding pods, and Actinidiaceae are woody vines from Asia.",
+      "options": {
+        "48932": "Polemoniaceae (phloxes, Jacob's ladders, gilias) are mostly herbs with 5 petals fused into a tube or funnel and a style split into 3 stigma branches.",
+        "47890": "Balsaminaceae (touch-me-nots) have juicy, translucent stems, bilaterally symmetrical spurred flowers, and seed pods that burst explosively when touched.",
+        "133387": "Ericaceae: mostly shrubs (some trees and evergreen herbs), often with leathery evergreen leaves; corollas fused into bells, urns or saucers; anthers frequently opening by pores. Common in bogs, forests and alpine heath.",
+        "55150": "Actinidiaceae (kiwifruit and allies) are mostly woody climbing vines and shrubs of eastern Asia, with fleshy many-seeded berries. Not wild in BC."
+      }
+    },
+    "genus": {
+      "summary": "Kalmia has saucer-shaped flowers whose 10 anthers are tucked into small pockets in the petals, springing out to dust visiting insects with pollen; fruit is a dry capsule. Vaccinium and Arbutus have urn-shaped flowers and fleshy berries, and Pyrola is a low evergreen herb with nodding flowers on a leafless stalk.",
+      "options": {
+        "48353": "Vaccinium (blueberries, huckleberries, cranberries): urn- or bell-shaped flowers and juicy berries with a small crown-like ring at the tip from the inferior ovary.",
+        "49398": "Kalmia: evergreen shrubs with saucer- or bowl-shaped pink to white flowers; in most species the anthers sit in pockets in the corolla until triggered; dry capsule fruits.",
+        "51047": "Arbutus is a tree with smooth, peeling, reddish bark, large glossy leaves, clusters of white urn-shaped flowers and orange-red berries. In BC it grows along the southern coast.",
+        "60369": "Pyrola (wintergreens): low evergreen herbs with a basal rosette of rounded leaves and a leafless stalk of nodding, open flowers with a long, often curved style."
+      }
+    },
+    "species": {
+      "summary": "Western bog laurel is a low shrub (10-50 cm) with small opposite leaves that are greyish beneath, and terminal clusters of deep pink saucer flowers with anther pockets. Alpine azalea is a mat-forming dwarf with tiny bell flowers lacking pockets, while sheep laurel and mountain laurel are eastern species with whorled or alternate leaves.",
+      "options": {
+        "53041": "Kalmia angustifolia: eastern North American shrub with leaves usually in whorls of 3 and smaller crimson-pink flowers in clusters along the stem, below the new growth.",
+        "204337": "Kalmia procumbens (formerly Loiseleuria): a prostrate mat with leaves only 3-8 mm and tiny pink bell-shaped flowers 4-5 mm, no anther pockets and 5 stamens. Bogs and alpine tundra in BC.",
+        "49397": "Kalmia latifolia: eastern US shrub often several metres tall with mostly alternate, stalked leaves 5-10 cm and large terminal clusters of white to pink flowers 2-2.5 cm wide.",
+        "67810": "Kalmia microphylla: 10-50 cm; leaves opposite, evergreen, shiny dark green above, greyish and finely hairy below, edges rolled under; deep pink saucers 1-2 cm wide in terminal clusters. Bogs and wet meadows throughout BC."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "E-Flora BC: Kalmia microphylla",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Kalmia%20microphylla"
+    },
+    {
+      "title": "E-Flora BC: Kalmia procumbens",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Kalmia%20procumbens"
+    },
+    {
+      "title": "Go Botany: Kalmia dichotomous key",
+      "url": "https://gobotany.nativeplanttrust.org/dkey/kalmia/"
+    },
+    {
+      "title": "Wikipedia: Ericaceae",
+      "url": "https://en.wikipedia.org/wiki/Ericaceae"
+    }
+  ]
+}

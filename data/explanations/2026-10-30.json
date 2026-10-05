@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-30",
+  "ranks": {
+    "kingdom": {
+      "summary": "Green leaves and stems that grow in one place and make food from sunlight point to the plant kingdom. Fungi lack chlorophyll and absorb their food, Chromista are mostly brown seaweeds and microscopic golden algae, and protozoa are mostly single-celled. Plants share chlorophylls a and b, starch for storage and cellulose cell walls.",
+      "options": {
+        "47126": "Multicellular organisms that make their own food by photosynthesis using chlorophylls a and b, store starch, and have cellulose cell walls. Most are green and grow anchored in one place.",
+        "47170": "Absorb food from their surroundings instead of photosynthesising, and have chitin in their cell walls. Seen as mushrooms, brackets, moulds or (with algal partners) lichens, never as green leafy shoots.",
+        "48222": "Mostly aquatic: kelps and other brown seaweeds, diatoms and their relatives. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden-brown to olive colours.",
+        "47686": "Mostly single-celled organisms such as amoebae and slime moulds that usually feed on other organisms. They never form leafy, rooted, photosynthetic bodies."
+      }
+    },
+    "phylum": {
+      "summary": "This plant has true roots, upright stems and leaves with veins, which come from vascular tissue (xylem and phloem). Algae, mosses, liverworts and hornworts lack that plumbing, so they stay small, flat or live in water. Veined leaves and sturdy stems are the easiest giveaway.",
+      "options": {
+        "56327": "Hornworts: small, flat green bodies (thalli) with no leaves, sending up thin horn-shaped spore capsules. No vascular tissue.",
+        "57774": "Red algae: mostly marine seaweeds coloured red to purple by phycoerythrin pigment. No vascular tissue, true roots or leaves, and no swimming (flagellated) cells.",
+        "211194": "Vascular plants: they have xylem and phloem, tissues that carry water and food, so they can grow tall with true roots, stems and veined leaves. Includes lycophytes, ferns, conifers and flowering plants.",
+        "311313": "Charophyte algae such as stoneworts and desmids: freshwater green algae that are the closest algal relatives of land plants, but without vascular tissue, true roots or leaves."
+      }
+    },
+    "class": {
+      "summary": "Flowers and fruits mark this as a flowering plant, which rules out the spore-bearing lycophytes and ferns and the cone-bearing conifers. Broad leaves with a branching network of veins, and flower parts in fours or fives, point to the dicots rather than the monocots, whose leaves usually have parallel veins and whose flower parts come in threes.",
+      "options": {
+        "121943": "Ferns (and horsetails): spore-bearing vascular plants without flowers or seeds. Fern fronds uncoil from fiddleheads and carry spore clusters on their undersides.",
+        "47163": "Monocots: flowering plants usually with parallel-veined, often strap-like leaves, flower parts in threes and a single seed leaf. Grasses, sedges, lilies and orchids belong here.",
+        "47623": "Lycophytes (clubmosses, spikemosses, quillworts): spore-bearing vascular plants with small single-veined leaves, often with spores in cone-like tips. No flowers or seeds.",
+        "47124": "Dicots: flowering plants usually with net-veined leaves, flower parts in fours or fives, and two seed leaves. Includes most broad-leaved trees, shrubs and wildflowers."
+      }
+    },
+    "order": {
+      "summary": "Saxifragales is defined largely by DNA, but members often have flowers with separate petals, a few stamens and a partly inferior ovary, and many have palmately lobed or fleshy leaves. Rosales usually have stipules and many stamens; Lamiales have fused, often two-lipped petals and opposite leaves; Fabales have pea flowers and pods.",
+      "options": {
+        "47132": "Roses, elms, figs and relatives: leaves usually with stipules; flowers with five free petals and many stamens on a hypanthium, or tiny and wind-pollinated.",
+        "48151": "Mints, plantains, olives and relatives: leaves usually opposite; petals fused into a tube, often two-lipped, with two or four stamens.",
+        "47123": "Legumes and milkworts: pea-like flowers with banner, wings and keel (or two petal-like sepals), and pod fruits; leaves often compound.",
+        "71289": "Saxifrages, stonecrops, peonies and relatives: herbs, succulents and shrubs, often with palmately lobed or fleshy leaves, separate petals and a few stamens; ovary often partly inferior."
+      }
+    },
+    "family": {
+      "summary": "This plant is a woody shrub with alternate, palmately lobed leaves and flowers whose ovary sits below a tubular hypanthium, ripening into a juicy berry. Saxifrages are mostly herbs with dry two-beaked capsules, katsura is a tree with opposite heart-shaped leaves, and water milfoils are aquatic herbs with feathery leaves.",
+      "options": {
+        "48386": "Saxifrage family: mostly herbs with basal leaves and small five-petalled flowers; fruit a dry capsule, often with two diverging beaks.",
+        "71475": "Katsura family: Asian trees with opposite, heart-shaped leaves that smell of caramel in autumn; tiny petal-less flowers; planted ornamentally.",
+        "47131": "Shrubs, sometimes spiny, with alternate, palmately lobed leaves; flowers with a tube-like hypanthium on top of an inferior ovary; fruit a many-seeded berry.",
+        "60205": "Water milfoil family: mostly aquatic herbs with finely divided, feather-like leaves in whorls and tiny flowers."
+      }
+    },
+    "genus": {
+      "summary": "Ribes is the only woody option: a shrub with palmately lobed, maple-like leaves, flowers with a tubular base sitting on top of the ovary, and juicy berries crowned by the withered flower. Stonecrops are succulents with fleshy leaves; saxifrages are low herbs with dry, two-beaked capsules; Tolmiea is a woodland herb whose hairy leaves sprout baby plantlets.",
+      "options": {
+        "47130": "Currants and gooseberries: shrubs with alternate, palmately lobed leaves, flowers in racemes or small clusters with a tube-like hypanthium, and juicy many-seeded berries; gooseberries are spiny, currants usually not.",
+        "55735": "Stonecrops: low succulent herbs with thick, fleshy, often cylindrical leaves; star-shaped five-petalled flowers, often yellow, ripening into several separate small pods.",
+        "55434": "Saxifrages: herbs, often with a basal rosette, of rocky, alpine or moist places; small five-petalled flowers; fruit a dry capsule with two diverging beaks.",
+        "53303": "Piggyback plant: herb of moist coastal forests with hairy, heart-shaped, lobed basal leaves that often grow plantlets where blade meets stalk; small tubular purplish-brown flowers with thread-like petals."
+      }
+    },
+    "species": {
+      "summary": "Red-flowering currant has no spines and bears showy drooping clusters of 10 to 20 deep pink to red flowers in early spring, followed by blue-black berries with a whitish bloom. Spreading and gummy gooseberries are spiny with only a few flowers per cluster; sticky currant is spineless but has white or cream flowers and very glandular-sticky leaves, growing in interior mountains.",
+      "options": {
+        "53435": "Red-flowering currant: spineless shrub of dry to moist open sites in southern BC, mainly west of the Cascades. Long hanging clusters of rose-pink to red flowers; blue-black glaucous berries.",
+        "53448": "Spreading gooseberry: spiny coastal shrub with long arching branches; small greenish to purplish flowers with long protruding stamens; smooth purple-black berries.",
+        "78861": "Gummy gooseberry: low shrub with nodal spines in threes; one or two fuchsia-like flowers with red sepals and white or pinkish petals; bristly-glandular, sticky, reddish-brown berries. S Vancouver Island and Gulf Islands.",
+        "78870": "Sticky currant: spineless shrub of montane and subalpine woods in south-central and southeastern BC, very glandular and sticky; white or cream flowers; deep bluish-black berries."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "E-Flora BC: Ribes sanguineum",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Ribes%20sanguineum"
+    },
+    {
+      "title": "E-Flora BC: Ribes lobbii",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Ribes%20lobbii"
+    },
+    {
+      "title": "E-Flora BC: Ribes viscosissimum",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Ribes%20viscosissimum"
+    },
+    {
+      "title": "E-Flora BC: Ribes divaricatum",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Ribes%20divaricatum"
+    },
+    {
+      "title": "Wikipedia: Grossulariaceae",
+      "url": "https://en.wikipedia.org/wiki/Grossulariaceae"
+    },
+    {
+      "title": "E-Flora BC: Tolmiea menziesii",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Tolmiea%20menziesii"
+    },
+    {
+      "title": "Wikipedia: Sedum",
+      "url": "https://en.wikipedia.org/wiki/Sedum"
+    },
+    {
+      "title": "Wikipedia: Saxifraga",
+      "url": "https://en.wikipedia.org/wiki/Saxifraga"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 """Pick daily puzzles from softshade's research-grade BC plant observations.
 
     python build_dailies.py START_DATE N_DAYS
+    python build_dailies.py --fill      # top up ranks with < 4 options
 
 writes data/daily/YYYY-MM-DD.json (species, answer options at each rank,
 photo list) and downloads that day's photos to assets/daily/YYYY-MM-DD/.
@@ -45,23 +46,47 @@ def lineage(sid):
     return out[::-1]
 
 
-def distractors(answer, rank_i, rng):
-    """Three wrong answers: siblings that also occur in BC, weighted toward
-    common ones; topped up from worldwide siblings when BC has too few."""
-    parent = tree[answer][3]
-    sibs = sorted((t for t, v in tree.items() if v[3] == parent and v[2] == rank_i and t != answer),
-                  key=lambda t: -tree[t][4])
-    picks = rng.sample(sibs[:8], min(3, len(sibs[:8])))
-    out = [opt(t) for t in picks]
-    if len(out) < 3:
-        world = get("taxa", taxon_id=parent, rank=MAIN_RANKS[rank_i], is_active="true",
-                    order_by="observations_count", per_page=12)["results"]
-        for t in world:
-            if len(out) == 3:
-                break
-            if t["id"] != answer and t["id"] not in picks and t["rank"] == MAIN_RANKS[rank_i]:
-                out.append(opt(t["id"], t["name"], t.get("preferred_common_name")))
+def distractors(answer, rank_i, rng, have=()):
+    """Wrong answers until there are three: siblings that also occur in BC
+    (weighted toward common ones), then worldwide siblings; if the group has
+    no other members, cousins from the next group up (BC first, then world),
+    climbing until three are found."""
+    out = [opt(t) if isinstance(t, int) else t for t in have]
+    taken = {answer} | {o["id"] for o in out}
+    rank = MAIN_RANKS[rank_i]
+    for anc in lineage(answer)[-2::-1]:          # parent, grandparent, ...
+        if len(out) >= 3:
+            break
+        bc = sorted((t for t, v in tree.items()
+                     if v[2] == rank_i and t not in taken and anc in lineage(t)), key=lambda t: -tree[t][4])
+        for t in rng.sample(bc[:8], min(3 - len(out), len(bc[:8]))):
+            out.append(opt(t)); taken.add(t)
+        if len(out) < 3:
+            world = get("taxa", taxon_id=anc, rank=rank, is_active="true",
+                        order_by="observations_count", per_page=12)["results"]
+            for t in world:
+                if len(out) < 3 and t["id"] not in taken and t["rank"] == rank:
+                    out.append(opt(t["id"], t["name"], t.get("preferred_common_name"))); taken.add(t["id"])
     return out
+
+
+def fill_short_ranks():
+    """Top up existing puzzles whose ranks have fewer than 4 options, keeping
+    the options already there (explanations may already cover them)."""
+    for f in sorted(glob.glob(os.path.join(ROOT, "data", "daily", "*.json"))):
+        p = json.load(open(f))
+        changed = False
+        for i, r in enumerate(p["ranks"]):
+            if len(r["options"]) < 4 and i > 0:
+                wrong = [o for o in r["options"] if o["id"] != r["answer"]]
+                new = distractors(r["answer"], i, random.Random(f"fill-{p['date']}-{i}"), wrong)
+                added = [o for o in new if o not in wrong]
+                r["options"] += added
+                changed = True
+                print(p["date"], r["rank"], "+", [o["name"] for o in added])
+        if changed:
+            with open(f, "w") as fh:
+                json.dump(p, fh, indent=1, ensure_ascii=False)
 
 
 def credit(attribution):
@@ -131,4 +156,7 @@ def main(start, n_days):
 
 
 if __name__ == "__main__":
-    main(dt.date.fromisoformat(sys.argv[1]), int(sys.argv[2]))
+    if sys.argv[1] == "--fill":
+        fill_short_ranks()
+    else:
+        main(dt.date.fromisoformat(sys.argv[1]), int(sys.argv[2]))

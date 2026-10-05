@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-11",
+  "ranks": {
+    "kingdom": {
+      "summary": "This is a green, rooted plant that makes its own food, which puts it in Plantae. Chromista photosynthesizers (kelps, diatoms) are brownish or golden, fungi don't photosynthesize and have chitin walls, and protozoa are mostly microscopic single cells.",
+      "options": {
+        "47170": "Fungi (including lichens) cannot photosynthesize on their own; they absorb food from their surroundings. Their cell walls contain chitin, and most grow as networks of thread-like hyphae, showing up as mushrooms, moulds, brackets or crusts.",
+        "47686": "Protozoa are mostly single-celled organisms such as amoebae and slime moulds, which feed by engulfing or absorbing food. They lack cellulose walls and chloroplasts and are usually microscopic, though slime moulds can form visible blobs.",
+        "48222": "Chromista includes kelps and other brown seaweeds, diatoms and water moulds. Photosynthetic members use chlorophylls a and c, plus brownish pigments such as fucoxanthin, so they look olive-brown or golden rather than grass-green.",
+        "47126": "Plants are multicellular organisms that make their own food by photosynthesis, using chloroplasts with chlorophylls a and b. Their cell walls are made of cellulose and they store energy as starch. Most are green and rooted in place."
+      }
+    },
+    "phylum": {
+      "summary": "This leafy flowering plant has roots, stems and leaves supplied by vascular tissue. Liverworts are small non-vascular plants, red algae (Rhodophyta) are mostly marine seaweeds, and charophyte algae are freshwater algae without true leaves or roots.",
+      "options": {
+        "57774": "Red algae are mostly marine seaweeds coloured red, pink or purplish by the pigment phycoerythrin. They have no vascular tissue, roots or flowers, and are usually found attached to rocks in the sea.",
+        "64615": "Liverworts are small non-vascular plants that are either flat, lobed thalli or leafy shoots with leaves in neat rows. Their spore capsules sit on short-lived, translucent stalks and they lack true roots.",
+        "211194": "Vascular plants have xylem and phloem, internal tubes that carry water and sugars, letting them grow tall with true roots, stems and leaves. The large, long-lived plant you see is the spore- or seed-producing generation.",
+        "311313": "Charophyte algae are freshwater green algae, such as stoneworts, desmids and Spirogyra, that are the closest algal relatives of land plants. They lack vascular tissue, roots and true leaves."
+      }
+    },
+    "class": {
+      "summary": "The leaves have parallel veins running lengthwise and the flowers are built on a plan of threes (3 sepals, 3 petals): monocot features. Ferns and lycophytes reproduce by spores, and conifers bear cones rather than flowers.",
+      "options": {
+        "121943": "Ferns reproduce by spores, usually made in clusters (sori) on the underside of the fronds. New fronds unroll as fiddleheads, and they produce no flowers or seeds.",
+        "47623": "Lycophytes (clubmosses, spikemosses, quillworts) have small leaves with a single unbranched vein. They reproduce by spores, often in cone-like tips, and never produce flowers or seeds.",
+        "47163": "Monocots typically have one seed leaf, leaves with parallel veins (often long and strap-like with a sheathing base), flower parts in threes, scattered vascular bundles and fibrous roots.",
+        "136329": "Conifers bear naked seeds on the scales of woody cones and have needle- or scale-like leaves. They never produce flowers or fruit, and most are evergreen trees or shrubs."
+      }
+    },
+    "order": {
+      "summary": "The small flowers are strongly bilaterally symmetrical, with one petal forming a lip and the reproductive parts fused into a column, a design found only in one Asparagales family. Liliales have six similar showy tepals, Poales have chaffy wind-pollinated flowers, and Acorales are aromatic sweet-flags.",
+      "options": {
+        "47162": "Poales are grass-like plants with narrow, parallel-veined leaves and small, usually wind-pollinated, chaffy or brownish flowers. Sedges, rushes, cattails and pineapples (bromeliads) belong here.",
+        "71270": "Acorales contains only the sweet-flags: aromatic plants with iris-like sword leaves and a finger-like spike of tiny flowers jutting sideways from a leaf-like stalk. It is the earliest-branching monocot lineage.",
+        "47329": "Liliales have showy flowers with 6 petal-like tepals (often spotted or striped), 6 stamens, and usually a superior ovary. Many grow from bulbs or rhizomes and carry nectar at the base of the tepals.",
+        "47218": "Asparagales is a huge order including irises, agaves, asparagus, daffodils and camas. Many grow from bulbs or corms; their tepals are rarely spotted and nectar is usually made in the ovary walls rather than at tepal bases."
+      }
+    },
+    "family": {
+      "summary": "Orchidaceae flowers have one petal modified into a lip (labellum), stamens and style fused into a single column, pollen in waxy packets (pollinia), and dust-like seeds. Asparagaceae and Amaryllidaceae have six similar tepals and six stamens, and Iridaceae have three stamens and flat, fan-arranged leaves.",
+      "options": {
+        "47599": "Asparagaceae (camas, asparagus, hyacinths, lily-of-the-valley) usually have radially symmetrical flowers with 6 similar tepals and 6 stamens and a superior ovary.",
+        "55849": "Amaryllidaceae (onions, daffodils, snowdrops) grow from bulbs and carry flowers in an umbel at the top of a leafless stalk, wrapped in papery bracts when in bud.",
+        "47217": "Orchidaceae: bilaterally symmetrical flowers with a distinctive lip petal, a central column combining stamen and style, pollen in pollinia, an inferior ovary, and tiny dust-like seeds.",
+        "47781": "Iridaceae (irises, crocuses, blue-eyed grasses) have 3 stamens, an inferior ovary, and flat sword-like leaves often arranged edge-on in a fan."
+      }
+    },
+    "genus": {
+      "summary": "Goodyera has an evergreen rosette of dark green, often white-marked leaves at ground level and a woolly spike of many small greenish-white flowers. Cypripedium has large slipper-shaped pouches, Galearis has one or two leaves and a few showier pink-and-white flowers, and Corallorhiza has no green leaves at all.",
+      "options": {
+        "47589": "Cypripedium (lady's slippers) has large flowers with an inflated slipper-like lip, and two fertile anthers rather than one. Leaves are broad, pleated and on the stem.",
+        "51433": "Galearis (round-leaved orchis) has a single or a few basal leaves and a few showy flowers, white or pink with a purple-spotted or tinted lip, rather than a dense spike of tiny ones.",
+        "50718": "Goodyera: a ground-level rosette of evergreen leaves, often with white veins or blotches, and a downy stalk carrying a spike of small whitish flowers whose pouch-like lip is hidden under a hood.",
+        "49445": "Corallorhiza (coralroots) has no green leaves; it gets food from fungi and sends up reddish, brown or yellowish stems from a branched, coral-like rhizome."
+      }
+    },
+    "species": {
+      "summary": "Western rattlesnake plantain has fairly large leaves (3-7 cm) marked with a white stripe or blotches mainly along the midvein, and a larger lip (about 5-7 mm). The other three have smaller leaves with white netting along the side veins too: lesser rattlesnake plantain is tiny with a one-sided spike, and checkered and downy are eastern species.",
+      "options": {
+        "62407": "Goodyera repens: small leaves 1-3 cm, sometimes with white net veining; one-sided spike; lip deeply pouched and only about 2-5 mm. Frequent in central and eastern BC.",
+        "62366": "Goodyera tesselata: eastern North American; light to bluish green leaves with a network of white markings, and flowers in a loose spiral with a shallow pouch.",
+        "50719": "Goodyera oblongifolia: leaves oblong-elliptic, 3-7 cm, dark green with white along the midvein; one-sided, often spiralled spike; lip about 5-8 mm. Common in mossy forests through southern BC.",
+        "62406": "Goodyera pubescens: eastern North America; leaves strongly netted with white, and a dense cylindrical spike where the spiral of flowers is barely visible."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "E-Flora BC: Goodyera oblongifolia",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Goodyera%20oblongifolia"
+    },
+    {
+      "title": "E-Flora BC: Goodyera repens",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Goodyera%20repens"
+    },
+    {
+      "title": "Go Botany: Goodyera dichotomous key",
+      "url": "https://gobotany.nativeplanttrust.org/dkey/goodyera/"
+    },
+    {
+      "title": "Go Botany: Goodyera tesselata",
+      "url": "https://gobotany.nativeplanttrust.org/species/goodyera/tesselata/"
+    },
+    {
+      "title": "Wikipedia: Orchidaceae",
+      "url": "https://en.wikipedia.org/wiki/Orchidaceae"
+    }
+  ]
+}

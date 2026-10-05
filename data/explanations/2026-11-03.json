@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-03",
+  "ranks": {
+    "kingdom": {
+      "summary": "Green leaves and stems that grow in one place and make food from sunlight point to the plant kingdom. Fungi lack chlorophyll and absorb their food, Chromista are mostly brown seaweeds and microscopic golden algae, and protozoa are mostly single-celled. Plants share chlorophylls a and b, starch for storage and cellulose cell walls.",
+      "options": {
+        "47126": "Multicellular organisms that make their own food by photosynthesis using chlorophylls a and b, store starch, and have cellulose cell walls. Most are green and grow anchored in one place.",
+        "47170": "Absorb food from their surroundings instead of photosynthesising, and have chitin in their cell walls. Seen as mushrooms, brackets, moulds or (with algal partners) lichens, never as green leafy shoots.",
+        "48222": "Mostly aquatic: kelps and other brown seaweeds, diatoms and their relatives. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden-brown to olive colours.",
+        "47686": "Mostly single-celled organisms such as amoebae and slime moulds that usually feed on other organisms. They never form leafy, rooted, photosynthetic bodies."
+      }
+    },
+    "phylum": {
+      "summary": "This plant has true roots, upright stems and leaves with veins, which come from vascular tissue (xylem and phloem). Algae, mosses, liverworts and hornworts lack that plumbing, so they stay small, flat or live in water. Veined leaves and sturdy stems are the easiest giveaway.",
+      "options": {
+        "311313": "Charophyte algae such as stoneworts and desmids: freshwater green algae that are the closest algal relatives of land plants, but without vascular tissue, true roots or leaves.",
+        "311249": "Mosses: small leafy shoots anchored by thread-like rhizoids, without true roots or xylem and phloem. The green leafy plant is the long-lived stage; spores come from a capsule on a stalk.",
+        "211194": "Vascular plants: they have xylem and phloem, tissues that carry water and food, so they can grow tall with true roots, stems and veined leaves. Includes lycophytes, ferns, conifers and flowering plants.",
+        "64615": "Liverworts: either flat, lobed thalli or leafy shoots with leaves in two or three rows, often lobed and without a midrib. No vascular tissue."
+      }
+    },
+    "class": {
+      "summary": "Flowers and fruits mark this as a flowering plant, which rules out the spore-bearing lycophytes and ferns and the cone-bearing conifers. Broad leaves with a branching network of veins, and flower parts in fours or fives, point to the dicots rather than the monocots, whose leaves usually have parallel veins and whose flower parts come in threes.",
+      "options": {
+        "136329": "Conifers: seed plants with needle- or scale-like leaves and seeds carried on cone scales rather than inside a fruit. No flowers.",
+        "47124": "Dicots: flowering plants usually with net-veined leaves, flower parts in fours or fives, and two seed leaves. Includes most broad-leaved trees, shrubs and wildflowers.",
+        "47623": "Lycophytes (clubmosses, spikemosses, quillworts): spore-bearing vascular plants with small single-veined leaves, often with spores in cone-like tips. No flowers or seeds.",
+        "121943": "Ferns (and horsetails): spore-bearing vascular plants without flowers or seeds. Fern fronds uncoil from fiddleheads and carry spore clusters on their undersides."
+      }
+    },
+    "order": {
+      "summary": "The flowers here are pea-like: a large upper petal (banner), two side petals (wings) and two lower petals joined into a keel, and the fruit is a pod. That combination marks Fabales. The other orders shown have radially symmetric flowers, daisy-like heads or fused bell-shaped petals instead.",
+      "options": {
+        "47123": "Pea-flowered plants and milkworts: flowers usually pea-like (a large upper banner, two side wings, a keel) or with two big petal-like sepals; fruits often pods; leaves often compound.",
+        "47605": "Sunflowers, bellflowers and relatives: tiny flowers packed into daisy-like heads, or bell-shaped fused petals; anthers often joined into a tube.",
+        "48232": "Buttercups, poppies, barberries and relatives: flowers often with many free stamens and pistils, and leaves often divided but without stipules.",
+        "47132": "Roses, elms, figs and relatives: radially symmetric flowers with five free petals and many stamens on a cup-like rim, or tiny wind-pollinated flowers."
+      }
+    },
+    "family": {
+      "summary": "The legume family is the one with true pea flowers (banner, wings and keel), compound leaves with stipules and pod fruits. Milkworts only mimic a pea flower, using two petal-like sepals as wings. The soapbark and bay-cedar families are small groups of trees and shrubs from elsewhere with simple leaves and no pea flowers.",
+      "options": {
+        "71608": "Soapbark family: a single genus of evergreen trees from Chile and nearby, with simple leaves, star-shaped flowers and star-shaped dry fruits.",
+        "61207": "Milkwort family: small flowers that look pea-like but are built differently, with two large coloured petal-like sepals (wings) and a lower petal often fringed.",
+        "71636": "Bay-cedar family: a small, mostly tropical and Australian group of shrubs and trees with simple leaves; none in BC.",
+        "47122": "Legume family: pea-shaped flowers with banner, wings and keel; fruit a pod (legume); leaves usually compound with stipules; roots often with nitrogen-fixing nodules."
+      }
+    },
+    "genus": {
+      "summary": "Trifolium has three leaflets all joined at one point and many small flowers packed into round heads; the withered petals usually stay on. Sweet peas and vetches have pinnate leaves with several leaflets ending in tendrils. Bird's-foot trefoils have yellow flowers in small umbels and five leaflets, the lower two set back by the stem like stipules.",
+      "options": {
+        "50321": "Sweet peas and vetchlings: pinnate leaves with few leaflets ending in tendrils; stems often winged; style flattened and hairy on one side.",
+        "52472": "Vetches: pinnate leaves with many leaflets and branched tendrils; stems usually not winged; style with a tuft of hairs around the tip.",
+        "47436": "Bird's-foot trefoils: yellow (often red-tinged) flowers in small umbels; leaves with five leaflets, two of them near the stem; long slender pods.",
+        "51876": "Clovers: three leaflets joined at one point; small flowers crowded in round heads, the petals persisting and enclosing the small pod."
+      }
+    },
+    "species": {
+      "summary": "White clover creeps along the ground on stolons that root at the nodes, and its white (sometimes pink-tinged) flower heads rise singly on long leafless stalks; the leaflets often show a pale V-shaped band. Alsike clover is upright without creeping stems; rabbitfoot clover has fuzzy grey heads; tomcat clover is an upright annual with purple, white-tipped flowers above a ring of toothed bracts.",
+      "options": {
+        "61824": "Alsike clover: upright or sprawling but not rooting along the stems; pinkish-white heads on leafy stems; leaflets without a pale chevron.",
+        "79408": "Rabbitfoot clover: annual with narrow leaflets and soft, fuzzy, greyish-pink oblong heads; feathery calyx teeth hide the tiny flowers.",
+        "55745": "White clover: creeping stolons root at the nodes; long-stalked white or pink-tinged heads arise from the creeping stem; leaflets often with a pale V-band.",
+        "57081": "Tomcat clover: native upright annual with narrow, linear leaflets; purple flowers with white tips in heads set on a conspicuous toothed involucre."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "E-Flora BC: Trifolium repens",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Trifolium%20repens"
+    },
+    {
+      "title": "Wikipedia: Trifolium repens",
+      "url": "https://en.wikipedia.org/wiki/Trifolium_repens"
+    },
+    {
+      "title": "Wikipedia: Trifolium hybridum",
+      "url": "https://en.wikipedia.org/wiki/Trifolium_hybridum"
+    },
+    {
+      "title": "Wikipedia: Trifolium arvense",
+      "url": "https://en.wikipedia.org/wiki/Trifolium_arvense"
+    },
+    {
+      "title": "Puget Prairie Plants: Trifolium willdenovii",
+      "url": "https://wikis.evergreen.edu/pugetprairieplants/index.php/Trifolium_willdenovii"
+    }
+  ]
+}

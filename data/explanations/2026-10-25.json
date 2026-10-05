@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-25",
+  "ranks": {
+    "kingdom": {
+      "summary": "Green leaves and stems that grow in one place and make food from sunlight point to the plant kingdom. Fungi lack chlorophyll and absorb their food, Chromista are mostly brown seaweeds and microscopic golden algae, and protozoa are mostly single-celled. Plants share chlorophylls a and b, starch for storage and cellulose cell walls.",
+      "options": {
+        "47126": "Multicellular organisms that make their own food by photosynthesis using chlorophylls a and b, store starch, and have cellulose cell walls. Most are green and grow anchored in one place.",
+        "47170": "Absorb food from their surroundings instead of photosynthesising, and have chitin in their cell walls. Seen as mushrooms, brackets, moulds or (with algal partners) lichens, never as green leafy shoots.",
+        "48222": "Mostly aquatic: kelps and other brown seaweeds, diatoms and their relatives. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden-brown to olive colours.",
+        "47686": "Mostly single-celled organisms such as amoebae and slime moulds that usually feed on other organisms. They never form leafy, rooted, photosynthetic bodies."
+      }
+    },
+    "phylum": {
+      "summary": "This plant has true roots, upright stems and leaves with veins, which come from vascular tissue (xylem and phloem). Algae, mosses, liverworts and hornworts lack that plumbing, so they stay small, flat or live in water. Veined leaves and sturdy stems are the easiest giveaway.",
+      "options": {
+        "211194": "Vascular plants: they have xylem and phloem, tissues that carry water and food, so they can grow tall with true roots, stems and veined leaves. Includes lycophytes, ferns, conifers and flowering plants.",
+        "50863": "Green algae, living mostly in water, from single cells to sheets like sea lettuce. They share plant pigments but have no roots, vascular tissue or embryos nourished by a parent plant.",
+        "57774": "Red algae: mostly marine seaweeds coloured red to purple by phycoerythrin pigment. No vascular tissue, true roots or leaves, and no swimming (flagellated) cells.",
+        "311313": "Charophyte algae such as stoneworts and desmids: freshwater green algae that are the closest algal relatives of land plants, but without vascular tissue, true roots or leaves."
+      }
+    },
+    "class": {
+      "summary": "Flowers and fruits mark this as a flowering plant, which rules out the spore-bearing lycophytes and ferns and the cone-bearing conifers. Broad leaves with a branching network of veins, and flower parts in fours or fives, point to the dicots rather than the monocots, whose leaves usually have parallel veins and whose flower parts come in threes.",
+      "options": {
+        "47124": "Dicots: flowering plants usually with net-veined leaves, flower parts in fours or fives, and two seed leaves. Includes most broad-leaved trees, shrubs and wildflowers.",
+        "47163": "Monocots: flowering plants usually with parallel-veined, often strap-like leaves, flower parts in threes and a single seed leaf. Grasses, sedges, lilies and orchids belong here.",
+        "47623": "Lycophytes (clubmosses, spikemosses, quillworts): spore-bearing vascular plants with small single-veined leaves, often with spores in cone-like tips. No flowers or seeds.",
+        "136329": "Conifers: seed plants with needle- or scale-like leaves and seeds carried on cone scales rather than inside a fruit. No flowers."
+      }
+    },
+    "order": {
+      "summary": "Malpighiales is a huge, varied order recognised more by DNA than by one obvious trait. Here the clues are a tree with simple, alternate, toothed leaves with stipules and tiny flowers packed into dangling catkins. Caryophyllales are mostly herbs, often succulent; Rosales usually have showy five-petalled flowers or rough leaves; Fabales have pea-like flowers and pods.",
+      "options": {
+        "47366": "Pinks, cacti, amaranths and relatives: mostly herbs or succulents, often with swollen nodes, opposite leaves or fleshy tissues, and many with betalain (red-violet) pigments rather than anthocyanins.",
+        "47132": "Roses, elms, figs, nettles and relatives: typically with stipules and flowers with five free petals and a cup-like hypanthium, or reduced wind-pollinated flowers with rough or asymmetric leaves.",
+        "47123": "Legumes and milkworts: flowers usually pea-like (banner, wings, keel) or with two petal-like sepals, and fruits that are pods; leaves often compound.",
+        "51820": "A large, diverse order including willows, violets, spurges and St. John's worts. Members often have toothed leaves whose teeth end in a gland; northern trees in it bear flowers in catkins."
+      }
+    },
+    "family": {
+      "summary": "The willow family is the one with flowers in catkins: male and female catkins on separate trees, ripening into capsules that release seeds wrapped in cottony fluff. Leaves are simple, alternate and toothed. St. John's worts have opposite, dotted leaves and yellow flowers, spurges have milky sap and odd cup-like flower clusters, and waterworts are tiny aquatic herbs.",
+      "options": {
+        "47567": "Willow family: trees and shrubs with simple alternate leaves, stipules and separate male and female plants. Tiny flowers in catkins become capsules shedding cottony-haired seeds.",
+        "71412": "St. John's wort family: herbs or shrubs with opposite leaves often marked with translucent or black gland dots, and yellow flowers with many stamens.",
+        "51821": "Spurge family: often with milky sap; many have a cup-like flower cluster (cyathium) and fruits that split into three parts.",
+        "52644": "Waterworts: tiny herbs of wet mud or shallow water with opposite leaves and minute flowers; nothing tree-like."
+      }
+    },
+    "genus": {
+      "summary": "Two of these options, Casearia and Scolopia, are tropical woody plants with ordinary small flowers, not catkins. Poplars and willows both have catkins, but poplar buds are covered by several overlapping scales, catkins hang down, the catkin bracts are fringed or lobed, and leaf stalks are long. Willow buds have a single cap-like scale and their catkins are often upright.",
+      "options": {
+        "83034": "A large tropical genus of trees and shrubs, often with translucent dots or lines in the leaves and small clustered flowers; not found wild in BC.",
+        "181943": "Tropical and subtropical trees and shrubs of Africa and Asia, often thorny, with small bisexual flowers; not found wild in BC.",
+        "53453": "Willows: each bud is covered by one cap-like scale; catkins are often erect, with smooth-edged bracts; leaves are usually narrower with short stalks.",
+        "47566": "Poplars, cottonwoods and aspens: buds with several overlapping scales (often resinous), long leaf stalks, drooping catkins with fringed bracts, and a cup-shaped disc at the base of each flower."
+      }
+    },
+    "species": {
+      "summary": "Black cottonwood is the tall poplar of BC river valleys and the coast. Its leaves are egg-shaped to lance-shaped with a long pointed tip, dark green above and pale (often rusty-stained) beneath, on rounded stalks; buds are sticky and smell of balsam. The aspens have nearly round leaves on flattened stalks that make them tremble, and narrowleaf cottonwood has willow-like narrow leaves.",
+      "options": {
+        "47571": "European aspen: native to Europe and Asia, not BC. Round leaves with coarse, wavy teeth on flattened stalks, so they flutter in the wind.",
+        "54840": "Quaking aspen: very common across BC. Smooth, whitish to pale green bark and small, nearly round, finely toothed leaves on flattened stalks that quiver in the slightest breeze.",
+        "78699": "Black cottonwood: tall tree with deeply furrowed grey bark when old. Leaves broad-based and pointed, whitish beneath, on round stalks; buds sticky and fragrant; capsules usually split into three parts.",
+        "52130": "Narrowleaf cottonwood: a Rocky Mountain species of the interior US and southern Alberta. Leaves narrow and lance-shaped like a willow's, on short stalks."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "E-Flora BC: Populus trichocarpa",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Populus%20trichocarpa"
+    },
+    {
+      "title": "Wikipedia: Populus trichocarpa",
+      "url": "https://en.wikipedia.org/wiki/Populus_trichocarpa"
+    },
+    {
+      "title": "Wikipedia: Populus angustifolia",
+      "url": "https://en.wikipedia.org/wiki/Populus_angustifolia"
+    },
+    {
+      "title": "Wikipedia: Salicaceae",
+      "url": "https://en.wikipedia.org/wiki/Salicaceae"
+    },
+    {
+      "title": "Wikipedia: Malpighiales",
+      "url": "https://en.wikipedia.org/wiki/Malpighiales"
+    }
+  ]
+}

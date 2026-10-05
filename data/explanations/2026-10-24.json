@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-24",
+  "ranks": {
+    "kingdom": {
+      "summary": "This is a green, leafy organism that makes its own food by photosynthesis, so it belongs with the plants. Fungi lack chlorophyll and absorb their food, protozoa are mostly microscopic single cells, and chromists include kelps and diatoms that are coloured brown or golden by different pigments.",
+      "options": {
+        "47126": "Multicellular organisms that make their own food with chlorophylls a and b, store starch and have cellulose cell walls. Green leaves, stems and roots are the giveaway.",
+        "47170": "Fungi absorb food from their surroundings instead of photosynthesising, and have chitin cell walls. Seen as mushrooms, moulds and brackets, or as lichens when partnered with algae; never leafy and green.",
+        "47686": "Mostly single-celled, often mobile organisms such as amoebae, plus slime moulds; they feed by engulfing food and have no leaves, stems or roots.",
+        "48222": "Kelps, diatoms, water moulds and relatives, mostly aquatic. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden to olive-brown colours rather than grass-green."
+      }
+    },
+    "phylum": {
+      "summary": "Its stems and leaves contain veins of xylem and phloem that conduct water and food, and it produces flowers and seeds. Liverworts and mosses are small non-vascular plants that reproduce by spores, and charophytes are algae without true roots, stems or leaves.",
+      "options": {
+        "211194": "Plants with xylem and phloem, internal tubes that carry water and sugars. This lets them grow true roots, stems and leaves and reach large sizes; it includes lycophytes, horsetails, conifers and flowering plants, among others.",
+        "64615": "Liverworts: small non-vascular plants, either flat ribbon-like sheets (thalli) or leafy stems with leaves in 2–3 rows that are often lobed. Spores come from capsules on short-lived, translucent stalks.",
+        "311249": "Mosses: low, non-vascular plants with tiny leaves usually only one cell thick, anchored by hair-like rhizoids. Spores are released from capsules on wiry stalks; no flowers or seeds.",
+        "311313": "Charophyte algae: freshwater green algae most closely related to land plants, such as stoneworts with whorled branches and microscopic desmids. No vascular tissue or true leaves."
+      }
+    },
+    "class": {
+      "summary": "Net-veined leaves and flower parts in 4s or 5s point to the dicots. Monocots usually have parallel-veined leaves and flower parts in 3s, while lycophytes, ferns and conifers never produce flowers.",
+      "options": {
+        "47124": "Flowering plants usually with net-veined leaves, flower parts in 4s or 5s, two seed leaves (cotyledons), and often a taproot.",
+        "47163": "Flowering plants with one seed leaf, usually parallel-veined leaves, flower parts in 3s and fibrous roots; examples include lilies, orchids, sedges and palms.",
+        "121943": "Spore-bearing vascular plants, usually with large, often divided fronds that unroll from fiddleheads and carry spore clusters underneath; no flowers or seeds. Horsetails are included here too.",
+        "47623": "Clubmosses, spikemosses and quillworts: small, simple leaves (microphylls) with a single vein, often densely clothing the stem; spores borne in cones or leaf axils; no flowers or seeds."
+      }
+    },
+    "order": {
+      "summary": "Asterales have petals fused into a tube or bell, and include flower-head plants, bellflowers and some wetland herbs with fringed or winged petals. Ranunculales typically have separate petals and many stamens, Rosales have separate petals and often stipules, and Fabales have pea-like flowers and pods.",
+      "options": {
+        "48232": "Buttercups, poppies and barberries: flowers usually with separate petals, many spirally arranged stamens and often several separate pistils.",
+        "47605": "Sunflowers, bellflowers, lobelias and relatives: petals fused into a tube or bell, ovary often below the flower, and many store inulin rather than starch. The largest family packs tiny flowers into heads.",
+        "47132": "Roses, elms, nettles and figs. Typically 5 separate petals, numerous stamens, and stipules (small leafy flaps) at the base of the leaf stalks.",
+        "47123": "Legumes and milkworts: many have butterfly-shaped (pea) flowers, compound leaves and fruits that are pods; many legumes fix nitrogen in root nodules."
+      }
+    },
+    "family": {
+      "summary": "Menyanthaceae are aquatic or bog herbs with alternate or basal leaves and 5-lobed fused flowers whose petals are often fringed, bearded or winged; the ovary sits above the petals. Asteraceae pack flowers into heads, Campanulaceae have bells and often milky sap, and Goodeniaceae (mostly Australian) have fan-shaped flowers split down one side.",
+      "options": {
+        "62369": "Bog and water plants such as buckbean and floating hearts: leaves alternate or basal, sometimes floating; flowers with 5 fused petals that are often bearded, fringed or winged; superior ovary.",
+        "145472": "Fanflowers: mostly Australian herbs and shrubs; the corolla is often split down one side into a fan shape, and the style bears a cup (indusium) that collects and presents pollen.",
+        "48040": "Bellflowers and lobelias: often milky sap, bell-shaped or two-lipped fused corollas, and an inferior ovary below the flower.",
+        "47604": "Daisies and sunflowers: many tiny flowers packed into a head surrounded by green bracts, often with ray and disc florets; seeds often topped by a pappus of bristles or scales."
+      }
+    },
+    "genus": {
+      "summary": "Nephrophyllidium has thick, kidney-shaped, scalloped basal leaves on long stalks and white flowers whose petals carry wavy wings and a central keel. Menyanthes has leaves divided into three leaflets and hairy-fringed petals, Nymphoides has floating lily-pad-like leaves, and Ornduffia is an Australian group.",
+      "options": {
+        "560461": "Australian aquatic or wetland herbs split off from the related genus Villarsia in 2009; not found in North America.",
+        "72235": "Buckbean: a bog plant whose leaves are divided into three leaflets, with white to pinkish flowers whose petals are densely fringed with white hairs on the upper face.",
+        "340458": "A wetland herb with only basal, thick, kidney-shaped, scalloped leaves 5–14 cm wide on long stalks, and loose clusters of white 5-petalled flowers whose petals have wavy wings and a keel.",
+        "62370": "Floating hearts: aquatic plants with floating, round to heart-shaped leaves like small water-lilies and yellow or white flowers held at the water surface."
+      }
+    },
+    "species": {
+      "summary": "Deer-cabbage is the only species in its genus. It grows in bogs, swamps and wet forests from Alaska to Oregon and in Japan; look for thick, kidney-shaped, scalloped basal leaves and white flowers whose crinkled petal wings suggest a rooster's comb (crista-galli). Bogbean has three-parted leaves and hairy-fringed petals, and the two floating hearts are water plants with floating leaves.",
+      "options": {
+        "340457": "A perennial with all leaves basal, kidney- to heart-shaped, toothed and 5–14 cm wide on stalks 10–30 cm long; 5–30 white flowers in loose clusters with petals wavy on midveins and margins. Common in coastal BC bogs and wet forests from low to subalpine elevations.",
+        "78016": "Bogbean (buckbean): leaves divided into three leaflets, and pinkish-white flowers whose petals are densely fringed with white hairs; grows in standing water and bogs throughout BC.",
+        "78237": "Water fringe (yellow floating heart): a Eurasian aquatic with floating, round to heart-shaped leaves and bright yellow 5-petalled flowers with fringed edges, held at the water surface.",
+        "165759": "Water snowflake: a tropical and subtropical aquatic with floating heart-shaped leaves and small white flowers whose petals are covered in fluffy, snowflake-like fringes."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Nephrophyllidium",
+      "url": "https://en.wikipedia.org/wiki/Nephrophyllidium"
+    },
+    {
+      "title": "UBC Coastal Plants: Fauria crista-galli (deer cabbage)",
+      "url": "https://blogs.ubc.ca/coastal-plants/plants-of-bc/entry/17"
+    },
+    {
+      "title": "E-Flora BC: Nephrophyllidium crista-galli",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Nephrophyllidium%20crista-galli"
+    },
+    {
+      "title": "Burke Herbarium Image Collection: Nephrophyllidium crista-galli",
+      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Nephrophyllidium%20crista-galli"
+    },
+    {
+      "title": "Wikipedia: Menyanthaceae",
+      "url": "https://en.wikipedia.org/wiki/Menyanthaceae"
+    },
+    {
+      "title": "Wikipedia: Ornduffia",
+      "url": "https://en.wikipedia.org/wiki/Ornduffia"
+    },
+    {
+      "title": "Wikipedia: Nymphoides peltata",
+      "url": "https://en.wikipedia.org/wiki/Nymphoides_peltata"
+    },
+    {
+      "title": "Wikipedia: Nymphoides indica",
+      "url": "https://en.wikipedia.org/wiki/Nymphoides_indica"
+    },
+    {
+      "title": "Burke Herbarium Image Collection: Menyanthes trifoliata",
+      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Menyanthes%20trifoliata"
+    }
+  ]
+}

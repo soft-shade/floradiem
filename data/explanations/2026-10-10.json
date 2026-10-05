@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-10",
+  "ranks": {
+    "kingdom": {
+      "summary": "This is a green, rooted plant that makes its own food, which puts it in Plantae. Chromista photosynthesizers (kelps, diatoms) are brownish or golden, fungi don't photosynthesize and have chitin walls, and protozoa are mostly microscopic single cells.",
+      "options": {
+        "47686": "Protozoa are mostly single-celled organisms such as amoebae and slime moulds, which feed by engulfing or absorbing food. They lack cellulose walls and chloroplasts and are usually microscopic, though slime moulds can form visible blobs.",
+        "47170": "Fungi (including lichens) cannot photosynthesize on their own; they absorb food from their surroundings. Their cell walls contain chitin, and most grow as networks of thread-like hyphae, showing up as mushrooms, moulds, brackets or crusts.",
+        "47126": "Plants are multicellular organisms that make their own food by photosynthesis, using chloroplasts with chlorophylls a and b. Their cell walls are made of cellulose and they store energy as starch. Most are green and rooted in place.",
+        "48222": "Chromista includes kelps and other brown seaweeds, diatoms and water moulds. Photosynthetic members use chlorophylls a and c, plus brownish pigments such as fucoxanthin, so they look olive-brown or golden rather than grass-green."
+      }
+    },
+    "phylum": {
+      "summary": "Tall stems, long leaves and roots that reach down into wet soil all depend on vascular tissue to move water and sugars. Hornworts and liverworts are tiny non-vascular plants hugging damp surfaces, and green algae live mostly in water without roots or leaves.",
+      "options": {
+        "56327": "Hornworts are tiny non-vascular plants with a flat, ribbon-like green body (thallus). Their spores are made in upright, horn-shaped sporophytes that keep growing from the base.",
+        "211194": "Vascular plants have xylem and phloem, internal tubes that carry water and sugars, letting them grow tall with true roots, stems and leaves. The large, long-lived plant you see is the spore- or seed-producing generation.",
+        "64615": "Liverworts are small non-vascular plants that are either flat, lobed thalli or leafy shoots with leaves in neat rows. Their spore capsules sit on short-lived, translucent stalks and they lack true roots.",
+        "50863": "Green algae (Chlorophyta) are mostly aquatic, from single cells to sheets like sea lettuce. They share plant pigments but have no roots, stems, leaves or vascular tissue."
+      }
+    },
+    "class": {
+      "summary": "Long, narrow, strap-like leaves with parallel veins and a sheath wrapping the stem are classic monocot features. Conifers bear cones and needles, ferns unroll fronds and make spores, and lycophytes have tiny one-veined leaves and spores instead of flowers.",
+      "options": {
+        "47623": "Lycophytes (clubmosses, spikemosses, quillworts) have small leaves with a single unbranched vein. They reproduce by spores, often in cone-like tips, and never produce flowers or seeds.",
+        "136329": "Conifers bear naked seeds on the scales of woody cones and have needle- or scale-like leaves. They never produce flowers or fruit, and most are evergreen trees or shrubs.",
+        "121943": "Ferns reproduce by spores, usually made in clusters (sori) on the underside of the fronds. New fronds unroll as fiddleheads, and they produce no flowers or seeds.",
+        "47163": "Monocots typically have one seed leaf, leaves with parallel veins (often long and strap-like with a sheathing base), flower parts in threes, scattered vascular bundles and fibrous roots."
+      }
+    },
+    "order": {
+      "summary": "Narrow sheathing leaves and small, chaffy, wind-pollinated flowers without showy petals point to Poales. Asparagales usually have showy petal-like tepals, Acorales are aromatic sweet-flags with a sideways finger-like flower spike, and Arecales are woody palms.",
+      "options": {
+        "71270": "Acorales contains only the sweet-flags: aromatic plants with iris-like sword leaves and a finger-like spike of tiny flowers jutting sideways from a leaf-like stalk. It is the earliest-branching monocot lineage.",
+        "47218": "Asparagales is a huge order including irises, agaves, asparagus, daffodils and camas. Many grow from bulbs or corms; their tepals are rarely spotted and nectar is usually made in the ovary walls rather than at tepal bases.",
+        "47162": "Poales are grass-like plants with narrow, parallel-veined leaves and small, usually wind-pollinated, chaffy or brownish flowers. Sedges, rushes, cattails and pineapples (bromeliads) belong here.",
+        "48866": "Arecales are the palms: woody, usually unbranched trunks topped by large fan- or feather-shaped leaves. They are tropical and warm-temperate and none are native to BC."
+      }
+    },
+    "family": {
+      "summary": "Grasses (Poaceae) have round, usually hollow stems with solid joints (nodes), leaf sheaths open on one side, and leaves in two rows. Sedges have solid, often three-sided stems and leaves in three rows, rushes have tiny six-tepalled flowers, and cattails have brown sausage-shaped spikes.",
+      "options": {
+        "52642": "Juncaceae (rushes, wood-rushes) have round stems and flowers that look like tiny brown or green lilies, with 6 tepals, producing capsules full of small seeds.",
+        "47161": "Cyperaceae (sedges) usually have solid, often triangular stems ('sedges have edges'), closed leaf sheaths, leaves in three rows, and each tiny flower tucked behind a single scale.",
+        "48694": "Typhaceae (cattails and bur-reeds) have flowers packed into dense cylindrical spikes (cattails, brown and velvety) or round spiky balls (bur-reeds).",
+        "47434": "Poaceae: round, mostly hollow stems with swollen nodes, leaves in two rows with an open sheath and a ligule (small flap or fringe) where blade meets sheath, and tiny florets enclosed in scales, grouped into spikelets."
+      }
+    },
+    "genus": {
+      "summary": "Phalaris has its spikelets in a panicle (a branched cluster), each spikelet flattened with two equal keeled glumes enclosing one fertile floret and tiny sterile lemmas at its base. Pseudoroegneria and Agropyron carry spikelets directly on an unbranched spike, and Dactylis bunches its spikelets into dense one-sided clumps.",
+      "options": {
+        "57189": "Phalaris: spikelets flattened, with 2 large, equal, keeled (sometimes winged) glumes hiding a single fertile floret plus 1-2 small sterile lemmas; spikelets crowded in a dense or lobed panicle.",
+        "156421": "Pseudoroegneria (bluebunch wheatgrass) is a dry-country bunchgrass with spikelets set singly and well spaced along an unbranched spike, often with spreading awns. Common in BC's interior grasslands.",
+        "71950": "Agropyron (crested wheatgrass) has a dense, flattened spike with spikelets spreading like the teeth of a comb. A drought-tolerant introduced forage grass.",
+        "52721": "Dactylis (orchard grass) forms big tufts with strongly flattened, keeled shoots; its spikelets are packed into dense one-sided clusters at the tips of a few stiff branches."
+      }
+    },
+    "species": {
+      "summary": "Reed canary grass is a tall, creeping perennial of wet ground whose glumes are narrowly keeled, not winged, and whose panicle is lobed and often purplish. Canary grass and Carolina canarygrass are annuals with broadly winged glumes, and harding grass is a winged-glume perennial bunchgrass.",
+      "options": {
+        "57191": "Phalaris canariensis (birdseed grass): annual with a dense egg-shaped head; glumes broadly winged, 6-10 mm; 2 scale-like sterile lemmas 2-4 mm. A casual weed from birdseed.",
+        "78536": "Phalaris caroliniana: annual of the southern US with a dense panicle and winged glumes; its sterile lemmas are feathery and only 1.5-2 mm.",
+        "57188": "Phalaris aquatica: Mediterranean perennial bunchgrass grown for forage; dense cylindrical panicle with broadly winged glumes about 4-5 mm. Lacks the long creeping rhizomes of reed canary grass.",
+        "63337": "Phalaris arundinacea: sod-forming perennial with creeping rhizomes, 50-200 cm; panicle 7-25 cm, lobed, often purplish, spreading at flowering; glumes 4-5 mm, not winged. Wet ditches, shores and marshes across southern BC."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "E-Flora BC: Phalaris arundinacea",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Phalaris%20arundinacea"
+    },
+    {
+      "title": "Jepson eFlora: Key to Phalaris",
+      "url": "https://herbariadb.berkeley.edu/eflora/eflora_keys.php?key=11135"
+    },
+    {
+      "title": "Wikipedia: Poaceae",
+      "url": "https://en.wikipedia.org/wiki/Poaceae"
+    },
+    {
+      "title": "Wikipedia: Cyperaceae",
+      "url": "https://en.wikipedia.org/wiki/Cyperaceae"
+    }
+  ]
+}

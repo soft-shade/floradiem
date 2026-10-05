@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-16",
+  "ranks": {
+    "kingdom": {
+      "summary": "This is a green, leafy organism that makes its own food by photosynthesis, so it belongs with the plants. Fungi lack chlorophyll and absorb their food, protozoa are mostly microscopic single cells, and chromists include kelps and diatoms that are coloured brown or golden by different pigments.",
+      "options": {
+        "47686": "Mostly single-celled, often mobile organisms such as amoebae, plus slime moulds; they feed by engulfing food and have no leaves, stems or roots.",
+        "48222": "Kelps, diatoms, water moulds and relatives, mostly aquatic. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden to olive-brown colours rather than grass-green.",
+        "47126": "Multicellular organisms that make their own food with chlorophylls a and b, store starch and have cellulose cell walls. Green leaves, stems and roots are the giveaway.",
+        "47170": "Fungi absorb food from their surroundings instead of photosynthesising, and have chitin cell walls. Seen as mushrooms, moulds and brackets, or as lichens when partnered with algae; never leafy and green."
+      }
+    },
+    "phylum": {
+      "summary": "Its big, stiff fronds are supported by veins of xylem and phloem, the vascular tissue that mosses and algae lack. Mosses are small with leaves usually one cell thick, and green and red algae have no true roots, stems or leaves.",
+      "options": {
+        "311249": "Mosses: low, non-vascular plants with tiny leaves usually only one cell thick, anchored by hair-like rhizoids. Spores are released from capsules on wiry stalks; no flowers or seeds.",
+        "50863": "Green algae: grass-green like plants but with no roots, stems, leaves or vascular tissue. They live in water or on damp surfaces, from single cells to seaweeds like sea lettuce.",
+        "57774": "Red algae: mostly marine seaweeds coloured red to purple by the pigment phycoerythrin; no vascular tissue, roots or leaves.",
+        "211194": "Plants with xylem and phloem, internal tubes that carry water and sugars. This lets them grow true roots, stems and leaves and reach large sizes; it includes lycophytes, horsetails, conifers and flowering plants, among others."
+      }
+    },
+    "class": {
+      "summary": "Large, divided fronds that unroll from fiddleheads, with spores produced in dots on the underside and no flowers, cones or seeds, mark the ferns. Lycophytes have tiny single-veined leaves, conifers bear seeds in cones, and dicots have flowers.",
+      "options": {
+        "136329": "Conifers: woody trees and shrubs with needle- or scale-like leaves and seeds borne in cones; no flowers or fruits.",
+        "121943": "Spore-bearing vascular plants, usually with large, often divided fronds that unroll from fiddleheads and carry spore clusters underneath; no flowers or seeds. Horsetails are included here too.",
+        "47623": "Clubmosses, spikemosses and quillworts: small, simple leaves (microphylls) with a single vein, often densely clothing the stem; spores borne in cones or leaf axils; no flowers or seeds.",
+        "47124": "Flowering plants usually with net-veined leaves, flower parts in 4s or 5s, two seed leaves (cotyledons), and often a taproot."
+      }
+    },
+    "order": {
+      "summary": "Polypodiales are the 'typical' leafy-frond spore plants: small spore cases (sporangia) gathered in discrete dots or lines (sori) on the underside of ordinary fronds, often covered by a flap (indusium). Royal ferns carry naked sporangia on separate fertile parts, adder's-tongues have a fertile spike rising from a single leaf, and Salviniales are small aquatic plants.",
+      "options": {
+        "47754": "By far the largest fern order. Sporangia are small, long-stalked and clustered in sori on the frond underside, each with a ring of thickened cells (annulus) that flings the spores out.",
+        "332901": "Royal and cinnamon ferns: large clumping ferns whose sporangia are not in sori but massed on separate fertile fronds or fertile frond sections that turn brown.",
+        "55328": "Adder's-tongues and moonworts: usually one fleshy leaf a year, split into a sterile blade and an upright, stalked fertile spike with large bead-like sporangia; the young leaf does not unroll like a fiddlehead.",
+        "332905": "Water ferns such as mosquito fern (Azolla) and water clover: small aquatic plants, floating or rooted in mud, producing two kinds of spores inside hard capsules (sporocarps)."
+      }
+    },
+    "family": {
+      "summary": "Dryopteridaceae are mostly sturdy, often evergreen woodland ferns with densely scaly stalks and round sori under round or kidney-shaped indusia. Lady ferns (Athyriaceae) have elongate or hooked sori, Cystopteridaceae are small, delicate ferns, and bracken (Dennstaedtiaceae) has hairy rather than scaly stalks with spores along the leaf margin.",
+      "options": {
+        "332916": "Fragile ferns and oak ferns: small, thin, delicate fronds; sori round, with a hood-like indusium or none; stalks with few scales and two vascular strands.",
+        "332930": "Lady ferns: lacy, finely divided, deciduous fronds; sori elongated, J-shaped or hooked, with indusia attached along one side; two vascular strands in the stalk.",
+        "52682": "Bracken and allies: fronds arise singly from long-creeping underground stems; stalks hairy rather than scaly; sori lie along the leaf edges, protected by the rolled-under margin.",
+        "47753": "Wood ferns and relatives: robust, often evergreen fronds in crowns, stalks densely scaly, and round sori usually covered by a round or kidney-shaped indusium; several vascular strands in the stalk."
+      }
+    },
+    "genus": {
+      "summary": "Polystichum fronds are leathery and evergreen, with pinnae bearing bristle-tipped teeth and an ear-like lobe ('thumb') at the base; sori are round with a circular indusium attached at its centre like an umbrella. Wood ferns (Dryopteris) have kidney-shaped indusia and softer fronds, Cyrtomium has broad pinnae with netted veins, and tongueferns have undivided leaves.",
+      "options": {
+        "72085": "Holly ferns: fronds once-divided into relatively few broad, glossy pinnae with netted (not free) veins; mostly Asian, grown as ornamentals.",
+        "47752": "Leathery, evergreen, once- or twice-divided fronds; pinna margins with spiny, bristle-tipped teeth and an ear-like lobe at the pinna base; sori round with a peltate (centrally attached, shield-like) indusium.",
+        "67932": "Tongue ferns, mostly tropical: simple, undivided strap-like leaves; fertile leaves have spores spread over the whole underside rather than in separate dots.",
+        "52672": "Wood ferns: usually twice-divided, softer fronds; sori round with a kidney-shaped indusium attached at a notch; teeth not bristle-tipped."
+      }
+    },
+    "species": {
+      "summary": "Western sword fern is the big arching fern of coastal BC forests: fronds up to 1.8 m, once-divided into many narrow toothed pinnae, each with an upward 'thumb' at its base. Northern holly fern is much smaller and stiffer with short, crowded pinnae; California sword fern has lobed pinnae; Alaska holly fern is deeply lobed to twice-divided.",
+      "options": {
+        "78697": "Small (10–60 cm), stiff, upright fronds, narrow and once-divided, with short crowded pinnae (0.5–3 cm) that shrink toward the base; very short stalk. Grows in talus and cliff crevices at mid to high elevations.",
+        "63867": "Fronds 20–80 cm, once-divided but with pinnae shallowly to deeply lobed (pinnate-pinnatifid); a rare, red-listed fern in BC, typically in rock crevices at low elevations.",
+        "47751": "Large, arching, dark green fronds 50–180 cm long, once-divided into narrow lance-shaped pinnae with spiny, forward-pointing teeth and a well-developed basal 'thumb'; stalk densely brown-scaly. Abundant in moist lowland conifer forests.",
+        "167282": "Fronds 30–100 cm, deeply lobed to fully twice-divided, with small stalked segments bearing fine spiny teeth; a blue-listed fern of moist forests, rare in coastal northwestern BC and north into Alaska."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "Burke Herbarium Image Collection: Polystichum munitum",
+      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Polystichum%20munitum"
+    },
+    {
+      "title": "Burke Herbarium Image Collection: Polystichum lonchitis",
+      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Polystichum%20lonchitis"
+    },
+    {
+      "title": "Burke Herbarium Image Collection: Polystichum californicum",
+      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Polystichum%20californicum"
+    },
+    {
+      "title": "E-Flora BC: Polystichum setigerum",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Polystichum%20setigerum"
+    },
+    {
+      "title": "E-Flora BC: Polystichum californicum",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Polystichum%20californicum"
+    },
+    {
+      "title": "Wikipedia: Polystichum",
+      "url": "https://en.wikipedia.org/wiki/Polystichum"
+    },
+    {
+      "title": "Wikipedia: Dryopteridaceae",
+      "url": "https://en.wikipedia.org/wiki/Dryopteridaceae"
+    }
+  ]
+}

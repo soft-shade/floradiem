@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-28",
+  "ranks": {
+    "kingdom": {
+      "summary": "Green leaves and stems that grow in one place and make food from sunlight point to the plant kingdom. Fungi lack chlorophyll and absorb their food, Chromista are mostly brown seaweeds and microscopic golden algae, and protozoa are mostly single-celled. Plants share chlorophylls a and b, starch for storage and cellulose cell walls.",
+      "options": {
+        "47126": "Multicellular organisms that make their own food by photosynthesis using chlorophylls a and b, store starch, and have cellulose cell walls. Most are green and grow anchored in one place.",
+        "47170": "Absorb food from their surroundings instead of photosynthesising, and have chitin in their cell walls. Seen as mushrooms, brackets, moulds or (with algal partners) lichens, never as green leafy shoots.",
+        "48222": "Mostly aquatic: kelps and other brown seaweeds, diatoms and their relatives. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden-brown to olive colours.",
+        "47686": "Mostly single-celled organisms such as amoebae and slime moulds that usually feed on other organisms. They never form leafy, rooted, photosynthetic bodies."
+      }
+    },
+    "phylum": {
+      "summary": "This plant has true roots, upright stems and leaves with veins, which come from vascular tissue (xylem and phloem). Algae, mosses, liverworts and hornworts lack that plumbing, so they stay small, flat or live in water. Veined leaves and sturdy stems are the easiest giveaway.",
+      "options": {
+        "211194": "Vascular plants: they have xylem and phloem, tissues that carry water and food, so they can grow tall with true roots, stems and veined leaves. Includes lycophytes, ferns, conifers and flowering plants.",
+        "311249": "Mosses: small leafy shoots anchored by thread-like rhizoids, without true roots or xylem and phloem. The green leafy plant is the long-lived stage; spores come from a capsule on a stalk.",
+        "50863": "Green algae, living mostly in water, from single cells to sheets like sea lettuce. They share plant pigments but have no roots, vascular tissue or embryos nourished by a parent plant.",
+        "64615": "Liverworts: either flat, lobed thalli or leafy shoots with leaves in two or three rows, often lobed and without a midrib. No vascular tissue."
+      }
+    },
+    "class": {
+      "summary": "Flowers and fruits mark this as a flowering plant, which rules out the spore-bearing lycophytes and ferns and the cone-bearing conifers. Broad leaves with a branching network of veins, and flower parts in fours or fives, point to the dicots rather than the monocots, whose leaves usually have parallel veins and whose flower parts come in threes.",
+      "options": {
+        "121943": "Ferns (and horsetails): spore-bearing vascular plants without flowers or seeds. Fern fronds uncoil from fiddleheads and carry spore clusters on their undersides.",
+        "47124": "Dicots: flowering plants usually with net-veined leaves, flower parts in fours or fives, and two seed leaves. Includes most broad-leaved trees, shrubs and wildflowers.",
+        "136329": "Conifers: seed plants with needle- or scale-like leaves and seeds carried on cone scales rather than inside a fruit. No flowers.",
+        "47623": "Lycophytes (clubmosses, spikemosses, quillworts): spore-bearing vascular plants with small single-veined leaves, often with spores in cone-like tips. No flowers or seeds."
+      }
+    },
+    "order": {
+      "summary": "Rosales commonly have leaves with stipules (small leaf-like flaps at the stalk base) and flowers with five separate petals and many stamens arising from a cup-like rim (hypanthium). Lamiales usually have opposite leaves and two-lipped fused petals; Ranunculales have many free parts, often spirally arranged; Saxifragales are mostly herbs or succulents with flowers often on a two-beaked ovary.",
+      "options": {
+        "47132": "Roses, elms, figs and relatives: leaves usually with stipules; flowers either five free petals with many stamens on a hypanthium, or small and wind-pollinated.",
+        "48151": "Mints, plantains, olives and relatives: leaves usually opposite; petals fused into a tube, often two-lipped, with two or four stamens.",
+        "48232": "Buttercups, poppies, barberries and relatives: flowers often with many free stamens and pistils, and often divided leaves without stipules.",
+        "71289": "Saxifrages, stonecrops and relatives: mostly herbs or succulents with separate petals and a few stamens; ovary often with diverging beaks."
+      }
+    },
+    "family": {
+      "summary": "The rose family typically has alternate leaves with stipules and showy flowers with five free petals and many stamens around a cup-like rim. The oleaster family is covered in silvery or rusty scales; the elm family has lopsided leaf bases and tiny petal-less flowers; the buckthorn family has small flowers whose stamens sit directly opposite the petals.",
+      "options": {
+        "64695": "Oleaster family: shrubs whose leaves and twigs are covered in silvery or rusty star-shaped scales; flowers lack petals.",
+        "53548": "Elm family: trees with toothed leaves that are lopsided at the base; tiny petal-less, wind-pollinated flowers and flat winged fruits.",
+        "47148": "Rose family: leaves alternate with stipules; flowers with five free petals and many stamens on a cup-like hypanthium; fruits range from hips and drupes to pomes and achenes.",
+        "49041": "Buckthorn family: shrubs and small trees with small flowers whose stamens stand opposite the tiny, often hooded petals; fruit a drupe or capsule."
+      }
+    },
+    "genus": {
+      "summary": "Prunus has simple leaves (often with small glands on the stalk or leaf base) and a single fleshy fruit with one hard stone. Oemleria also has simple leaves but each flower produces several small drupes and the plant is male or female; Geum and Rubus have compound or lobed leaves, with Geum producing heads of hooked or plumed achenes and Rubus producing aggregate berries.",
+      "options": {
+        "47351": "Simple, toothed leaves, frequently with glands near the leaf base; five-petalled flowers with a single pistil that becomes a drupe with one stone.",
+        "53420": "Indian-plum: early-flowering shrub with separate male and female plants; each flower produces up to five small, bluish-black drupes.",
+        "55751": "Avens: herbs with pinnately divided basal leaves; fruits are dry achenes in a head, each tipped by a hooked or feathery style.",
+        "47544": "Brambles: usually prickly canes with compound or lobed leaves; fruit an aggregate of many small drupelets (raspberries, blackberries)."
+      }
+    },
+    "species": {
+      "summary": "Cherry laurel is the only evergreen here: thick, glossy, leathery leaves up to about 15 cm long, with a pair of glands on the underside near the base, and small white flowers in long upright spikes followed by black fruits. Apricot, wild cherry and cherry plum are deciduous, flower before or with the new leaves, and bear flowers singly or in small clusters rather than long spikes.",
+      "options": {
+        "135331": "Apricot: deciduous; broad, rounded leaves with an abrupt point; solitary pinkish-white flowers before the leaves; velvety orange fruit.",
+        "61964": "Wild cherry: deciduous tree with shiny reddish bark in horizontal bands; leaves with glands on the stalk; white flowers in clusters; red to dark red cherries.",
+        "61432": "Cherry laurel: evergreen shrub or small tree, invasive in southwest BC woods; leaves glossy and leathery; white flowers in erect racemes; black fruits.",
+        "55837": "Cherry plum: deciduous small tree, often purple-leaved in gardens; small leaves; white or pink flowers very early in spring; round red or yellow plums."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "E-Flora BC: Prunus laurocerasus",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Prunus%20laurocerasus"
+    },
+    {
+      "title": "Wikipedia: Prunus laurocerasus",
+      "url": "https://en.wikipedia.org/wiki/Prunus_laurocerasus"
+    },
+    {
+      "title": "Wikipedia: Prunus avium",
+      "url": "https://en.wikipedia.org/wiki/Prunus_avium"
+    },
+    {
+      "title": "Wikipedia: Prunus cerasifera",
+      "url": "https://en.wikipedia.org/wiki/Prunus_cerasifera"
+    },
+    {
+      "title": "Wikipedia: Oemleria",
+      "url": "https://en.wikipedia.org/wiki/Oemleria"
+    },
+    {
+      "title": "Wikipedia: Rosaceae",
+      "url": "https://en.wikipedia.org/wiki/Rosaceae"
+    }
+  ]
+}

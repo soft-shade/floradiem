@@ -528,24 +528,35 @@
     const line = lineage(sid);
     for (let i = 0; i < line.length; i++) {
       const id = line[i];
-      let wrong;
-      if (i === 0) wrong = KINGDOMS.filter((k) => k.id !== id);
-      else {
-        const sibs = (game.children[game.tree[id][3]] || [])
-          .filter((t) => t !== id && game.tree[t][2] === i)
-          .sort((a, b) => game.tree[b][4] - game.tree[a][4]).slice(0, 8);
-        wrong = pickRandom(sibs, 3).map(treeOpt);
-        if (wrong.length < 3) wrong = wrong.concat(await worldSiblings(game.tree[id][3], i, [id, ...wrong.map((w) => w.id)], 3 - wrong.length));
-      }
+      const wrong = i === 0 ? KINGDOMS.filter((k) => k.id !== id) : await wrongOptions(id, i);
       const answer = i === 0 ? KINGDOMS.find((k) => k.id === id) || treeOpt(id) : treeOpt(id);
       ranks.push({ rank: RANKS[i], answer: id, options: pickRandom([answer, ...wrong], 4) });
     }
     return ranks;
   }
-  async function worldSiblings(parent, rankI, exclude, n) {
+
+  // Siblings that grow in BC (common ones first), then worldwide siblings;
+  // when the group has no other members, cousins from the next group up.
+  async function wrongOptions(id, rankI) {
+    const line = lineage(id);
+    const taken = new Set([id]);
+    const out = [];
+    const members = Object.keys(game.tree).map(Number).filter((t) => game.tree[t][2] === rankI);
+    for (let k = line.length - 2; k >= 0 && out.length < 3; k--) {
+      const anc = line[k];
+      const bc = members.filter((t) => !taken.has(t) && lineage(t).includes(anc))
+        .sort((a, b) => game.tree[b][4] - game.tree[a][4]).slice(0, 8);
+      for (const t of pickRandom(bc, 3 - out.length)) { out.push(treeOpt(t)); taken.add(t); }
+      if (out.length < 3) {
+        for (const o of await worldMembers(anc, rankI, taken, 3 - out.length)) { out.push(o); taken.add(o.id); }
+      }
+    }
+    return out;
+  }
+  async function worldMembers(anc, rankI, taken, n) {
     try {
-      const d = await getJSON(`${API}taxa?taxon_id=${parent}&rank=${RANKS[rankI]}&is_active=true&order_by=observations_count&per_page=12`);
-      return d.results.filter((t) => !exclude.includes(t.id) && t.rank === RANKS[rankI]).slice(0, n)
+      const d = await getJSON(`${API}taxa?taxon_id=${anc}&rank=${RANKS[rankI]}&is_active=true&order_by=observations_count&per_page=12`);
+      return d.results.filter((t) => !taken.has(t.id) && t.rank === RANKS[rankI]).slice(0, n)
         .map((t) => ({ id: t.id, name: t.name, common: t.preferred_common_name || '' }));
     } catch (e) { return []; }
   }

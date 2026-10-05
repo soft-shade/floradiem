@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-20",
+  "ranks": {
+    "kingdom": {
+      "summary": "This is a green, leafy organism that makes its own food by photosynthesis, so it belongs with the plants. Fungi lack chlorophyll and absorb their food, protozoa are mostly microscopic single cells, and chromists include kelps and diatoms that are coloured brown or golden by different pigments.",
+      "options": {
+        "47170": "Fungi absorb food from their surroundings instead of photosynthesising, and have chitin cell walls. Seen as mushrooms, moulds and brackets, or as lichens when partnered with algae; never leafy and green.",
+        "47126": "Multicellular organisms that make their own food with chlorophylls a and b, store starch and have cellulose cell walls. Green leaves, stems and roots are the giveaway.",
+        "48222": "Kelps, diatoms, water moulds and relatives, mostly aquatic. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden to olive-brown colours rather than grass-green.",
+        "47686": "Mostly single-celled, often mobile organisms such as amoebae, plus slime moulds; they feed by engulfing food and have no leaves, stems or roots."
+      }
+    },
+    "phylum": {
+      "summary": "Its stems and leaves contain veins of xylem and phloem that conduct water and food, and it produces flowers and seeds. The other options are all non-vascular: liverworts, hornworts and mosses are small plants that reproduce by spores, and algae lack true roots, stems and leaves altogether.",
+      "options": {
+        "311249": "Mosses: low, non-vascular plants with tiny leaves usually only one cell thick, anchored by hair-like rhizoids. Spores are released from capsules on wiry stalks; no flowers or seeds.",
+        "311313": "Charophyte algae: freshwater green algae most closely related to land plants, such as stoneworts with whorled branches and microscopic desmids. No vascular tissue or true leaves.",
+        "50863": "Green algae: grass-green like plants but with no roots, stems, leaves or vascular tissue. They live in water or on damp surfaces, from single cells to seaweeds like sea lettuce.",
+        "211194": "Plants with xylem and phloem, internal tubes that carry water and sugars. This lets them grow true roots, stems and leaves and reach large sizes; it includes lycophytes, horsetails, conifers and flowering plants, among others."
+      }
+    },
+    "class": {
+      "summary": "Net-veined leaves and flower parts in 4s or 5s point to the dicots. Monocots usually have parallel-veined leaves and flower parts in 3s, while lycophytes, ferns and conifers never produce flowers.",
+      "options": {
+        "47623": "Clubmosses, spikemosses and quillworts: small, simple leaves (microphylls) with a single vein, often densely clothing the stem; spores borne in cones or leaf axils; no flowers or seeds.",
+        "136329": "Conifers: woody trees and shrubs with needle- or scale-like leaves and seeds borne in cones; no flowers or fruits.",
+        "47124": "Flowering plants usually with net-veined leaves, flower parts in 4s or 5s, two seed leaves (cotyledons), and often a taproot.",
+        "47163": "Flowering plants with one seed leaf, usually parallel-veined leaves, flower parts in 3s and fibrous roots; examples include lilies, orchids, sedges and palms."
+      }
+    },
+    "order": {
+      "summary": "Brassicales mostly contain mustard oils (glucosinolates) that give a peppery, cabbage-like taste and smell, and many have flowers with 4 separate petals arranged in a cross. Saxifragales and Rosales usually have 5 petals, and Caryophyllales are marked by features like swollen nodes, succulent leaves or notched petals.",
+      "options": {
+        "71289": "Saxifrages, stonecrops, currants and peonies. Flowers usually have separate petals, often 5 or 10 stamens, and frequently 2 partly separate carpels that form beaked fruits.",
+        "71275": "Mustards, capers, papaya and nasturtiums: chemically united by mustard-oil glucosinolates that give a peppery taste; flowers often have 4 separate petals in a cross.",
+        "47132": "Roses, elms, nettles and figs. Typically 5 separate petals, numerous stamens, and stipules (small leafy flaps) at the base of the leaf stalks.",
+        "47366": "Pinks, chickweeds, cacti, docks and amaranths: often swollen stem nodes, succulent leaves or separate notched petals; many use betalain pigments instead of anthocyanins."
+      }
+    },
+    "family": {
+      "summary": "Brassicaceae flowers have 4 petals in a cross, 6 stamens (4 long, 2 short), and a pod divided lengthwise by a papery partition. Spider flowers (Cleomaceae) have long protruding stamens and a stalked pod, meadowfoams (Limnanthaceae) have nutlet fruits, and nasturtiums have round, shield-like leaves and spurred flowers.",
+      "options": {
+        "71409": "Spider flowers: often palmately compound leaves, 4 petals but very long, protruding stamens, and a pod raised on a stalk (gynophore) above the rest of the flower.",
+        "51337": "Meadowfoams and false mermaid: small, soft herbs of wet ground with divided leaves, flower parts in 5s (or 3s), and fruits that split into separate rounded nutlets.",
+        "47204": "Crucifers: flowers with 4 petals in a cross shape and 6 stamens (4 long, 2 short); fruits are long pods (siliques) or short pods (silicles) divided by a papery central partition; often peppery-tasting.",
+        "54330": "Nasturtiums: round, shield-like (peltate) leaves with the stalk attached in the middle, and showy, spurred, 5-petalled orange to red flowers."
+      }
+    },
+    "genus": {
+      "summary": "Cardamine typically has pinnately divided leaves, white to pink flowers, and long, slender pods whose valves often coil up explosively to fling the seeds. Berteroa is greyish with star-shaped hairs and deeply notched petals, Lunaria has large round papery pods, and Sisymbrium has yellow flowers.",
+      "options": {
+        "72007": "Hoary alyssum: a greyish plant covered in star-shaped hairs, with deeply two-lobed white petals and short, flattened oval pods.",
+        "55326": "Honesty: a tall plant with large, heart-shaped toothed leaves, purple or white flowers, and big, flat, round pods whose silvery papery partition persists like a coin.",
+        "49652": "Leaves often pinnately divided into rounded leaflets; flowers white, pink or purple; fruit a long narrow pod with seeds in one row, the valves often springing open and coiling.",
+        "53267": "Hedge mustards: yellow flowers, often deeply lobed leaves, and long, slender pods; frequently weedy on dry, disturbed ground."
+      }
+    },
+    "species": {
+      "summary": "Hairy bittercress is a small weedy annual with a persistent basal rosette of pinnate leaves with rounded leaflets, tiny white petals and usually only 4 stamens; ripe pods snap open explosively. Little western bittercress is very similar but native and usually has 6 stamens, while cuckooflower and Nuttall's toothwort are perennials with large pink to purple petals.",
+      "options": {
+        "54531": "A hairless perennial of wet meadows, lawns and forest edges; stem leaves cut into narrow segments and large (8–15 mm) lilac to purple, rarely white, petals.",
+        "52981": "A native annual or biennial of moist ground; very like hairy bittercress with tiny white petals (2–4 mm), but its flowers have 6 stamens.",
+        "76002": "A native spring woodland perennial from fleshy rhizomes; rounded or heart-shaped basal leaves, 1–3 stem leaves with narrow leaflets, and showy pink to purple petals 9–14 mm long.",
+        "55829": "An introduced Eurasian annual weed of gardens and disturbed ground; rosette of pinnate leaves with rounded leaflets and sparse hairs on the leaf stalks; tiny white petals and usually just 4 stamens."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "Burke Herbarium Image Collection: Cardamine hirsuta",
+      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Cardamine%20hirsuta"
+    },
+    {
+      "title": "Burke Herbarium Image Collection: Cardamine oligosperma",
+      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Cardamine%20oligosperma"
+    },
+    {
+      "title": "Burke Herbarium Image Collection: Cardamine nuttallii",
+      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Cardamine%20nuttallii"
+    },
+    {
+      "title": "Burke Herbarium Image Collection: Cardamine pratensis",
+      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Cardamine%20pratensis"
+    },
+    {
+      "title": "E-Flora BC: Cardamine hirsuta",
+      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Cardamine%20hirsuta"
+    },
+    {
+      "title": "Wikipedia: Cardamine hirsuta",
+      "url": "https://en.wikipedia.org/wiki/Cardamine_hirsuta"
+    },
+    {
+      "title": "Wikipedia: Brassicaceae",
+      "url": "https://en.wikipedia.org/wiki/Brassicaceae"
+    }
+  ]
+}
