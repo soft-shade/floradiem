@@ -194,7 +194,7 @@
   function setPhotos(photos, revealLinks) {
     const car = $('carousel');
     car.innerHTML = photos.length ? photos.map((p, i) =>
-      `<figure><img src="${esc(p.src)}" alt="Photo ${i + 1} of the mystery plant" loading="${i ? 'lazy' : 'eager'}"></figure>`).join('')
+      `<figure><img src="${esc(p.src)}" alt="Photo ${i + 1} of the mystery organism" loading="${i ? 'lazy' : 'eager'}"></figure>`).join('')
       : '<div class="loading">Loading photos…</div>';
     car.scrollLeft = 0;
     car._photos = photos;
@@ -510,7 +510,11 @@
   // ---------------------------------------------------------------- unlimited mode
   async function loadTree() {
     if (game.tree) return;
-    const data = await getJSON('data/bc_tree.json?v=' + VER);
+    const [data, pairs] = await Promise.all([
+      getJSON('data/bc_tree.json?v=' + VER),
+      getJSON('data/conflicts.json?v=' + VER).catch(() => []),
+    ]);
+    game.conflicts = new Set(pairs.map((p) => [p.a, p.b].sort().join('|')));
     game.tree = data.taxa;
     game.children = {};
     for (const [id, t] of Object.entries(data.taxa)) {
@@ -540,18 +544,32 @@
 
   // Siblings that grow in BC (common ones first), then worldwide siblings;
   // when the group has no other members, cousins from the next group up.
+  // Arguable duplicates (shared common name, or a curated pair where a regional
+  // flora lumps what iNaturalist splits) never appear in the same question.
+  const commonKey = (s) => (s || '').toLowerCase().replace(/[^a-z]/g, '');
+  function clash(a, b) {
+    if (game.conflicts.has([a.id, b.id].sort().join('|'))) return true;
+    const ca = commonKey(a.common);
+    return !!ca && ca === commonKey(b.common);
+  }
+
   async function wrongOptions(id, rankI) {
     const line = lineage(id);
     const taken = new Set([id]);
     const out = [];
+    const ok = (o) => !taken.has(o.id) && ![treeOpt(id), ...out].some((x) => clash(o, x));
     const members = Object.keys(game.tree).map(Number).filter((t) => game.tree[t][2] === rankI);
     for (let k = line.length - 2; k >= 0 && out.length < 3; k--) {
       const anc = line[k];
       const bc = members.filter((t) => !taken.has(t) && lineage(t).includes(anc))
         .sort((a, b) => game.tree[b][4] - game.tree[a][4]).slice(0, 8);
-      for (const t of pickRandom(bc, 3 - out.length)) { out.push(treeOpt(t)); taken.add(t); }
+      for (const t of pickRandom(bc, bc.length)) {
+        if (out.length < 3 && ok(treeOpt(t))) { out.push(treeOpt(t)); taken.add(t); }
+      }
       if (out.length < 3) {
-        for (const o of await worldMembers(anc, rankI, taken, 3 - out.length)) { out.push(o); taken.add(o.id); }
+        for (const o of await worldMembers(anc, rankI, taken, 12)) {
+          if (out.length < 3 && ok(o)) { out.push(o); taken.add(o.id); }
+        }
       }
     }
     return out;
@@ -569,8 +587,8 @@
     $('daily-picker').innerHTML = '';
     $('ladder').innerHTML = '';
     setPhotos([], false);
-    $('stage').innerHTML = '<p class="note">Finding a plant…</p>';
-    try { await loadTree(); } catch (e) { $('stage').innerHTML = '<p>Could not load the plant list.</p>'; return; }
+    $('stage').innerHTML = '<p class="note">Finding a species…</p>';
+    try { await loadTree(); } catch (e) { $('stage').innerHTML = '<p>Could not load the species list.</p>'; return; }
     for (let tries = 0; tries < 5; tries++) {
       const sid = game.uSpecies[Math.floor(Math.random() * game.uSpecies.length)];
       let obs;
@@ -656,7 +674,7 @@
         <p class="species">It was <i>${esc(sp.name)}</i>${sp.common ? ` — ${esc(cap(sp.common))}` : ''}.
           <a href="https://www.inaturalist.org/taxa/${sp.id}" target="_blank" rel="noopener">About this plant ↗</a></p>
         <div class="actions" style="justify-content:center">
-          <button class="btn" id="btn-again">Next plant</button>
+          <button class="btn" id="btn-again">Next species</button>
           <button class="btn ghost" id="btn-share">Share</button>
         </div>
       </div>`;
@@ -687,7 +705,17 @@
     const si = $('btn-signin');
     if (si) si.onclick = async () => {
       const A = window.PD_AUTH;
-      try { authUser ? await A.signOut(A.auth) : await A.signInWithPopup(A.auth, A.provider); } catch (e) { toast('Sign-in failed'); }
+      try { authUser ? await A.signOut(A.auth) : await A.signInWithPopup(A.auth, A.provider); } catch (e) {
+        console.warn('sign-in failed', e);
+        const why = {
+          'auth/unauthorized-domain': `Sign-in isn't enabled for ${location.hostname}`,
+          'auth/popup-blocked': 'Allow pop-ups for this site to sign in',
+          'auth/network-request-failed': 'Network error, please try again',
+        }[e.code];
+        if (e.code !== 'auth/popup-closed-by-user' && e.code !== 'auth/cancelled-popup-request') {
+          toast(why || `Sign-in failed (${e.code || e.message})`);
+        }
+      }
     };
   }
 
@@ -765,7 +793,7 @@
 
   function helpView() {
     return `<h2>How to play</h2>
-      <p>Each day Plantdiem shows photos of one plant (or seaweed) from British Columbia, photographed by
+      <p>Each day Plantdiem shows photos of one plant, fungus, lichen, seaweed or slime mold from British Columbia, photographed by
          <a href="https://www.inaturalist.org/people/softshade" target="_blank" rel="noopener">softshade</a> on iNaturalist.
          Swipe or use the arrows to see every photo.</p>
       <p>Work down the tree of life — <b>Kingdom, Phylum, Class, Order, Family, Genus, Species</b> — choosing from four options each time.
@@ -777,7 +805,7 @@
          Each day's run becomes the next decimal digit — 1 → 1.2 → 1.22 → … A perfect 7 locks the puzzle.</p>
       <p>Scores like <b>7.0</b> (perfect first try), <b>6.7</b> (nailed it on day two) or <b>1.224554</b> are all possible.</p>
       <h3>Unlimited</h3>
-      <p>Random plants from all research-grade BC observations on iNaturalist, as many as you like. A miss doesn't end the run: you see the right answer and keep going to Species, scoring one point per rank you get right.</p>
+      <p>Random plants, fungi, lichens, seaweeds and slime molds from all research-grade BC observations on iNaturalist, as many as you like. A miss doesn't end the run: you see the right answer and keep going to Species, scoring one point per rank you get right.</p>
       <p class="note">New daily puzzle at midnight Pacific time.</p>`;
   }
   $('btn-help').onclick = () => openModal(helpView);

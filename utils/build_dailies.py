@@ -1,7 +1,12 @@
-"""Pick daily puzzles from softshade's research-grade BC plant observations.
+"""Pick daily puzzles from softshade's research-grade BC observations
+(plants, fungi incl. lichens, chromists, protozoa incl. slime molds).
 
     python build_dailies.py START_DATE N_DAYS
-    python build_dailies.py --fill      # top up ranks with < 4 options
+    python build_dailies.py --fill                 # top up ranks with < 4 options
+    python build_dailies.py --check                # list clashing options in every puzzle
+    python build_dailies.py --replace DATE TAXON   # rebuild one day with another species
+    python build_dailies.py --swap DATE RANK OLD_ID CLASHES_WITH_ID "why"
+                                                   # record a conflict, replace that option
 
 writes data/daily/YYYY-MM-DD.json (species, answer options at each rank,
 photo list) and downloads that day's photos to assets/daily/YYYY-MM-DD/.
@@ -19,7 +24,8 @@ import sys
 import requests
 from PIL import Image
 
-from inat import BC_PLACE, HEADERS, MAIN_RANKS, PLANTS_AND_ALGAE, get, get_all
+import conflicts
+from inat import BC_PLACE, HEADERS, MAIN_RANKS, POOL_TAXA, get, get_all
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 USER = "softshade"
@@ -50,24 +56,67 @@ def distractors(answer, rank_i, rng, have=()):
     """Wrong answers until there are three: siblings that also occur in BC
     (weighted toward common ones), then worldwide siblings; if the group has
     no other members, cousins from the next group up (BC first, then world),
-    climbing until three are found."""
+    climbing until three are found. Never two arguably-identical options
+    (see conflicts.py)."""
     out = [opt(t) if isinstance(t, int) else t for t in have]
     taken = {answer} | {o["id"] for o in out}
     rank = MAIN_RANKS[rank_i]
+    pairs = conflicts.load()
+    ans = opt(answer)
+
+    def ok(c):
+        return c["id"] not in taken and not any(conflicts.clash(c, o, rank, pairs) for o in [ans] + out)
+
     for anc in lineage(answer)[-2::-1]:          # parent, grandparent, ...
         if len(out) >= 3:
             break
         bc = sorted((t for t, v in tree.items()
-                     if v[2] == rank_i and t not in taken and anc in lineage(t)), key=lambda t: -tree[t][4])
-        for t in rng.sample(bc[:8], min(3 - len(out), len(bc[:8]))):
-            out.append(opt(t)); taken.add(t)
+                     if v[2] == rank_i and t not in taken and anc in lineage(t)), key=lambda t: -tree[t][4])[:8]
+        rng.shuffle(bc)
+        for t in bc:
+            if len(out) < 3 and ok(opt(t)):
+                out.append(opt(t)); taken.add(t)
         if len(out) < 3:
             world = get("taxa", taxon_id=anc, rank=rank, is_active="true",
                         order_by="observations_count", per_page=12)["results"]
             for t in world:
-                if len(out) < 3 and t["id"] not in taken and t["rank"] == rank:
-                    out.append(opt(t["id"], t["name"], t.get("preferred_common_name"))); taken.add(t["id"])
+                c = opt(t["id"], t["name"], t.get("preferred_common_name"))
+                if len(out) < 3 and t["rank"] == rank and ok(c):
+                    out.append(c); taken.add(t["id"])
     return out
+
+
+def check_all():
+    """Report option pairs that clash in existing puzzles."""
+    pairs = conflicts.load()
+    bad = 0
+    for f in sorted(glob.glob(os.path.join(ROOT, "data", "daily", "*.json"))):
+        p = json.load(open(f))
+        for r in p["ranks"][1:]:
+            o = r["options"]
+            for i in range(len(o)):
+                for j in range(i + 1, len(o)):
+                    if conflicts.clash(o[i], o[j], r["rank"], pairs):
+                        bad += 1
+                        print(p["date"], r["rank"], o[i]["name"], "<->", o[j]["name"])
+    print(bad, "clashes")
+
+
+def swap(date, rank, old_id, other_id, why):
+    """Record old_id/other_id as a conflict and replace old_id with a fresh option."""
+    f = os.path.join(ROOT, "data", "daily", date + ".json")
+    p = json.load(open(f))
+    i = MAIN_RANKS.index(rank)
+    r = p["ranks"][i]
+    assert old_id != r["answer"], "can't swap out the answer"
+    conflicts.add(old_id, other_id, why)
+    keep = [o for o in r["options"] if o["id"] not in (old_id, r["answer"])]
+    new = distractors(r["answer"], i, random.Random(f"swap-{date}-{rank}-{old_id}"), keep)
+    pos = next(k for k, o in enumerate(r["options"]) if o["id"] == old_id)
+    r["options"][pos] = new[-1]
+    with open(f, "w") as fh:
+        json.dump(p, fh, indent=1, ensure_ascii=False)
+    print(date, rank, "replaced", old_id, "with", new[-1]["id"], new[-1]["name"], new[-1]["common"])
 
 
 def fill_short_ranks():
@@ -121,7 +170,7 @@ def main(start, n_days):
     for f in glob.glob(os.path.join(ROOT, "data", "daily", "*.json")):
         used.add(json.load(open(f))["species"]["id"])
     pool = get_all("observations/species_counts", per_page=500, user_id=USER, place_id=BC_PLACE,
-                   quality_grade="research", taxon_id=PLANTS_AND_ALGAE)
+                   quality_grade="research", taxon_id=POOL_TAXA)
     # Only species whose full 7-rank lineage is known.
     candidates = sorted({r["taxon"]["id"] for r in pool
                          if r["taxon"]["id"] in tree and tree[r["taxon"]["id"]][2] == 6
@@ -136,20 +185,37 @@ def main(start, n_days):
         if os.path.exists(out):
             print(day, "exists, skipped")
             continue
-        sid = candidates.pop()
-        ranks = []
-        for rank_i, tid in enumerate(lineage(sid)):
-            wrong = [opt(k, *v) for k, v in KINGDOMS.items() if k != tid] if rank_i == 0 else distractors(tid, rank_i, rng)
-            options = [opt(tid)] + wrong
-            rng.shuffle(options)
-            ranks.append({"rank": MAIN_RANKS[rank_i], "answer": tid, "options": options})
-        puzzle = {"date": day, "number": (start + dt.timedelta(days=i) - EPOCH).days + 1,
-                  "species": opt(sid), "ranks": ranks, "photos": download_photos(sid, day)}
-        with open(out, "w") as f:
-            json.dump(puzzle, f, indent=1, ensure_ascii=False)
-        print(day, puzzle["species"]["name"], "-", puzzle["species"]["common"],
-              len(puzzle["photos"]), "photos")
+        make_day(day, candidates.pop(), rng)
+    write_index()
 
+
+def make_day(day, sid, rng):
+    ranks = []
+    for rank_i, tid in enumerate(lineage(sid)):
+        wrong = [opt(k, *v) for k, v in KINGDOMS.items() if k != tid] if rank_i == 0 else distractors(tid, rank_i, rng)
+        options = [opt(tid)] + wrong
+        rng.shuffle(options)
+        ranks.append({"rank": MAIN_RANKS[rank_i], "answer": tid, "options": options})
+    puzzle = {"date": day, "number": (dt.date.fromisoformat(day) - EPOCH).days + 1,
+              "species": opt(sid), "ranks": ranks, "photos": download_photos(sid, day)}
+    with open(os.path.join(ROOT, "data", "daily", day + ".json"), "w") as f:
+        json.dump(puzzle, f, indent=1, ensure_ascii=False)
+    print(day, puzzle["species"]["name"], "-", puzzle["species"]["common"], len(puzzle["photos"]), "photos")
+
+
+def replace_day(day, sid):
+    """Swap a scheduled day's species; its old photos and explanations are removed."""
+    import shutil
+    shutil.rmtree(os.path.join(ROOT, "assets", "daily", day), ignore_errors=True)
+    for d in ("daily", "explanations"):
+        f = os.path.join(ROOT, "data", d, day + ".json")
+        if os.path.exists(f):
+            os.remove(f)
+    make_day(day, sid, random.Random(f"plantdiem-replace-{day}"))
+    write_index()
+
+
+def write_index():
     days = sorted(os.path.basename(f)[:-5] for f in glob.glob(os.path.join(ROOT, "data", "daily", "*.json")))
     with open(os.path.join(ROOT, "data", "daily_index.json"), "w") as f:
         json.dump({"epoch": EPOCH.isoformat(), "days": days}, f)
@@ -158,5 +224,11 @@ def main(start, n_days):
 if __name__ == "__main__":
     if sys.argv[1] == "--fill":
         fill_short_ranks()
+    elif sys.argv[1] == "--check":
+        check_all()
+    elif sys.argv[1] == "--replace":
+        replace_day(sys.argv[2], int(sys.argv[3]))
+    elif sys.argv[1] == "--swap":
+        swap(sys.argv[2], sys.argv[3], int(sys.argv[4]), int(sys.argv[5]), sys.argv[6])
     else:
         main(dt.date.fromisoformat(sys.argv[1]), int(sys.argv[2]))

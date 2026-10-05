@@ -1,4 +1,4 @@
-"""Build data/bc_tree.json: every plant / red alga / brown alga species with
+"""Build data/bc_tree.json: every plant, fungus (incl. lichens), chromist and protozoan species with
 research-grade observations in British Columbia, with its main-rank lineage.
 
 The game uses it to pick plausible wrong answers (siblings that also grow in
@@ -12,14 +12,14 @@ rank index follows inat.MAIN_RANKS; parent id is the nearest main-rank ancestor
 import json
 import os
 
-from inat import BC_PLACE, MAIN_RANKS, PLANTS_AND_ALGAE, get_all, taxa_by_id
+from inat import BC_PLACE, MAIN_RANKS, POOL_TAXA, get_all, taxa_by_id
 
 OUT = os.path.join(os.path.dirname(__file__), "..", "data", "bc_tree.json")
 
 
 def main():
     leaves = get_all("observations/species_counts", per_page=500, place_id=BC_PLACE,
-                     quality_grade="research", taxon_id=PLANTS_AND_ALGAE)
+                     quality_grade="research", taxon_id=POOL_TAXA)
     print(len(leaves), "leaf taxa")
     ancestry = {t["taxon"]["id"]: t["taxon"]["ancestor_ids"] for t in leaves}
     info = taxa_by_id({a for anc in ancestry.values() for a in anc})

@@ -12,7 +12,7 @@ CACHE = os.path.join(os.path.dirname(__file__), ".cache")
 HEADERS = {"User-Agent": "Plantdiem data builder (github.com/soft-shade/plantdiem)"}
 
 BC_PLACE = 7085
-PLANTS_AND_ALGAE = "47126,48220"   # Plantae (incl. red algae) + Phaeophyceae (brown algae)
+POOL_TAXA = "47126,47170,48222,47686"   # Plantae, Fungi (incl. lichens), Chromista, Protozoa
 MAIN_RANKS = ["kingdom", "phylum", "class", "order", "family", "genus", "species"]
 
 _last = 0.0
