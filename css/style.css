@@ -107,92 +107,29 @@ main { max-width: 760px; margin: 0 auto; padding: 12px 16px 24px; }
   padding: 0; min-height: 52px;
 }
 .opt-main { flex: 1; border: 0; background: transparent; text-align: left; padding: 10px 12px; font-style: italic; font-size: 1.05rem; min-height: 48px; }
-.opt-main .common[hidden] { display: none; }
-.opt-main .common { display: block; font-style: normal; font-size: .8rem; color: var(--muted); }
+.opt-main .common { display: block; font-style: normal; font-size: .82rem; color: var(--muted); margin-top: 1px; }
 .opt:hover:not(.locked) { border-color: var(--green); background: var(--green-pale); }
 .opt.correct { border-color: var(--green); background: var(--green); }
 .opt.correct .opt-main, .opt.correct .opt-main .common { color: #fff; }
 .opt.chosen-wrong { border-color: var(--miss); background: var(--miss-pale); }
 .opt.locked .opt-main { cursor: default; }
-.opt-info {
-  flex: 0 0 auto; width: 28px; height: 28px; margin-right: 8px; border-radius: 50%;
-  border: 1.5px solid var(--green); background: #fff; color: var(--green-dark);
-  font: italic 700 .85rem Georgia, serif; padding: 0; display: none;
-}
-/* Hover shows the common name on mouse devices; touch devices get the (i) button. */
-@media (hover: hover) {
-  .opt[data-common]:not([data-common=""]) .opt-main:hover::after {
-    content: attr(data-tip);
-    position: absolute; left: 10px; bottom: calc(100% + 6px); z-index: 5;
-    background: var(--ink); color: #fff; font: 400 .82rem Lato, sans-serif; font-style: normal;
-    padding: 4px 8px; border-radius: 6px; white-space: nowrap; pointer-events: none;
-  }
-}
-@media (hover: none) { .opt[data-common]:not([data-common=""]) .opt-info { display: block; } }
-
-/* ---- explanation ---- */
-.verdict { margin: 14px 0 6px; padding: 10px 12px; border-radius: 8px; font-weight: 700; }
-.verdict.ok { background: var(--green-pale); color: var(--green-deep); border-left: 5px solid var(--green); }
-.verdict.miss { background: var(--miss-pale); color: var(--miss); border-left: 5px solid var(--miss); }
-.verdict i { font-weight: 900; }
-.explain p { margin: 8px 0; }
-.explain ul { list-style: none; padding: 0; margin: 8px 0; }
-.explain li { padding: 6px 10px; border-left: 3px solid var(--line); margin: 6px 0; font-size: .93rem; }
-.explain li.is-answer { border-left-color: var(--green); background: var(--green-pale); }
-.explain li.is-chosen { border-left-color: var(--miss); }
-.explain li .nm { font-style: italic; font-weight: 700; color: inherit; }
-.explain li a.nm { color: var(--green-dark); }
-.explain .facts { font-size: .8rem; color: var(--muted); margin-top: 3px; }
-.explain .src { font-size: .78rem; color: var(--muted); }
-.explain .src a { color: var(--muted); }
-.actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
-.btn {
-  border: 0; border-radius: 999px; padding: 10px 20px; font-weight: 700;
-  background: var(--green); color: #fff;
-}
-.btn:hover { background: var(--green-dark); }
-.btn.ghost { background: #fff; color: var(--green-dark); border: 2px solid var(--green); }
-
-/* ---- results ---- */
-.result { text-align: center; padding: 6px 0; }
-.result .big { font-size: 2.4rem; font-weight: 900; color: var(--green-dark); line-height: 1.1; }
-.result .attempts { display: inline-grid; grid-template-columns: auto auto auto; gap: 2px 12px; margin: 10px auto; font-size: .9rem; text-align: left; }
-.result .species { font-size: 1.2rem; }
-.result .species i { font-weight: 700; }
-.note { color: var(--muted); font-size: .9rem; }
-
-/* ---- modal & toast ---- */
-.modal { position: fixed; inset: 0; background: rgba(0,0,0,.45); display: grid; place-items: center; z-index: 50; padding: 16px; }
-.modal[hidden] { display: none; }
-.modal-box { position: relative; background: #fff; border-radius: 12px; max-width: 520px; width: 100%; max-height: 88vh; overflow: auto; padding: 20px 22px; }
-.modal-box h2 { margin: 0 0 10px; color: var(--green-deep); }
-.modal-close { position: absolute; top: 8px; right: 10px; border: 0; background: none; font-size: 1.8rem; color: var(--muted); }
-.tabs { display: flex; gap: 6px; margin-bottom: 12px; }
-.tabs button { border: 1.5px solid var(--green); background: #fff; color: var(--green-dark); border-radius: 999px; padding: 4px 14px; font-weight: 700; }
-.tabs button.active { background: var(--green); color: #fff; }
-.statgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; text-align: center; margin: 8px 0 14px; }
-.statgrid div { background: var(--panel); border-radius: 8px; padding: 8px 4px; }
-.statgrid b { display: block; font-size: 1.4rem; color: var(--green-dark); }
-.statgrid span { font-size: .72rem; color: var(--muted); }
-.bars { display: grid; gap: 3px; }
-.bar { display: grid; grid-template-columns: 70px 1fr; align-items: center; gap: 6px; font-size: .8rem; }
-.bar .fill { background: var(--green); color: #fff; border-radius: 3px; padding: 1px 6px; text-align: right; min-width: 22px; font-weight: 700; }
-.bar.me .fill { background: var(--green-deep); }
-.history { width: 100%; border-collapse: collapse; font-size: .85rem; margin-top: 8px; }
-.history td, .history th { padding: 4px 6px; border-bottom: 1px solid var(--line); text-align: left; }
-.signin { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); font-size: .9rem; }
-.toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--ink); color: #fff; padding: 8px 16px; border-radius: 999px; z-index: 60; }
-.toast[hidden] { display: none; }
 
 .foot-logo { width: 110px; height: auto; margin-bottom: 6px; }
 .foot { text-align: center; font-size: .8rem; color: var(--muted); padding: 0 16px 24px; }
 
 @media (max-width: 520px) {
-  .brand-name { font-size: 1.1rem; }
-  .mode-tab { padding: 4px 10px; font-size: .9rem; }
-  .topbar { gap: 8px; padding: 8px 10px; }
+  .brand-name { font-size: 1.05rem; }
+  .mode-tab { padding: 4px 9px; font-size: .85rem; }
+  .topbar { gap: 6px; padding: 8px 10px; }
+  .modes { margin-left: auto; flex-shrink: 1; min-width: 0; }
+  .icon-btn { width: 30px; height: 30px; }
+  .brand-icon { width: 32px; height: 30px; }
   .prompt { font-size: 1.3rem; }
   .ladder { gap: 2px; }
   .ladder li { font-size: 0; padding: 4px 0; }
-  .ladder li b { font-size: .6rem; letter-spacing: 0; }
+  .ladder li b { font-size: clamp(.5rem, 2.6vw, .6rem); letter-spacing: -.1px; }
+}
+/* Very narrow phones: the logo alone identifies the game. */
+@media (max-width: 380px) {
+  .brand-name { display: none; }
 }

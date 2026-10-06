@@ -260,9 +260,8 @@
 
   function optionHTML(o, i, stateCls, rank) {
     const tip = o.common ? cap(o.common) : '';
-    return `<div class="opt ${stateCls}" data-common="${esc(tip)}">
-      <button class="opt-main" data-i="${i}" data-tip="${esc(tip)}">${esc(shortName(o.name, rank))}<span class="common" hidden>${esc(tip)}</span></button>
-      <button class="opt-info" data-info="${i}" aria-label="Show common name">i</button>
+    return `<div class="opt ${stateCls}">
+      <button class="opt-main" data-i="${i}">${esc(shortName(o.name, rank))}${tip ? `<span class="common">${esc(tip)}</span>` : ''}</button>
     </div>`;
   }
 
@@ -278,13 +277,6 @@
       <div class="prompt">${cap(r.rank)}?<small>${esc(attemptNote)}</small></div>
       <div class="options">${opts.map((o, i) => optionHTML(o, i, '', r.rank)).join('')}</div>`;
     $('stage').querySelectorAll('.opt-main').forEach((b) => { b.onclick = () => choose(opts[+b.dataset.i]); });
-    $('stage').querySelectorAll('.opt-info').forEach((b) => {
-      b.onclick = (e) => {
-        e.stopPropagation();
-        const c = b.parentElement.querySelector('.common');
-        c.hidden = !c.hidden;
-      };
-    });
   }
 
   function currentOptions(level) {
@@ -318,9 +310,6 @@
         <i>${esc(answer.name)}</i>${answer.common ? ` (${esc(answer.common)})` : ''}.</div>
       <div class="actions"><button class="btn" id="btn-next">${over ? 'See results' : 'Next: ' + cap(RANKS[level + 1]) + ' →'}</button></div>
       <div class="explain" id="explain"><p class="note">Loading notes…</p></div>`;
-    $('stage').querySelectorAll('.opt-info').forEach((b) => {
-      b.onclick = () => { const c = b.parentElement.querySelector('.common'); c.hidden = !c.hidden; };
-    });
     $('btn-next').onclick = () => (over ? finishRun() : renderQuestion());
 
     const ex = game.mode === 'daily' ? dailyExplanation(level) : await unlimitedExplanation(level);
