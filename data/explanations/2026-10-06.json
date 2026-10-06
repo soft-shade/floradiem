@@ -1,94 +1,98 @@
 {
-  "date": "2026-10-06",
-  "ranks": {
-    "kingdom": {
-      "summary": "This is a green, rooted plant that makes its own food, which puts it in Plantae. Chromista photosynthesizers (kelps, diatoms) are brownish or golden, fungi don't photosynthesize and have chitin walls, and protozoa are mostly microscopic single cells.",
-      "options": {
-        "47126": "Plants are multicellular organisms that make their own food by photosynthesis, using chloroplasts with chlorophylls a and b. Their cell walls are made of cellulose and they store energy as starch. Most are green and rooted in place.",
-        "48222": "Chromista includes kelps and other brown seaweeds, diatoms and water moulds. Photosynthetic members use chlorophylls a and c, plus brownish pigments such as fucoxanthin, so they look olive-brown or golden rather than grass-green.",
-        "47686": "Protozoa are mostly single-celled organisms such as amoebae and slime moulds, which feed by engulfing or absorbing food. They lack cellulose walls and chloroplasts and are usually microscopic, though slime moulds can form visible blobs.",
-        "47170": "Fungi (including lichens) cannot photosynthesize on their own; they absorb food from their surroundings. Their cell walls contain chitin, and most grow as networks of thread-like hyphae, showing up as mushrooms, moulds, brackets or crusts."
-      }
-    },
-    "phylum": {
-      "summary": "This plant has a stem, leaves, roots and flowers, which require vascular tissue to move water and sugars. Liverworts and hornworts are tiny, flat or leafy non-vascular plants, and charophyte algae are freshwater algae without true leaves or roots.",
-      "options": {
-        "64615": "Liverworts are small non-vascular plants that are either flat, lobed thalli or leafy shoots with leaves in neat rows. Their spore capsules sit on short-lived, translucent stalks and they lack true roots.",
-        "311313": "Charophyte algae are freshwater green algae, such as stoneworts, desmids and Spirogyra, that are the closest algal relatives of land plants. They lack vascular tissue, roots and true leaves.",
-        "211194": "Vascular plants have xylem and phloem, internal tubes that carry water and sugars, letting them grow tall with true roots, stems and leaves. The large, long-lived plant you see is the spore- or seed-producing generation.",
-        "56327": "Hornworts are tiny non-vascular plants with a flat, ribbon-like green body (thallus). Their spores are made in upright, horn-shaped sporophytes that keep growing from the base."
-      }
-    },
-    "class": {
-      "summary": "The leaves are net-veined with toothed edges and the flowers have fused petals in a five-part plan, typical of dicots. Monocots have parallel-veined leaves and parts in threes, ferns and lycophytes reproduce by spores and never flower.",
-      "options": {
-        "47623": "Lycophytes (clubmosses, spikemosses, quillworts) have small leaves with a single unbranched vein. They reproduce by spores, often in cone-like tips, and never produce flowers or seeds.",
-        "47163": "Monocots typically have one seed leaf, leaves with parallel veins (often long and strap-like with a sheathing base), flower parts in threes, scattered vascular bundles and fibrous roots.",
-        "121943": "Ferns reproduce by spores, usually made in clusters (sori) on the underside of the fronds. New fronds unroll as fiddleheads, and they produce no flowers or seeds.",
-        "47124": "Dicots typically have two seed leaves, net-veined leaves, flower parts in fours or fives, and a taproot. Their stem vascular bundles form a ring, so woody members can make true wood."
-      }
-    },
-    "order": {
-      "summary": "The small flowers have petals fused into a two-lipped tube and the leaves are opposite, the classic Lamiales pattern. Fabales have pea-shaped flowers and pods, Saxifragales usually have separate, radially symmetrical petals, and Caryophyllales such as pinks have separate, often notched petals.",
-      "options": {
-        "47123": "Fabales are mostly legumes: flowers often pea-like with a banner, two wings and a keel, fruits in pods, and leaves usually compound with stipules. Many fix nitrogen in root nodules.",
-        "71289": "Saxifragales include saxifrages, stonecrops, currants and peonies. Flowers are mostly radially symmetrical with separate petals, often in fives, and carpels often partly separate; stonecrops have fleshy, succulent leaves.",
-        "48151": "Lamiales usually have petals fused into a tube that is often two-lipped (bilaterally symmetrical), with 2 or 4 stamens. Leaves are commonly opposite; the order includes mints, plantains, snapdragons and olives.",
-        "47366": "Caryophyllales include pinks, chickweeds, cacti, docks and amaranths. Pinks have opposite leaves on swollen joints and 5 free, often notched petals; many members are succulent or salt-tolerant."
-      }
-    },
-    "family": {
-      "summary": "A square stem, opposite leaves, two-lipped flowers in whorls at the leaf joints and a fruit of four small nutlets mark Lamiaceae. Verbenaceae lack the four-lobed ovary, Plantaginaceae usually have round stems and many-seeded capsules, and Lentibulariaceae are carnivorous plants with spurred flowers.",
-      "options": {
-        "48623": "Lamiaceae: square stems, opposite (often aromatic) leaves, two-lipped corollas, and an ovary deeply split into four lobes with the style rising from the centre, ripening into four nutlets.",
-        "49194": "Verbenaceae (verbenas, lantana) often have square stems too, but the style sits on top of an unlobed ovary, and flowers are usually small and only weakly two-lipped, in spikes or heads.",
-        "50638": "Plantaginaceae is a broad family (plantains, speedwells, foxgloves, penstemons). Stems are usually round, and the fruit is typically a capsule with many seeds rather than four nutlets.",
-        "57860": "Lentibulariaceae are carnivorous: bladderworts trap prey in underwater bladders and butterworts catch insects on sticky leaf rosettes. Flowers are two-lipped with a spur."
-      }
-    },
-    "genus": {
-      "summary": "Lamium has upright stems with whorls of flowers in the upper leaf joints, a hooded upper lip, and a lower lip whose side lobes are reduced to tiny teeth. Glechoma creeps with kidney-shaped leaves, Scutellaria has a bump on the calyx, and Nepeta is grey, fragrant and spiky-flowered.",
-      "options": {
-        "55831": "Glechoma (ground-ivy) creeps along the ground, rooting at the joints, with round to kidney-shaped scalloped leaves, an aromatic smell, and small blue-violet flowers in small groups in the leaf joints.",
-        "53914": "Scutellaria (skullcaps) has a calyx with a distinctive raised bump or crest on its upper side, and flowers usually blue-violet, often paired in leaf joints and facing one way.",
-        "55460": "Lamium: often hairy herbs with flowers in whorls at the upper leaf joints. The corolla has a hooded upper lip and a broad lower lip whose side lobes are reduced to small teeth.",
-        "48624": "Nepeta (catmints, catnip) is strongly aromatic, often greyish-hairy, with flowers crowded in terminal spikes and a 15-veined calyx."
-      }
-    },
-    "species": {
-      "summary": "Red deadnettle has every leaf on a stalk, with round-toothed, heart-shaped leaves crowded and purplish at the top, and small pink-purple flowers. Henbit's upper leaves clasp the stem without stalks, cutleaf deadnettle has deeply and sharply cut leaves, and spotted deadnettle is a larger-flowered perennial with white-blotched leaves.",
-      "options": {
-        "55828": "Lamium maculatum is a creeping perennial garden plant with large flowers (about 20-35 mm) and leaves that commonly have a white central blotch. Occasionally escapes from gardens in BC.",
-        "1369716": "Lamium hybridum looks like red deadnettle but its leaves are deeply and irregularly cut with sharp teeth. E-Flora BC treats it as a variety (var. incisum) of red deadnettle.",
-        "55851": "Lamium purpureum: annual, 10-40 cm, all leaves stalked, heart-shaped with rounded teeth, the top ones crowded and tinged purple. Corollas pink-purple, 10-15 mm. Frequent in SW BC waste places and gardens.",
-        "55459": "Lamium amplexicaule (henbit): the upper leaves and bracts are stalkless and clasp the stem, forming collar-like pairs under well-spaced flower whorls. Corolla slender, about 12-18 mm."
-      }
-    }
+ "date": "2026-10-06",
+ "ranks": {
+  "kingdom": {
+   "summary": "This is a green, rooted plant that makes its own food, which puts it in Plantae. Chromista photosynthesizers (kelps, diatoms) are brownish or golden, fungi don't photosynthesize and have chitin walls, and protozoa are mostly microscopic single cells.",
+   "options": {
+    "47126": "Plants are multicellular organisms that make their own food by photosynthesis, using chloroplasts with chlorophylls a and b. Their cell walls are made of cellulose and they store energy as starch. Most are green and rooted in place.",
+    "48222": "Chromista includes kelps and other brown seaweeds, diatoms and water moulds. Photosynthetic members use chlorophylls a and c, plus brownish pigments such as fucoxanthin, so they look olive-brown or golden rather than grass-green.",
+    "47686": "Protozoa are mostly single-celled organisms such as amoebae and slime moulds, which feed by engulfing or absorbing food. They lack cellulose walls and chloroplasts and are usually microscopic, though slime moulds can form visible blobs.",
+    "47170": "Fungi (including lichens) cannot photosynthesize on their own; they absorb food from their surroundings. Their cell walls contain chitin, and most grow as networks of thread-like hyphae, showing up as mushrooms, moulds, brackets or crusts."
+   }
   },
-  "sources": [
-    {
-      "title": "E-Flora BC: Lamium purpureum",
-      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Lamium%20purpureum"
-    },
-    {
-      "title": "E-Flora BC: Lamium amplexicaule",
-      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Lamium%20amplexicaule"
-    },
-    {
-      "title": "E-Flora BC: Lamium maculatum",
-      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Lamium%20maculatum"
-    },
-    {
-      "title": "Go Botany: Lamium dichotomous key",
-      "url": "https://gobotany.nativeplanttrust.org/dkey/lamium/"
-    },
-    {
-      "title": "Wikipedia: Lamiaceae",
-      "url": "https://en.wikipedia.org/wiki/Lamiaceae"
-    },
-    {
-      "title": "Wikipedia: Lentibulariaceae",
-      "url": "https://en.wikipedia.org/wiki/Lentibulariaceae"
-    }
-  ]
+  "phylum": {
+   "summary": "This plant has a stem, leaves, roots and flowers, which require vascular tissue to move water and sugars. Liverworts and hornworts are tiny, flat or leafy non-vascular plants, and charophyte algae are freshwater algae without true leaves or roots.",
+   "options": {
+    "64615": "Liverworts are small non-vascular plants that are either flat, lobed thalli or leafy shoots with leaves in neat rows. Their spore capsules sit on short-lived, translucent stalks and they lack true roots.",
+    "311313": "Charophyte algae are freshwater green algae, such as stoneworts, desmids and Spirogyra, that are the closest algal relatives of land plants. They lack vascular tissue, roots and true leaves.",
+    "211194": "Vascular plants have xylem and phloem, internal tubes that carry water and sugars, letting them grow tall with true roots, stems and leaves. The large, long-lived plant you see is the spore- or seed-producing generation.",
+    "56327": "Hornworts are tiny non-vascular plants with a flat, ribbon-like green body (thallus). Their spores are made in upright, horn-shaped sporophytes that keep growing from the base."
+   }
+  },
+  "class": {
+   "summary": "The leaves are net-veined with toothed edges and the flowers have fused petals in a five-part plan, typical of dicots. Monocots have parallel-veined leaves and parts in threes, ferns and lycophytes reproduce by spores and never flower.",
+   "options": {
+    "47623": "Lycophytes (clubmosses, spikemosses, quillworts) have small leaves with a single unbranched vein. They reproduce by spores, often in cone-like tips, and never produce flowers or seeds.",
+    "47163": "Monocots typically have one seed leaf, leaves with parallel veins (often long and strap-like with a sheathing base), flower parts in threes, scattered vascular bundles and fibrous roots.",
+    "121943": "Ferns reproduce by spores, usually made in clusters (sori) on the underside of the fronds. New fronds unroll as fiddleheads, and they produce no flowers or seeds.",
+    "47124": "Dicots typically have two seed leaves, net-veined leaves, flower parts in fours or fives, and a taproot. Their stem vascular bundles form a ring, so woody members can make true wood."
+   }
+  },
+  "order": {
+   "summary": "The small flowers have petals fused into a two-lipped tube and the leaves are opposite, the classic Lamiales pattern. Fabales have pea-shaped flowers and pods, Saxifragales usually have separate, radially symmetrical petals, and Caryophyllales such as pinks have separate, often notched petals.",
+   "options": {
+    "47123": "Fabales are mostly legumes: flowers often pea-like with a banner, two wings and a keel, fruits in pods, and leaves usually compound with stipules. Many fix nitrogen in root nodules.",
+    "71289": "Saxifragales include saxifrages, stonecrops, currants and peonies. Flowers are mostly radially symmetrical with separate petals, often in fives, and carpels often partly separate; stonecrops have fleshy, succulent leaves.",
+    "48151": "Lamiales usually have petals fused into a tube that is often two-lipped (bilaterally symmetrical), with 2 or 4 stamens. Leaves are commonly opposite; the order includes mints, plantains, snapdragons and olives.",
+    "47366": "Caryophyllales include pinks, chickweeds, cacti, docks and amaranths. Pinks have opposite leaves on swollen joints and 5 free, often notched petals; many members are succulent or salt-tolerant."
+   }
+  },
+  "family": {
+   "summary": "A square stem, opposite leaves, two-lipped flowers in whorls at the leaf joints and a fruit of four small nutlets mark Lamiaceae. Verbenaceae lack the four-lobed ovary, Plantaginaceae usually have round stems and many-seeded capsules, and Lentibulariaceae are carnivorous plants with spurred flowers.",
+   "options": {
+    "48623": "Lamiaceae: square stems, opposite (often aromatic) leaves, two-lipped corollas, and an ovary deeply split into four lobes with the style rising from the centre, ripening into four nutlets.",
+    "49194": "Verbenaceae (verbenas, lantana) often have square stems too, but the style sits on top of an unlobed ovary, and flowers are usually small and only weakly two-lipped, in spikes or heads.",
+    "50638": "Plantaginaceae is a broad family (plantains, speedwells, foxgloves, penstemons). Stems are usually round, and the fruit is typically a capsule with many seeds rather than four nutlets.",
+    "57860": "Lentibulariaceae are carnivorous: bladderworts trap prey in underwater bladders and butterworts catch insects on sticky leaf rosettes. Flowers are two-lipped with a spur."
+   }
+  },
+  "genus": {
+   "summary": "Lamium has upright stems with whorls of flowers in the upper leaf joints, a hooded upper lip, and a lower lip whose side lobes are reduced to tiny teeth. Glechoma creeps with kidney-shaped leaves, Scutellaria has a bump on the calyx, and Nepeta is grey, fragrant and spiky-flowered.",
+   "options": {
+    "55831": "Glechoma (ground-ivy) creeps along the ground, rooting at the joints, with round to kidney-shaped scalloped leaves, an aromatic smell, and small blue-violet flowers in small groups in the leaf joints.",
+    "53914": "Scutellaria (skullcaps) has a calyx with a distinctive raised bump or crest on its upper side, and flowers usually blue-violet, often paired in leaf joints and facing one way.",
+    "55460": "Lamium: often hairy herbs with flowers in whorls at the upper leaf joints. The corolla has a hooded upper lip and a broad lower lip whose side lobes are reduced to small teeth.",
+    "48624": "Nepeta (catmints, catnip) is strongly aromatic, often greyish-hairy, with flowers crowded in terminal spikes and a 15-veined calyx."
+   }
+  },
+  "species": {
+   "summary": "Red deadnettle is a small annual with every leaf stalked, round-toothed, heart-shaped leaves crowded and purplish at the top, and small pink-purple flowers. Henbit's upper leaves clasp the stem without stalks, spotted deadnettle is a larger-flowered perennial with white-blotched leaves, and yellow archangel is a trailing perennial with yellow flowers.",
+   "options": {
+    "55828": "Lamium maculatum is a creeping perennial garden plant with large flowers (about 20-35 mm) and leaves that commonly have a white central blotch. Occasionally escapes from gardens in BC.",
+    "55851": "Lamium purpureum: annual, 10-40 cm, all leaves stalked, heart-shaped with rounded teeth, the top ones crowded and tinged purple. Corollas pink-purple, 10-15 mm. Frequent in SW BC waste places and gardens.",
+    "55459": "Lamium amplexicaule (henbit): the upper leaves and bracts are stalkless and clasp the stem, forming collar-like pairs under well-spaced flower whorls. Corolla slender, about 12-18 mm.",
+    "204339": "Lamium galeobdolon (yellow archangel, sometimes placed in Lamiastrum): a perennial spreading by long runners, leaves often silver-marked, and yellow two-lipped flowers about 15-25 mm with reddish streaks on the lower lip. A garden escape now invasive in coastal BC forests."
+   }
+  }
+ },
+ "sources": [
+  {
+   "title": "E-Flora BC: Lamium purpureum",
+   "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Lamium%20purpureum"
+  },
+  {
+   "title": "E-Flora BC: Lamium amplexicaule",
+   "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Lamium%20amplexicaule"
+  },
+  {
+   "title": "E-Flora BC: Lamium maculatum",
+   "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Lamium%20maculatum"
+  },
+  {
+   "title": "Go Botany: Lamium dichotomous key",
+   "url": "https://gobotany.nativeplanttrust.org/dkey/lamium/"
+  },
+  {
+   "title": "Wikipedia: Lamiaceae",
+   "url": "https://en.wikipedia.org/wiki/Lamiaceae"
+  },
+  {
+   "title": "Wikipedia: Lentibulariaceae",
+   "url": "https://en.wikipedia.org/wiki/Lentibulariaceae"
+  },
+  {
+   "title": "E-Flora BC: Lamium galeobdolon",
+   "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Lamium%20galeobdolon"
+  }
+ ]
 }

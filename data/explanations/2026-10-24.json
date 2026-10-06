@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-24",
+  "ranks": {
+    "kingdom": {
+      "summary": "These small fans grow on dead wood and don't photosynthesize; they absorb food from the wood through thread-like hyphae, which places them in Fungi. Plants and photosynthetic chromists make their own food with chloroplasts, and protozoa are mostly microscopic single cells.",
+      "options": {
+        "47170": "Fungi (including lichens) cannot photosynthesize on their own; they absorb food from their surroundings. Their cell walls contain chitin, and most grow as networks of thread-like hyphae, showing up as mushrooms, moulds, brackets or crusts.",
+        "47126": "Plants are multicellular organisms that make their own food by photosynthesis, using chloroplasts with chlorophylls a and b. Their cell walls are made of cellulose and most are green and rooted in place.",
+        "48222": "Chromista includes kelps and other brown seaweeds, diatoms and water moulds. Photosynthetic members use chlorophylls a and c plus brownish pigments, so they look olive-brown or golden rather than green.",
+        "47686": "Protozoa are mostly single-celled organisms such as amoebae and slime moulds that engulf or absorb food. They lack chitin cell walls and are usually microscopic, though slime moulds can form visible blobs."
+      }
+    },
+    "phylum": {
+      "summary": "A mushroom-like fruiting body with gill-like plates on wood is the work of a basidiomycete, which bears spores on club-shaped basidia. Chytrids and Blastocladiomycota are microscopic water fungi with swimming spores, and Mucoromycota are pin moulds; none of them make visible caps with gills.",
+      "options": {
+        "47169": "Basidiomycetes make their spores on the outside of club-shaped cells (basidia), usually four per cell. Most visible mushrooms, brackets, puffballs, jelly fungi, rusts and smuts belong here.",
+        "125609": "Chytrids are microscopic fungi of water and damp soil with swimming spores that have a single whiplash tail. They never form mushrooms; one species is the notorious amphibian chytrid.",
+        "1094423": "Blastocladiomycota are microscopic water and soil fungi with swimming, single-tailed spores, such as Allomyces. They form no visible fruiting bodies.",
+        "1094433": "Mucoromycota include fast-growing pin moulds such as bread mould (Rhizopus) and Mucor, with spores in tiny round sacs on stalks. They make no gilled mushrooms."
+      }
+    },
+    "class": {
+      "summary": "A tough, cap-like fruiting body with a spore-bearing underside is typical of Agaricomycetes, the class of mushrooms and brackets. Rusts (Pucciniomycetes) and smuts (Ustilaginomycetes) are plant parasites that show up as coloured pustules or sooty spore masses, and Cystobasidiomycetes are mostly yeasts and tiny inconspicuous fungi.",
+      "options": {
+        "50814": "Agaricomycetes produce sizeable fruiting bodies such as gilled mushrooms, boletes, brackets, coral fungi and puffballs, with the spore-bearing surface on gills, pores, teeth or inside a sac.",
+        "69967": "Pucciniomycetes are mainly the rust fungi, parasites of living plants that appear as orange, yellow or brown powdery pustules on leaves and stems, often alternating between two host plants.",
+        "83712": "Ustilaginomycetes are smut fungi that replace grains, flowers or other plant parts with masses of dark, sooty spores. They do not form mushrooms or brackets.",
+        "152040": "Cystobasidiomycetes are mostly yeasts and minute fungi, some living on or inside other fungi or as pink yeasts. They are rarely noticed without a microscope."
+      }
+    },
+    "order": {
+      "summary": "Agaricales is the big order of gilled mushrooms, and these fans carry gill-like plates underneath. Chanterelles (Cantharellales) have blunt, forked ridges rather than true gills; Gomphales includes corals and vase-shaped fungi with wrinkled undersides; and most Boletales have a spongy layer of pores under a fleshy cap.",
+      "options": {
+        "47167": "Agaricales contains most gilled mushrooms, from toadstools with stems and rings to shelf-like species on wood. Spores are borne on blade-like gills (or gill-like folds) under the cap.",
+        "47350": "Cantharellales includes chanterelles, hedgehog mushrooms and some crusts. Chanterelles have blunt, shallow, often forked ridges running down the stem instead of sharp-edged gills.",
+        "55154": "Gomphales includes coral fungi (Ramaria), pig's ears and scaly vase chanterelles (Turbinellus). Their spore surface is smooth, wrinkled or on coral branches, and spores are often ornamented and ochre.",
+        "48427": "Boletales are mainly boletes: fleshy, stemmed mushrooms with a sponge-like layer of pores under the cap. A few members have gills (e.g. Paxillus) or are puffball-like."
+      }
+    },
+    "family": {
+      "summary": "Schizophyllaceae are tough, stalkless fans on wood whose gill-like folds are split lengthwise along their edges. Mycenaceae are small, fragile, stemmed bonnets; Coprinaceae are inky caps with black spores that often dissolve into ink; and Cortinariaceae have rusty-brown spores and a cobweb-like veil on fleshy, stemmed mushrooms.",
+      "options": {
+        "54574": "Schizophyllaceae form small, leathery, fan- or shell-shaped fruiting bodies attached directly to wood. The undersides bear folds that are split down the edge; they shrivel when dry and revive when wet.",
+        "55920": "Mycenaceae are mostly small, thin-fleshed mushrooms with conical or bell-shaped caps on slender, fragile stems, often in clusters on wood or litter. Spore print is usually white.",
+        "516951": "Coprinaceae is an older family name for the inky caps and their relatives. They have dark brown to black spores, and many species have gills that dissolve into black ink as they mature.",
+        "48705": "Cortinariaceae are fleshy, stemmed mushrooms with rusty-brown spore prints. Young specimens usually have a cobweb-like veil (cortina) between cap edge and stem, leaving fibres on the stem."
+      }
+    },
+    "genus": {
+      "summary": "Schizophyllum makes tough, stalkless, hairy fans on wood whose gill-like folds are split along the edge. Mycena forms delicate bonnets on thin stems, Coprinus is the shaggy inky cap that turns to black ink, and Nidula is a bird's-nest fungus with tiny egg-like spore packets sitting in a cup.",
+      "options": {
+        "54575": "Schizophyllum species are small, tough, leathery fans or shells attached laterally to wood with no stem. The underside has radiating folds that are split lengthwise, rolling back in dry weather; spore print white.",
+        "55922": "Mycena (bonnets) are small, fragile mushrooms with conical to bell-shaped, often striate caps on thin, hollow stems. Many grow in clusters on wood or conifer needles; spore print white.",
+        "118140": "Nidula is a bird's-nest fungus: a small cup containing egg-like spore packets (peridioles) embedded in a sticky gel. Unlike Crucibulum and Cyathus, the eggs lack attaching cords.",
+        "47393": "Coprinus in the strict sense is the shaggy mane group: tall, cylindrical, shaggy-scaled caps on soil whose gills turn black and liquefy into ink. Spores are black."
+      }
+    },
+    "species": {
+      "summary": "Schizophyllum commune is the familiar whitish-grey, hairy fan with distinctly split, pale gill folds, common on dead hardwood worldwide. Schizophyllum amplum (poplar bells) is a small hanging bell or cup with an almost smooth brownish underside, while S. umbrinum and S. fasciatum are brownish species with darker or coloured gill folds.",
+      "options": {
+        "54573": "Splitgill mushroom: 1–4 cm, whitish to greyish, densely hairy fans attached to dead wood (mainly hardwoods). The whitish to grey gill folds are clearly split along their edges. Spore print white; found worldwide.",
+        "451041": "Poplar bells: tiny (5–15 mm) bell- or cup-shaped fruiting bodies hanging from bark of dead poplar branches. The light brown to orange-brown underside is smooth or only weakly ridged, lacking real split gills.",
+        "352359": "S. umbrinum has a brownish cap surface and distinctive orange-brown gill folds, contrasting with the pale whitish-grey folds of the common splitgill.",
+        "352358": "S. fasciatum, described from Mexico, has a cap marked with concentric zones and dark, sooty-coloured gill folds rather than pale ones."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "MushroomExpert: Schizophyllum commune",
+      "url": "https://www.mushroomexpert.com/schizophyllum_commune.html"
+    },
+    {
+      "title": "Wikipedia: Schizophyllum amplum",
+      "url": "https://en.wikipedia.org/wiki/Schizophyllum_amplum"
+    },
+    {
+      "title": "Italian Journal of Mycology: Schizophyllum species (Schizophyllum umbrinum, S. fasciatum)",
+      "url": "https://italianmycology.unibo.it/article/download/9426/9590"
+    }
+  ]
+}

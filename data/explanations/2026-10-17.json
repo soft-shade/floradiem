@@ -1,94 +1,102 @@
 {
-  "date": "2026-10-17",
-  "ranks": {
-    "kingdom": {
-      "summary": "This is an olive-brown seaweed. Its colour comes from chlorophyll c and the golden-brown pigment fucoxanthin, which places it with the kelps, diatoms and their allies rather than with the grass-green plants. Fungi and protozoa don't photosynthesise at all.",
-      "options": {
-        "47170": "Fungi absorb food from their surroundings instead of photosynthesising, and have chitin cell walls. Seen as mushrooms, moulds and brackets, or as lichens when partnered with algae; never leafy and green.",
-        "48222": "Kelps, diatoms, water moulds and relatives, mostly aquatic. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden to olive-brown colours rather than grass-green.",
-        "47126": "Land plants plus green and red algae: green members use chlorophylls a and b and store starch. Olive-brown seaweeds with fucoxanthin belong elsewhere.",
-        "47686": "Mostly single-celled, often mobile organisms such as amoebae, plus slime moulds; they feed by engulfing food and have no leaves, stems or roots."
-      }
-    },
-    "phylum": {
-      "summary": "Ochrophyta are the photosynthetic stramenopiles, from single-celled diatoms to large seaweeds, all with golden-brown chloroplasts. Water moulds (Oomycota) are colourless and fungus-like, ciliates are single cells covered in beating hairs, and the dinoflagellate group (Miozoa) is mostly microscopic plankton and parasites.",
-      "options": {
-        "52595": "Water moulds and downy mildews: fungus-like filaments that absorb food and have no chloroplasts, such as the potato blight organism.",
-        "48221": "Photosynthetic stramenopiles: diatoms, golden algae, yellow-green algae and large seaweeds. Chloroplasts contain chlorophyll c and usually fucoxanthin; swimming cells have one hairy and one smooth flagellum.",
-        "118996": "Ciliates: microscopic single cells covered in hair-like cilia used for swimming and feeding, like Paramecium; they never form seaweeds.",
-        "792744": "Dinoflagellates and apicomplexans: mostly single-celled plankton with two flagella (some cause red tides) or parasites such as the malaria organism."
-      }
-    },
-    "class": {
-      "summary": "A large, many-celled seaweed with a holdfast and branching fronds is the hallmark of Phaeophyceae. Diatoms are single cells in glassy silica shells, and golden and yellow-green algae are mostly tiny freshwater cells, colonies or filaments.",
-      "options": {
-        "48220": "Brown algae: almost all multicellular marine seaweeds, from fine filaments to giant kelps; olive to dark brown from fucoxanthin, with food stored as laminarin rather than starch.",
-        "123880": "Diatoms: single cells (sometimes in chains) enclosed in a two-part glassy silica shell; they form brown films on rocks and mud but never leafy seaweeds.",
-        "51943": "Golden algae: mostly microscopic, often swimming cells or colonies in fresh water, some covered in silica scales.",
-        "53659": "Yellow-green algae: lack fucoxanthin so look yellow-green; mostly freshwater or soil cells and filaments, such as the felt-forming Vaucheria."
-      }
-    },
-    "order": {
-      "summary": "Fucales are tough, leathery seaweeds whose sex cells form in tiny pits (conceptacles) clustered in swollen branch tips called receptacles, with no separate small life stage. Desmarestiales are soft, branched, acid-containing subtidal weeds, Ralfsiales form flat crusts on rock, and Dictyotales are thin flat ribbons or fans with no midrib.",
-      "options": {
-        "152254": "Acid weeds: soft, branched, often feathery seaweeds that store sulphuric acid in their cells and quickly decay once collected; mainly subtidal.",
-        "706026": "Tough brown crusts that look like tar spots or paint on intertidal rocks, with no upright branches.",
-        "48219": "Leathery intertidal and subtidal seaweeds; gametes form in conceptacles within swollen receptacles. The life cycle lacks the free-living alternate generation that kelps have.",
-        "51022": "Thin, flat, ribbon- or fan-shaped blades lacking a midrib, growing from an apical cell and often forking evenly; mainly in warmer seas."
-      }
-    },
-    "family": {
-      "summary": "Fucaceae are the classic intertidal rockweeds of cold northern shores: flattened, repeatedly forked fronds attached by a disc holdfast, with swollen receptacles at the tips. Sargassaceae have a stem-like axis bearing leaf-like blades and stalked round air bladders, Durvillaeaceae are massive southern bull kelps, and Hormosiraceae form chains of bead-like segments.",
-      "options": {
-        "48218": "Mid-sized intertidal seaweeds with flat, forking fronds (often with a midrib) and swollen, speckled reproductive tips; some have air bladders within the frond.",
-        "126125": "Sargassum and kin: a stem-like axis bearing leaf-like blades and small, stalked, round air bladders, like the introduced wireweed (Sargassum muticum) on BC shores.",
-        "197106": "Southern bull kelps of New Zealand, Chile and southern Australia: huge, thick, leathery fronds, often with honeycomb-like inner tissue for buoyancy.",
-        "342808": "Neptune's necklace of Australia and New Zealand: chains of water-filled, bead-like segments, unlike any flat-fronded seaweed."
-      }
-    },
-    "genus": {
-      "summary": "Fucus fronds are flat with a distinct midrib running up each evenly forking branch. Ascophyllum has narrow strap-like fronds with no midrib and large single air bladders in a row, while Silvetia and Pelvetiopsis are small, high-shore rockweeds whose narrow fronds also lack a midrib.",
-      "options": {
-        "68769": "Knotted wrack of the North Atlantic: long, narrow, strap-like fronds without a midrib, with large egg-shaped air bladders spaced singly along them.",
-        "117830": "Small, bushy rockweeds lacking a midrib, with narrow, compressed fronds and receptacles at the branch tips; found on the Pacific coast of North America and in East Asia.",
-        "48217": "Flattened, dichotomously (evenly) forking fronds with a conspicuous midrib, attached by a disc-shaped holdfast; swollen reproductive tips; some species have air bladders.",
-        "125339": "Pelvetiopsis limitata, a small (usually under 10 cm) tufted plant of the highest, wave-exposed rocks on the Pacific coast, with narrow fronds and no midrib."
-      }
-    },
-    "species": {
-      "summary": "Rockweed is the common Fucus of BC shores, forming a broad olive band in the mid-intertidal. Its fronds have no air bladders, and in summer the branch tips swell into inflated receptacles. Bladder wrack has paired bladders beside the midrib, saw wrack has saw-toothed edges, and spiral wrack has twisted fronds and a rim around each receptacle; these three are North Atlantic species.",
-      "options": {
-        "118817": "Spiral wrack: an upper-shore North Atlantic species whose fronds are often spirally twisted; no air bladders; receptacles have a distinct sterile rim around the edge.",
-        "48216": "Bladder wrack of the North Atlantic: smooth-edged fronds with round air bladders usually in pairs on either side of the midrib (often missing on wave-exposed shores).",
-        "69155": "Olive to yellowish, forking fronds up to about 30 cm with a midrib but no air bladders; in summer the branch tips swell into inflated, yellowish receptacles. Common on rocks in the upper and mid-intertidal throughout BC.",
-        "57772": "Saw wrack: a lower-shore North Atlantic species easily known by the saw-toothed edges of its broad fronds; no air bladders and flattened, not inflated, receptacles."
-      }
-    }
+ "date": "2026-10-17",
+ "ranks": {
+  "kingdom": {
+   "summary": "This is an olive-brown seaweed. Its colour comes from chlorophyll c and the golden-brown pigment fucoxanthin, which places it with the kelps, diatoms and their allies rather than with the grass-green plants. Fungi and protozoa don't photosynthesise at all.",
+   "options": {
+    "47170": "Fungi absorb food from their surroundings instead of photosynthesising, and have chitin cell walls. Seen as mushrooms, moulds and brackets, or as lichens when partnered with algae; never leafy and green.",
+    "48222": "Kelps, diatoms, water moulds and relatives, mostly aquatic. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden to olive-brown colours rather than grass-green.",
+    "47126": "Land plants plus green and red algae: green members use chlorophylls a and b and store starch. Olive-brown seaweeds with fucoxanthin belong elsewhere.",
+    "47686": "Mostly single-celled, often mobile organisms such as amoebae, plus slime moulds; they feed by engulfing food and have no leaves, stems or roots."
+   }
   },
-  "sources": [
-    {
-      "title": "Wikipedia: Fucus distichus",
-      "url": "https://en.wikipedia.org/wiki/Fucus_distichus"
-    },
-    {
-      "title": "University of Puget Sound Slater Museum: Rockweed (Fucus distichus)",
-      "url": "https://www.pugetsound.edu/rockweed"
-    },
-    {
-      "title": "E-Flora BC: Fucus distichus",
-      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Fucus%20distichus"
-    },
-    {
-      "title": "Seaweed.ie (M.D. Guiry): Fucus serratus",
-      "url": "https://www.seaweed.ie/descriptions/Fucus_serratus.php"
-    },
-    {
-      "title": "NMBAQC: Pictures to help with identification of Fucus species from the British Isles",
-      "url": "https://nmbaqcs.org/media/hdupwgru/pictures-to-help-with-identification-of-fucus-species-from-the-birtish-isles.pdf"
-    },
-    {
-      "title": "Wikipedia: Fucales",
-      "url": "https://en.wikipedia.org/wiki/Fucales"
-    }
-  ]
+  "phylum": {
+   "summary": "Ochrophyta are the photosynthetic stramenopiles, from single-celled diatoms to large seaweeds, all with golden-brown chloroplasts. Water moulds (Oomycota) are colourless and fungus-like, ciliates are single cells covered in beating hairs, and the dinoflagellate group (Miozoa) is mostly microscopic plankton and parasites.",
+   "options": {
+    "52595": "Water moulds and downy mildews: fungus-like filaments that absorb food and have no chloroplasts, such as the potato blight organism.",
+    "48221": "Photosynthetic stramenopiles: diatoms, golden algae, yellow-green algae and large seaweeds. Chloroplasts contain chlorophyll c and usually fucoxanthin; swimming cells have one hairy and one smooth flagellum.",
+    "118996": "Ciliates: microscopic single cells covered in hair-like cilia used for swimming and feeding, like Paramecium; they never form seaweeds.",
+    "792744": "Dinoflagellates and apicomplexans: mostly single-celled plankton with two flagella (some cause red tides) or parasites such as the malaria organism."
+   }
+  },
+  "class": {
+   "summary": "A large, many-celled seaweed with a holdfast and branching fronds is the hallmark of Phaeophyceae. Diatoms are single cells in glassy silica shells, and golden and yellow-green algae are mostly tiny freshwater cells, colonies or filaments.",
+   "options": {
+    "48220": "Brown algae: almost all multicellular marine seaweeds, from fine filaments to giant kelps; olive to dark brown from fucoxanthin, with food stored as laminarin rather than starch.",
+    "123880": "Diatoms: single cells (sometimes in chains) enclosed in a two-part glassy silica shell; they form brown films on rocks and mud but never leafy seaweeds.",
+    "51943": "Golden algae: mostly microscopic, often swimming cells or colonies in fresh water, some covered in silica scales.",
+    "53659": "Yellow-green algae: lack fucoxanthin so look yellow-green; mostly freshwater or soil cells and filaments, such as the felt-forming Vaucheria."
+   }
+  },
+  "order": {
+   "summary": "Fucales are tough, leathery seaweeds whose sex cells form in tiny pits (conceptacles) clustered in swollen branch tips called receptacles, with no separate small life stage. Desmarestiales are soft, branched, acid-containing subtidal weeds, Ralfsiales form flat crusts on rock, and Dictyotales are thin flat ribbons or fans with no midrib.",
+   "options": {
+    "152254": "Acid weeds: soft, branched, often feathery seaweeds that store sulphuric acid in their cells and quickly decay once collected; mainly subtidal.",
+    "706026": "Tough brown crusts that look like tar spots or paint on intertidal rocks, with no upright branches.",
+    "48219": "Leathery intertidal and subtidal seaweeds; gametes form in conceptacles within swollen receptacles. The life cycle lacks the free-living alternate generation that kelps have.",
+    "51022": "Thin, flat, ribbon- or fan-shaped blades lacking a midrib, growing from an apical cell and often forking evenly; mainly in warmer seas."
+   }
+  },
+  "family": {
+   "summary": "Fucaceae are the classic intertidal rockweeds of cold northern shores: flattened, repeatedly forked fronds attached by a disc holdfast, with swollen receptacles at the tips. Sargassaceae have a stem-like axis bearing leaf-like blades and stalked round air bladders, Durvillaeaceae are massive southern bull kelps, and Hormosiraceae form chains of bead-like segments.",
+   "options": {
+    "48218": "Mid-sized intertidal seaweeds with flat, forking fronds (often with a midrib) and swollen, speckled reproductive tips; some have air bladders within the frond.",
+    "126125": "Sargassum and kin: a stem-like axis bearing leaf-like blades and small, stalked, round air bladders, like the introduced wireweed (Sargassum muticum) on BC shores.",
+    "197106": "Southern bull kelps of New Zealand, Chile and southern Australia: huge, thick, leathery fronds, often with honeycomb-like inner tissue for buoyancy.",
+    "342808": "Neptune's necklace of Australia and New Zealand: chains of water-filled, bead-like segments, unlike any flat-fronded seaweed."
+   }
+  },
+  "genus": {
+   "summary": "Fucus fronds are flat with a distinct midrib running up each evenly forking branch. Ascophyllum has narrow strap-like fronds with no midrib and large single air bladders in a row, while Silvetia and Pelvetiopsis are small, high-shore rockweeds whose narrow fronds also lack a midrib.",
+   "options": {
+    "68769": "Knotted wrack of the North Atlantic: long, narrow, strap-like fronds without a midrib, with large egg-shaped air bladders spaced singly along them.",
+    "117830": "Small, bushy rockweeds lacking a midrib, with narrow, compressed fronds and receptacles at the branch tips; found on the Pacific coast of North America and in East Asia.",
+    "48217": "Flattened, dichotomously (evenly) forking fronds with a conspicuous midrib, attached by a disc-shaped holdfast; swollen reproductive tips; some species have air bladders.",
+    "125339": "Pelvetiopsis limitata, a small (usually under 10 cm) tufted plant of the highest, wave-exposed rocks on the Pacific coast, with narrow fronds and no midrib."
+   }
+  },
+  "species": {
+   "summary": "Rockweed is the common Fucus of BC shores, forming a broad olive band in the mid-intertidal. Its fronds have no air bladders, and in summer the branch tips swell into inflated receptacles. Bladder wrack has paired bladders beside the midrib, saw wrack has saw-toothed edges, and horned wrack has narrow fronds with slender, pointed, often forked receptacles; these three are North Atlantic species.",
+   "options": {
+    "48216": "Bladder wrack of the North Atlantic: smooth-edged fronds with round air bladders usually in pairs on either side of the midrib (often missing on wave-exposed shores).",
+    "69155": "Olive to yellowish, forking fronds up to about 30 cm with a midrib but no air bladders; in summer the branch tips swell into inflated, yellowish receptacles. Common on rocks in the upper and mid-intertidal throughout BC.",
+    "57772": "Saw wrack: a lower-shore North Atlantic species easily known by the saw-toothed edges of its broad fronds; no air bladders and flattened, not inflated, receptacles.",
+    "356118": "Horned wrack: a North Atlantic wrack of estuaries and brackish water; thin, narrow fronds with a midrib, no air bladders, and slender, pointed, often forked receptacles."
+   }
+  }
+ },
+ "sources": [
+  {
+   "title": "Wikipedia: Fucus distichus",
+   "url": "https://en.wikipedia.org/wiki/Fucus_distichus"
+  },
+  {
+   "title": "University of Puget Sound Slater Museum: Rockweed (Fucus distichus)",
+   "url": "https://www.pugetsound.edu/rockweed"
+  },
+  {
+   "title": "E-Flora BC: Fucus distichus",
+   "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Fucus%20distichus"
+  },
+  {
+   "title": "Seaweed.ie (M.D. Guiry): Fucus serratus",
+   "url": "https://www.seaweed.ie/descriptions/Fucus_serratus.php"
+  },
+  {
+   "title": "NMBAQC: Pictures to help with identification of Fucus species from the British Isles",
+   "url": "https://nmbaqcs.org/media/hdupwgru/pictures-to-help-with-identification-of-fucus-species-from-the-birtish-isles.pdf"
+  },
+  {
+   "title": "Wikipedia: Fucales",
+   "url": "https://en.wikipedia.org/wiki/Fucales"
+  },
+  {
+   "title": "AlgaeBase: Fucus ceranoides",
+   "url": "https://www.algaebase.org/search/species/?q=Fucus%20ceranoides"
+  },
+  {
+   "title": "Analysis of the organellar genomes of Fucus spiralis",
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7801007/"
+  }
+ ]
 }

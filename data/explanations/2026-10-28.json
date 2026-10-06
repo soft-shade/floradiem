@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-28",
+  "ranks": {
+    "kingdom": {
+      "summary": "A stemmed mushroom growing from the ground is the fruiting body of a fungus feeding through hyphae in the soil, not a photosynthesizer, so it belongs in Fungi. Plants and photosynthetic chromists make their own food with chloroplasts, and protozoa are mostly microscopic single cells.",
+      "options": {
+        "47170": "Fungi (including lichens) cannot photosynthesize on their own; they absorb food from their surroundings. Their cell walls contain chitin, and most grow as networks of thread-like hyphae, showing up as mushrooms, moulds, brackets or crusts.",
+        "47126": "Plants are multicellular organisms that make their own food by photosynthesis, using chloroplasts with chlorophylls a and b. Their cell walls are made of cellulose and most are green and rooted in place.",
+        "48222": "Chromista includes kelps and other brown seaweeds, diatoms and water moulds. Photosynthetic members use chlorophylls a and c plus brownish pigments, so they look olive-brown or golden rather than green.",
+        "47686": "Protozoa are mostly single-celled organisms such as amoebae and slime moulds that engulf or absorb food. They lack chitin cell walls and are usually microscopic, though slime moulds can form visible blobs."
+      }
+    },
+    "phylum": {
+      "summary": "A capped, gilled mushroom is produced by a basidiomycete, which bears spores on club-shaped basidia. Chytrids and Blastocladiomycota are microscopic water fungi with swimming spores, and Entomophthoromycota are insect-killing fungi; none form capped mushrooms.",
+      "options": {
+        "47169": "Basidiomycetes make their spores on the outside of club-shaped cells (basidia), usually four per cell. Most visible mushrooms, brackets, puffballs, jelly fungi, rusts and smuts belong here.",
+        "125609": "Chytrids are microscopic fungi of water and damp soil with swimming spores that have a single whiplash tail. They never form mushrooms; one species is the notorious amphibian chytrid.",
+        "1094423": "Blastocladiomycota are microscopic water and soil fungi with swimming, single-tailed spores, such as Allomyces. They form no visible fruiting bodies.",
+        "1094440": "Entomophthoromycota are mostly insect pathogens, such as Entomophthora, which kills flies that are then found stuck to surfaces with a halo of shot-off spores. They form no mushrooms."
+      }
+    },
+    "class": {
+      "summary": "Fleshy capped mushrooms with gills belong to Agaricomycetes. Dacrymycetes are small orange-yellow jelly fungi on wood, Exobasidiomycetes are plant parasites that cause galls or leaf blisters, and Atractiellomycetes are tiny, obscure fungi rarely noticed in the field.",
+      "options": {
+        "50814": "Agaricomycetes produce sizeable fruiting bodies such as gilled mushrooms, boletes, brackets, coral fungi and puffballs, with the spore-bearing surface on gills, pores, teeth or inside a sac.",
+        "53277": "Dacrymycetes are jelly fungi, typically bright yellow to orange blobs, cushions or little horns on dead wood (e.g. Dacrymyces, Calocera). Their basidia are distinctively forked like a tuning fork.",
+        "130023": "Exobasidiomycetes are plant parasites, including Exobasidium, which makes swollen, pinkish galls on leaves of huckleberries, azaleas and relatives. They do not form mushrooms.",
+        "152037": "Atractiellomycetes are a small group of minute fungi, some forming tiny stalked heads on wood or living with orchid roots. They are rarely noticed without magnification."
+      }
+    },
+    "order": {
+      "summary": "Agaricales is the big order of typical gilled mushrooms, with soft caps, thin blade-like gills and a central stem. Russulales gilled species (Russula, Lactarius) are notably brittle and crumbly; Cantharellales chanterelles have blunt, forked ridges instead of gills; and Hymenochaetales are mostly brown, tough brackets and crusts on wood.",
+      "options": {
+        "47167": "Agaricales contains most gilled mushrooms. Fruiting bodies typically have a soft cap, blade-like gills and a central stem, with spore prints in many colours (white, pink, brown, black).",
+        "48341": "Russulales includes brittlegills (Russula) and milkcaps (Lactarius), whose flesh snaps like chalk because of round cells, plus some brackets and crusts. Milkcaps ooze latex when cut.",
+        "47350": "Cantharellales includes chanterelles and hedgehog mushrooms. Chanterelles have blunt, shallow, forked ridges running down the stem instead of sharp-edged gills; hedgehogs have spines.",
+        "57519": "Hymenochaetales are mostly tough, brown brackets and crusts on wood whose tissues darken in potassium hydroxide (KOH). A few small gilled mushrooms belong here, but they are uncommon."
+      }
+    },
+    "family": {
+      "summary": "Entolomataceae have a salmon- to pinkish-brown spore print that slowly tints the gills pink; its stemmed mushrooms grow on soil. Sarcomyxaceae are late-season oyster-like shelves on wood, Nidulariaceae are bird's-nest fungi, and Coprinaceae (inky caps) have black spores and often dissolving gills.",
+      "options": {
+        "47166": "Entolomataceae are gilled mushrooms with pink to pinkish-brown spore prints; gills usually start white or grey and become pinkish. Under the microscope the spores are angular or ridged, never smooth.",
+        "1128531": "Sarcomyxaceae contains the late oyster (Sarcomyxa serotina): a shelf-like mushroom on hardwood logs in late autumn, with an olive-green to yellowish, slightly slimy cap, crowded gills and a stubby side stem.",
+        "121439": "Nidulariaceae are bird's-nest fungi: small cups on wood or debris holding egg-like spore packets that are splashed out by raindrops. They have no cap or gills.",
+        "516951": "Coprinaceae is an older family name for the inky caps and relatives. They have dark brown to black spore prints, and many have gills that dissolve into black ink as they mature."
+      }
+    },
+    "genus": {
+      "summary": "All four genera have pinkish spores, so microscopic spore shape and gill attachment matter. Entoloma spores are angular in every view and its gills are usually attached or notched rather than running down the stem. Clitopilus has longitudinally ridged spores and decurrent gills, Rhodophana has bumpy spores and clamped hyphae, and Lulesia is a mostly tropical group with crowded, narrow gills.",
+      "options": {
+        "47165": "Entoloma is a huge genus of pink-spored mushrooms whose spores are angular (polyhedral) in all views. Gills are usually adnexed to notched, and caps range from tiny and blue to large and grey-brown.",
+        "64709": "Clitopilus mushrooms (e.g. the sweetbread mushroom) are usually whitish or grey with gills running down the stem and a strong mealy smell. Their pinkish spores have fine longitudinal ridges.",
+        "496872": "Rhodophana, split from Rhodocybe, has orange-brown caps (e.g. Rhodophana nitellina) and spores that are bumpy to weakly angular. Unlike most of the family, its hyphae have clamp connections.",
+        "1399746": "Lulesia is a small, mostly tropical genus with zoned caps and very narrow, crowded gills. DNA studies suggest it is the same genus as Clitocella."
+      }
+    },
+    "species": {
+      "summary": "Entoloma sericeum is a modest, dark brown, silky-fibrillose grassland pinkgill whose cap pales markedly as it dries. Entoloma medianox is much larger and bluish-grey in forests, E. cetratum is a small, honey-brown, strongly striate cap in conifer moss, and E. serrulatum is blue-black with dark-edged gills.",
+      "options": {
+        "350740": "Silky pinkgill: cap 2.5–5 cm, conical becoming flatter with an umbo, dark brown and silky-fibrillose, hygrophanous (much paler when dry). Gills grey then pinkish; stem similarly coloured. Grows in unimproved grassland and lawns.",
+        "447232": "Midnight Entoloma: a large, robust western North American species, cap 5–13 cm, dark bluish-grey and streaked, on a thick stem. Grows in mixed forests from late autumn to midwinter; formerly called E. bloxamii.",
+        "804447": "Honey pinkgill: small cap up to 3 cm, light amber- to honey-brown and ribbed almost to the centre, with salmon-pink gills and a slender stem. Grows among moss in coniferous forest.",
+        "418614": "Blue edge pinkgill: a small blue-black mushroom with a fibrillose, centrally scaly cap. Its pale bluish gills have distinctive blackish-blue edges. Found in grassland and heaths."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "First Nature: Entoloma sericeum, Silky Pinkgill",
+      "url": "https://www.first-nature.com/fungi/entoloma-sericeum.php"
+    },
+    {
+      "title": "Wikipedia: Entoloma medianox",
+      "url": "https://en.wikipedia.org/wiki/Entoloma_medianox"
+    },
+    {
+      "title": "Wikipedia: Entoloma cetratum",
+      "url": "https://en.wikipedia.org/wiki/Entoloma_cetratum"
+    },
+    {
+      "title": "First Nature: Entoloma serrulatum, Blue Edge Pinkgill",
+      "url": "https://www.first-nature.com/fungi/entoloma-serrulatum.php"
+    },
+    {
+      "title": "Wikipedia: Rhodophana",
+      "url": "https://en.wikipedia.org/wiki/Rhodophana"
+    },
+    {
+      "title": "Wikipedia: Lulesia",
+      "url": "https://en.wikipedia.org/wiki/Lulesia"
+    }
+  ]
+}

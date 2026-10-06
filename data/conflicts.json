@@ -28,5 +28,85 @@
   "a": 125717,
   "b": 59968,
   "why": "Davydov et al. 2017 merge Lasallia into Umbilicaria as a subgenus"
+ },
+ {
+  "a": 47328,
+  "b": 49464,
+  "why": "Melanthiaceae long included in Liliaceae s.l. (E-Flora BC: Veratrum previously Liliaceae)"
+ },
+ {
+  "a": 118831,
+  "b": 49650,
+  "why": "Both segregates of Zigadenus s.l. (E-Flora BC lists Zigadenus as synonym of each)"
+ },
+ {
+  "a": 156421,
+  "b": 71950,
+  "why": "Pseudoroegneria spicata long treated as Agropyron spicatum"
+ },
+ {
+  "a": 72258,
+  "b": 48367,
+  "why": "Nothochelone nemorosa = Penstemon nemorosus (synonym listed by E-Flora BC)"
+ },
+ {
+  "a": 332930,
+  "b": 47753,
+  "why": "E-Flora BC and FNA place Athyrium in Dryopteridaceae s.l."
+ },
+ {
+  "a": 332916,
+  "b": 47753,
+  "why": "E-Flora BC and FNA place Cystopteris in Dryopteridaceae s.l."
+ },
+ {
+  "a": 72085,
+  "b": 47752,
+  "why": "Cyrtomium is nested in Polystichum; some authors sink it (e.g. Polystichum falcatum)"
+ },
+ {
+  "a": 118817,
+  "b": 48216,
+  "why": "Fucus spiralis often treated as F. vesiculosus var. spiralis (Cánovas et al. organellar genomes)"
+ },
+ {
+  "a": 1376734,
+  "b": 52720,
+  "why": "POWO treats Dactylis smithii as D. glomerata subsp. smithii"
+ },
+ {
+  "a": 156421,
+  "b": 57185,
+  "why": "Both genera have been included in Elymus s.l. (Elymus spicatus, Elymus cinereus)"
+ },
+ {
+  "a": 204271,
+  "b": 51843,
+  "why": "Circaea canadensis long treated as C. lutetiana subsp. canadensis"
+ },
+ {
+  "a": 158551,
+  "b": 158552,
+  "why": "Arbutus arizonica treated as A. xalapensis var./subsp. arizonica"
+ },
+ {
+  "a": 57066,
+  "b": 58907,
+  "why": "USDA PLANTS lumps M. albus into M. officinalis; also treated as M. officinalis subsp. albus"
+ },
+ {
+  "a": 48386,
+  "b": 47131,
+  "why": "Ribes long placed in Saxifragaceae s.l. (e.g. Gleason & Cronquist, older floras)"
+ },
+ {
+  "a": 355751,
+  "b": 52643,
+  "why": "Oreojuncus (2014) split from Juncus; FNA and E-Flora keep Juncus trifidus"
+ },
+ {
+  "a": 496537,
+  "b": 716947,
+  "why": "Trientalis latifolia treated as T. europaea var./subsp. latifolia"
  }
 ]

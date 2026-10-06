@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-09",
+  "ranks": {
+    "kingdom": {
+      "summary": "A soft, shapeless mass that crept onto mulch or wood and then hardened into a crusty, spore-filled lump is an amoeboid organism, placed with the Protozoa. Fungi grow as threads (hyphae) with chitin walls, plants are green, and Chromista are mostly brown seaweeds, diatoms and water moulds.",
+      "options": {
+        "48222": "Mostly aquatic: brown seaweeds, diatoms, water moulds and their relatives. Photosynthetic members are golden-brown from fucoxanthin; none feeds by creeping over wood as a slimy mass.",
+        "47170": "Grow as networks of thin threads (hyphae) with chitin walls, absorbing food, and fruit as mushrooms, cups, crusts or moulds. They do not crawl or engulf food.",
+        "47686": "Mostly single-celled or amoeboid organisms that engulf bacteria and other food. Some amoeboid groups form large, visible feeding masses and spore-bearing fruiting bodies.",
+        "47126": "Green, photosynthetic organisms with chlorophylls a and b and cellulose walls, rooted or anchored in one place. They never move as a feeding mass."
+      }
+    },
+    "phylum": {
+      "summary": "Organisms whose amoebae or feeding masses come together to produce stalked or cushion-like spore-bearing fruiting bodies visible to the eye are the slime molds, Mycetozoa. Euglenozoa, Choanozoa and Metamonada are all microscopic flagellates that never make such fruiting bodies.",
+      "options": {
+        "142256": "Microscopic flagellates such as green Euglena in ponds and parasitic trypanosomes. Single cells with one or two flagella; no fruiting bodies.",
+        "151874": "Microscopic collar flagellates (choanoflagellates) and relatives, the closest single-celled relatives of animals. A single flagellum ringed by a collar of tiny projections.",
+        "47685": "Slime molds: amoebae or a large multinucleate feeding mass that crawls over decaying matter, then turns into fruiting bodies that release spores. Many fruiting bodies are easily seen with the naked eye.",
+        "796988": "Microscopic, mostly oxygen-avoiding flagellates living in guts or low-oxygen water, such as Giardia and Trichomonas. No visible fruiting bodies."
+      }
+    },
+    "class": {
+      "summary": "Myxomycetes feed as a plasmodium, a single huge cell with many nuclei that can be brightly coloured, and fruit with spores enclosed inside a wall. Ceratiomyxa bears its spores on the outside of white columns, dictyostelids make tiny stalks from aggregated separate amoebae, and Tubulinea are free amoebae.",
+      "options": {
+        "47684": "True slime molds: a creeping, often bright plasmodium turns into sporangia, plasmodiocarps or cushion-like aethalia, with dark or coloured spores held inside a wall.",
+        "1443445": "Ceratiomyxa: white, frost-like or honeycomb-like growths on rotting wood, with each spore borne singly on the outside of tiny stalks rather than inside a sporangium.",
+        "119001": "Cellular slime molds: separate amoebae feed in soil and gather into a tiny slug that forms a stalked spore head only a millimetre or two tall. Rarely noticed in the field.",
+        "768624": "Free-living lobose amoebae, some with a shell (test), such as Amoeba and Arcella. Microscopic, with no spore-bearing fruiting bodies."
+      }
+    },
+    "order": {
+      "summary": "Physarales are the slime molds with lime (calcium carbonate) in their fruiting bodies, often as white or yellow granules or crystals, and with dark spores. Trichiales have bright yellow, red or tan spores and capillitium threads without lime; Echinosteliales are minute; Meridermatales are lime-free, dark-spored species of melting snowbanks.",
+      "options": {
+        "56259": "Bright-spored myxomycetes (yellow, orange, red or tan) whose capillitium threads are often sculptured with spirals or rings and contain no lime. Includes Arcyria and Trichia.",
+        "1443229": "Small dark-spored sporangia without lime, found mostly at the edges of melting snow in mountains. Recently separated from Lamproderma-like species.",
+        "55484": "Dark-spored myxomycetes with lime in the peridium, capillitium or both, often seen as white or yellowish granules, crystals or crusts. Includes the largest and most familiar species.",
+        "56267": "Minute myxomycetes, usually under 1 mm tall, with pale or colourless spores and little or no capillitium; mostly found on bark in moist chambers."
+      }
+    },
+    "family": {
+      "summary": "In Physaraceae the lime is granular and usually also forms nodes in the capillitium. Didymiaceae carry lime as crystals on the outside of the fruiting body and have lime-free capillitium. Arcyriaceae are bright-spored with a stretchy net of threads, and Lamprodermataceae have shiny, often iridescent, lime-free sporangia.",
+      "options": {
+        "55485": "Lime granular, present in the capillitium (often as nodes) and usually in the outer wall. Fruiting bodies range from tiny stalked sporangia to large cushion-like masses.",
+        "56260": "Stalked sporangia with bright colours (red, pink, yellow, grey); after the wall breaks, a net of capillitium threads expands like cotton candy. No lime.",
+        "56271": "Lime as crystals, often star-shaped or forming an eggshell-like crust on the wall, while the capillitium itself is free of lime. Includes Didymium and Diderma.",
+        "1443239": "Stalked or sessile sporangia with a thin, shiny, often iridescent blue to bronze wall, a central column and dark spores. No lime."
+      }
+    },
+    "genus": {
+      "summary": "Fuligo forms a large aethalium: a fused, cushion-like mass up to many centimetres across, covered by a fragile limy crust (cortex). Badhamia, Craterium and Nannengaella mostly form separate small sporangia or vein-like plasmodiocarps, not a single big cushion with a cortex.",
+      "options": {
+        "327932": "Small stalked sporangia shaped like goblets or cups, often with a lid that falls off to expose the spores. Lime in the wall and capillitium.",
+        "55486": "Large aethalia, from a few centimetres to over 20 cm, with a crusty, brittle, limy outer cortex over a mass of interwoven limy tubes and dark spores. Plasmodium often bright yellow.",
+        "1504205": "Recently separated from Physarum: heavily limed sporangia or plasmodiocarps, often with a limy stalk and columella. Only one species forms aethalium-like fruiting bodies.",
+        "56265": "Sporangia or plasmodiocarps whose capillitium is a network of broad tubes filled with lime throughout, not just at nodes. Spores often stuck together in clusters."
+      }
+    },
+    "species": {
+      "summary": "Fuligo septica is the common yellow (sometimes white, pink or tan) cushion, 2–20 cm wide, with a thick, fragile, limy cortex and small spores 6–9 µm. F. gyrosa makes tiny convoluted, worm-like fruiting bodies on leaves and soil. F. leviderma and F. intermedia are similar-looking aethalia separated mainly by cortex and microscopic spore characters.",
+      "options": {
+        "501701": "Described from Europe in 1995. The name means 'smooth skin', referring to a smoother cortex than the typical crusty form of F. septica; reliable identification needs microscopy.",
+        "1598946": "Not a large cushion: clusters or rosettes of small, worm-like, convoluted plasmodiocarps 0.2–4 mm wide, often encrusting leaves of living plants, soil and moss, including in greenhouses.",
+        "55483": "Dog vomit slime mold: bright yellow plasmodium on mulch, logs and lawns, maturing into a cushion 2–20 cm wide with a thick, brittle, limy cortex. Spores dark in mass, nearly smooth, 6–9 µm.",
+        "498110": "Described by Macbride and still accepted as a separate species. Its aethalia look much like those of F. septica, so it is separated mainly by microscopic characters such as spore size and surface."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "Fuligo septica — Landcare Research Virtual Mycota",
+      "url": "https://virtualmycota.landcareresearch.co.nz/webforms/vM_Species_Details.aspx?pk=3745"
+    },
+    {
+      "title": "Fuligo cinerea — Landcare Research Virtual Mycota",
+      "url": "https://virtualmycota.landcareresearch.co.nz/WebForms/vM_Species_Details.aspx?pk=3744"
+    },
+    {
+      "title": "Fuligo septica — Hidden Forest (slime moulds of New Zealand)",
+      "url": "https://www.hiddenforest.co.nz/slime/family/physaraceae/physa02.htm"
+    },
+    {
+      "title": "Nannengaella — Outline of Fungi, Note 1364",
+      "url": "https://www.outlineoffungi.org/pdf/Outlineoffungi.org%20-%20Note%201364%20Nannengaella.pdf"
+    },
+    {
+      "title": "Physarum gyrosum (Fuligo gyrosa) — Notes from the Royal Botanic Garden Edinburgh",
+      "url": "https://journals.rbge.org.uk/notes/article/download/2302/2122/12290"
+    },
+    {
+      "title": "Fuligo — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Fuligo"
+    }
+  ]
+}

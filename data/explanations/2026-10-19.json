@@ -1,94 +1,102 @@
 {
-  "date": "2026-10-19",
-  "ranks": {
-    "kingdom": {
-      "summary": "This is a green, leafy organism that makes its own food by photosynthesis, so it belongs with the plants. Fungi lack chlorophyll and absorb their food, protozoa are mostly microscopic single cells, and chromists include kelps and diatoms that are coloured brown or golden by different pigments.",
-      "options": {
-        "47126": "Multicellular organisms that make their own food with chlorophylls a and b, store starch and have cellulose cell walls. Green leaves, stems and roots are the giveaway.",
-        "47686": "Mostly single-celled, often mobile organisms such as amoebae, plus slime moulds; they feed by engulfing food and have no leaves, stems or roots.",
-        "47170": "Fungi absorb food from their surroundings instead of photosynthesising, and have chitin cell walls. Seen as mushrooms, moulds and brackets, or as lichens when partnered with algae; never leafy and green.",
-        "48222": "Kelps, diatoms, water moulds and relatives, mostly aquatic. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden to olive-brown colours rather than grass-green."
-      }
-    },
-    "phylum": {
-      "summary": "Its stems and leaves contain veins of xylem and phloem that conduct water and food, and it produces flowers and seeds. Mosses are small non-vascular plants that reproduce by spores, and red algae and charophytes are algae without true roots, stems or leaves.",
-      "options": {
-        "57774": "Red algae: mostly marine seaweeds coloured red to purple by the pigment phycoerythrin; no vascular tissue, roots or leaves.",
-        "211194": "Plants with xylem and phloem, internal tubes that carry water and sugars. This lets them grow true roots, stems and leaves and reach large sizes; it includes lycophytes, horsetails, conifers and flowering plants, among others.",
-        "311313": "Charophyte algae: freshwater green algae most closely related to land plants, such as stoneworts with whorled branches and microscopic desmids. No vascular tissue or true leaves.",
-        "311249": "Mosses: low, non-vascular plants with tiny leaves usually only one cell thick, anchored by hair-like rhizoids. Spores are released from capsules on wiry stalks; no flowers or seeds."
-      }
-    },
-    "class": {
-      "summary": "Long, narrow leaves with parallel veins, fibrous roots and flowers built on a plan of 3 point to the monocots. Dicots usually have net-veined leaves, lycophytes have tiny single-veined leaves and reproduce by spores, and conifers bear seeds in cones rather than flowers.",
-      "options": {
-        "47163": "Flowering plants with one seed leaf, usually parallel-veined leaves, flower parts in 3s and fibrous roots; examples include lilies, orchids, sedges and palms.",
-        "47623": "Clubmosses, spikemosses and quillworts: small, simple leaves (microphylls) with a single vein, often densely clothing the stem; spores borne in cones or leaf axils; no flowers or seeds.",
-        "136329": "Conifers: woody trees and shrubs with needle- or scale-like leaves and seeds borne in cones; no flowers or fruits.",
-        "47124": "Flowering plants usually with net-veined leaves, flower parts in 4s or 5s, two seed leaves (cotyledons), and often a taproot."
-      }
-    },
-    "order": {
-      "summary": "Poales are mostly grass-like plants with long, narrow, parallel-veined leaves and small, dull, chaffy flowers, often wind-pollinated and lacking showy petals. The other orders usually have more conspicuous flowers: three coloured petals in spiderworts, a spathe and spadix in aroids, or six bright tepals in orchids, irises and onions (Asparagales).",
-      "options": {
-        "49146": "Spiderworts and relatives: soft, often succulent stems with sheathing leaves, and flowers with three showy, short-lived petals and often hairy stamen filaments.",
-        "48073": "Aroids, water plantains, pondweeds and seagrasses: many aquatic or wetland plants. Aroids bear tiny flowers on a fleshy spike (spadix) wrapped by a hood-like spathe, as in skunk cabbage.",
-        "47218": "Orchids, irises, onions and asparagus: showy, insect-pollinated flowers usually with six petal-like tepals, often growing from bulbs, corms or rhizomes.",
-        "47162": "Grass, sedge, rush, cattail and bromeliad relatives: mostly long, narrow, parallel-veined leaves and small, chaffy, often wind-pollinated flowers in spikes or heads."
-      }
-    },
-    "family": {
-      "summary": "Poaceae have round, usually hollow stems with solid, swollen joints (nodes), leaves in two rows with a sheath and a ligule, and tiny flowers packed into spikelets between scale-like bracts. Sedges have solid, often triangular stems and three-ranked leaves; rushes have round pithy stems and small six-tepalled flowers; cattails bear dense brown cylindrical spikes.",
-      "options": {
-        "52642": "Rushes and wood-rushes: round, pithy or leafless-looking stems; small but complete flowers with six papery tepals, and capsules holding many seeds.",
-        "48694": "Cattails and bur-reeds: tall wetland plants with flat strap-like leaves; flowers in dense brown sausage-shaped spikes (cattails) or spherical burr-like heads (bur-reeds).",
-        "47434": "True grasses: round, usually hollow stems with swollen solid nodes, two-ranked leaves with a ligule (small flap or fringe where blade meets sheath), and tiny florets enclosed by two bracts (lemma and palea), grouped in spikelets.",
-        "47161": "Sedges: stems usually solid and triangular ('sedges have edges'), leaves in three ranks with closed sheaths; each tiny flower sits behind a single scale and produces a small nut-like achene."
-      }
-    },
-    "genus": {
-      "summary": "Dactylis is a coarse bunchgrass whose panicle carries its spikelets in dense, one-sided, fist-like clusters at the ends of stiff branches; its sheaths and spikelets are strongly flattened and keeled. Bromus has larger, loosely spreading or drooping spikelets, while Leymus and Pseudoroegneria carry their spikelets directly on an unbranched spike.",
-      "options": {
-        "57185": "Wildryes: tall, often bluish, rhizomatous grasses with a stiff spike bearing usually two or more several-flowered spikelets at each node, such as dune wildrye on BC beaches.",
-        "52721": "Tufted perennials with flattened, keeled sheaths and spikelets crowded in dense, one-sided lumps at the tips of stiff panicle branches; lemmas keeled with stiff hairs and a short awn tip.",
-        "156421": "Bluebunch wheatgrass: a bunchgrass of dry interior BC grasslands with a slender, unbranched spike carrying one spikelet per node, often with awns that bend outward.",
-        "52701": "Bromes: fairly large, many-flowered spikelets in open or nodding panicles, with lemmas usually bearing an awn from just below a two-toothed tip."
-      }
-    },
-    "species": {
-      "summary": "Orchard grass is the widespread Eurasian hay and pasture grass of BC fields, roadsides and forest edges, known by its dense, one-sided spikelet clusters. Its only relative here, Dactylis smithii, lives only on Atlantic islands. Reed canary grass is a tall rhizomatous wetland grass with a long papery ligule, and bulbous bluegrass is a small grass with swollen bases whose spikelets turn into tiny bulblets.",
-      "options": {
-        "1376734": "An island endemic of Macaronesia (Canary Islands, Madeira and Cape Verde), sometimes treated as a subspecies of orchard grass; not found in BC.",
-        "52720": "Tall (often over 1 m) tufted perennial with flat leaves 3–11 mm wide, a long ligule (3–9 mm), flattened keeled sheaths and dense, one-sided spikelet clusters; introduced from Eurasia and widely naturalised in BC.",
-        "63337": "Reed canary grass: a tall (to 2 m) rhizomatous grass forming dense stands in wetlands and ditches; long papery ligule and a compact panicle that spreads open at flowering. Invasive in BC wetlands.",
-        "58382": "Bulbous bluegrass: a small tufted grass with bulb-like swollen leaf bases; most spikelets are replaced by little purple-based leafy bulblets that drop and sprout. A weed of dry disturbed ground."
-      }
-    }
+ "date": "2026-10-19",
+ "ranks": {
+  "kingdom": {
+   "summary": "This is a green, leafy organism that makes its own food by photosynthesis, so it belongs with the plants. Fungi lack chlorophyll and absorb their food, protozoa are mostly microscopic single cells, and chromists include kelps and diatoms that are coloured brown or golden by different pigments.",
+   "options": {
+    "47126": "Multicellular organisms that make their own food with chlorophylls a and b, store starch and have cellulose cell walls. Green leaves, stems and roots are the giveaway.",
+    "47686": "Mostly single-celled, often mobile organisms such as amoebae, plus slime moulds; they feed by engulfing food and have no leaves, stems or roots.",
+    "47170": "Fungi absorb food from their surroundings instead of photosynthesising, and have chitin cell walls. Seen as mushrooms, moulds and brackets, or as lichens when partnered with algae; never leafy and green.",
+    "48222": "Kelps, diatoms, water moulds and relatives, mostly aquatic. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden to olive-brown colours rather than grass-green."
+   }
   },
-  "sources": [
-    {
-      "title": "Burke Herbarium Image Collection: Dactylis glomerata",
-      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Dactylis%20glomerata"
-    },
-    {
-      "title": "E-Flora BC: Dactylis glomerata",
-      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Dactylis%20glomerata"
-    },
-    {
-      "title": "Wikipedia: Dactylis",
-      "url": "https://en.wikipedia.org/wiki/Dactylis"
-    },
-    {
-      "title": "Wikipedia: Poaceae",
-      "url": "https://en.wikipedia.org/wiki/Poaceae"
-    },
-    {
-      "title": "Burke Herbarium Image Collection: Phalaris arundinacea",
-      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Phalaris%20arundinacea"
-    },
-    {
-      "title": "Burke Herbarium Image Collection: Poa bulbosa",
-      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Poa%20bulbosa"
-    }
-  ]
+  "phylum": {
+   "summary": "Its stems and leaves contain veins of xylem and phloem that conduct water and food, and it produces flowers and seeds. Mosses are small non-vascular plants that reproduce by spores, and red algae and charophytes are algae without true roots, stems or leaves.",
+   "options": {
+    "57774": "Red algae: mostly marine seaweeds coloured red to purple by the pigment phycoerythrin; no vascular tissue, roots or leaves.",
+    "211194": "Plants with xylem and phloem, internal tubes that carry water and sugars. This lets them grow true roots, stems and leaves and reach large sizes; it includes lycophytes, horsetails, conifers and flowering plants, among others.",
+    "311313": "Charophyte algae: freshwater green algae most closely related to land plants, such as stoneworts with whorled branches and microscopic desmids. No vascular tissue or true leaves.",
+    "311249": "Mosses: low, non-vascular plants with tiny leaves usually only one cell thick, anchored by hair-like rhizoids. Spores are released from capsules on wiry stalks; no flowers or seeds."
+   }
+  },
+  "class": {
+   "summary": "Long, narrow leaves with parallel veins, fibrous roots and flowers built on a plan of 3 point to the monocots. Dicots usually have net-veined leaves, lycophytes have tiny single-veined leaves and reproduce by spores, and conifers bear seeds in cones rather than flowers.",
+   "options": {
+    "47163": "Flowering plants with one seed leaf, usually parallel-veined leaves, flower parts in 3s and fibrous roots; examples include lilies, orchids, sedges and palms.",
+    "47623": "Clubmosses, spikemosses and quillworts: small, simple leaves (microphylls) with a single vein, often densely clothing the stem; spores borne in cones or leaf axils; no flowers or seeds.",
+    "136329": "Conifers: woody trees and shrubs with needle- or scale-like leaves and seeds borne in cones; no flowers or fruits.",
+    "47124": "Flowering plants usually with net-veined leaves, flower parts in 4s or 5s, two seed leaves (cotyledons), and often a taproot."
+   }
+  },
+  "order": {
+   "summary": "Poales are mostly grass-like plants with long, narrow, parallel-veined leaves and small, dull, chaffy flowers, often wind-pollinated and lacking showy petals. The other orders usually have more conspicuous flowers: three coloured petals in spiderworts, a spathe and spadix in aroids, or six bright tepals in orchids, irises and onions (Asparagales).",
+   "options": {
+    "49146": "Spiderworts and relatives: soft, often succulent stems with sheathing leaves, and flowers with three showy, short-lived petals and often hairy stamen filaments.",
+    "48073": "Aroids, water plantains, pondweeds and seagrasses: many aquatic or wetland plants. Aroids bear tiny flowers on a fleshy spike (spadix) wrapped by a hood-like spathe, as in skunk cabbage.",
+    "47218": "Orchids, irises, onions and asparagus: showy, insect-pollinated flowers usually with six petal-like tepals, often growing from bulbs, corms or rhizomes.",
+    "47162": "Grass, sedge, rush, cattail and bromeliad relatives: mostly long, narrow, parallel-veined leaves and small, chaffy, often wind-pollinated flowers in spikes or heads."
+   }
+  },
+  "family": {
+   "summary": "Poaceae have round, usually hollow stems with solid, swollen joints (nodes), leaves in two rows with a sheath and a ligule, and tiny flowers packed into spikelets between scale-like bracts. Sedges have solid, often triangular stems and three-ranked leaves; rushes have round pithy stems and small six-tepalled flowers; cattails bear dense brown cylindrical spikes.",
+   "options": {
+    "52642": "Rushes and wood-rushes: round, pithy or leafless-looking stems; small but complete flowers with six papery tepals, and capsules holding many seeds.",
+    "48694": "Cattails and bur-reeds: tall wetland plants with flat strap-like leaves; flowers in dense brown sausage-shaped spikes (cattails) or spherical burr-like heads (bur-reeds).",
+    "47434": "True grasses: round, usually hollow stems with swollen solid nodes, two-ranked leaves with a ligule (small flap or fringe where blade meets sheath), and tiny florets enclosed by two bracts (lemma and palea), grouped in spikelets.",
+    "47161": "Sedges: stems usually solid and triangular ('sedges have edges'), leaves in three ranks with closed sheaths; each tiny flower sits behind a single scale and produces a small nut-like achene."
+   }
+  },
+  "genus": {
+   "summary": "Dactylis is a coarse bunchgrass whose panicle carries its spikelets in dense, one-sided, fist-like clusters at the ends of stiff branches; its sheaths and spikelets are strongly flattened and keeled. Bromus has larger, loosely spreading or drooping spikelets, while Leymus and Agropyron carry their spikelets directly on an unbranched spike.",
+   "options": {
+    "57185": "Wildryes: tall, often bluish, rhizomatous grasses with a stiff spike bearing usually two or more several-flowered spikelets at each node, such as dune wildrye on BC beaches.",
+    "52721": "Tufted perennials with flattened, keeled sheaths and spikelets crowded in dense, one-sided lumps at the tips of stiff panicle branches; lemmas keeled with stiff hairs and a short awn tip.",
+    "52701": "Bromes: fairly large, many-flowered spikelets in open or nodding panicles, with lemmas usually bearing an awn from just below a two-toothed tip.",
+    "71950": "Agropyron (crested wheatgrass) has a dense, flattened spike with spikelets spreading like the teeth of a comb. A drought-tolerant introduced forage grass."
+   }
+  },
+  "species": {
+   "summary": "Orchard grass is the widespread Eurasian hay and pasture grass of BC fields, roadsides and forest edges, known by its dense, one-sided spikelet clusters. Bristly dogtail grass is a small annual with a dense, bristly, one-sided head, reed canary grass is a tall rhizomatous wetland grass with a long papery ligule, and bulbous bluegrass is a small grass whose spikelets turn into tiny bulblets.",
+   "options": {
+    "52720": "Tall (often over 1 m) tufted perennial with flat leaves 3–11 mm wide, a long ligule (3–9 mm), flattened keeled sheaths and dense, one-sided spikelet clusters; introduced from Eurasia and widely naturalised in BC.",
+    "63337": "Reed canary grass: a tall (to 2 m) rhizomatous grass forming dense stands in wetlands and ditches; long papery ligule and a compact panicle that spreads open at flowering. Invasive in BC wetlands.",
+    "58382": "Bulbous bluegrass: a small tufted grass with bulb-like swollen leaf bases; most spikelets are replaced by little purple-based leafy bulblets that drop and sprout. A weed of dry disturbed ground.",
+    "1628703": "Bristly dogtail grass (formerly Cynosurus echinatus): an introduced annual of dry open ground in southern BC; dense, one-sided, ovoid head in which fertile spikelets are hidden among sterile ones with comb-like, long-awned lemmas."
+   }
+  }
+ },
+ "sources": [
+  {
+   "title": "Burke Herbarium Image Collection: Dactylis glomerata",
+   "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Dactylis%20glomerata"
+  },
+  {
+   "title": "E-Flora BC: Dactylis glomerata",
+   "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Dactylis%20glomerata"
+  },
+  {
+   "title": "Wikipedia: Dactylis",
+   "url": "https://en.wikipedia.org/wiki/Dactylis"
+  },
+  {
+   "title": "Wikipedia: Poaceae",
+   "url": "https://en.wikipedia.org/wiki/Poaceae"
+  },
+  {
+   "title": "Burke Herbarium Image Collection: Phalaris arundinacea",
+   "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Phalaris%20arundinacea"
+  },
+  {
+   "title": "Burke Herbarium Image Collection: Poa bulbosa",
+   "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Poa%20bulbosa"
+  },
+  {
+   "title": "POWO: Dactylis glomerata subsp. smithii",
+   "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77108230-1"
+  },
+  {
+   "title": "E-Flora BC: Cynosurus echinatus",
+   "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Cynosurus%20echinatus"
+  }
+ ]
 }

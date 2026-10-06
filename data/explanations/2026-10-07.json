@@ -1,90 +1,94 @@
 {
-  "date": "2026-10-07",
-  "ranks": {
-    "kingdom": {
-      "summary": "This is a green, rooted plant that makes its own food, which puts it in Plantae. Chromista photosynthesizers (kelps, diatoms) are brownish or golden, fungi don't photosynthesize and have chitin walls, and protozoa are mostly microscopic single cells.",
-      "options": {
-        "48222": "Chromista includes kelps and other brown seaweeds, diatoms and water moulds. Photosynthetic members use chlorophylls a and c, plus brownish pigments such as fucoxanthin, so they look olive-brown or golden rather than grass-green.",
-        "47126": "Plants are multicellular organisms that make their own food by photosynthesis, using chloroplasts with chlorophylls a and b. Their cell walls are made of cellulose and they store energy as starch. Most are green and rooted in place.",
-        "47170": "Fungi (including lichens) cannot photosynthesize on their own; they absorb food from their surroundings. Their cell walls contain chitin, and most grow as networks of thread-like hyphae, showing up as mushrooms, moulds, brackets or crusts.",
-        "47686": "Protozoa are mostly single-celled organisms such as amoebae and slime moulds, which feed by engulfing or absorbing food. They lack cellulose walls and chloroplasts and are usually microscopic, though slime moulds can form visible blobs."
-      }
-    },
-    "phylum": {
-      "summary": "A tall, leafy plant like this needs vascular tissue to move water and sugars, which places it with the vascular plants. Mosses and hornworts are small non-vascular plants, and green algae (Chlorophyta) are mostly aquatic, without roots or leaves.",
-      "options": {
-        "311249": "Mosses are small, leafy, non-vascular plants that need moisture to reproduce. The green leafy shoots are the gametophyte; spores come from a capsule held up on a thin stalk.",
-        "50863": "Green algae (Chlorophyta) are mostly aquatic, from single cells to sheets like sea lettuce. They share plant pigments but have no roots, stems, leaves or vascular tissue.",
-        "56327": "Hornworts are tiny non-vascular plants with a flat, ribbon-like green body (thallus). Their spores are made in upright, horn-shaped sporophytes that keep growing from the base.",
-        "211194": "Vascular plants have xylem and phloem, internal tubes that carry water and sugars, letting them grow tall with true roots, stems and leaves. The large, long-lived plant you see is the spore- or seed-producing generation."
-      }
-    },
-    "class": {
-      "summary": "The broad leaves have strong parallel veins running from base to tip and clasp the stem with a sheath, and the flowers have parts in threes: monocot features. Dicots have net veins, conifers bear cones, and ferns make spores instead of flowers.",
-      "options": {
-        "47163": "Monocots typically have one seed leaf, leaves with parallel veins (often long and strap-like with a sheathing base), flower parts in threes, scattered vascular bundles and fibrous roots.",
-        "136329": "Conifers bear naked seeds on the scales of woody cones and have needle- or scale-like leaves. They never produce flowers or fruit, and most are evergreen trees or shrubs.",
-        "121943": "Ferns reproduce by spores, usually made in clusters (sori) on the underside of the fronds. New fronds unroll as fiddleheads, and they produce no flowers or seeds.",
-        "47124": "Dicots typically have two seed leaves, net-veined leaves, flower parts in fours or fives, and a taproot. Their stem vascular bundles form a ring, so woody members can make true wood."
-      }
-    },
-    "order": {
-      "summary": "The flowers have 6 similar tepals and 6 stamens and are insect-pollinated, fitting Liliales. Poales have tiny wind-pollinated chaffy flowers, Arecales are woody palms, and Acorales are sweet-flags with a finger-like flower spike.",
-      "options": {
-        "47162": "Poales are grass-like plants with narrow, parallel-veined leaves and small, usually wind-pollinated, chaffy or brownish flowers. Sedges, rushes, cattails and pineapples (bromeliads) belong here.",
-        "48866": "Arecales are the palms: woody, usually unbranched trunks topped by large fan- or feather-shaped leaves. They are tropical and warm-temperate and none are native to BC.",
-        "71270": "Acorales contains only the sweet-flags: aromatic plants with iris-like sword leaves and a finger-like spike of tiny flowers jutting sideways from a leaf-like stalk. It is the earliest-branching monocot lineage.",
-        "47329": "Liliales have showy flowers with 6 petal-like tepals (often spotted or striped), 6 stamens, and usually a superior ovary. Many grow from bulbs or rhizomes and carry nectar at the base of the tepals."
-      }
-    },
-    "family": {
-      "summary": "Melanthiaceae often have 3 separate styles, tepals with nectar glands, and capsule fruits; many are poisonous. Liliaceae typically have a single style and showy, often spotted tepals, Colchicaceae include bellworts and fairy bells, and Alstroemeriaceae are South American with twisted leaves.",
-      "options": {
-        "71433": "Alstroemeriaceae (Peruvian lilies) are South and Central American plants whose leaves twist on their stalks so they are upside down, and whose flowers are often streaked. Only garden plants in BC.",
-        "67773": "Colchicaceae include autumn crocus and, in BC, fairy bells (Prosartes): nodding bell-like flowers, often with berries, and very poisonous colchicine in some members.",
-        "49464": "Melanthiaceae: rhizomes or bulbs, flowers with 6 tepals often bearing glands, usually 3 distinct styles, and capsule fruits. Includes trilliums, death camas, beargrass and other toxic herbs.",
-        "47328": "Liliaceae (lilies, fritillaries, fawn lilies, queen's cup) usually grow from bulbs and have large showy tepals, often spotted or striped, with a single style."
-      }
-    },
-    "genus": {
-      "summary": "Veratrum is a tall (often 1-2 m) plant with large, broad, pleated leaves spiralling up a stout stem and a big branched cluster of many star-shaped flowers. Toxicoscordion and Anticlea have narrow grass-like leaves from bulbs, and Trillium has a single whorl of 3 leaves and one flower.",
-      "options": {
-        "49650": "Toxicoscordion (death camas) grows from a bulb with mostly basal, narrow grass-like leaves and a raceme of creamy-white flowers, each tepal with a gland near its base. Very toxic.",
-        "60502": "Veratrum: stout leafy stems from thick rhizomes, broad oval leaves strongly pleated like an accordion, and a large branched terminal cluster of many small star-shaped flowers. Highly poisonous.",
-        "118831": "Anticlea (e.g. mountain death camas) is a bulb plant with grass-like leaves and greenish-white flowers bearing a large, heart-shaped gland at each tepal base.",
-        "49465": "Trillium: a single whorl of 3 broad leaves on a stem topped by one flower with 3 green sepals and 3 white to purplish petals."
-      }
-    },
-    "species": {
-      "summary": "Green false hellebore is the only option with yellow-green, star-shaped flowers whose lower inflorescence branches droop, and it is the common species in BC. Corn lily (V. californicum) has white flowers on stiffly upright branches, and the two Eurasian white hellebores have white or greenish flowers but do not grow wild here.",
-      "options": {
-        "470430": "Veratrum lobelianum is a Eurasian plant often treated as a synonym or subspecies of V. album, so it shares the 'white hellebore' name. Not native to BC.",
-        "60500": "Veratrum californicum (corn lily): similar size, but flowers white with green markings near the base and held in a narrow, erect-branched inflorescence. Western US mountains.",
-        "79484": "Veratrum viride: 1-2 m, flowers pale or yellow-green with dark green centres and finely toothed to fringed tepals; lower branches of the inflorescence droop. Common in moist meadows and streambanks through most of BC.",
-        "85424": "Veratrum album: European and western Asian, with white flowers marked green toward the outside. Not native to North America."
-      }
-    }
+ "date": "2026-10-07",
+ "ranks": {
+  "kingdom": {
+   "summary": "This is a green, rooted plant that makes its own food, which puts it in Plantae. Chromista photosynthesizers (kelps, diatoms) are brownish or golden, fungi don't photosynthesize and have chitin walls, and protozoa are mostly microscopic single cells.",
+   "options": {
+    "48222": "Chromista includes kelps and other brown seaweeds, diatoms and water moulds. Photosynthetic members use chlorophylls a and c, plus brownish pigments such as fucoxanthin, so they look olive-brown or golden rather than grass-green.",
+    "47126": "Plants are multicellular organisms that make their own food by photosynthesis, using chloroplasts with chlorophylls a and b. Their cell walls are made of cellulose and they store energy as starch. Most are green and rooted in place.",
+    "47170": "Fungi (including lichens) cannot photosynthesize on their own; they absorb food from their surroundings. Their cell walls contain chitin, and most grow as networks of thread-like hyphae, showing up as mushrooms, moulds, brackets or crusts.",
+    "47686": "Protozoa are mostly single-celled organisms such as amoebae and slime moulds, which feed by engulfing or absorbing food. They lack cellulose walls and chloroplasts and are usually microscopic, though slime moulds can form visible blobs."
+   }
   },
-  "sources": [
-    {
-      "title": "E-Flora BC: Veratrum viride",
-      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Veratrum%20viride"
-    },
-    {
-      "title": "Wikipedia: Veratrum viride",
-      "url": "https://en.wikipedia.org/wiki/Veratrum_viride"
-    },
-    {
-      "title": "Wikipedia: Veratrum californicum",
-      "url": "https://en.wikipedia.org/wiki/Veratrum_californicum"
-    },
-    {
-      "title": "Wikipedia: Veratrum album",
-      "url": "https://en.wikipedia.org/wiki/Veratrum_album"
-    },
-    {
-      "title": "Wikipedia: Melanthiaceae",
-      "url": "https://en.wikipedia.org/wiki/Melanthiaceae"
-    }
-  ]
+  "phylum": {
+   "summary": "A tall, leafy plant like this needs vascular tissue to move water and sugars, which places it with the vascular plants. Mosses and hornworts are small non-vascular plants, and green algae (Chlorophyta) are mostly aquatic, without roots or leaves.",
+   "options": {
+    "311249": "Mosses are small, leafy, non-vascular plants that need moisture to reproduce. The green leafy shoots are the gametophyte; spores come from a capsule held up on a thin stalk.",
+    "50863": "Green algae (Chlorophyta) are mostly aquatic, from single cells to sheets like sea lettuce. They share plant pigments but have no roots, stems, leaves or vascular tissue.",
+    "56327": "Hornworts are tiny non-vascular plants with a flat, ribbon-like green body (thallus). Their spores are made in upright, horn-shaped sporophytes that keep growing from the base.",
+    "211194": "Vascular plants have xylem and phloem, internal tubes that carry water and sugars, letting them grow tall with true roots, stems and leaves. The large, long-lived plant you see is the spore- or seed-producing generation."
+   }
+  },
+  "class": {
+   "summary": "The broad leaves have strong parallel veins running from base to tip and clasp the stem with a sheath, and the flowers have parts in threes: monocot features. Dicots have net veins, conifers bear cones, and ferns make spores instead of flowers.",
+   "options": {
+    "47163": "Monocots typically have one seed leaf, leaves with parallel veins (often long and strap-like with a sheathing base), flower parts in threes, scattered vascular bundles and fibrous roots.",
+    "136329": "Conifers bear naked seeds on the scales of woody cones and have needle- or scale-like leaves. They never produce flowers or fruit, and most are evergreen trees or shrubs.",
+    "121943": "Ferns reproduce by spores, usually made in clusters (sori) on the underside of the fronds. New fronds unroll as fiddleheads, and they produce no flowers or seeds.",
+    "47124": "Dicots typically have two seed leaves, net-veined leaves, flower parts in fours or fives, and a taproot. Their stem vascular bundles form a ring, so woody members can make true wood."
+   }
+  },
+  "order": {
+   "summary": "The flowers have 6 similar tepals and 6 stamens and are insect-pollinated, fitting Liliales. Poales have tiny wind-pollinated chaffy flowers, Arecales are woody palms, and Acorales are sweet-flags with a finger-like flower spike.",
+   "options": {
+    "47162": "Poales are grass-like plants with narrow, parallel-veined leaves and small, usually wind-pollinated, chaffy or brownish flowers. Sedges, rushes, cattails and pineapples (bromeliads) belong here.",
+    "48866": "Arecales are the palms: woody, usually unbranched trunks topped by large fan- or feather-shaped leaves. They are tropical and warm-temperate and none are native to BC.",
+    "71270": "Acorales contains only the sweet-flags: aromatic plants with iris-like sword leaves and a finger-like spike of tiny flowers jutting sideways from a leaf-like stalk. It is the earliest-branching monocot lineage.",
+    "47329": "Liliales have showy flowers with 6 petal-like tepals (often spotted or striped), 6 stamens, and usually a superior ovary. Many grow from bulbs or rhizomes and carry nectar at the base of the tepals."
+   }
+  },
+  "family": {
+   "summary": "Melanthiaceae often have 3 separate styles, tepals with nectar glands, and capsule fruits; many are poisonous. Colchicaceae include bellworts and fairy bells, Smilacaceae are mostly climbing vines with net-veined leaves and tendrils, and Alstroemeriaceae are South American with twisted leaves. Older floras placed this family inside a broad Liliaceae.",
+   "options": {
+    "71433": "Alstroemeriaceae (Peruvian lilies) are South and Central American plants whose leaves twist on their stalks so they are upside down, and whose flowers are often streaked. Only garden plants in BC.",
+    "67773": "Colchicaceae include autumn crocus and, in BC, fairy bells (Prosartes): nodding bell-like flowers, often with berries, and very poisonous colchicine in some members.",
+    "49464": "Melanthiaceae: rhizomes or bulbs, flowers with 6 tepals often bearing glands, usually 3 distinct styles, and capsule fruits. Includes trilliums, death camas, beargrass and other toxic herbs.",
+    "60747": "Smilacaceae (greenbriers): mostly woody or herbaceous vines climbing by paired tendrils on the leaf stalks, with net-veined leaves, small unisexual flowers in umbels and berry fruits. Not native to BC."
+   }
+  },
+  "genus": {
+   "summary": "Veratrum is a tall (often 1-2 m) plant with large, broad, pleated leaves spiralling up a stout stem and a big branched cluster of many star-shaped flowers. Toxicoscordion has narrow grass-like leaves from a bulb, Xerophyllum has dense tufts of tough, wiry leaves, and Trillium has a single whorl of 3 leaves and one flower.",
+   "options": {
+    "49650": "Toxicoscordion (death camas) grows from a bulb with mostly basal, narrow grass-like leaves and a raceme of creamy-white flowers, each tepal with a gland near its base. Very toxic.",
+    "60502": "Veratrum: stout leafy stems from thick rhizomes, broad oval leaves strongly pleated like an accordion, and a large branched terminal cluster of many small star-shaped flowers. Highly poisonous.",
+    "49465": "Trillium: a single whorl of 3 broad leaves on a stem topped by one flower with 3 green sepals and 3 white to purplish petals.",
+    "59525": "Xerophyllum (beargrass): huge basal tufts of long, tough, wiry, grass-like leaves and a tall stalk ending in a dense club-shaped cluster of small creamy-white flowers. In BC only in the southeast."
+   }
+  },
+  "species": {
+   "summary": "Green false hellebore is the only option with yellow-green, star-shaped flowers whose lower inflorescence branches droop, and it is the common species in BC. Corn lily (V. californicum) has white flowers on stiffly upright branches, white hellebore (V. album) is a Eurasian white-flowered species, and black false-hellebore (V. nigrum) has dark purple-brown flowers. None of the last three grows wild in BC.",
+   "options": {
+    "60500": "Veratrum californicum (corn lily): similar size, but flowers white with green markings near the base and held in a narrow, erect-branched inflorescence. Western US mountains.",
+    "79484": "Veratrum viride: 1-2 m, flowers pale or yellow-green with dark green centres and finely toothed to fringed tepals; lower branches of the inflorescence droop. Common in moist meadows and streambanks through most of BC.",
+    "85424": "Veratrum album: European and western Asian, with white flowers marked green toward the outside. Not native to North America.",
+    "344733": "Veratrum nigrum: Eurasian (central Europe to East Asia), with a long, narrow panicle of small, very dark purple-brown to blackish-maroon flowers. Not native to North America."
+   }
+  }
+ },
+ "sources": [
+  {
+   "title": "E-Flora BC: Veratrum viride",
+   "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Veratrum%20viride"
+  },
+  {
+   "title": "Wikipedia: Veratrum viride",
+   "url": "https://en.wikipedia.org/wiki/Veratrum_viride"
+  },
+  {
+   "title": "Wikipedia: Veratrum californicum",
+   "url": "https://en.wikipedia.org/wiki/Veratrum_californicum"
+  },
+  {
+   "title": "Wikipedia: Veratrum album",
+   "url": "https://en.wikipedia.org/wiki/Veratrum_album"
+  },
+  {
+   "title": "Wikipedia: Melanthiaceae",
+   "url": "https://en.wikipedia.org/wiki/Melanthiaceae"
+  },
+  {
+   "title": "POWO: Veratrum nigrum",
+   "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:540070-1"
+  }
+ ]
 }

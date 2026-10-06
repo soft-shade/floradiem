@@ -1,98 +1,102 @@
 {
-  "date": "2026-10-21",
-  "ranks": {
-    "kingdom": {
-      "summary": "This is a green, leafy organism that makes its own food by photosynthesis, so it belongs with the plants. Fungi lack chlorophyll and absorb their food, protozoa are mostly microscopic single cells, and chromists include kelps and diatoms that are coloured brown or golden by different pigments.",
-      "options": {
-        "48222": "Kelps, diatoms, water moulds and relatives, mostly aquatic. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden to olive-brown colours rather than grass-green.",
-        "47686": "Mostly single-celled, often mobile organisms such as amoebae, plus slime moulds; they feed by engulfing food and have no leaves, stems or roots.",
-        "47170": "Fungi absorb food from their surroundings instead of photosynthesising, and have chitin cell walls. Seen as mushrooms, moulds and brackets, or as lichens when partnered with algae; never leafy and green.",
-        "47126": "Multicellular organisms that make their own food with chlorophylls a and b, store starch and have cellulose cell walls. Green leaves, stems and roots are the giveaway."
-      }
-    },
-    "phylum": {
-      "summary": "Its stems and leaves contain veins of xylem and phloem that conduct water and food, and it produces flowers and seeds. Green algae and charophytes lack true roots, stems and leaves, and hornworts are small non-vascular plants that reproduce by spores.",
-      "options": {
-        "50863": "Green algae: grass-green like plants but with no roots, stems, leaves or vascular tissue. They live in water or on damp surfaces, from single cells to seaweeds like sea lettuce.",
-        "311313": "Charophyte algae: freshwater green algae most closely related to land plants, such as stoneworts with whorled branches and microscopic desmids. No vascular tissue or true leaves.",
-        "56327": "Hornworts: non-vascular plants with a flat, dark-green thallus from which grow upright, horn-like spore-bearing structures that split lengthwise as they release spores.",
-        "211194": "Plants with xylem and phloem, internal tubes that carry water and sugars. This lets them grow true roots, stems and leaves and reach large sizes; it includes lycophytes, horsetails, conifers and flowering plants, among others."
-      }
-    },
-    "class": {
-      "summary": "Net-veined leaves and flower parts in 4s or 5s point to the dicots. Monocots usually have parallel-veined leaves and flower parts in 3s, while lycophytes, ferns and conifers never produce flowers.",
-      "options": {
-        "121943": "Spore-bearing vascular plants, usually with large, often divided fronds that unroll from fiddleheads and carry spore clusters underneath; no flowers or seeds. Horsetails are included here too.",
-        "47163": "Flowering plants with one seed leaf, usually parallel-veined leaves, flower parts in 3s and fibrous roots; examples include lilies, orchids, sedges and palms.",
-        "47124": "Flowering plants usually with net-veined leaves, flower parts in 4s or 5s, two seed leaves (cotyledons), and often a taproot.",
-        "47623": "Clubmosses, spikemosses and quillworts: small, simple leaves (microphylls) with a single vein, often densely clothing the stem; spores borne in cones or leaf axils; no flowers or seeds."
-      }
-    },
-    "order": {
-      "summary": "Myrtales usually have simple opposite leaves and flowers with a floral cup or tube (hypanthium), often an inferior ovary, and frequently parts in 4s. Fabales have pea-like flowers and pods, Ranunculales have separate petals and many stamens, and Saxifragales often have 5-parted flowers with 2 partly separate carpels.",
-      "options": {
-        "47123": "Legumes and milkworts: many have butterfly-shaped (pea) flowers, compound leaves and fruits that are pods; many legumes fix nitrogen in root nodules.",
-        "71289": "Saxifrages, stonecrops, currants and peonies. Flowers usually have separate petals, often 5 or 10 stamens, and frequently 2 partly separate carpels that form beaked fruits.",
-        "48232": "Buttercups, poppies and barberries: flowers usually with separate petals, many spirally arranged stamens and often several separate pistils.",
-        "47791": "Myrtles, evening primroses, loosestrifes and eucalypts: usually simple, entire, often opposite leaves; flowers with a cup or tube (hypanthium) carrying sepals, petals and stamens."
-      }
-    },
-    "family": {
-      "summary": "Onagraceae have an inferior ovary (below the flower), flower parts usually in 4s, and pollen strung together on sticky threads. Lythraceae have a superior ovary inside a ribbed floral tube and crumpled petals, Myrtaceae are aromatic woody plants with showy masses of stamens, and melastomes have leaves with several curved parallel main veins.",
-      "options": {
-        "58935": "Loosestrifes: superior ovary sitting inside a ribbed, tubular floral cup; petals often crumpled; e.g. invasive purple loosestrife in BC wetlands.",
-        "47790": "Mostly herbs; ovary inferior, often topped by a slender floral tube; sepals and petals typically 4 each, stamens 4 or 8, and pollen grains linked by sticky viscin threads.",
-        "51816": "Myrtles, eucalypts, guavas and cloves: woody plants with aromatic oil dots in the leaves and flowers dominated by numerous stamens.",
-        "48889": "Tropical melastomes: opposite leaves with 3–9 prominent veins curving from base to tip, and stamens with pore-opening anthers often bearing odd appendages."
-      }
-    },
-    "genus": {
-      "summary": "Circaea is unusual in having flower parts in 2s: 2 sepals, 2 tiny notched white petals and 2 stamens, followed by a small bur-like fruit covered in hooked hairs. Epilobium, Clarkia and Oenothera all have 4 petals and dry capsules: willowherbs with silky-tufted seeds, clarkias with showy pink petals, and evening primroses with large, often yellow flowers and an X-shaped stigma.",
-      "options": {
-        "52972": "Willowherbs and fireweed: 4 pink, purple or white petals; long, slender capsules splitting to release seeds topped with tufts of silky hairs.",
-        "47789": "Clarkias: annuals of dry, open spring sites with showy pink to purple 4-petalled flowers, petals often clawed or lobed.",
-        "47933": "Woodland herbs with opposite, stalked leaves and small white flowers with 2 sepals, 2 notched petals and 2 stamens; fruit a small burr with hooked hairs that catch on fur and clothing.",
-        "48626": "Evening primroses: large 4-petalled flowers, often yellow (sometimes white or pink), on a long floral tube, with an X-shaped 4-lobed stigma; many open in the evening."
-      }
-    },
-    "species": {
-      "summary": "Alpine enchanter's-nightshade is a small, delicate plant (10–50 cm) of moist BC forests; its flowers stay crowded at the stem tip until they open, and its fruit is tiny (about 2 mm), one-seeded and smooth-surfaced apart from hooked hairs. The other three are larger plants with 2-seeded fruits: C. lutetiana of Eurasia, C. canadensis of eastern North America, and the densely hairy East Asian C. cordata.",
-      "options": {
-        "51843": "A Eurasian species whose flower stalk elongates before the flowers open, so open flowers are well spaced; fruit has 2 equal chambers and usually 2 seeds. Not native to BC.",
-        "204271": "An eastern North American species: fruit 2.8–4.5 mm, pear-shaped to round, distinctly ribbed or grooved and holding 2 seeds; not found in BC.",
-        "566011": "An East Asian species (Siberia, Korea, Japan, China to the Himalaya) with stems densely covered in soft and glandular hairs, broad heart-based leaves 4–13 cm long, and 2-seeded fruits.",
-        "76342": "Small, juicy-stemmed herb of moist to wet forests with opposite, heart- to egg-shaped leaves 2–6 cm; tiny white flowers crowded at the raceme tip; fruit about 2 mm, one-seeded, with hooked hairs and no ribs. Frequent throughout BC."
-      }
-    }
+ "date": "2026-10-21",
+ "ranks": {
+  "kingdom": {
+   "summary": "This is a green, leafy organism that makes its own food by photosynthesis, so it belongs with the plants. Fungi lack chlorophyll and absorb their food, protozoa are mostly microscopic single cells, and chromists include kelps and diatoms that are coloured brown or golden by different pigments.",
+   "options": {
+    "48222": "Kelps, diatoms, water moulds and relatives, mostly aquatic. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden to olive-brown colours rather than grass-green.",
+    "47686": "Mostly single-celled, often mobile organisms such as amoebae, plus slime moulds; they feed by engulfing food and have no leaves, stems or roots.",
+    "47170": "Fungi absorb food from their surroundings instead of photosynthesising, and have chitin cell walls. Seen as mushrooms, moulds and brackets, or as lichens when partnered with algae; never leafy and green.",
+    "47126": "Multicellular organisms that make their own food with chlorophylls a and b, store starch and have cellulose cell walls. Green leaves, stems and roots are the giveaway."
+   }
   },
-  "sources": [
-    {
-      "title": "Burke Herbarium Image Collection: Circaea alpina",
-      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Circaea%20alpina"
-    },
-    {
-      "title": "E-Flora BC: Circaea alpina",
-      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Circaea%20alpina"
-    },
-    {
-      "title": "Minnesota Wildflowers: Circaea alpina",
-      "url": "https://www.minnesotawildflowers.info/flower/alpine-enchanters-nightshade"
-    },
-    {
-      "title": "Minnesota Wildflowers: Circaea canadensis",
-      "url": "https://www.minnesotawildflowers.info/flower/enchanters-nightshade"
-    },
-    {
-      "title": "Wikipedia: Circaea",
-      "url": "https://en.wikipedia.org/wiki/Circaea"
-    },
-    {
-      "title": "Wikipedia: Circaea cordata",
-      "url": "https://en.wikipedia.org/wiki/Circaea_cordata"
-    },
-    {
-      "title": "Wikipedia: Onagraceae",
-      "url": "https://en.wikipedia.org/wiki/Onagraceae"
-    }
-  ]
+  "phylum": {
+   "summary": "Its stems and leaves contain veins of xylem and phloem that conduct water and food, and it produces flowers and seeds. Green algae and charophytes lack true roots, stems and leaves, and hornworts are small non-vascular plants that reproduce by spores.",
+   "options": {
+    "50863": "Green algae: grass-green like plants but with no roots, stems, leaves or vascular tissue. They live in water or on damp surfaces, from single cells to seaweeds like sea lettuce.",
+    "311313": "Charophyte algae: freshwater green algae most closely related to land plants, such as stoneworts with whorled branches and microscopic desmids. No vascular tissue or true leaves.",
+    "56327": "Hornworts: non-vascular plants with a flat, dark-green thallus from which grow upright, horn-like spore-bearing structures that split lengthwise as they release spores.",
+    "211194": "Plants with xylem and phloem, internal tubes that carry water and sugars. This lets them grow true roots, stems and leaves and reach large sizes; it includes lycophytes, horsetails, conifers and flowering plants, among others."
+   }
+  },
+  "class": {
+   "summary": "Net-veined leaves and flower parts in 4s or 5s point to the dicots. Monocots usually have parallel-veined leaves and flower parts in 3s, while lycophytes, ferns and conifers never produce flowers.",
+   "options": {
+    "121943": "Spore-bearing vascular plants, usually with large, often divided fronds that unroll from fiddleheads and carry spore clusters underneath; no flowers or seeds. Horsetails are included here too.",
+    "47163": "Flowering plants with one seed leaf, usually parallel-veined leaves, flower parts in 3s and fibrous roots; examples include lilies, orchids, sedges and palms.",
+    "47124": "Flowering plants usually with net-veined leaves, flower parts in 4s or 5s, two seed leaves (cotyledons), and often a taproot.",
+    "47623": "Clubmosses, spikemosses and quillworts: small, simple leaves (microphylls) with a single vein, often densely clothing the stem; spores borne in cones or leaf axils; no flowers or seeds."
+   }
+  },
+  "order": {
+   "summary": "Myrtales usually have simple opposite leaves and flowers with a floral cup or tube (hypanthium), often an inferior ovary, and frequently parts in 4s. Fabales have pea-like flowers and pods, Ranunculales have separate petals and many stamens, and Saxifragales often have 5-parted flowers with 2 partly separate carpels.",
+   "options": {
+    "47123": "Legumes and milkworts: many have butterfly-shaped (pea) flowers, compound leaves and fruits that are pods; many legumes fix nitrogen in root nodules.",
+    "71289": "Saxifrages, stonecrops, currants and peonies. Flowers usually have separate petals, often 5 or 10 stamens, and frequently 2 partly separate carpels that form beaked fruits.",
+    "48232": "Buttercups, poppies and barberries: flowers usually with separate petals, many spirally arranged stamens and often several separate pistils.",
+    "47791": "Myrtles, evening primroses, loosestrifes and eucalypts: usually simple, entire, often opposite leaves; flowers with a cup or tube (hypanthium) carrying sepals, petals and stamens."
+   }
+  },
+  "family": {
+   "summary": "Onagraceae have an inferior ovary (below the flower), flower parts usually in 4s, and pollen strung together on sticky threads. Lythraceae have a superior ovary inside a ribbed floral tube and crumpled petals, Myrtaceae are aromatic woody plants with showy masses of stamens, and melastomes have leaves with several curved parallel main veins.",
+   "options": {
+    "58935": "Loosestrifes: superior ovary sitting inside a ribbed, tubular floral cup; petals often crumpled; e.g. invasive purple loosestrife in BC wetlands.",
+    "47790": "Mostly herbs; ovary inferior, often topped by a slender floral tube; sepals and petals typically 4 each, stamens 4 or 8, and pollen grains linked by sticky viscin threads.",
+    "51816": "Myrtles, eucalypts, guavas and cloves: woody plants with aromatic oil dots in the leaves and flowers dominated by numerous stamens.",
+    "48889": "Tropical melastomes: opposite leaves with 3–9 prominent veins curving from base to tip, and stamens with pore-opening anthers often bearing odd appendages."
+   }
+  },
+  "genus": {
+   "summary": "Circaea is unusual in having flower parts in 2s: 2 sepals, 2 tiny notched white petals and 2 stamens, followed by a small bur-like fruit covered in hooked hairs. Epilobium, Clarkia and Oenothera all have 4 petals and dry capsules: willowherbs with silky-tufted seeds, clarkias with showy pink petals, and evening primroses with large, often yellow flowers and an X-shaped stigma.",
+   "options": {
+    "52972": "Willowherbs and fireweed: 4 pink, purple or white petals; long, slender capsules splitting to release seeds topped with tufts of silky hairs.",
+    "47789": "Clarkias: annuals of dry, open spring sites with showy pink to purple 4-petalled flowers, petals often clawed or lobed.",
+    "47933": "Woodland herbs with opposite, stalked leaves and small white flowers with 2 sepals, 2 notched petals and 2 stamens; fruit a small burr with hooked hairs that catch on fur and clothing.",
+    "48626": "Evening primroses: large 4-petalled flowers, often yellow (sometimes white or pink), on a long floral tube, with an X-shaped 4-lobed stigma; many open in the evening."
+   }
+  },
+  "species": {
+   "summary": "Alpine enchanter's-nightshade is a small, delicate plant (10–50 cm) of moist BC forests; its flowers stay crowded at the stem tip until they open, and its fruit is tiny (about 2 mm), one-seeded and smooth-surfaced apart from hooked hairs. The other three are larger plants with 2-seeded fruits: C. lutetiana of Eurasia and the East Asian C. mollis and densely hairy C. cordata.",
+   "options": {
+    "51843": "A Eurasian species whose flower stalk elongates before the flowers open, so open flowers are well spaced; fruit has 2 equal chambers and usually 2 seeds. Not native to BC.",
+    "566011": "An East Asian species (Siberia, Korea, Japan, China to the Himalaya) with stems densely covered in soft and glandular hairs, broad heart-based leaves 4–13 cm long, and 2-seeded fruits.",
+    "76342": "Small, juicy-stemmed herb of moist to wet forests with opposite, heart- to egg-shaped leaves 2–6 cm; tiny white flowers crowded at the raceme tip; fruit about 2 mm, one-seeded, with hooked hairs and no ribs. Frequent throughout BC.",
+    "510235": "An East and Southeast Asian species with softly hairy stems, narrowly egg-shaped leaves and 2-seeded fruits with prominent ribs and hooked hairs. Not found in North America."
+   }
+  }
+ },
+ "sources": [
+  {
+   "title": "Burke Herbarium Image Collection: Circaea alpina",
+   "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Circaea%20alpina"
+  },
+  {
+   "title": "E-Flora BC: Circaea alpina",
+   "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Circaea%20alpina"
+  },
+  {
+   "title": "Minnesota Wildflowers: Circaea alpina",
+   "url": "https://www.minnesotawildflowers.info/flower/alpine-enchanters-nightshade"
+  },
+  {
+   "title": "Minnesota Wildflowers: Circaea canadensis",
+   "url": "https://www.minnesotawildflowers.info/flower/enchanters-nightshade"
+  },
+  {
+   "title": "Wikipedia: Circaea",
+   "url": "https://en.wikipedia.org/wiki/Circaea"
+  },
+  {
+   "title": "Wikipedia: Circaea cordata",
+   "url": "https://en.wikipedia.org/wiki/Circaea_cordata"
+  },
+  {
+   "title": "Wikipedia: Onagraceae",
+   "url": "https://en.wikipedia.org/wiki/Onagraceae"
+  },
+  {
+   "title": "POWO: Circaea lutetiana subsp. canadensis",
+   "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:58904-2"
+  }
+ ]
 }

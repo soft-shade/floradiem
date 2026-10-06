@@ -1,0 +1,102 @@
+{
+  "date": "2026-11-04",
+  "ranks": {
+    "kingdom": {
+      "summary": "This is a lichen: a fungus living with a photosynthetic partner, forming a leathery thallus on rock. The fungus is the partner that defines it, so it sits in Fungi. Plants have roots, stems and leaves, chromists are mostly aquatic, and protozoa are mostly microscopic single cells.",
+      "options": {
+        "47170": "Fungi (including lichens) cannot photosynthesize on their own; they absorb food from their surroundings. Their cell walls contain chitin, and most grow as networks of thread-like hyphae, showing up as mushrooms, moulds, brackets or crusts.",
+        "47126": "Plants are multicellular organisms that make their own food by photosynthesis, using chloroplasts with chlorophylls a and b. Their cell walls are made of cellulose and most are green and rooted in place.",
+        "48222": "Chromista includes kelps and other brown seaweeds, diatoms and water moulds. Photosynthetic members use chlorophylls a and c plus brownish pigments, so they look olive-brown or golden rather than green.",
+        "47686": "Protozoa are mostly single-celled organisms such as amoebae and slime moulds that engulf or absorb food. They lack chitin cell walls and are usually microscopic, though slime moulds can form visible blobs."
+      }
+    },
+    "phylum": {
+      "summary": "Lichen fungi are overwhelmingly ascomycetes, which form spores inside sac-like asci, here in small black discs on the thallus. Basidiomycetes make spores on club-shaped basidia (mushrooms, brackets), and chytrids and Mucoromycota are microscopic or mould-like fungi that never form leafy lichens.",
+      "options": {
+        "48250": "Ascomycetes produce spores inside microscopic sacs (asci), usually eight per sac. The group includes cup fungi, morels, most moulds and yeasts, and the great majority of lichen-forming fungi.",
+        "47169": "Basidiomycetes make their spores on the outside of club-shaped cells (basidia), usually four per cell. Most visible mushrooms, brackets, puffballs, jelly fungi, rusts and smuts belong here. Only a handful of lichens are basidiomycetes.",
+        "125609": "Chytrids are microscopic fungi of water and damp soil with swimming spores that have a single whiplash tail. They never form mushrooms; one species is the notorious amphibian chytrid.",
+        "1094433": "Mucoromycota include fast-growing pin moulds such as bread mould (Rhizopus) and Mucor, with spores in tiny round sacs on stalks. They make no gilled mushrooms."
+      }
+    },
+    "class": {
+      "summary": "Lecanoromycetes contains most lichens, especially leafy and shrubby ones with open, disc-like fruiting bodies. Arthoniomycetes are mostly thin crusts with irregular, often script-like fruiting bodies; Pezizomycetes are free-living cup fungi; and Sordariomycetes mostly form tiny flask-shaped fruiting bodies and are rarely lichenized.",
+      "options": {
+        "54743": "Lecanoromycetes includes the large majority of lichens, from crusts to leafy (foliose) and shrubby (fruticose) forms. Spores are usually made in open, disc- or cup-shaped apothecia.",
+        "152028": "Arthoniomycetes are mostly crustose lichens on bark or rock with small, irregular or line-like (script) fruiting bodies that lack a distinct rim. They do not form leafy thalli.",
+        "152032": "Pezizomycetes are cup fungi, morels and truffles. They are not lichens; their asci open by a little lid (operculum) to shoot spores.",
+        "53539": "Sordariomycetes mostly produce spores in tiny flask-shaped perithecia. They include many moulds, plant pathogens and wood decayers, but very few lichens."
+      }
+    },
+    "order": {
+      "summary": "Umbilicariales includes leafy lichens on rock that are attached by a single central holdfast, plus some crusts and scale-like species. Peltigerales are leafy lichens attached by many rhizines, often with cyanobacteria; Lecideales and Pertusariales are crustose lichens fused tightly to their substrate.",
+      "options": {
+        "1094443": "Umbilicariales includes rock-dwelling leafy lichens attached at one central point (umbilicus), as well as bloodspot lichens and some scaly lichens on wood. Fruiting bodies are usually black discs.",
+        "48712": "Peltigerales are large leafy lichens (pelt lichens, lungworts) whose photosynthetic partner is often a cyanobacterium. They are attached by many rhizines or a felty underside, not by a single central point.",
+        "125752": "Lecideales are crustose lichens, mostly on rock, with black, rimless (lecideine) apothecia. The thallus is a thin crust or areolate patch with no lobes or free lower surface.",
+        "117423": "Pertusariales are mostly crustose lichens (wart lichens) whose apothecia are often sunk in wart-like bumps, and spores are often very large. They form crusts on bark or rock rather than lobed thalli."
+      }
+    },
+    "family": {
+      "summary": "Umbilicariaceae are mostly leathery, leaf-like lichens on rock held on by one central holdfast, typically with black, ridged fruiting bodies. The other families are crusts or scale-like lichens: Ophioparmaceae includes bloodspot and clam lichens, Fuscideaceae are dark-fruited crusts, and Ropalosporaceae are crusts with needle-like spores.",
+      "options": {
+        "59970": "Umbilicariaceae (toadskins and relatives) are mostly foliose lichens on rock, attached by a single central umbilicus. Their apothecia are usually black and often have concentric or maze-like ridges; a few members are scale-like on wood.",
+        "117989": "Ophioparmaceae includes bloodspot lichens (Ophioparma), pale crusts with blood-red apothecia, and clam lichens (Hypocenomyce) with small shell-shaped scales on wood or bark.",
+        "175583": "Fuscideaceae are crustose lichens, often on siliceous rock or bark, with small dark brown to black apothecia. They have no lobes or central holdfast.",
+        "175171": "Ropalosporaceae are inconspicuous crustose lichens, mostly on bark, whose spores are long, thin and needle-like with several cross-walls."
+      }
+    },
+    "genus": {
+      "summary": "Umbilicaria forms leathery, leaf-like lobes on rock attached by one central holdfast, with black fruiting bodies that typically bear maze-like ridges. Xylopsora and Fulgidea are small scale-like (squamulose) lichens on wood or bark, and Omphalodium is a South American genus whose surface bears raised white pores (pseudocyphellae).",
+      "options": {
+        "59968": "Umbilicaria (rock tripes) are foliose lichens on rock, attached by a single central umbilicus, with brown, grey or black thalli. Apothecia are black and usually gyrose (with concentric or maze-like ridges).",
+        "1520781": "Omphalodium is a small South American, mainly Andean genus. Its umbilicate thallus has abundant pseudocyphellae (pale pores) on tubercles and ridges, and its apothecia have a partly thalline rim.",
+        "532743": "Xylopsora (old-growth clam lichens) form small squamules on wood, especially old or fire-scarred conifer snags and stumps in the Northern Hemisphere. They contain friesiic acid.",
+        "474428": "Fulgidea are squamulose lichens on bark and wood, similar to Xylopsora in look and habitat but differing in chemistry (alectorialic and thamnolic acids)."
+      }
+    },
+    "species": {
+      "summary": "Umbilicaria polyphylla is a dark brown, shiny rock tripe divided into many overlapping, petal-like lobes, with a smooth, sooty black underside lacking rhizines. U. polyrrhiza is densely shaggy with rhizines below, U. americana is frosted grey above with dense rhizinomorphs below, and U. cylindrica has a fringe of black cilia on its lobe margins.",
+      "options": {
+        "125058": "Petalled rocktripe: thallus 2–6 cm, thin and crisp, cut into many rounded to strap-like overlapping lobes. Upper surface smooth, olive-brown to blackish; lower surface black and smooth with sooty thalloconidia but no rhizines; no marginal cilia.",
+        "936572": "Ballpoint rocktripe: upper surface dark brown and smooth, but the black lower surface is densely covered in rhizines, many tipped with tiny balls, which often show around the lobe edges.",
+        "182508": "Frosted rock tripe: larger, single-lobed thallus whose upper surface is grey and dusted with whitish pruina. The lower surface is thickly covered with branched rhizinomorphs and granular black thalloconidia.",
+        "233242": "Fringed rocktripe: upper surface grey to dark, often with a pale bloom, and lobe margins fringed with long, branched black cilia. Often fertile, with black, gyrose apothecia."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "ABRS Flora of Australia (lichens): Umbilicaria polyphylla",
+      "url": "https://canbr.gov.au/abrs/lichenlist/VOLUME%2057/Umbilicaria%20polyphylla_d.html"
+    },
+    {
+      "title": "Wikipedia: Umbilicaria",
+      "url": "https://en.wikipedia.org/wiki/Umbilicaria"
+    },
+    {
+      "title": "Wikipedia: Umbilicaria americana",
+      "url": "https://en.wikipedia.org/wiki/Umbilicaria_americana"
+    },
+    {
+      "title": "Wikipedia: Umbilicaria cylindrica",
+      "url": "https://en.wikipedia.org/wiki/Umbilicaria_cylindrica"
+    },
+    {
+      "title": "Open Education Alberta: Umbilicaria key (2025)",
+      "url": "https://pressbooks.openeducationalberta.ca/app/uploads/sites/311/2025/03/Umbilicaria-v2025.pdf"
+    },
+    {
+      "title": "Wikipedia: Xylopsora",
+      "url": "https://en.wikipedia.org/wiki/Xylopsora"
+    },
+    {
+      "title": "Wikipedia: Fulgidea",
+      "url": "https://en.wikipedia.org/wiki/Fulgidea"
+    },
+    {
+      "title": "Wikipedia: Omphalodium",
+      "url": "https://en.wikipedia.org/wiki/Omphalodium"
+    }
+  ]
+}

@@ -1,90 +1,94 @@
 {
-  "date": "2026-11-02",
-  "ranks": {
-    "kingdom": {
-      "summary": "Green leaves and stems that grow in one place and make food from sunlight point to the plant kingdom. Fungi lack chlorophyll and absorb their food, Chromista are mostly brown seaweeds and microscopic golden algae, and protozoa are mostly single-celled. Plants share chlorophylls a and b, starch for storage and cellulose cell walls.",
-      "options": {
-        "47126": "Multicellular organisms that make their own food by photosynthesis using chlorophylls a and b, store starch, and have cellulose cell walls. Most are green and grow anchored in one place.",
-        "47170": "Absorb food from their surroundings instead of photosynthesising, and have chitin in their cell walls. Seen as mushrooms, brackets, moulds or (with algal partners) lichens, never as green leafy shoots.",
-        "48222": "Mostly aquatic: kelps and other brown seaweeds, diatoms and their relatives. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden-brown to olive colours.",
-        "47686": "Mostly single-celled organisms such as amoebae and slime moulds that usually feed on other organisms. They never form leafy, rooted, photosynthetic bodies."
-      }
-    },
-    "phylum": {
-      "summary": "This plant has true roots, upright stems and leaves with veins, which come from vascular tissue (xylem and phloem). Algae, mosses, liverworts and hornworts lack that plumbing, so they stay small, flat or live in water. Veined leaves and sturdy stems are the easiest giveaway.",
-      "options": {
-        "64615": "Liverworts: either flat, lobed thalli or leafy shoots with leaves in two or three rows, often lobed and without a midrib. No vascular tissue.",
-        "57774": "Red algae: mostly marine seaweeds coloured red to purple by phycoerythrin pigment. No vascular tissue, true roots or leaves, and no swimming (flagellated) cells.",
-        "311249": "Mosses: small leafy shoots anchored by thread-like rhizoids, without true roots or xylem and phloem. The green leafy plant is the long-lived stage; spores come from a capsule on a stalk.",
-        "211194": "Vascular plants: they have xylem and phloem, tissues that carry water and food, so they can grow tall with true roots, stems and veined leaves. Includes lycophytes, ferns, conifers and flowering plants."
-      }
-    },
-    "class": {
-      "summary": "Flowers and fruits mark this as a flowering plant, which rules out the spore-bearing lycophytes and ferns and the cone-bearing conifers. Broad leaves with a branching network of veins, and flower parts in fours or fives, point to the dicots rather than the monocots, whose leaves usually have parallel veins and whose flower parts come in threes.",
-      "options": {
-        "47623": "Lycophytes (clubmosses, spikemosses, quillworts): spore-bearing vascular plants with small single-veined leaves, often with spores in cone-like tips. No flowers or seeds.",
-        "121943": "Ferns (and horsetails): spore-bearing vascular plants without flowers or seeds. Fern fronds uncoil from fiddleheads and carry spore clusters on their undersides.",
-        "136329": "Conifers: seed plants with needle- or scale-like leaves and seeds carried on cone scales rather than inside a fruit. No flowers.",
-        "47124": "Dicots: flowering plants usually with net-veined leaves, flower parts in fours or fives, and two seed leaves. Includes most broad-leaved trees, shrubs and wildflowers."
-      }
-    },
-    "order": {
-      "summary": "Ericales often have petals fused at the base into a tube, bell or wheel, with stamens attached to the corolla. Caryophyllales are often succulent or have swollen nodes and separate petals; Ranunculales have many free stamens and pistils; Rosales have five free petals on a cup-like base, often with leaf stipules.",
-      "options": {
-        "47366": "Pinks, cacti, amaranths and relatives: mostly herbs or succulents, often with swollen nodes and opposite leaves, separate (often notched) petals, and betalain pigments in many.",
-        "47181": "Heaths, primroses, balsams, phloxes and relatives: petals usually fused at least at the base into a tube, bell or wheel, with stamens attached to them.",
-        "48232": "Buttercups, poppies, barberries and relatives: flowers often with many free stamens and pistils; leaves often divided.",
-        "47132": "Roses, elms, figs and relatives: five free petals and many stamens on a cup-like rim, or tiny wind-pollinated flowers; leaves usually with stipules."
-      }
-    },
-    "family": {
-      "summary": "The primrose family has radially symmetric flowers with five fused petals, stamens standing directly opposite the petal lobes, and a single-chambered ovary with seeds on a central column. The heath family is mostly woody with urn-shaped flowers; the phlox family has a three-branched style; pitcher plants have tubular trap leaves.",
-      "options": {
-        "48064": "Primrose family: herbs with simple leaves and five-lobed, wheel- to funnel-shaped flowers; stamens opposite the lobes; capsule with seeds on a free central column.",
-        "133387": "Heath family: mostly shrubs on acidic soils, with urn- or bell-shaped flowers whose anthers often open by pores.",
-        "48932": "Phlox family: herbs with funnel- or saucer-shaped flowers, stamens alternating with the lobes, and a three-branched style.",
-        "52649": "New World pitcher plants: carnivorous bog herbs whose leaves form hollow insect-trapping tubes."
-      }
-    },
-    "genus": {
-      "summary": "Lysimachia has leafy stems with opposite, whorled or alternate leaves and flowers borne in leaf axils or at the stem tip. Primroses, snowbells and rock-jasmines instead have leaves in a basal rosette and flowers held in umbels on leafless stalks; snowbells have fringed, nodding bells, and rock-jasmines tiny flowers with a narrowed throat.",
-      "options": {
-        "55820": "Primroses: basal rosette of leaves; flowers in umbels on a leafless stalk, each with a narrow tube flaring into five, often notched, lobes.",
-        "132619": "Snowbells: small European alpine plants with rounded, leathery basal leaves and nodding, bell-shaped flowers deeply fringed at the edge.",
-        "58298": "Rock-jasmines: small rosette plants of dry or alpine sites with tiny white or pink flowers, the throat constricted, in umbels.",
-        "48063": "Loosestrifes and starflowers: leafy stems with opposite or whorled leaves; flowers yellow, white or pink, single in leaf axils, in racemes or at the stem tip."
-      }
-    },
-    "species": {
-      "summary": "Creeping Jenny lies flat on the ground, its long stems rooting as they go, with pairs of small round leaves and single, cup-shaped, bright yellow flowers from the leaf axils. Fringed loosestrife is also yellow-flowered but stands upright with hairy-fringed leaf stalks. The two starflowers are small upright plants with a whorl of leaves at the top and star-like white or pink flowers.",
-      "options": {
-        "62441": "Fringed loosestrife: upright plant with opposite, pointed leaves on stalks fringed with hairs; nodding yellow flowers on slender stalks.",
-        "716947": "Arctic starflower: small plant of bogs and wet woods with a whorl of blunt, egg-shaped leaves at the top; one or two white star-shaped flowers.",
-        "51809": "Creeping Jenny: introduced, prostrate plant of damp lawns and ditches; opposite, round, short-stalked leaves; bright yellow cup-shaped flowers singly in the leaf axils.",
-        "496537": "Western starflower: woodland plant with a whorl of pointed, broadly oval leaves atop the stem and delicate pink star-shaped flowers on thread-like stalks."
-      }
-    }
+ "date": "2026-11-02",
+ "ranks": {
+  "kingdom": {
+   "summary": "Green leaves and stems that grow in one place and make food from sunlight point to the plant kingdom. Fungi lack chlorophyll and absorb their food, Chromista are mostly brown seaweeds and microscopic golden algae, and protozoa are mostly single-celled. Plants share chlorophylls a and b, starch for storage and cellulose cell walls.",
+   "options": {
+    "47126": "Multicellular organisms that make their own food by photosynthesis using chlorophylls a and b, store starch, and have cellulose cell walls. Most are green and grow anchored in one place.",
+    "47170": "Absorb food from their surroundings instead of photosynthesising, and have chitin in their cell walls. Seen as mushrooms, brackets, moulds or (with algal partners) lichens, never as green leafy shoots.",
+    "48222": "Mostly aquatic: kelps and other brown seaweeds, diatoms and their relatives. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden-brown to olive colours.",
+    "47686": "Mostly single-celled organisms such as amoebae and slime moulds that usually feed on other organisms. They never form leafy, rooted, photosynthetic bodies."
+   }
   },
-  "sources": [
-    {
-      "title": "E-Flora BC: Lysimachia nummularia",
-      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Lysimachia%20nummularia"
-    },
-    {
-      "title": "Wikipedia: Lysimachia nummularia",
-      "url": "https://en.wikipedia.org/wiki/Lysimachia_nummularia"
-    },
-    {
-      "title": "Wikipedia: Lysimachia ciliata",
-      "url": "https://en.wikipedia.org/wiki/Lysimachia_ciliata"
-    },
-    {
-      "title": "Wikipedia: Trientalis latifolia",
-      "url": "https://en.wikipedia.org/wiki/Trientalis_latifolia"
-    },
-    {
-      "title": "Wikipedia: Primulaceae",
-      "url": "https://en.wikipedia.org/wiki/Primulaceae"
-    }
-  ]
+  "phylum": {
+   "summary": "This plant has true roots, upright stems and leaves with veins, which come from vascular tissue (xylem and phloem). Algae, mosses, liverworts and hornworts lack that plumbing, so they stay small, flat or live in water. Veined leaves and sturdy stems are the easiest giveaway.",
+   "options": {
+    "64615": "Liverworts: either flat, lobed thalli or leafy shoots with leaves in two or three rows, often lobed and without a midrib. No vascular tissue.",
+    "57774": "Red algae: mostly marine seaweeds coloured red to purple by phycoerythrin pigment. No vascular tissue, true roots or leaves, and no swimming (flagellated) cells.",
+    "311249": "Mosses: small leafy shoots anchored by thread-like rhizoids, without true roots or xylem and phloem. The green leafy plant is the long-lived stage; spores come from a capsule on a stalk.",
+    "211194": "Vascular plants: they have xylem and phloem, tissues that carry water and food, so they can grow tall with true roots, stems and veined leaves. Includes lycophytes, ferns, conifers and flowering plants."
+   }
+  },
+  "class": {
+   "summary": "Flowers and fruits mark this as a flowering plant, which rules out the spore-bearing lycophytes and ferns and the cone-bearing conifers. Broad leaves with a branching network of veins, and flower parts in fours or fives, point to the dicots rather than the monocots, whose leaves usually have parallel veins and whose flower parts come in threes.",
+   "options": {
+    "47623": "Lycophytes (clubmosses, spikemosses, quillworts): spore-bearing vascular plants with small single-veined leaves, often with spores in cone-like tips. No flowers or seeds.",
+    "121943": "Ferns (and horsetails): spore-bearing vascular plants without flowers or seeds. Fern fronds uncoil from fiddleheads and carry spore clusters on their undersides.",
+    "136329": "Conifers: seed plants with needle- or scale-like leaves and seeds carried on cone scales rather than inside a fruit. No flowers.",
+    "47124": "Dicots: flowering plants usually with net-veined leaves, flower parts in fours or fives, and two seed leaves. Includes most broad-leaved trees, shrubs and wildflowers."
+   }
+  },
+  "order": {
+   "summary": "Ericales often have petals fused at the base into a tube, bell or wheel, with stamens attached to the corolla. Caryophyllales are often succulent or have swollen nodes and separate petals; Ranunculales have many free stamens and pistils; Rosales have five free petals on a cup-like base, often with leaf stipules.",
+   "options": {
+    "47366": "Pinks, cacti, amaranths and relatives: mostly herbs or succulents, often with swollen nodes and opposite leaves, separate (often notched) petals, and betalain pigments in many.",
+    "47181": "Heaths, primroses, balsams, phloxes and relatives: petals usually fused at least at the base into a tube, bell or wheel, with stamens attached to them.",
+    "48232": "Buttercups, poppies, barberries and relatives: flowers often with many free stamens and pistils; leaves often divided.",
+    "47132": "Roses, elms, figs and relatives: five free petals and many stamens on a cup-like rim, or tiny wind-pollinated flowers; leaves usually with stipules."
+   }
+  },
+  "family": {
+   "summary": "The primrose family has radially symmetric flowers with five fused petals, stamens standing directly opposite the petal lobes, and a single-chambered ovary with seeds on a central column. The heath family is mostly woody with urn-shaped flowers; the phlox family has a three-branched style; pitcher plants have tubular trap leaves.",
+   "options": {
+    "48064": "Primrose family: herbs with simple leaves and five-lobed, wheel- to funnel-shaped flowers; stamens opposite the lobes; capsule with seeds on a free central column.",
+    "133387": "Heath family: mostly shrubs on acidic soils, with urn- or bell-shaped flowers whose anthers often open by pores.",
+    "48932": "Phlox family: herbs with funnel- or saucer-shaped flowers, stamens alternating with the lobes, and a three-branched style.",
+    "52649": "New World pitcher plants: carnivorous bog herbs whose leaves form hollow insect-trapping tubes."
+   }
+  },
+  "genus": {
+   "summary": "Lysimachia has leafy stems with opposite, whorled or alternate leaves and flowers borne in leaf axils or at the stem tip. Primroses, snowbells and rock-jasmines instead have leaves in a basal rosette and flowers held in umbels on leafless stalks; snowbells have fringed, nodding bells, and rock-jasmines tiny flowers with a narrowed throat.",
+   "options": {
+    "55820": "Primroses: basal rosette of leaves; flowers in umbels on a leafless stalk, each with a narrow tube flaring into five, often notched, lobes.",
+    "132619": "Snowbells: small European alpine plants with rounded, leathery basal leaves and nodding, bell-shaped flowers deeply fringed at the edge.",
+    "58298": "Rock-jasmines: small rosette plants of dry or alpine sites with tiny white or pink flowers, the throat constricted, in umbels.",
+    "48063": "Loosestrifes and starflowers: leafy stems with opposite or whorled leaves; flowers yellow, white or pink, single in leaf axils, in racemes or at the stem tip."
+   }
+  },
+  "species": {
+   "summary": "Creeping Jenny lies flat on the ground, its long stems rooting as they go, with pairs of small round leaves and single, cup-shaped, bright yellow flowers from the leaf axils. Fringed loosestrife is also yellow-flowered but stands upright with hairy-fringed leaf stalks. Arctic starflower has a whorl of leaves and white flowers, and sea milkwort is a fleshy salt-marsh plant with tiny petal-less flowers.",
+   "options": {
+    "62441": "Fringed loosestrife: upright plant with opposite, pointed leaves on stalks fringed with hairs; nodding yellow flowers on slender stalks.",
+    "716947": "Arctic starflower: small plant of bogs and wet woods with a whorl of blunt, egg-shaped leaves at the top; one or two white star-shaped flowers.",
+    "51809": "Creeping Jenny: introduced, prostrate plant of damp lawns and ditches; opposite, round, short-stalked leaves; bright yellow cup-shaped flowers singly in the leaf axils.",
+    "204175": "Sea milkwort (formerly Glaux): low, fleshy plant of salt marshes and saline flats; crowded opposite, succulent leaves and tiny pink or white flowers with coloured sepals and no petals, single in the leaf axils."
+   }
+  }
+ },
+ "sources": [
+  {
+   "title": "E-Flora BC: Lysimachia nummularia",
+   "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Lysimachia%20nummularia"
+  },
+  {
+   "title": "Wikipedia: Lysimachia nummularia",
+   "url": "https://en.wikipedia.org/wiki/Lysimachia_nummularia"
+  },
+  {
+   "title": "Wikipedia: Lysimachia ciliata",
+   "url": "https://en.wikipedia.org/wiki/Lysimachia_ciliata"
+  },
+  {
+   "title": "Wikipedia: Trientalis latifolia",
+   "url": "https://en.wikipedia.org/wiki/Trientalis_latifolia"
+  },
+  {
+   "title": "Wikipedia: Primulaceae",
+   "url": "https://en.wikipedia.org/wiki/Primulaceae"
+  },
+  {
+   "title": "Phytoneuron: Lysimachia latifolia",
+   "url": "https://www.phytoneuron.net/2014Phytoneuron/28PhytoN-Lysimachialatifolia.pdf"
+  }
+ ]
 }

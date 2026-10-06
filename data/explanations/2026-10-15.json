@@ -1,98 +1,102 @@
 {
-  "date": "2026-10-15",
-  "ranks": {
-    "kingdom": {
-      "summary": "This is a green, leafy organism that makes its own food by photosynthesis, so it belongs with the plants. Fungi lack chlorophyll and absorb their food, protozoa are mostly microscopic single cells, and chromists include kelps and diatoms that are coloured brown or golden by different pigments.",
-      "options": {
-        "48222": "Kelps, diatoms, water moulds and relatives, mostly aquatic. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden to olive-brown colours rather than grass-green.",
-        "47686": "Mostly single-celled, often mobile organisms such as amoebae, plus slime moulds; they feed by engulfing food and have no leaves, stems or roots.",
-        "47170": "Fungi absorb food from their surroundings instead of photosynthesising, and have chitin cell walls. Seen as mushrooms, moulds and brackets, or as lichens when partnered with algae; never leafy and green.",
-        "47126": "Multicellular organisms that make their own food with chlorophylls a and b, store starch and have cellulose cell walls. Green leaves, stems and roots are the giveaway."
-      }
-    },
-    "phylum": {
-      "summary": "Its stems and leaves contain veins of xylem and phloem that conduct water and food, and it produces flowers and seeds. The other options are all non-vascular: liverworts, hornworts and mosses are small plants that reproduce by spores, and algae lack true roots, stems and leaves altogether.",
-      "options": {
-        "211194": "Plants with xylem and phloem, internal tubes that carry water and sugars. This lets them grow true roots, stems and leaves and reach large sizes; it includes lycophytes, horsetails, conifers and flowering plants, among others.",
-        "64615": "Liverworts: small non-vascular plants, either flat ribbon-like sheets (thalli) or leafy stems with leaves in 2–3 rows that are often lobed. Spores come from capsules on short-lived, translucent stalks.",
-        "50863": "Green algae: grass-green like plants but with no roots, stems, leaves or vascular tissue. They live in water or on damp surfaces, from single cells to seaweeds like sea lettuce.",
-        "56327": "Hornworts: non-vascular plants with a flat, dark-green thallus from which grow upright, horn-like spore-bearing structures that split lengthwise as they release spores."
-      }
-    },
-    "class": {
-      "summary": "Net-veined leaves and flower parts in 4s or 5s point to the dicots. Monocots usually have parallel-veined leaves and flower parts in 3s, while lycophytes, ferns and conifers never produce flowers.",
-      "options": {
-        "47163": "Flowering plants with one seed leaf, usually parallel-veined leaves, flower parts in 3s and fibrous roots; examples include lilies, orchids, sedges and palms.",
-        "47124": "Flowering plants usually with net-veined leaves, flower parts in 4s or 5s, two seed leaves (cotyledons), and often a taproot.",
-        "47623": "Clubmosses, spikemosses and quillworts: small, simple leaves (microphylls) with a single vein, often densely clothing the stem; spores borne in cones or leaf axils; no flowers or seeds.",
-        "121943": "Spore-bearing vascular plants, usually with large, often divided fronds that unroll from fiddleheads and carry spore clusters underneath; no flowers or seeds. Horsetails are included here too."
-      }
-    },
-    "order": {
-      "summary": "Opposite leaves and a fused corolla with only 2 or 4 stamens fit Lamiales. Saxifragales and Rosales usually have separate petals and more stamens, and Ericales, though often bell-flowered, usually have alternate leaves and as many or twice as many stamens as petals.",
-      "options": {
-        "71289": "Saxifrages, stonecrops, currants and peonies. Flowers usually have separate petals, often 5 or 10 stamens, and frequently 2 partly separate carpels that form beaked fruits.",
-        "47132": "Roses, elms, nettles and figs. Typically 5 separate petals, numerous stamens, and stipules (small leafy flaps) at the base of the leaf stalks.",
-        "48151": "Mostly herbs and shrubs with opposite leaves and fused, often two-lipped or wheel-shaped corollas; stamens usually 2 or 4, fewer than the corolla lobes. Includes mints, snapdragons, plantains and olives.",
-        "47181": "Heathers, blueberries, primroses and balsams. Corollas are often fused into bells or urns, but stamens commonly equal or double the petal number and leaves are usually alternate."
-      }
-    },
-    "family": {
-      "summary": "Plantaginaceae is a broad family, from tiny wheel-shaped flowers to tall tubular spikes and the wind-pollinated plantains; fruits are usually many-seeded capsules. Verbenaceae have fruits that split into nutlets, Phrymaceae (monkeyflowers) have a ribbed, angled calyx tube, and Paulowniaceae are trees.",
-      "options": {
-        "49194": "Verbenas and relatives: often square stems, small flowers in dense spikes or heads, and a fruit that splits into 2–4 one-seeded nutlets rather than opening as a capsule.",
-        "71586": "Trees with huge heart-shaped leaves and upright clusters of large violet foxglove-like flowers, followed by woody, egg-shaped capsules full of tiny winged seeds.",
-        "50638": "Mostly herbs with opposite or basal leaves; flowers range from flat 4-lobed wheels to two-lipped, spurred or tubular forms, and the fruit is usually a capsule with many seeds. Now includes plantains, foxgloves and snapdragon relatives.",
-        "64552": "Monkeyflowers and lopseed: two-lipped flowers whose calyx is a tube with 5 prominent ribs or angles; many monkeyflowers have a two-lobed stigma that closes when touched."
-      }
-    },
-    "genus": {
-      "summary": "Veronica flowers are distinctive: a nearly flat, wheel-shaped corolla with just 4 lobes (the upper usually largest) and only 2 stamens. Penstemon, Nothochelone and Digitalis all have tubular, two-lipped or bell-like flowers with 4 fertile stamens.",
-      "options": {
-        "72258": "Woodland beardtongue of Pacific Northwest mountain forests: a single species resembling Penstemon, with toothed opposite leaves and pink, tubular two-lipped flowers over 3 cm long with a hairy sterile stamen and winged seeds.",
-        "53984": "Foxgloves: tall spikes of large, nodding, tubular flowers often spotted inside, with 4 stamens; leaves large and soft-hairy. Purple foxglove is a common escape in coastal BC.",
-        "48367": "Beardtongues: tubular, two-lipped flowers with 5 lobes, 4 fertile stamens and a fifth sterile stamen (staminode) that is often bearded with hairs.",
-        "51611": "Speedwells: small flowers with a flat, 4-lobed corolla (upper lobe largest, lower often narrowest), 2 stamens sticking outward, and a flattened, often notched capsule."
-      }
-    },
-    "species": {
-      "summary": "American brooklime grows in water or wet mud and is hairless, with short-stalked, lance-shaped opposite leaves and loose, many-flowered clusters arising from the leaf axils. Corn and bird's-eye speedwells are hairy weedy annuals of lawns and disturbed ground, and alpine speedwell is a mountain plant with flowers crowded at the stem tip.",
-      "options": {
-        "55748": "A small, hairy, taprooted annual of gardens and roadsides with tiny (2–2.5 mm wide) blue-violet flowers in leafy spikes at the stem tips, and heart-shaped capsules.",
-        "57277": "A hairless perennial of ditches, slow streams and pond edges with creeping rhizomes; leaves opposite, lance-shaped and short-stalked; blue flowers 5+ mm wide on spreading stalks in open racemes from the leaf axils.",
-        "61145": "A perennial of moist subalpine and alpine meadows and seeps, 7–30 cm tall, with deep blue-violet flowers in a compact cluster at the top of the stem; capsule taller than wide.",
-        "55666": "A sprawling introduced annual of lawns and gardens with broadly oval, toothed leaves; bright blue flowers with a usually white lower lobe, borne singly on long stalks from leaf axils; capsule broad with a wide notch."
-      }
-    }
+ "date": "2026-10-15",
+ "ranks": {
+  "kingdom": {
+   "summary": "This is a green, leafy organism that makes its own food by photosynthesis, so it belongs with the plants. Fungi lack chlorophyll and absorb their food, protozoa are mostly microscopic single cells, and chromists include kelps and diatoms that are coloured brown or golden by different pigments.",
+   "options": {
+    "48222": "Kelps, diatoms, water moulds and relatives, mostly aquatic. Photosynthetic members use chlorophyll c plus brownish pigments such as fucoxanthin, giving golden to olive-brown colours rather than grass-green.",
+    "47686": "Mostly single-celled, often mobile organisms such as amoebae, plus slime moulds; they feed by engulfing food and have no leaves, stems or roots.",
+    "47170": "Fungi absorb food from their surroundings instead of photosynthesising, and have chitin cell walls. Seen as mushrooms, moulds and brackets, or as lichens when partnered with algae; never leafy and green.",
+    "47126": "Multicellular organisms that make their own food with chlorophylls a and b, store starch and have cellulose cell walls. Green leaves, stems and roots are the giveaway."
+   }
   },
-  "sources": [
-    {
-      "title": "Burke Herbarium Image Collection: Veronica americana",
-      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Veronica%20americana"
-    },
-    {
-      "title": "Burke Herbarium Image Collection: Veronica wormskjoldii",
-      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Veronica%20wormskjoldii"
-    },
-    {
-      "title": "Burke Herbarium Image Collection: Veronica persica",
-      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Veronica%20persica"
-    },
-    {
-      "title": "Burke Herbarium Image Collection: Veronica arvensis",
-      "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Veronica%20arvensis"
-    },
-    {
-      "title": "E-Flora BC: Veronica americana",
-      "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Veronica%20americana"
-    },
-    {
-      "title": "Wikipedia: Plantaginaceae",
-      "url": "https://en.wikipedia.org/wiki/Plantaginaceae"
-    },
-    {
-      "title": "Wikipedia: Nothochelone",
-      "url": "https://en.wikipedia.org/wiki/Nothochelone"
-    }
-  ]
+  "phylum": {
+   "summary": "Its stems and leaves contain veins of xylem and phloem that conduct water and food, and it produces flowers and seeds. The other options are all non-vascular: liverworts, hornworts and mosses are small plants that reproduce by spores, and algae lack true roots, stems and leaves altogether.",
+   "options": {
+    "211194": "Plants with xylem and phloem, internal tubes that carry water and sugars. This lets them grow true roots, stems and leaves and reach large sizes; it includes lycophytes, horsetails, conifers and flowering plants, among others.",
+    "64615": "Liverworts: small non-vascular plants, either flat ribbon-like sheets (thalli) or leafy stems with leaves in 2–3 rows that are often lobed. Spores come from capsules on short-lived, translucent stalks.",
+    "50863": "Green algae: grass-green like plants but with no roots, stems, leaves or vascular tissue. They live in water or on damp surfaces, from single cells to seaweeds like sea lettuce.",
+    "56327": "Hornworts: non-vascular plants with a flat, dark-green thallus from which grow upright, horn-like spore-bearing structures that split lengthwise as they release spores."
+   }
+  },
+  "class": {
+   "summary": "Net-veined leaves and flower parts in 4s or 5s point to the dicots. Monocots usually have parallel-veined leaves and flower parts in 3s, while lycophytes, ferns and conifers never produce flowers.",
+   "options": {
+    "47163": "Flowering plants with one seed leaf, usually parallel-veined leaves, flower parts in 3s and fibrous roots; examples include lilies, orchids, sedges and palms.",
+    "47124": "Flowering plants usually with net-veined leaves, flower parts in 4s or 5s, two seed leaves (cotyledons), and often a taproot.",
+    "47623": "Clubmosses, spikemosses and quillworts: small, simple leaves (microphylls) with a single vein, often densely clothing the stem; spores borne in cones or leaf axils; no flowers or seeds.",
+    "121943": "Spore-bearing vascular plants, usually with large, often divided fronds that unroll from fiddleheads and carry spore clusters underneath; no flowers or seeds. Horsetails are included here too."
+   }
+  },
+  "order": {
+   "summary": "Opposite leaves and a fused corolla with only 2 or 4 stamens fit Lamiales. Saxifragales and Rosales usually have separate petals and more stamens, and Ericales, though often bell-flowered, usually have alternate leaves and as many or twice as many stamens as petals.",
+   "options": {
+    "71289": "Saxifrages, stonecrops, currants and peonies. Flowers usually have separate petals, often 5 or 10 stamens, and frequently 2 partly separate carpels that form beaked fruits.",
+    "47132": "Roses, elms, nettles and figs. Typically 5 separate petals, numerous stamens, and stipules (small leafy flaps) at the base of the leaf stalks.",
+    "48151": "Mostly herbs and shrubs with opposite leaves and fused, often two-lipped or wheel-shaped corollas; stamens usually 2 or 4, fewer than the corolla lobes. Includes mints, snapdragons, plantains and olives.",
+    "47181": "Heathers, blueberries, primroses and balsams. Corollas are often fused into bells or urns, but stamens commonly equal or double the petal number and leaves are usually alternate."
+   }
+  },
+  "family": {
+   "summary": "Plantaginaceae is a broad family, from tiny wheel-shaped flowers to tall tubular spikes and the wind-pollinated plantains; fruits are usually many-seeded capsules. Verbenaceae have fruits that split into nutlets, Phrymaceae (monkeyflowers) have a ribbed, angled calyx tube, and Paulowniaceae are trees.",
+   "options": {
+    "49194": "Verbenas and relatives: often square stems, small flowers in dense spikes or heads, and a fruit that splits into 2–4 one-seeded nutlets rather than opening as a capsule.",
+    "71586": "Trees with huge heart-shaped leaves and upright clusters of large violet foxglove-like flowers, followed by woody, egg-shaped capsules full of tiny winged seeds.",
+    "50638": "Mostly herbs with opposite or basal leaves; flowers range from flat 4-lobed wheels to two-lipped, spurred or tubular forms, and the fruit is usually a capsule with many seeds. Now includes plantains, foxgloves and snapdragon relatives.",
+    "64552": "Monkeyflowers and lopseed: two-lipped flowers whose calyx is a tube with 5 prominent ribs or angles; many monkeyflowers have a two-lobed stigma that closes when touched."
+   }
+  },
+  "genus": {
+   "summary": "Veronica flowers are distinctive: a nearly flat, wheel-shaped corolla with just 4 lobes (the upper usually largest) and only 2 stamens. Penstemon and Digitalis have large tubular or bell-like flowers with 4 fertile stamens, and Gratiola has 2 stamens but a narrow, tubular, two-lipped corolla.",
+   "options": {
+    "53984": "Foxgloves: tall spikes of large, nodding, tubular flowers often spotted inside, with 4 stamens; leaves large and soft-hairy. Purple foxglove is a common escape in coastal BC.",
+    "48367": "Beardtongues: tubular, two-lipped flowers with 5 lobes, 4 fertile stamens and a fifth sterile stamen (staminode) that is often bearded with hairs.",
+    "51611": "Speedwells: small flowers with a flat, 4-lobed corolla (upper lobe largest, lower often narrowest), 2 stamens sticking outward, and a flattened, often notched capsule.",
+    "60250": "Hedge-hyssops: small herbs of wet ground with opposite, stalkless leaves and single tubular, two-lipped white to yellowish flowers on stalks in the leaf axils, usually with 2 leafy bracts under the calyx; 2 fertile stamens."
+   }
+  },
+  "species": {
+   "summary": "American brooklime grows in water or wet mud and is hairless, with short-stalked, lance-shaped opposite leaves and loose, many-flowered clusters arising from the leaf axils. Corn and bird's-eye speedwells are hairy weedy annuals of lawns and disturbed ground, and alpine speedwell is a mountain plant with flowers crowded at the stem tip.",
+   "options": {
+    "55748": "A small, hairy, taprooted annual of gardens and roadsides with tiny (2–2.5 mm wide) blue-violet flowers in leafy spikes at the stem tips, and heart-shaped capsules.",
+    "57277": "A hairless perennial of ditches, slow streams and pond edges with creeping rhizomes; leaves opposite, lance-shaped and short-stalked; blue flowers 5+ mm wide on spreading stalks in open racemes from the leaf axils.",
+    "61145": "A perennial of moist subalpine and alpine meadows and seeps, 7–30 cm tall, with deep blue-violet flowers in a compact cluster at the top of the stem; capsule taller than wide.",
+    "55666": "A sprawling introduced annual of lawns and gardens with broadly oval, toothed leaves; bright blue flowers with a usually white lower lobe, borne singly on long stalks from leaf axils; capsule broad with a wide notch."
+   }
+  }
+ },
+ "sources": [
+  {
+   "title": "Burke Herbarium Image Collection: Veronica americana",
+   "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Veronica%20americana"
+  },
+  {
+   "title": "Burke Herbarium Image Collection: Veronica wormskjoldii",
+   "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Veronica%20wormskjoldii"
+  },
+  {
+   "title": "Burke Herbarium Image Collection: Veronica persica",
+   "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Veronica%20persica"
+  },
+  {
+   "title": "Burke Herbarium Image Collection: Veronica arvensis",
+   "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Veronica%20arvensis"
+  },
+  {
+   "title": "E-Flora BC: Veronica americana",
+   "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Veronica%20americana"
+  },
+  {
+   "title": "Wikipedia: Plantaginaceae",
+   "url": "https://en.wikipedia.org/wiki/Plantaginaceae"
+  },
+  {
+   "title": "Wikipedia: Nothochelone",
+   "url": "https://en.wikipedia.org/wiki/Nothochelone"
+  },
+  {
+   "title": "E-Flora BC: Nothochelone nemorosa",
+   "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Nothochelone%20nemorosa"
+  }
+ ]
 }

@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-08",
+  "ranks": {
+    "kingdom": {
+      "summary": "A large, olive-brown seaweed anchored to rock in the sea belongs with the Chromista. Their photosynthetic members use chlorophyll c and the brown pigment fucoxanthin, which gives brown seaweeds their colour. Plants are grass-green with chlorophylls a and b, fungi do not photosynthesise, and protozoa are mostly single-celled.",
+      "options": {
+        "47686": "Mostly single-celled organisms such as amoebae, flagellates and their relatives, usually feeding on other organisms. They do not form large, rooted, photosynthetic bodies in the sea.",
+        "47126": "Green land plants and green and red algae, using chlorophylls a and b (plus red pigments in red algae) and storing starch. Green seaweeds are bright grass-green, not olive-brown.",
+        "47170": "Absorb food from their surroundings rather than photosynthesising, with chitin in their cell walls. Seen as mushrooms, moulds, brackets and lichens, never as photosynthetic seaweeds.",
+        "48222": "Mostly aquatic: brown seaweeds, diatoms, water moulds and many microscopic relatives. Photosynthetic members use chlorophyll c and fucoxanthin, giving golden-brown to olive colours."
+      }
+    },
+    "phylum": {
+      "summary": "This is a photosynthetic, many-celled seaweed with golden-brown colour, which fits Ochrophyta, the pigmented branch of the heterokonts. Water moulds and the Bigyra lack chloroplasts and feed on other matter, and Miozoa (dinoflagellates and parasites such as Plasmodium) are single-celled.",
+      "options": {
+        "52595": "Water moulds: fungus-like, thread-forming organisms without chloroplasts that feed on living or dead material. Includes plant pathogens such as downy mildews and Phytophthora; never a large seaweed.",
+        "792744": "Mostly single-celled: dinoflagellates with two flagella and often armoured plates, plus parasitic apicomplexans such as Plasmodium. They can colour the water in blooms but never form big seaweeds.",
+        "48221": "The photosynthetic heterokonts, coloured golden to olive-brown by fucoxanthin. Ranges from diatoms and golden algae to large brown seaweeds that can be many metres long.",
+        "792746": "Colourless, mostly microscopic heterokonts without chloroplasts, such as bicosoecid flagellates, slime nets (labyrinthulids) and the gut parasite Blastocystis."
+      }
+    },
+    "class": {
+      "summary": "Only the brown algae (Phaeophyceae) form large, many-celled seaweeds with a holdfast, stalk and blades. The other options here are microscopic: free-swimming golden algae, raphidophyte flagellates, and tiny amoeboid Synchromophyceae. A seaweed visible to the naked eye in this group is a brown alga.",
+      "options": {
+        "51943": "Golden algae: mostly microscopic freshwater flagellates, single or in small colonies, some with silica scales. Golden-brown in colour but never forming a seaweed.",
+        "48220": "Brown algae: multicellular, almost all marine seaweeds, olive to dark brown. They range from fine filaments and crusts to rockweeds and giant forms with holdfast, stipe and blades.",
+        "152021": "Single-celled, fairly large flagellates without a cell wall, in marine and fresh water. Some marine species cause harmful blooms that can kill farmed fish.",
+        "1271866": "A small, recently described group of microscopic marine amoeboid algae that live in networks. Known only under the microscope."
+      }
+    },
+    "order": {
+      "summary": "A tough, leathery seaweed with a branched holdfast, a distinct stipe and broad blades points to the Laminariales. Sphacelariales and Ectocarpales are small, often filamentous brown algae, and Desmarestiales are finely or flatly branched with a midrib, without the clear holdfast-stipe-blade body plan.",
+      "options": {
+        "152257": "Small, stiff, tufted brown filaments a few centimetres tall, each branch tipped by a large, conspicuous apical cell. Often grows on rock or other seaweeds.",
+        "152254": "Branched brown seaweeds, from fine and bushy to flat with a midrib and opposite side branches. Many species store sulphuric acid and quickly turn green and decay when taken out of the water.",
+        "68789": "The largest brown seaweeds: tough sporophytes with a holdfast, stipe and one or more broad blades, growing from a meristem where stipe meets blade. The sexual stage is a microscopic filament.",
+        "117795": "Mostly small brown algae: fine branched filaments, hollow tubes, sacs or jelly-like cushions. Includes common epiphytes on other seaweeds and the sea cauliflower."
+      }
+    },
+    "family": {
+      "summary": "In current classification the Laminariaceae hold most NE Pacific kelps without special spore blades, including Laminaria, Saccharina and Macrocystis; several float-bearing genera once listed under Lessoniaceae now sit here. Alariaceae bear spores on separate small blades on the stipe, and Agaraceae have perforated or ribbed blades.",
+      "options": {
+        "67425": "Kelps without separate spore-bearing blades on the stipe; spore patches form on the main blades. Includes Laminaria, Saccharina and Macrocystis, and, since molecular work, several float-bearing genera once placed in Lessoniaceae.",
+        "123804": "Kelps that bear spores on special small blades (sporophylls) on the stipe below the main blade. Includes Alaria, with a conspicuous midrib, and the feather boa kelp Egregia.",
+        "67418": "Now mostly a southern-hemisphere family (Lessonia, Ecklonia, Eisenia) after molecular studies moved NE Pacific genera elsewhere. In several, the stipe forks near the top into branches that carry the blades.",
+        "500820": "Kelps with distinctive blades: perforated with holes (Agarum), or with several lengthwise ribs and bumpy surface (Costaria). Also called Costariaceae."
+      }
+    },
+    "genus": {
+      "summary": "Nereocystis is the only option with one very long, hollow, whip-like stipe ending in a single round float that carries many long strap-like blades. Postelsia is a short, upright sea palm on surf-swept rocks, Saccharina has a single broad blade on a short stipe, and Hedophyllum has a short stipe or none at all.",
+      "options": {
+        "325553": "Low-intertidal and shallow kelps with a short stipe or none, the broad blade arising close to the holdfast and often split. No float.",
+        "67416": "Sea palm: a stout, upright, flexible stipe up to about half a metre tall, topped by a tuft of drooping, grooved blades. Grows on surf-pounded intertidal rock; no float.",
+        "130243": "A single undivided blade, often with ruffled edges or a bumpy surface, on a short stipe above a branched holdfast. No float; includes sugar kelp.",
+        "120502": "A stipe up to tens of metres long, solid below and hollow above, ending in one large round float (pneumatocyst) that bears many long, strap-like blades. Forms floating canopies in the subtidal."
+      }
+    },
+    "species": {
+      "summary": "Bull kelp (Nereocystis luetkeana) has a long, hollow stipe swelling into a single round float with up to about 30–64 blades, and is usually annual. Neither Hedophyllum species nor Laminaria ephemera has a float; they are low-growing kelps with a single blade or blades held near the bottom.",
+      "options": {
+        "1267796": "A stipitate kelp with a broad blade often split into strap-like segments, mainly in cold northern waters. Externally very like Laminaria digitata; separated by DNA and by mucilage ducts in the stipe. No float.",
+        "244533": "Sea cabbage: mature plants have no stipe, with a thick, broad, often split and ruffled blade arising straight from the holdfast. Perennial, in the low intertidal of exposed coasts.",
+        "120499": "Bull kelp: hollow stipe 10–36 m long ending in one large float with about 30–64 blades up to 4 m long. Usually annual; spore patches drop from the blades to the seafloor.",
+        "81878": "A small, short-lived spring kelp with a single undivided blade on a short stipe, in the low intertidal and shallow subtidal. No float; it releases spores in spring and summer and then dies back."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "Nereocystis — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Nereocystis"
+    },
+    {
+      "title": "Laminariaceae — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Laminariaceae"
+    },
+    {
+      "title": "DeCew's Guide to the Seaweeds of British Columbia, Washington, Oregon, and Northern California: Key to brown algae (UC Berkeley)",
+      "url": "https://herbariadb.berkeley.edu/archive/decew_seaweed_guide/brownkey.html"
+    },
+    {
+      "title": "Sea cabbage taxonomy — Friday Harbor Labs Marine Botany",
+      "url": "https://depts.washington.edu/fhl/mb/Sacc_sess_Kristina/taxonomy.html"
+    },
+    {
+      "title": "Dankworth et al. 2020, DNA barcoding and mucilage ducts in the stipe reveal Hedophyllum nigripes (J. Phycol.)",
+      "url": "https://epic.awi.de/id/eprint/59100"
+    },
+    {
+      "title": "Phenology and reproduction of the spring kelp Laminaria ephemera (Botanica Marina, 2016)",
+      "url": "https://doi.org/10.1515/bot-2016-0071"
+    }
+  ]
+}
