@@ -1,5 +1,5 @@
-Plantdiem — a daily plant identification game by Softshade
-https://soft-shade.github.io/plantdiem/
+Floradiem — a daily plant identification game by Softshade
+https://soft-shade.github.io/floradiem/
 
 Each day: photos of one plant (or red/brown alga) that softshade has a
 research-grade iNaturalist observation of in British Columbia. Pick the
@@ -34,6 +34,7 @@ Deploy
     index.html on each deploy to bust caches.
 
 Stats
+    (Keys and collections still use the original name, plantdiem.)
     localStorage key plantdiem_stats. When signed in with Google, synced to
     Firebase project worm-game-bdd29 (shared with worm-game):
       plantdiem_stats/{uid}          per-player stats

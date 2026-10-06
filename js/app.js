@@ -1,4 +1,4 @@
-/* Plantdiem — daily plant identification game.
+/* Floradiem — daily plant identification game.
  *
  * Daily scoring: a puzzle can be attempted once per day for 7 days, starting
  * on its own date. Attempt j (0 = puzzle day) is a full run from Kingdom; the
@@ -13,7 +13,9 @@
   const RANKS = ['kingdom', 'phylum', 'class', 'order', 'family', 'genus', 'species'];
   const MAX_ATTEMPTS = 7;
   const TZ = 'America/Vancouver';
-  const SITE = 'https://soft-shade.github.io/plantdiem/';
+  const SITE = 'https://soft-shade.github.io/floradiem/';
+  // Storage keys and Firestore collections keep the game's original name
+  // (Plantdiem) so existing progress and security rules carry over.
   const STATS_KEY = 'plantdiem_stats';
   const BC_PLACE = 7085;
   const SOFTSHADE_SHARE = 0.8;   // Unlimited: chance of drawing from softshade's identifications
@@ -469,7 +471,7 @@
 
     $('stage').innerHTML = `
       <div class="result">
-        <div class="note">Plantdiem #${p.number} · ${final ? 'final score' : 'score so far'}</div>
+        <div class="note">Floradiem #${p.number} · ${final ? 'final score' : 'score so far'}</div>
         <div class="big">${scoreString(digits)}</div>
         <div class="attempts">${rows}</div>
         ${revealed}
@@ -502,7 +504,7 @@
   }
   function shareDaily(p, digits, final) {
     const lines = digits.map((d, j) => (d == null ? null : `${ladderEmoji(d)} ${d}/7`)).filter(Boolean);
-    return `Plantdiem #${p.number} — ${scoreString(digits)}${final ? '' : ' (so far)'}\n${lines.join('\n')}\n${SITE}`;
+    return `Floradiem #${p.number} — ${scoreString(digits)}${final ? '' : ' (so far)'}\n${lines.join('\n')}\n${SITE}`;
   }
   async function share(text) {
     try {
@@ -690,7 +692,7 @@
         </div>
       </div>`;
     $('btn-again').onclick = newUnlimited;
-    $('btn-share').onclick = () => share(`Plantdiem Unlimited — ${correct}/7\n${emoji}\n${SITE}`);
+    $('btn-share').onclick = () => share(`Floradiem Unlimited — ${correct}/7\n${emoji}\n${SITE}`);
   }
 
   // ---------------------------------------------------------------- modal: stats / help
@@ -804,7 +806,7 @@
 
   function helpView() {
     return `<h2>How to play</h2>
-      <p>Each day Plantdiem shows photos of one plant, fungus, lichen, seaweed or slime mold from British Columbia, photographed by
+      <p>Each day Floradiem shows photos of one plant, fungus, lichen, seaweed or slime mold from British Columbia, photographed by
          <a href="https://www.inaturalist.org/people/softshade" target="_blank" rel="noopener">softshade</a> on iNaturalist.
          Swipe or use the arrows to see every photo.</p>
       <p>Work down the tree of life — <b>Kingdom, Phylum, Class, Order, Family, Genus, Species</b> — choosing from four options each time.

@@ -9,7 +9,7 @@ import requests
 
 API = "https://api.inaturalist.org/v1/"
 CACHE = os.path.join(os.path.dirname(__file__), ".cache")
-HEADERS = {"User-Agent": "Plantdiem data builder (github.com/soft-shade/plantdiem)"}
+HEADERS = {"User-Agent": "Floradiem data builder (github.com/soft-shade/floradiem)"}
 
 BC_PLACE = 7085
 POOL_TAXA = "47126,47170,48222,47686"   # Plantae, Fungi (incl. lichens), Chromista, Protozoa
