@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-12",
+  "ranks": {
+    "kingdom": {
+      "summary": "A white, dusty coating of fine threads growing over living leaves is a fungus: it lacks chlorophyll and feeds from the plant it covers. Plants make their own food and are green themselves, Chromista are mainly brown seaweeds, diatoms and water moulds, and protozoa are mostly single-celled or amoeboid.",
+      "options": {
+        "47126": "Green, photosynthetic organisms with chlorophylls a and b, starch and cellulose cell walls. Here they would be the host leaves, not the white growth on them.",
+        "47170": "Absorb food from living or dead material instead of photosynthesising, growing as threads (hyphae) with chitin walls and spreading by spores. Includes mushrooms, moulds, rusts, lichens and leaf parasites.",
+        "48222": "Mostly aquatic brown seaweeds and diatoms, plus water moulds such as downy mildews, which look fungus-like but have cellulose walls and swimming spores.",
+        "47686": "Mostly single-celled or amoeboid organisms such as amoebae, flagellates and slime moulds that engulf their food. They do not form a thread network over living leaves."
+      }
+    },
+    "phylum": {
+      "summary": "This fungus has septate hyphae and, in season, tiny dark fruiting bodies that hold its sexual spores in sacs (asci), the mark of Ascomycota. Chytrids and Blastocladiomycota are mainly microscopic water and soil fungi with swimming spores, and Mucoromycota are fast-growing pin moulds with mostly unwalled-off hyphae.",
+      "options": {
+        "125609": "Chytrids: microscopic fungi of water and damp soil with swimming spores bearing a single whiplash flagellum. Many live on algae, pollen or amphibian skin.",
+        "1094423": "Microscopic fungi with swimming, flagellated spores, living in water and soil or as parasites of invertebrates and plants. Not visible as a coating on leaves.",
+        "48250": "Sac fungi: sexual spores form inside sacs called asci, usually eight per ascus, and hyphae have cross-walls. Includes cup fungi, morels, yeasts, many moulds and leaf parasites.",
+        "1094433": "Pin moulds and relatives: fast-growing hyphae mostly without cross-walls, often with tiny black spore heads on stalks, as on old bread or fruit; many partner with plant roots."
+      }
+    },
+    "class": {
+      "summary": "Leotiomycetes include many small cup and disc fungi and a large group of obligate leaf parasites that form a white surface growth with tiny dark, closed fruiting bodies. Lichinomycetes and Arthoniomycetes are mostly lichens, and Taphrinomycetes cause leaf curls and galls without any fruiting body.",
+      "options": {
+        "152030": "Mostly small, dark, jelly-like lichens with cyanobacterial partners, growing on rock in dry or wet sites. Not parasites of living leaves.",
+        "152035": "Leaf-curl and gall fungi such as Taphrina: they distort leaves, fruits or twigs and form a bloom of naked asci on the host surface, with a yeast stage. No white thread network.",
+        "55523": "A broad class of small cup and disc fungi with asci that open by a pore, plus obligate parasites that cover living leaves with white growth and tiny dark round fruiting bodies.",
+        "152028": "Mostly crust lichens on bark and rock, with small, black, often irregular or star-shaped fruiting bodies that lack a rim."
+      }
+    },
+    "order": {
+      "summary": "Helotiales, in the broad sense used here, includes the obligate parasites that cover living leaves in white growth, along with many tiny cup fungi; some sources give those parasites an order of their own. Leotiales are jelly-babies and their relatives, while Phacidiales and Marthamycetales have fruiting bodies sunk into dead leaves or bark.",
+      "options": {
+        "49073": "A very large, varied order: small, often brightly coloured cups and discs on plant debris, plant pathogens, and (in current molecular treatments) the parasites forming white surface growth on living leaves.",
+        "972694": "Small fruiting bodies sunk in dead leaves, twigs or bark, opening by splitting the host surface into teeth or lobes to expose a pale disc.",
+        "58671": "Includes jelly babies (Leotia): rubbery, stalked fruiting bodies with a gelatinous, cap-like head, growing in soil or moss on the forest floor.",
+        "738901": "Fruiting bodies develop under the surface of dead leaves, needles or bark and break through by flaps or a slit. Includes some needle and bark pathogens of conifers."
+      }
+    },
+    "family": {
+      "summary": "Erysiphaceae are obligate parasites whose white, powdery mycelium sits on the surface of living leaves, producing chains or single spores and later tiny dark spheres (chasmothecia) with hair-like appendages. The other families form small cups: blue-green Chlorociboriaceae, tiny pale Pezizellaceae and Sclerotiniaceae arising from sclerotia or mummified fruit.",
+      "options": {
+        "791906": "Small blue-green cups on bare, decaying hardwood, which is itself stained blue-green by the fungus (green elfcup).",
+        "791564": "Tiny, often pale or translucent stalked cups, typically under a few millimetres, on dead leaves, stems and wood.",
+        "204631": "Cup fungi growing from hard resting bodies (sclerotia) or mummified fruit; includes grey mould (Botrytis), white mould and brown rot of stone fruit.",
+        "55525": "Powdery mildews: obligate parasites with a white superficial mycelium on living plants, feeding through small pegs into the epidermis. Late in the season they form tiny dark round chasmothecia with appendages."
+      }
+    },
+    "genus": {
+      "summary": "Erysiphe has conidia borne singly (not in chains) and chasmothecia with several asci, and attacks a huge range of broadleaved plants. Podosphaera has a single ascus per chasmothecium and chained conidia, Blumeria grows only on grasses and cereals, and Arthrocladiella grows only on Lycium (goji). The host plant is often the best field clue.",
+      "options": {
+        "326135": "Found only on grasses and cereals, forming thick, felt-like white to grey pustules with densely packed chasmothecia. Conidia in chains.",
+        "1394551": "One species, found only on Lycium (goji and wolfberries). Conidia formed in chains on erect conidiophores.",
+        "328021": "The largest genus, on many herbaceous and woody broadleaved hosts. Conidia borne singly, appressoria usually lobed, chasmothecia with several asci and appendages that are hooked, branched or thread-like.",
+        "334961": "A single ascus in each chasmothecium; conidia in chains and containing fibrosin bodies. Common on rose family plants, often twisting and distorting leaves and shoots."
+      }
+    },
+    "species": {
+      "summary": "In Erysiphe, host plant is the first clue: E. trifoliorum (clover powdery mildew) grows on clovers and some related legumes, while E. adunca is on willows and poplars, E. berberidis on barberry and Oregon-grape, and E. vaccinii on blueberries and huckleberries. Under a lens, appendage tips also differ: hooked in E. adunca, branched in the others.",
+      "options": {
+        "567471": "On willows and poplars. Chasmothecial appendages end in a hook or coiled tip (it was formerly placed in Uncinula).",
+        "603361": "Clover powdery mildew: white powdery coating on leaves of clovers and some related legumes. Appendages long and flexuous with loosely branched tips; formerly Microsphaera trifolii.",
+        "765061": "On blueberries, huckleberries and other Vaccinium. Appendages with repeatedly forked (dichotomously branched) tips, as in the former genus Microsphaera.",
+        "979091": "On barberry (Berberis). Appendages with tightly, repeatedly forked tips of the former Microsphaera type."
+      }
+    }
+  },
+  "sources": [
+    {"title": "Erysiphaceae — Wikipedia", "url": "https://en.wikipedia.org/wiki/Erysiphaceae"},
+    {"title": "Appendage morphology — University of Reading, Powdery mildews", "url": "https://blogs.reading.ac.uk/crg/appendage-morphology"},
+    {"title": "Microsphaera trifolii (= Erysiphe trifoliorum) — New Zealand Organisms Register", "url": "https://nzor.org.nz/names/A77B2E06-83D6-4B11-9131-5419E520626B"},
+    {"title": "The genus Arthrocladiella: a new report of powdery mildew fungi from Iran (Mycologia Iranica)", "url": "https://mij.areeo.ac.ir/article_127516.html"}
+  ]
+}
