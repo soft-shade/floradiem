@@ -80,10 +80,27 @@
     } catch (e) {}
     return defaultStats();
   }
+  // Another tab (or an old one left open) may have saved newer results, so
+  // merge what's on disk before writing; a stale tab can only add, never erase.
   function saveStats(now) {
-    try { localStorage.setItem(STATS_KEY, JSON.stringify(stats)); } catch (e) {}
+    try {
+      const disk = JSON.parse(localStorage.getItem(STATS_KEY));
+      if (disk && disk.daily) mergeInto(stats, disk);
+      localStorage.setItem(STATS_KEY, JSON.stringify(stats));
+    } catch (e) {}
     saveStatsRemote(now);
   }
+
+  // Keep open tabs in step: pick up whatever another tab just saved.
+  addEventListener('storage', (e) => {
+    if (e.key !== STATS_KEY || !e.newValue) return;
+    try {
+      const other = JSON.parse(e.newValue);
+      if (other && other.daily) mergeInto(stats, other);
+      if (game.mode === 'daily' && game.index) renderPicker(todayISO());
+      refreshModal();
+    } catch (err) {}
+  });
 
   // While signed in, every change is also written to Firestore. Writes are
   // debounced, except `now` (a finished run), which goes out right away, and
@@ -94,47 +111,60 @@
     clearTimeout(remoteTimer);
     remoteTimer = setTimeout(writeRemote, now ? Math.max(0, 1100 - (Date.now() - lastRemote)) : 1200);
   }
-  function writeRemote() {
+  // Read-merge-write, so a device or tab with an older copy can't erase
+  // results another one already saved to Firestore.
+  async function writeRemote() {
     clearTimeout(remoteTimer);
     remoteTimer = null;
     const A = window.PD_AUTH;
     if (!authUser || !A) return;
     lastRemote = Date.now();
-    A.setDoc(A.doc(A.db, 'plantdiem_stats', authUser.uid), Object.assign({}, stats, { last_write: A.serverTimestamp() }))
-      .catch((e) => {
-        console.warn('stats write failed', e);
-        if (!warnedSync) { warnedSync = true; toast("Couldn't sync your stats; they're still saved on this device"); }
-      });
+    const ref = A.doc(A.db, 'plantdiem_stats', authUser.uid);
+    try {
+      const snap = await A.getDoc(ref);
+      const remote = snap.exists() ? snap.data() : null;
+      if (remote && remote.daily) {
+        delete remote.last_write;
+        mergeInto(stats, remote);
+        try { localStorage.setItem(STATS_KEY, JSON.stringify(stats)); } catch (e) {}
+      }
+      await A.setDoc(ref, Object.assign({}, stats, { last_write: A.serverTimestamp() }));
+    } catch (e) {
+      console.warn('stats write failed', e);
+      if (!warnedSync) { warnedSync = true; toast("Couldn't sync your stats; they're still saved on this device"); }
+    }
   }
   addEventListener('pagehide', () => { if (remoteTimer) writeRemote(); });
   document.addEventListener('visibilitychange', () => { if (document.hidden && remoteTimer) writeRemote(); });
 
-  // On sign-in the Firestore copy and this device's copy are merged, never
-  // overwritten, so a result recorded on either side survives (a write that
-  // never landed, or a puzzle played on another device while signed out).
-  function mergeStats(a, b) {
-    const out = JSON.parse(JSON.stringify(a));
-    const ha = out.daily.history = out.daily.history || {};
-    for (const [date, rb] of Object.entries((b.daily && b.daily.history) || {})) {
-      const ra = ha[date];
-      if (!ra) { ha[date] = JSON.parse(JSON.stringify(rb)); continue; }
-      ra.attempts = ra.attempts || {};
-      for (const [j, att] of Object.entries(rb.attempts || {})) {
-        const cur = ra.attempts[j];
-        if (!cur || (!cur.done && (att.done || att.picks.length > cur.picks.length))) ra.attempts[j] = att;
+  // Merge another copy of the stats into `target` in place (in place so that
+  // records other code is holding stay live). A result recorded in either
+  // copy survives: finished attempts beat unfinished ones, solved stays solved.
+  function mergeInto(target, src) {
+    const copy = (x) => JSON.parse(JSON.stringify(x));
+    target.daily = target.daily || { history: {} };
+    const ht = target.daily.history = target.daily.history || {};
+    for (const [date, rs] of Object.entries((src.daily && src.daily.history) || {})) {
+      const rt = ht[date];
+      if (!rt) { ht[date] = copy(rs); continue; }
+      rt.attempts = rt.attempts || {};
+      for (const [j, att] of Object.entries(rs.attempts || {})) {
+        const cur = rt.attempts[j];
+        if (!cur || (!cur.done && (att.done || att.picks.length > cur.picks.length))) rt.attempts[j] = copy(att);
       }
-      ra.solved = !!(ra.solved || rb.solved);
-      ra.aggregate_contributed = !!(ra.aggregate_contributed || rb.aggregate_contributed);
-      if (rb.digits) ra.digits = rb.digits.map((d, k) => Math.max(d || 0, (ra.digits || [])[k] || 0));
-      if (ra.depth0 == null) ra.depth0 = rb.depth0;
+      rt.solved = !!(rt.solved || rs.solved);
+      rt.aggregate_contributed = !!(rt.aggregate_contributed || rs.aggregate_contributed);
+      if (rs.digits) rt.digits = rs.digits.map((d, k) => Math.max(d || 0, (rt.digits || [])[k] || 0));
+      if (rt.depth0 == null && rs.depth0 != null) rt.depth0 = rs.depth0;
     }
-    const da = out.daily, dl = b.daily || {};
-    if ((dl.last_play_date || '') > (da.last_play_date || '')) { da.last_play_date = dl.last_play_date; da.streak = dl.streak; }
-    else if (dl.last_play_date === da.last_play_date) da.streak = Math.max(da.streak || 0, dl.streak || 0);
-    da.best_streak = Math.max(da.best_streak || 0, dl.best_streak || 0);
+    const dt = target.daily, ds = src.daily || {};
+    if ((ds.last_play_date || '') > (dt.last_play_date || '')) { dt.last_play_date = ds.last_play_date; dt.streak = ds.streak; }
+    else if (ds.last_play_date && ds.last_play_date === dt.last_play_date) dt.streak = Math.max(dt.streak || 0, ds.streak || 0);
+    dt.best_streak = Math.max(dt.best_streak || 0, ds.best_streak || 0);
     // Unlimited totals can't be merged without double counting; keep the larger.
-    if (((b.unlimited || {}).games || 0) > ((out.unlimited || {}).games || 0)) out.unlimited = b.unlimited;
-    return out;
+    target.unlimited = target.unlimited || { games: 0, perfect: 0, total_correct: 0, distribution: {} };
+    if (((src.unlimited || {}).games || 0) > (target.unlimited.games || 0)) Object.assign(target.unlimited, copy(src.unlimited));
+    return target;
   }
 
   function initAuth() {
@@ -149,10 +179,9 @@
           const remote = snap.exists() ? snap.data() : null;
           if (remote && remote.daily) {
             delete remote.last_write;
-            const merged = mergeStats(remote, stats);
-            const changed = JSON.stringify(merged) !== JSON.stringify(remote);
-            stats = merged;
-            if (changed) saveStatsRemote(true);   // push back what only this device had
+            const before = JSON.stringify(remote);
+            mergeInto(stats, remote);
+            if (JSON.stringify(stats) !== before) saveStatsRemote(true);   // push back what only this device had
           } else {
             saveStatsRemote(true);   // first sign-in: seed the doc with local progress
           }
