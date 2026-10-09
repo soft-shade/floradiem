@@ -256,11 +256,17 @@
     svg.addEventListener('wheel', (e) => { e.preventDefault(); const [x, y] = svgPoint(e); zoomAt(e.deltaY < 0 ? 1.2 : 1 / 1.2, x, y); }, { passive: false });
     const pointers = new Map();
     let last = null, pinch = null;
+    // The pointer is only captured once a drag is under way: capturing on
+    // pointerdown retargets the click to the SVG, so links would never fire.
     let moved = 0;
-    svg.addEventListener('pointerdown', (e) => { svg.setPointerCapture(e.pointerId); pointers.set(e.pointerId, e); last = svgPoint(e); pinch = null; moved = 0; });
+    svg.addEventListener('pointerdown', (e) => {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;   // middle/right clicks go to the link
+      pointers.set(e.pointerId, e); last = svgPoint(e); pinch = null; moved = 0;
+    });
     svg.addEventListener('pointermove', (e) => {
       if (!pointers.has(e.pointerId)) return;
       pointers.set(e.pointerId, e);
+      if (moved > 3 && !svg.hasPointerCapture(e.pointerId)) { try { svg.setPointerCapture(e.pointerId); } catch (err) {} }
       if (pointers.size === 2) {
         const [a, b] = [...pointers.values()];
         const dist = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
@@ -274,6 +280,7 @@
       last = [x, y];
     });
     const up = (e) => { pointers.delete(e.pointerId); last = null; pinch = null; };
+    addEventListener('pointerup', up);   // a release outside the SVG before capture began
     svg.addEventListener('pointerup', up);
     svg.addEventListener('pointercancel', up);
     svg.addEventListener('click', (e) => { if (moved > 3 && e.target.closest('a')) e.preventDefault(); });
