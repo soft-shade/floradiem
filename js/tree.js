@@ -14,7 +14,7 @@
   'use strict';
 
   const C = window.PDC;
-  const { RANKS, cap, esc, fmtScore } = C;
+  const { RANKS, cap, esc } = C;
   const $ = (id) => document.getElementById(id);
   const params = new URLSearchParams(location.search);
   const mode = params.get('mode') === 'unlimited' ? 'unlimited' : 'daily';
@@ -90,9 +90,13 @@
   }
 
   // Text widths from a canvas, so branch lengths can make room for labels.
+  // Leaves are drawn bold, so they are measured bold; GAP keeps the end of a
+  // label (the score, on the flipped left half) clear of the branch lines.
   const canvas = document.createElement('canvas').getContext('2d');
-  canvas.font = `${FS}px Lato, "Helvetica Neue", Arial, sans-serif`;
-  const textW = (s) => canvas.measureText(s).width;
+  const FONT = 'Lato, "Helvetica Neue", Arial, sans-serif';
+  const GAP = 10;
+  const textW = (s, bold) => { canvas.font = `${bold ? '700 ' : ''}${FS}px ${FONT}`; return canvas.measureText(s).width; };
+  const fmt2 = (x) => String(Math.round(x * 100) / 100);
 
   const rad = (deg) => (deg * Math.PI) / 180;
 
@@ -115,13 +119,13 @@
     };
     setAngles(root);
     for (const lf of leaves) {
-      const pts = lf.entries.map((e) => fmtScore(e.s)).join(' · ');
+      const pts = lf.entries.map((e) => fmt2(e.s)).join(' · ');
       lf.text = `${lf.label} · ${pts}`;
     }
     const allNodes = [];
     const collect = (n) => { allNodes.push(n); n.children.forEach(collect); };
     collect(root);
-    for (const n of allNodes) { n.text = n.text || n.label; n.w = n.rankI < 0 ? 0 : textW(n.text); }
+    for (const n of allNodes) { n.text = n.text || n.label; n.w = n.rankI < 0 ? 0 : textW(n.text, !n.children.length) + GAP; }
 
     // Nodes of one rank whose angles are close need enough radius that their
     // labels don't cross: at least a label height of arc between neighbours.
@@ -189,14 +193,14 @@
       if (n.rankI < 0) continue;
       const a = ((n.angle % 360) + 360) % 360;
       const flip = a > 90 && a < 270;
-      const r0 = n.r + 2;
-      const tf = flip ? `rotate(${f(a + 180)}) translate(${f(-(r0 + n.w))},0)` : `rotate(${f(a)}) translate(${f(r0)},0)`;
+      const r0 = n.r + GAP / 2;
+      const tf = flip ? `rotate(${f(a + 180)}) translate(${f(-(r0 + n.w - GAP))},0)` : `rotate(${f(a)}) translate(${f(r0)},0)`;
       const color = classOf.get(n) != null ? colorOf.get(classOf.get(n)) : fg;
       const leaf = !n.children.length;
       let tip = '';
       if (leaf) {
         const [name, common] = taxon(n.id);
-        tip = n.entries.map((e) => `${fmtScore(e.s)} pts${e.d ? ' · ' + e.d : ' · ' + new Date(e.t).toLocaleDateString()}`).join('; ');
+        tip = n.entries.map((e) => `${fmt2(e.s)} pts${e.d ? ' · ' + e.d : ' · ' + new Date(e.t).toLocaleDateString()}`).join('; ');
         tip = `${common ? cap(common) + ' — ' : ''}${name}: ${tip}`;
       }
       const t = `<text transform="${tf}" dy="0.35em" fill="${color}"${leaf ? ' font-weight="700"' : ''}>${tip ? `<title>${esc(tip)}</title>` : ''}${esc(n.text)}</text>`;
@@ -356,6 +360,8 @@
   };
   wirePanZoom();
   render();
+  // Widths were measured before the web font arrived: lay out again with it.
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { if (current) render(); });
 
   // Signed in: fold in what other devices have added.
   function initAuth() {
