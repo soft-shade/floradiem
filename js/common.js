@@ -136,6 +136,28 @@
     return target;
   }
 
+  // A cached copy of the page can outlive a deploy (GitHub Pages lets the
+  // HTML be cached for ten minutes, and some browsers serve it from cache on
+  // navigation). data/version.json is fetched bypassing the cache; if it
+  // names a newer build, reload once so the fresh HTML and ?v= assets load.
+  // Checked on load and whenever the tab comes back into view.
+  async function checkVersion() {
+    const mine = window.PD_VER;
+    if (!mine || location.protocol === 'file:') return;
+    try {
+      const r = await fetch('data/version.json?t=' + Date.now(), { cache: 'no-store' });
+      if (!r.ok) return;
+      const live = (await r.json()).v;
+      if (!live || live === mine || live < mine) return;
+      const key = 'plantdiem_reloaded_for';
+      if (sessionStorage.getItem(key) === live) return;   // already tried once this session
+      sessionStorage.setItem(key, live);
+      location.reload();
+    } catch (e) {}
+  }
+  checkVersion();
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) checkVersion(); });
+
   window.PDC = { RANKS, STATS_KEY, TREE_CAP, cap, esc, round3, fmtScore, shortName,
-    defaultStats, upgradeStats, loadStats, entryKey, addEntry, treeCount, treeSlice, mergeInto };
+    defaultStats, upgradeStats, loadStats, entryKey, addEntry, treeCount, treeSlice, mergeInto, checkVersion };
 })();

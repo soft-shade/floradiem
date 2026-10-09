@@ -56,8 +56,11 @@ Explanations
     a month ahead. Run check_explanations.py before committing new ones.
 
 Deploy
-    GitHub Pages from main. Bump PD_VER (and the ?v= on css/js) in
-    index.html and tree.html on each deploy to bust caches.
+    GitHub Pages from main. Run utils/bump_version.py before each deploy:
+    it stamps PD_VER in index.html and tree.html and data/version.json.
+    CSS, JS and data load with ?v=PD_VER; common.js fetches version.json
+    uncached (on load and when the tab regains focus) and reloads once if
+    a newer build is live, so a cached page can't stay stale.
 
 Testing without Node
     Headless Chromium (snap) can't write outside $HOME, and headless Firefox

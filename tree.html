@@ -12,9 +12,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
-    <script>window.PD_VER = '20261010i';</script>
-    <link rel="stylesheet" href="css/style.css?v=20261010i">
-    <link rel="stylesheet" href="css/tree.css?v=20261010i">
+    <script>window.PD_VER = '20261010j';</script>
+    <script>document.write(['css/style.css', 'css/tree.css']
+      .map((f) => '<link rel="stylesheet" href="' + f + '?v=' + window.PD_VER + '">').join(''));</script>
 
     <!-- Firebase: same project and collections as the game (see index.html). -->
     <script type="module">
@@ -79,7 +79,9 @@
       <p class="support-line">Enjoying Floradiem? <a class="btn support" href="https://www.patreon.com/c/softshade" target="_blank" rel="noopener">♥ Support Softshade</a></p>
     </main>
 
-    <script src="js/common.js?v=20261010i"></script>
-    <script src="js/tree.js?v=20261010i"></script>
+    <script>
+      document.write(['js/common.js', 'js/tree.js']
+        .map((f) => '<script src="' + f + '?v=' + window.PD_VER + '"><\/script>').join(''));
+    </script>
   </body>
 </html>

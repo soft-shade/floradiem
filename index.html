@@ -83,8 +83,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
-    <script>window.PD_VER = '20261010i';</script>
-    <link rel="stylesheet" href="css/style.css?v=20261010i">
+    <!-- Cache-busting: every deploy bumps PD_VER (utils/bump_version.py does
+         it for both pages and data/version.json). The stylesheet, scripts and
+         data files are all fetched with ?v=PD_VER, and common.js reloads the
+         page once if data/version.json says a newer build is live. -->
+    <script>window.PD_VER = '20261010j';</script>
+    <script>document.write('<link rel="stylesheet" href="css/style.css?v=' + window.PD_VER + '">');</script>
 
     <!-- Firebase: shared with worm-game (project worm-game-bdd29). Floradiem
          only touches its own collections: plantdiem_stats/{uid} and
@@ -198,7 +202,9 @@
     </div>
     <div class="toast" id="toast" hidden></div>
 
-    <script src="js/common.js?v=20261010i"></script>
-    <script src="js/app.js?v=20261010i"></script>
+    <script>
+      document.write(['js/common.js', 'js/app.js']
+        .map((f) => '<script src="' + f + '?v=' + window.PD_VER + '"><\/script>').join(''));
+    </script>
   </body>
 </html>
