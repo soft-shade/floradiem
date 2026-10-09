@@ -203,8 +203,10 @@
         tip = n.entries.map((e) => `${fmt2(e.s)} pts${e.d ? ' · ' + e.d : ' · ' + new Date(e.t).toLocaleDateString()}`).join('; ');
         tip = `${common ? cap(common) + ' — ' : ''}${name}: ${tip}`;
       }
-      const t = `<text transform="${tf}" dy="0.35em" fill="${color}"${leaf ? ' font-weight="700"' : ''}>${tip ? `<title>${esc(tip)}</title>` : ''}${esc(n.text)}</text>`;
-      texts.push(leaf ? `<a href="https://www.inaturalist.org/taxa/${n.id}" target="_blank" rel="noopener">${t}</a>` : t);
+      if (!tip) { const [name, common] = taxon(n.id); tip = `${cap(RANKS[n.rankI])}: ${name}${common ? ' — ' + cap(common) : ''} · open on iNaturalist`; }
+      const t = `<text transform="${tf}" dy="0.35em" fill="${color}"${leaf ? ' font-weight="700"' : ''}><title>${esc(tip)}</title>${esc(n.text)}</text>`;
+      // Every taxon, species or group, links to its iNaturalist page.
+      texts.push(`<a href="https://www.inaturalist.org/taxa/${n.id}" target="_blank" rel="noopener">${t}</a>`);
     }
 
     const R = L.maxR;
@@ -254,7 +256,8 @@
     svg.addEventListener('wheel', (e) => { e.preventDefault(); const [x, y] = svgPoint(e); zoomAt(e.deltaY < 0 ? 1.2 : 1 / 1.2, x, y); }, { passive: false });
     const pointers = new Map();
     let last = null, pinch = null;
-    svg.addEventListener('pointerdown', (e) => { svg.setPointerCapture(e.pointerId); pointers.set(e.pointerId, e); last = svgPoint(e); pinch = null; });
+    let moved = 0;
+    svg.addEventListener('pointerdown', (e) => { svg.setPointerCapture(e.pointerId); pointers.set(e.pointerId, e); last = svgPoint(e); pinch = null; moved = 0; });
     svg.addEventListener('pointermove', (e) => {
       if (!pointers.has(e.pointerId)) return;
       pointers.set(e.pointerId, e);
@@ -267,13 +270,13 @@
         return;
       }
       const [x, y] = svgPoint(e);
-      if (last) { view.x += x - last[0]; view.y += y - last[1]; applyView(); }
+      if (last) { moved += Math.abs(x - last[0]) + Math.abs(y - last[1]); view.x += x - last[0]; view.y += y - last[1]; applyView(); }
       last = [x, y];
     });
     const up = (e) => { pointers.delete(e.pointerId); last = null; pinch = null; };
     svg.addEventListener('pointerup', up);
     svg.addEventListener('pointercancel', up);
-    svg.addEventListener('click', (e) => { if (e.target.closest('a') && (Math.abs(view.k - 1) > 0 || view.x || view.y) && e.detail === 0) e.preventDefault(); });
+    svg.addEventListener('click', (e) => { if (moved > 3 && e.target.closest('a')) e.preventDefault(); });
     $('z-in').onclick = () => zoomAt(1.3, 0, 0);
     $('z-out').onclick = () => zoomAt(1 / 1.3, 0, 0);
     $('z-fit').onclick = resetView;
