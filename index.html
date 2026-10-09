@@ -4,22 +4,87 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Floradiem — Daily Plant ID Game by Softshade</title>
-    <meta name="description" content="Floradiem is a free daily plant identification game by Softshade. Study photos of a British Columbia plant and work down the tree of life — kingdom, phylum, class, order, family, genus, species — learning what sets each group apart.">
+    <meta name="description" content="Floradiem is a free daily plant identification game. Study photos of a British Columbia plant and work down the tree of life — kingdom, phylum, class, order, family, genus, species — learning what sets each group apart. A new plant every day, plus an unlimited mode.">
+    <meta name="keywords" content="plant identification game, daily plant game, botany quiz, plant ID quiz, taxonomy game, tree of life game, iNaturalist game, British Columbia plants, BC flora, wordle for plants, Floradiem, Softshade">
+    <meta name="author" content="Softshade">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#74ac00">
     <link rel="canonical" href="https://soft-shade.github.io/floradiem/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Floradiem">
-    <meta property="og:title" content="Floradiem — Daily Plant ID Game by Softshade">
-    <meta property="og:description" content="Identify a BC plant from kingdom down to species. A new plant every day.">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:title" content="Floradiem — Daily Plant ID Game">
+    <meta property="og:description" content="Identify one British Columbia plant from kingdom down to species, learning what sets each group apart. A new plant every day.">
     <meta property="og:url" content="https://soft-shade.github.io/floradiem/">
-    <meta property="og:image" content="https://soft-shade.github.io/floradiem/favicon.png">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://soft-shade.github.io/floradiem/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Floradiem — a daily plant identification game">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Floradiem — Daily Plant ID Game">
+    <meta name="twitter:description" content="Identify one British Columbia plant from kingdom down to species. A new plant every day.">
+    <meta name="twitter:image" content="https://soft-shade.github.io/floradiem/assets/og-image.png">
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
     <link rel="alternate icon" type="image/png" href="favicon.png?v=2">
+    <link rel="apple-touch-icon" href="favicon.png?v=2">
+    <link rel="manifest" href="site.webmanifest">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://soft-shade.github.io/floradiem/#website",
+          "url": "https://soft-shade.github.io/floradiem/",
+          "name": "Floradiem",
+          "description": "A free daily plant identification game by Softshade.",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://soft-shade.github.io/floradiem/#org" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://soft-shade.github.io/floradiem/#org",
+          "name": "Softshade",
+          "url": "https://github.com/soft-shade",
+          "logo": "https://soft-shade.github.io/floradiem/favicon.png",
+          "sameAs": ["https://github.com/soft-shade", "https://www.inaturalist.org/people/softshade"]
+        },
+        {
+          "@type": ["WebApplication", "VideoGame"],
+          "@id": "https://soft-shade.github.io/floradiem/#app",
+          "name": "Floradiem",
+          "alternateName": "Floradiem — Daily Plant ID Game",
+          "url": "https://soft-shade.github.io/floradiem/",
+          "image": "https://soft-shade.github.io/floradiem/assets/og-image.png",
+          "description": "A free daily plant identification game. Study photos of a British Columbia plant and work down the tree of life — kingdom, phylum, class, order, family, genus, species — with notes on what sets each group apart. A new plant every day, plus an unlimited mode drawing on research-grade iNaturalist observations.",
+          "applicationCategory": "GameApplication",
+          "applicationSubCategory": "Educational game",
+          "genre": ["Educational", "Puzzle", "Trivia", "Nature"],
+          "gamePlatform": "Web browser",
+          "playMode": "SinglePlayer",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "isAccessibleForFree": true,
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
+          "inLanguage": "en",
+          "keywords": "plant identification, botany, taxonomy, daily puzzle, British Columbia, iNaturalist",
+          "about": [
+            { "@type": "Thing", "name": "Plant identification" },
+            { "@type": "Thing", "name": "Botany" },
+            { "@type": "Thing", "name": "Biological taxonomy" },
+            { "@type": "Place", "name": "British Columbia" }
+          ],
+          "author": { "@id": "https://soft-shade.github.io/floradiem/#org" },
+          "publisher": { "@id": "https://soft-shade.github.io/floradiem/#org" }
+        }
+      ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
-    <script>window.PD_VER = '20261009';</script>
-    <link rel="stylesheet" href="css/style.css?v=20261009">
+    <script>window.PD_VER = '20261009b';</script>
+    <link rel="stylesheet" href="css/style.css?v=20261009b">
 
     <!-- Firebase: shared with worm-game (project worm-game-bdd29). Floradiem
          only touches its own collections: plantdiem_stats/{uid} and
@@ -99,6 +164,18 @@
       </section>
     </main>
 
+    <section class="about" aria-label="About Floradiem">
+      <h2>About Floradiem</h2>
+      <p>Floradiem is a free daily plant identification game. Each day it shows photos of one plant, fungus, lichen,
+         seaweed or slime mold photographed in British Columbia, Canada, and you work down the tree of life —
+         <strong>kingdom, phylum, class, order, family, genus and species</strong> — picking from four options at each rank.
+         Every answer comes with short notes on what sets that group apart, so each puzzle is a small botany lesson.</p>
+      <p>A wrong pick doesn't end the game: the option turns red with its notes and you try again at the same rank for
+         reduced points. Puzzles from the past week can be replayed as practice, and <strong>Unlimited mode</strong> serves
+         random species from all research-grade BC observations on iNaturalist. Sign in to keep your stats across devices
+         and see how your score compares with other players.</p>
+    </section>
+
     <footer class="foot">
       <a href="https://github.com/soft-shade" target="_blank" rel="noopener"><img src="assets/softshade-logo-green.svg" alt="Softshade Nature" class="foot-logo"></a><br>
       Photos and identifications from <a href="https://www.inaturalist.org" target="_blank" rel="noopener">iNaturalist</a>.
@@ -113,6 +190,6 @@
     </div>
     <div class="toast" id="toast" hidden></div>
 
-    <script src="js/app.js?v=20261009"></script>
+    <script src="js/app.js?v=20261009b"></script>
   </body>
 </html>

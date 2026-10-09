@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /utils/
+
+Sitemap: https://soft-shade.github.io/floradiem/sitemap.xml

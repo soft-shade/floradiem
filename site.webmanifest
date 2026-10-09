@@ -1,0 +1,14 @@
+{
+  "name": "Floradiem — Daily Plant ID Game",
+  "short_name": "Floradiem",
+  "description": "A free daily plant identification game: work down the tree of life from kingdom to species for one British Columbia plant each day.",
+  "start_url": "/floradiem/",
+  "scope": "/floradiem/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#74ac00",
+  "icons": [
+    { "src": "favicon.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
