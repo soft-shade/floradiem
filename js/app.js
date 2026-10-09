@@ -267,7 +267,7 @@
   function setPhotos(photos, revealLinks) {
     const car = $('carousel');
     car.innerHTML = photos.length ? photos.map((p, i) =>
-      `<figure><img src="${esc(p.src)}" alt="Photo ${i + 1} of the mystery organism" loading="${i ? 'lazy' : 'eager'}"></figure>`).join('')
+      `<figure><img src="${esc(p.src)}" alt="Photo ${i + 1} of the mystery organism" loading="${i ? 'lazy' : 'eager'}" draggable="false"></figure>`).join('')
       : '<div class="loading">Loading photos…</div>';
     car.scrollLeft = 0;
     car._photos = photos;
@@ -288,7 +288,79 @@
     // Observation links name the species, so they only appear once revealed.
     $('car-attr').innerHTML = !p ? '' : car._reveal && p.obs
       ? `<a href="${esc(p.obs)}" target="_blank" rel="noopener">${esc(p.attribution)}</a>` : esc(p.attribution);
+    $('car-hint').hidden = !photos.length;
+    updateZoomUI();
   }
+
+  // Zoom: the mouse wheel over a photo zooms around the pointer (instead of
+  // scrolling the page), dragging pans while zoomed in, double-click resets.
+  // A badge and shaded edges show when part of the photo is out of view.
+  const ZOOM_MAX = 6;
+  const zoomOf = (fig) => fig._z || (fig._z = { k: 1, x: 0, y: 0 });
+  function currentFigure() {
+    const car = $('carousel');
+    const figs = car.querySelectorAll('figure');
+    return figs[Math.min(carouselIndex(), figs.length - 1)] || null;
+  }
+  function applyZoom(fig) {
+    const z = zoomOf(fig), img = fig.querySelector('img');
+    const W = fig.clientWidth, H = fig.clientHeight;
+    z.k = Math.min(ZOOM_MAX, Math.max(1, z.k));
+    z.x = Math.min(0, Math.max(W - W * z.k, z.x));
+    z.y = Math.min(0, Math.max(H - H * z.k, z.y));
+    if (img) img.style.transform = z.k === 1 ? '' : `translate(${z.x}px, ${z.y}px) scale(${z.k})`;
+    fig.classList.toggle('zoomed', z.k > 1);
+    updateZoomUI();
+  }
+  function updateZoomUI() {
+    const fig = currentFigure();
+    const z = fig ? zoomOf(fig) : { k: 1, x: 0, y: 0 };
+    const card = document.querySelector('.photo-card');
+    const W = fig ? fig.clientWidth : 0, H = fig ? fig.clientHeight : 0;
+    $('zoom-badge').hidden = z.k === 1;
+    $('zoom-badge').textContent = `${z.k.toFixed(1)}× · drag to pan · double-click to reset`;
+    card.classList.toggle('more-l', z.x < -1);
+    card.classList.toggle('more-r', z.x > W - W * z.k + 1);
+    card.classList.toggle('more-t', z.y < -1);
+    card.classList.toggle('more-b', z.y > H - H * z.k + 1);
+  }
+  $('carousel').addEventListener('wheel', (e) => {
+    const fig = e.target.closest('figure');
+    if (!fig) return;
+    e.preventDefault();
+    const z = zoomOf(fig);
+    const r = fig.getBoundingClientRect();
+    const px = e.clientX - r.left, py = e.clientY - r.top;
+    const k2 = Math.min(ZOOM_MAX, Math.max(1, z.k * (e.deltaY < 0 ? 1.2 : 1 / 1.2)));
+    const s = k2 / z.k;
+    z.x = px - (px - z.x) * s;
+    z.y = py - (py - z.y) * s;
+    z.k = k2;
+    applyZoom(fig);
+  }, { passive: false });
+  let drag = null;
+  $('carousel').addEventListener('pointerdown', (e) => {
+    const fig = e.target.closest('figure');
+    if (!fig || e.pointerType !== 'mouse' || e.button !== 0 || zoomOf(fig).k === 1) return;
+    drag = { fig, x: e.clientX, y: e.clientY };
+    fig.setPointerCapture(e.pointerId);
+    e.preventDefault();
+  });
+  $('carousel').addEventListener('pointermove', (e) => {
+    if (!drag) return;
+    const z = zoomOf(drag.fig);
+    z.x += e.clientX - drag.x; z.y += e.clientY - drag.y;
+    drag.x = e.clientX; drag.y = e.clientY;
+    applyZoom(drag.fig);
+  });
+  $('carousel').addEventListener('pointerup', () => { drag = null; });
+  $('carousel').addEventListener('pointercancel', () => { drag = null; });
+  $('carousel').addEventListener('dblclick', (e) => {
+    const fig = e.target.closest('figure');
+    if (!fig) return;
+    fig._z = { k: 1, x: 0, y: 0 };
+    applyZoom(fig);
+  });
   function stepCarousel(dir) {
     const car = $('carousel');
     const n = (car._photos || []).length;
@@ -793,13 +865,17 @@
   // observations of it comes first; then photos from the place's or
   // project's observations; then everyone's (two per observation, best-voted
   // first) until there are at least PHOTO_MIN. Fewer and the species is skipped.
+  // Credits read "username · licence" whatever the licence (iNaturalist's own
+  // attribution string drops the name for CC0 photos).
+  const licenseLabel = (code) => (code ? code.toUpperCase().replace(/^CC-/, 'CC ') : 'all rights reserved');
   async function fetchPhotos(sid) {
     const photos = [], seen = new Set();
     const add = (obs, perObs) => {
       for (const o of obs.results) for (const ph of o.photos.slice(0, perObs)) {
         if (seen.has(ph.id) || photos.length >= PHOTO_MAX) continue;
         seen.add(ph.id);
-        photos.push({ src: ph.url.replace('/square.', '/large.'), attribution: ph.attribution, obs: o.uri });
+        photos.push({ src: ph.url.replace('/square.', '/large.'), obs: o.uri,
+          attribution: `${(o.user && o.user.login) || 'iNaturalist'} · ${licenseLabel(ph.license_code)}` });
       }
     };
     const base = { taxon_id: sid, quality_grade: 'research', photos: 'true', per_page: 12, order_by: 'votes' };

@@ -97,14 +97,30 @@ main { max-width: 760px; margin: 0 auto; padding: 12px 16px 24px; }
 
 /* ---- photo carousel ---- */
 .photo-card { position: relative; overflow: hidden; }
+/* The box keeps a 4:3 shape whatever the photo's size: photos are positioned
+   absolutely so a tall one can't stretch it (and force a scrollbar). */
 .carousel {
-  display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
-  scrollbar-width: none; background: #f3f3f3; aspect-ratio: 4 / 3; max-height: 62vh;
+  display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory;
+  scrollbar-width: none; background: #f3f3f3; aspect-ratio: 4 / 3; max-height: 62vh; min-height: 0;
 }
 .carousel::-webkit-scrollbar { display: none; }
-.carousel figure { flex: 0 0 100%; margin: 0; scroll-snap-align: center; display: grid; place-items: center; }
-.carousel img { max-width: 100%; max-height: 100%; width: 100%; height: 100%; object-fit: contain; display: block; }
+.carousel figure { flex: 0 0 100%; margin: 0; scroll-snap-align: center; position: relative; overflow: hidden; }
+.carousel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block; transform-origin: 0 0; user-select: none; -webkit-user-drag: none; }
+.carousel figure.zoomed { cursor: grab; }
+.carousel figure.zoomed:active { cursor: grabbing; }
 .carousel .loading { margin: auto; color: var(--muted); }
+/* Zoom cues: a badge while zoomed in, and shaded edges on the sides where
+   more of the photo lies beyond the box. */
+.zoom-badge { position: absolute; left: 10px; top: 10px; background: rgba(0,0,0,.6); color: #fff; font-size: .75rem; padding: 3px 8px; border-radius: 999px; pointer-events: none; }
+.zoom-badge[hidden] { display: none; }
+.edge { position: absolute; pointer-events: none; opacity: 0; transition: opacity .15s; }
+.edge.t { left: 0; right: 0; top: 0; height: 34px; background: linear-gradient(rgba(0,0,0,.5), transparent); }
+.edge.b { left: 0; right: 0; bottom: 0; height: 34px; background: linear-gradient(transparent, rgba(0,0,0,.5)); }
+.edge.l { top: 0; bottom: 0; left: 0; width: 34px; background: linear-gradient(90deg, rgba(0,0,0,.5), transparent); }
+.edge.r { top: 0; bottom: 0; right: 0; width: 34px; background: linear-gradient(-90deg, rgba(0,0,0,.5), transparent); }
+.photo-card.more-t .edge.t, .photo-card.more-b .edge.b, .photo-card.more-l .edge.l, .photo-card.more-r .edge.r { opacity: 1; }
+.car-hint { display: none; color: var(--muted); }
+@media (hover: hover) { .car-hint { display: inline; } }
 .car-btn {
   position: absolute; top: calc(50% - 40px); width: 40px; height: 40px; border-radius: 50%;
   border: 0; background: rgba(255,255,255,.85); color: var(--ink); font-size: 1.8rem; line-height: 1;
@@ -112,8 +128,20 @@ main { max-width: 760px; margin: 0 auto; padding: 12px 16px 24px; }
 }
 .car-btn.prev { left: 10px; } .car-btn.next { right: 10px; }
 .car-btn[hidden] { display: none; }
-.car-meta { display: flex; justify-content: space-between; gap: 10px; padding: 6px 12px; font-size: .8rem; color: var(--muted); }
+.car-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 6px 12px; font-size: .8rem; color: var(--muted); }
+.car-meta .car-left { display: flex; gap: 10px; white-space: nowrap; }
 #car-attr { text-align: right; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Wide windows: photo on the left, question on the right, so the options
+   and the Next button are in view without scrolling. */
+@media (min-width: 960px) {
+  main { max-width: 1240px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; align-items: start; }
+  main > .picker, main > .filter { grid-column: 1 / -1; margin-bottom: 0; }
+  main > .picker:empty { display: none; }
+  main > .card { margin-bottom: 0; }
+  .photo-card { position: sticky; top: 64px; }
+  .carousel { max-height: calc(100vh - 150px); }
+}
 
 /* ---- ladder ---- */
 .play-card { padding: 14px 16px 16px; }

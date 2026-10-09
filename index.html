@@ -83,8 +83,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
-    <script>window.PD_VER = '20261010b';</script>
-    <link rel="stylesheet" href="css/style.css?v=20261010b">
+    <script>window.PD_VER = '20261010c';</script>
+    <link rel="stylesheet" href="css/style.css?v=20261010c">
 
     <!-- Firebase: shared with worm-game (project worm-game-bdd29). Floradiem
          only touches its own collections: plantdiem_stats/{uid} and
@@ -159,7 +159,9 @@
         <div class="carousel" id="carousel" tabindex="0" aria-label="Observation photos"></div>
         <button class="car-btn prev" id="car-prev" aria-label="Previous photo">&#8249;</button>
         <button class="car-btn next" id="car-next" aria-label="Next photo">&#8250;</button>
-        <div class="car-meta"><span id="car-count"></span><span id="car-attr"></span></div>
+        <div class="edge t"></div><div class="edge b"></div><div class="edge l"></div><div class="edge r"></div>
+        <div class="zoom-badge" id="zoom-badge" hidden></div>
+        <div class="car-meta"><span class="car-left"><span id="car-count"></span><span class="car-hint" id="car-hint">scroll to zoom · drag to pan</span></span><span id="car-attr"></span></div>
       </section>
 
       <section class="card play-card">
@@ -195,7 +197,7 @@
     </div>
     <div class="toast" id="toast" hidden></div>
 
-    <script src="js/common.js?v=20261010b"></script>
-    <script src="js/app.js?v=20261010b"></script>
+    <script src="js/common.js?v=20261010c"></script>
+    <script src="js/app.js?v=20261010c"></script>
   </body>
 </html>

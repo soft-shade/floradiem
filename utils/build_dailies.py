@@ -8,6 +8,7 @@
     python build_dailies.py --swap DATE RANK OLD_ID CLASHES_WITH_ID "why"
                                                    # record a conflict, replace that option
     python build_dailies.py --photos               # top up days with < PHOTO_MIN photos
+    python build_dailies.py --credits              # rewrite photo credits (username · licence)
 
 writes data/daily/YYYY-MM-DD.json (species, answer options at each rank,
 photo list) and downloads that day's photos to assets/daily/YYYY-MM-DD/.
@@ -23,6 +24,7 @@ import io
 import json
 import os
 import random
+import re
 import sys
 
 import requests
@@ -143,9 +145,32 @@ def fill_short_ranks():
                 json.dump(p, fh, indent=1, ensure_ascii=False)
 
 
-def credit(attribution):
-    # CC0 photos come back as just "no rights reserved"; name the photographer anyway.
-    return attribution if USER in attribution else f"Photo: {USER}, {attribution} (CC0)"
+def license_label(code):
+    """'cc-by-nc' -> 'CC BY-NC', 'cc0' -> 'CC0', None -> 'all rights reserved'."""
+    return code.upper().replace("CC-", "CC ", 1) if code else "all rights reserved"
+
+
+def credit(login, code):
+    # Always "username · licence": iNaturalist's own string drops the name for CC0.
+    return f"{login} · {license_label(code)}"
+
+
+def recredit():
+    """Rewrite every existing photo credit in the username · licence form,
+    recovering the licence from the old iNaturalist attribution string."""
+    for f in sorted(glob.glob(os.path.join(ROOT, "data", "daily", "*.json"))):
+        p = json.load(open(f))
+        for ph in p["photos"]:
+            if "license" not in ph:
+                a = ph.get("attribution", "")
+                m = re.search(r"\((CC[^)]*)\)", a)
+                ph["license"] = (m.group(1).lower().replace(" ", "-") if m
+                                 else "cc0" if "no rights reserved" in a else None)
+            ph.setdefault("user", USER)
+            ph["attribution"] = credit(ph["user"], ph["license"])
+        with open(f, "w") as fh:
+            json.dump(p, fh, indent=1, ensure_ascii=False)
+        print(p["date"], [ph["attribution"] for ph in p["photos"][:3]])
 
 
 def download_photos(sid, day):
@@ -165,8 +190,8 @@ def download_photos(sid, day):
                 img.thumbnail((PHOTO_MAX, PHOTO_MAX), Image.LANCZOS)
                 img.save(path, quality=82, optimize=True, progressive=True)
             photos.append({"src": f"assets/daily/{day}/{n:02d}.jpg",
-                           "obs": o["uri"], "attribution": credit(p["attribution"]),
-                           "observed": o.get("observed_on")})
+                           "obs": o["uri"], "attribution": credit(USER, p.get("license_code")),
+                           "observed": o.get("observed_on"), "user": USER, "license": p.get("license_code")})
     return top_up_photos(sid, photos)
 
 
@@ -187,8 +212,10 @@ def top_up_photos(sid, photos):
                 if src in seen or len(photos) >= PHOTO_MIN:
                     continue
                 seen.add(src)
-                photos.append({"src": src, "obs": o["uri"], "attribution": p["attribution"],
-                               "observed": o.get("observed_on"), "user": o["user"]["login"]})
+                photos.append({"src": src, "obs": o["uri"],
+                               "attribution": credit(o["user"]["login"], p.get("license_code")),
+                               "observed": o.get("observed_on"), "user": o["user"]["login"],
+                               "license": p.get("license_code")})
     return photos
 
 
@@ -266,6 +293,8 @@ if __name__ == "__main__":
         fill_short_ranks()
     elif sys.argv[1] == "--photos":
         top_up_all()
+    elif sys.argv[1] == "--credits":
+        recredit()
     elif sys.argv[1] == "--check":
         check_all()
     elif sys.argv[1] == "--replace":

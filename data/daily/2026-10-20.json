@@ -194,71 +194,82 @@
   {
    "src": "assets/daily/2026-10-20/01.jpg",
    "obs": "https://www.inaturalist.org/observations/266455335",
-   "attribution": "Photo: softshade, no rights reserved (CC0)",
-   "observed": "2025-03-22"
+   "attribution": "softshade · CC0",
+   "observed": "2025-03-22",
+   "license": "cc0",
+   "user": "softshade"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/6708178/large.jpeg",
    "obs": "https://www.inaturalist.org/observations/5450407",
-   "attribution": "(c) Andrew Simon, some rights reserved (CC BY-NC)",
+   "attribution": "chlorophilia · CC BY-NC",
    "observed": "2017-03-23",
-   "user": "chlorophilia"
+   "user": "chlorophilia",
+   "license": "cc-by-nc"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/182773123/large.jpg",
    "obs": "https://www.inaturalist.org/observations/108457305",
-   "attribution": "(c) Aiva Noringseth, some rights reserved (CC BY)",
+   "attribution": "aiva · CC BY",
    "observed": "2022-03-12",
-   "user": "aiva"
+   "user": "aiva",
+   "license": "cc-by"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/182773154/large.jpg",
    "obs": "https://www.inaturalist.org/observations/108457305",
-   "attribution": "(c) Aiva Noringseth, some rights reserved (CC BY)",
+   "attribution": "aiva · CC BY",
    "observed": "2022-03-12",
-   "user": "aiva"
+   "user": "aiva",
+   "license": "cc-by"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/7083222/large.jpeg",
    "obs": "https://www.inaturalist.org/observations/5715302",
-   "attribution": "(c) Andrew Simon, some rights reserved (CC BY-NC)",
+   "attribution": "chlorophilia · CC BY-NC",
    "observed": "2017-04-14",
-   "user": "chlorophilia"
+   "user": "chlorophilia",
+   "license": "cc-by-nc"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/7083231/large.jpeg",
    "obs": "https://www.inaturalist.org/observations/5715302",
-   "attribution": "(c) Andrew Simon, some rights reserved (CC BY-NC)",
+   "attribution": "chlorophilia · CC BY-NC",
    "observed": "2017-04-14",
-   "user": "chlorophilia"
+   "user": "chlorophilia",
+   "license": "cc-by-nc"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/98299372/large.jpg",
    "obs": "https://www.inaturalist.org/observations/61431793",
-   "attribution": "(c) caltha, some rights reserved (CC BY-NC)",
+   "attribution": "caltha · CC BY-NC",
    "observed": "2020-09-30",
-   "user": "caltha"
+   "user": "caltha",
+   "license": "cc-by-nc"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/98299380/large.jpg",
    "obs": "https://www.inaturalist.org/observations/61431793",
-   "attribution": "(c) caltha, some rights reserved (CC BY-NC)",
+   "attribution": "caltha · CC BY-NC",
    "observed": "2020-09-30",
-   "user": "caltha"
+   "user": "caltha",
+   "license": "cc-by-nc"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/480046763/large.jpeg",
    "obs": "https://www.inaturalist.org/observations/267144358",
-   "attribution": "(c) Maggie Bitz, some rights reserved (CC BY-NC)",
+   "attribution": "maggiebitzz · CC BY-NC",
    "observed": "2025-03-21",
-   "user": "maggiebitzz"
+   "user": "maggiebitzz",
+   "license": "cc-by-nc"
   },
   {
    "src": "https://static.inaturalist.org/photos/480004515/large.jpg",
    "obs": "https://www.inaturalist.org/observations/267123603",
-   "attribution": "(c) Natalie Waite, all rights reserved",
+   "attribution": "natwaite · all rights reserved",
    "observed": "2025-03-26",
-   "user": "natwaite"
+   "user": "natwaite",
+   "license": null
   }
  ]
 }

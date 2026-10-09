@@ -194,71 +194,82 @@
   {
    "src": "assets/daily/2026-10-17/01.jpg",
    "obs": "https://www.inaturalist.org/observations/217095192",
-   "attribution": "Photo: softshade, no rights reserved (CC0)",
-   "observed": "2024-05-20"
+   "attribution": "softshade · CC0",
+   "observed": "2024-05-20",
+   "license": "cc0",
+   "user": "softshade"
   },
   {
    "src": "https://static.inaturalist.org/photos/165687954/large.jpeg",
    "obs": "https://www.inaturalist.org/observations/99399563",
-   "attribution": "(c) Jeffrey Nicholls, all rights reserved",
+   "attribution": "tsimshian_storm · all rights reserved",
    "observed": "2021-09-05",
-   "user": "tsimshian_storm"
+   "user": "tsimshian_storm",
+   "license": null
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/214800932/large.jpg",
    "obs": "https://www.inaturalist.org/observations/126590910",
-   "attribution": "(c) John D Reynolds, some rights reserved (CC BY-NC)",
+   "attribution": "johndreynolds · CC BY-NC",
    "observed": "2022-07-16",
-   "user": "johndreynolds"
+   "user": "johndreynolds",
+   "license": "cc-by-nc"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/214800911/large.jpg",
    "obs": "https://www.inaturalist.org/observations/126590910",
-   "attribution": "(c) John D Reynolds, some rights reserved (CC BY-NC)",
+   "attribution": "johndreynolds · CC BY-NC",
    "observed": "2022-07-16",
-   "user": "johndreynolds"
+   "user": "johndreynolds",
+   "license": "cc-by-nc"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/206578015/large.jpeg",
    "obs": "https://www.inaturalist.org/observations/122037967",
-   "attribution": "(c) B Staffan Lindgren, some rights reserved (CC BY)",
+   "attribution": "bstaffan · CC BY",
    "observed": "2022-06-14",
-   "user": "bstaffan"
+   "user": "bstaffan",
+   "license": "cc-by"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/28133292/large.jpg",
    "obs": "https://www.inaturalist.org/observations/18405692",
-   "attribution": "(c) John D Reynolds, some rights reserved (CC BY-NC)",
+   "attribution": "johndreynolds · CC BY-NC",
    "observed": "2006-06-27",
-   "user": "johndreynolds"
+   "user": "johndreynolds",
+   "license": "cc-by-nc"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/730571484/large.jpg",
    "obs": "https://www.inaturalist.org/observations/398269136",
-   "attribution": "(c) Roanan DeMeyer, some rights reserved (CC BY-NC)",
+   "attribution": "roanan_d · CC BY-NC",
    "observed": "2026-05-04",
-   "user": "roanan_d"
+   "user": "roanan_d",
+   "license": "cc-by-nc"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/263310272/large.jpg",
    "obs": "https://www.inaturalist.org/observations/152524264",
-   "attribution": "(c) Patrick Culbert, some rights reserved (CC BY-NC)",
+   "attribution": "pdculbert · CC BY-NC",
    "observed": "2018-06-23",
-   "user": "pdculbert"
+   "user": "pdculbert",
+   "license": "cc-by-nc"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/718607706/large.jpg",
    "obs": "https://www.inaturalist.org/observations/392140991",
-   "attribution": "(c) E. Skeard, some rights reserved (CC BY-NC)",
+   "attribution": "egg-ed · CC BY-NC",
    "observed": "2026-08-17",
-   "user": "egg-ed"
+   "user": "egg-ed",
+   "license": "cc-by-nc"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/40714271/large.jpeg",
    "obs": "https://www.inaturalist.org/observations/26231692",
-   "attribution": "(c) Kat, some rights reserved (CC BY-NC)",
+   "attribution": "katlmartin · CC BY-NC",
    "observed": "2019-06-01",
-   "user": "katlmartin"
+   "user": "katlmartin",
+   "license": "cc-by-nc"
   }
  ]
 }

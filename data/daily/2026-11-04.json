@@ -194,70 +194,82 @@
   {
    "src": "assets/daily/2026-11-04/01.jpg",
    "obs": "https://www.inaturalist.org/observations/204466561",
-   "attribution": "Photo: softshade, no rights reserved (CC0)",
-   "observed": "2024-03-29"
+   "attribution": "softshade · CC0",
+   "observed": "2024-03-29",
+   "license": "cc0",
+   "user": "softshade"
   },
   {
    "src": "assets/daily/2026-11-04/02.jpg",
    "obs": "https://www.inaturalist.org/observations/204466561",
-   "attribution": "Photo: softshade, no rights reserved (CC0)",
-   "observed": "2024-03-29"
+   "attribution": "softshade · CC0",
+   "observed": "2024-03-29",
+   "license": "cc0",
+   "user": "softshade"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/692556225/large.jpg",
    "obs": "https://www.inaturalist.org/observations/378606193",
-   "attribution": "(c) Paul Foth, some rights reserved (CC BY-NC)",
+   "attribution": "paulrfoth · CC BY-NC",
    "observed": "2026-07-05",
-   "user": "paulrfoth"
+   "user": "paulrfoth",
+   "license": "cc-by-nc"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/692556249/large.jpg",
    "obs": "https://www.inaturalist.org/observations/378606193",
-   "attribution": "(c) Paul Foth, some rights reserved (CC BY-NC)",
+   "attribution": "paulrfoth · CC BY-NC",
    "observed": "2026-07-05",
-   "user": "paulrfoth"
+   "user": "paulrfoth",
+   "license": "cc-by-nc"
   },
   {
    "src": "https://static.inaturalist.org/photos/353231325/large.jpeg",
    "obs": "https://www.inaturalist.org/observations/200231628",
-   "attribution": "(c) robin robinson, all rights reserved",
+   "attribution": "robinrobinson · all rights reserved",
    "observed": "2024-02-23",
-   "user": "robinrobinson"
+   "user": "robinrobinson",
+   "license": null
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/257537612/large.jpeg",
    "obs": "https://www.inaturalist.org/observations/149454809",
-   "attribution": "(c) trientalid, some rights reserved (CC BY-NC)",
+   "attribution": "trientalid · CC BY-NC",
    "observed": "2023-02-21",
-   "user": "trientalid"
+   "user": "trientalid",
+   "license": "cc-by-nc"
   },
   {
    "src": "https://static.inaturalist.org/photos/259415066/large.jpeg",
    "obs": "https://www.inaturalist.org/observations/150443724",
-   "attribution": "(c) Hannah Burman, all rights reserved",
+   "attribution": "hannahb33 · all rights reserved",
    "observed": "2023-03-06",
-   "user": "hannahb33"
+   "user": "hannahb33",
+   "license": null
   },
   {
    "src": "https://static.inaturalist.org/photos/259421218/large.jpeg",
    "obs": "https://www.inaturalist.org/observations/150443724",
-   "attribution": "(c) Hannah Burman, all rights reserved",
+   "attribution": "hannahb33 · all rights reserved",
    "observed": "2023-03-06",
-   "user": "hannahb33"
+   "user": "hannahb33",
+   "license": null
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/462808233/large.jpeg",
    "obs": "https://www.inaturalist.org/observations/257991757",
-   "attribution": "(c) Moe Meikle, some rights reserved (CC BY-NC)",
+   "attribution": "moemeikle · CC BY-NC",
    "observed": "2025-01-09",
-   "user": "moemeikle"
+   "user": "moemeikle",
+   "license": "cc-by-nc"
   },
   {
    "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/462808244/large.jpeg",
    "obs": "https://www.inaturalist.org/observations/257991757",
-   "attribution": "(c) Moe Meikle, some rights reserved (CC BY-NC)",
+   "attribution": "moemeikle · CC BY-NC",
    "observed": "2025-01-09",
-   "user": "moemeikle"
+   "user": "moemeikle",
+   "license": "cc-by-nc"
   }
  ]
 }
