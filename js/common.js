@@ -23,7 +23,8 @@
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const round3 = (x) => Math.round(x * 1000) / 1000;
-  const fmtScore = (x) => (x == null ? '—' : String(round3(x)));
+  // Scores are kept to three decimals but shown to two.
+  const fmtScore = (x) => (x == null ? '—' : String(Math.round(x * 100) / 100));
   // Species are shown with the genus abbreviated, field-guide style: "E. cicutarium".
   const shortName = (name, rank) => {
     const w = (name || '').split(' ');

@@ -5,7 +5,7 @@
  * doesn't end the run or reveal the answer: that option turns red with notes
  * on why it isn't the one, and you pick again at the same rank. After one miss
  * each correct answer is worth 1/2, after two 1/3, then 1/4 and so on. Scores
- * are rounded to three decimals; 7 is perfect.
+ * are kept to three decimals and shown to two; 7 is perfect.
  *
  * The daily puzzle only counts on its own date. Puzzles from the past week can
  * be replayed as practice, which never touches the score or stats.
@@ -1183,7 +1183,7 @@
       <h3>Scoring</h3>
       <p>Every correct answer is worth <b>1 point</b> until your first miss. From then on each correct answer is worth <b>½</b> —
          including the rank you missed on. After a second miss they're worth <b>⅓</b>, then <b>¼</b>, and so on.
-         Scores are rounded to three decimals; a run with no misses scores a perfect <b>7</b>.</p>
+         Scores are shown to two decimals; a run with no misses scores a perfect <b>7</b>.</p>
       <p>The daily puzzle counts on its own day only. Puzzles from the past week stay available to <b>replay as practice</b>,
          which never changes your score or stats.</p>
       <h3>Unlimited</h3>

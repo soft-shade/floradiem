@@ -28,7 +28,8 @@ Scoring (Daily and Unlimited): a run always goes down to species. Each
 correct answer is worth 1 point until the first miss. A miss doesn't end the
 run or reveal the answer: that option turns red with its notes and you pick
 again. After one miss every correct answer (including the rank missed on) is
-worth 1/2, after two 1/3, then 1/4 ... Rounded to 3 decimals; 7 is perfect.
+worth 1/2, after two 1/3, then 1/4 ... Kept to 3 decimals, shown to 2; 7 is
+perfect.
 The daily only counts on its own date; the past week's puzzles can be
 replayed as practice without touching the score.
 
