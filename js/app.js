@@ -24,6 +24,7 @@
   const WINDOW_DAYS = 7;          // how long a daily stays in the picker (for practice)
   const TZ = 'America/Vancouver';
   const SITE = 'https://soft-shade.github.io/floradiem/';
+  const PATREON = 'https://www.patreon.com/c/softshade';
   const FILTER_KEY = 'plantdiem_unl_filter';
   const API = 'https://api.inaturalist.org/v1/';
   const POOL_TAXA = '47126,47170,48222,47686';   // Plantae, Fungi (incl. lichens), Chromista, Protozoa
@@ -630,6 +631,7 @@
           <button class="btn ghost" id="btn-review">Review answers</button>
           <button class="btn ghost" id="btn-replay">Replay (practice)</button>
           <button class="btn ghost" id="btn-unl">Play Unlimited</button>
+          ${supportBtn()}
         </div>
       </div>`;
     $('btn-share').onclick = () => share(shareDaily(p, run));
@@ -637,6 +639,8 @@
     $('btn-replay').onclick = startReplay;
     $('btn-unl').onclick = () => switchMode('unlimited');
   }
+
+  const supportBtn = () => `<a class="btn support" href="${PATREON}" target="_blank" rel="noopener">♥ Support Softshade</a>`;
 
   // "Added to your Daily tree (12 / 250)" with a link to it.
   function treeLine(mode, n) {
@@ -1045,6 +1049,7 @@
         <div class="actions" style="justify-content:center">
           <button class="btn" id="btn-again">Next species</button>
           <button class="btn ghost" id="btn-share">Share</button>
+          ${supportBtn()}
         </div>
       </div>`;
     $('btn-again').onclick = newUnlimited;
@@ -1194,7 +1199,8 @@
       <p>Every puzzle you solve is added to your personal tree of life — one tree for Daily, one for Unlimited — with the
          points you earned beside each species. A tree holds ${C.TREE_CAP} species; after that a new one starts and the old
          ones stay on your <a href="tree.html">tree page</a>.</p>
-      <p class="note">New daily puzzle at midnight Pacific time.</p>`;
+      <p class="note">New daily puzzle at midnight Pacific time.</p>
+      <p class="support-line">Floradiem is free and ad-free. ${supportBtn()}</p>`;
   }
   $('btn-help').onclick = () => openModal(helpView);
   $('btn-stats').onclick = () => { world = null; openModal(statsView); if (statsTab === 'world') loadWorld(); };

@@ -244,6 +244,10 @@ main { max-width: 760px; margin: 0 auto; padding: 12px 16px 24px; }
 .about p { margin: 0 0 8px; }
 .about strong { color: var(--ink); font-weight: 700; }
 
+.btn.support { background: #d9486f; color: #fff; text-decoration: none; }
+.btn.support:hover { background: #b93659; }
+.support-line { margin: 0 0 14px; font-size: .9rem; color: var(--muted); display: flex; gap: 10px; align-items: center; justify-content: center; flex-wrap: wrap; }
+.result .btn.support { border: 0; }
 .foot-logo { width: 110px; height: auto; margin-bottom: 6px; }
 .foot { text-align: center; font-size: .8rem; color: var(--muted); padding: 0 16px 24px; }
 
