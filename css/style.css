@@ -48,6 +48,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .icon-btn:hover { background: rgba(255,255,255,.15); }
 a.icon-btn { text-decoration: none; }
+.icon-btn img { width: 24px; height: 22px; object-fit: contain; display: block; }
 
 main { max-width: 760px; margin: 0 auto; padding: 12px 16px 24px; }
 .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); margin-bottom: 14px; }
@@ -135,10 +136,10 @@ main { max-width: 760px; margin: 0 auto; padding: 12px 16px 24px; }
 /* Wide windows: photo on the left, question on the right, so the options
    and the Next button are in view without scrolling. */
 @media (min-width: 960px) {
-  main { max-width: 1240px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; align-items: start; }
-  main > .picker, main > .filter { grid-column: 1 / -1; margin-bottom: 0; }
-  main > .picker:empty { display: none; }
-  main > .card { margin-bottom: 0; }
+  #app { max-width: 1240px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; align-items: start; }
+  #app > .picker, #app > .filter { grid-column: 1 / -1; margin-bottom: 0; }
+  #app > .picker:empty { display: none; }
+  #app > .card { margin-bottom: 0; }
   .photo-card { position: sticky; top: 64px; }
   .carousel { max-height: calc(100vh - 150px); }
 }
