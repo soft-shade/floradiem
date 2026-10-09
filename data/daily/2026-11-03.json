@@ -214,6 +214,48 @@
    "obs": "https://www.inaturalist.org/observations/192741468",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
    "observed": "2023-12-01"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/102097263/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/63599870",
+   "attribution": "(c) essexlemons, some rights reserved (CC BY-NC)",
+   "observed": "2020-09-30",
+   "user": "essexlemons"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/102097275/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/63599870",
+   "attribution": "(c) essexlemons, some rights reserved (CC BY-NC)",
+   "observed": "2020-09-30",
+   "user": "essexlemons"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/244666057/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/142683736",
+   "attribution": "(c) mbohm45, some rights reserved (CC BY-NC)",
+   "observed": "2022-11-23",
+   "user": "mbohm45"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/244666067/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/142683736",
+   "attribution": "(c) mbohm45, some rights reserved (CC BY-NC)",
+   "observed": "2022-11-23",
+   "user": "mbohm45"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/140307593/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/85291243",
+   "attribution": "(c) Andrew Simon, some rights reserved (CC BY-NC)",
+   "observed": "2021-07-01",
+   "user": "chlorophilia"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/140307605/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/85291243",
+   "attribution": "(c) Andrew Simon, some rights reserved (CC BY-NC)",
+   "observed": "2021-07-01",
+   "user": "chlorophilia"
   }
  ]
 }

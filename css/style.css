@@ -64,6 +64,36 @@ main { max-width: 760px; margin: 0 auto; padding: 12px 16px 24px; }
 .pick.active { border-color: var(--green); background: var(--green-pale); }
 .pick.ready .p-sub { color: var(--green-dark); font-weight: 700; }
 
+/* ---- unlimited species filter ---- */
+.filter { margin-bottom: 12px; }
+.filter[hidden] { display: none; }
+.filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: .9rem; }
+.filter-label { color: var(--muted); }
+.chip {
+  display: inline-flex; align-items: center; gap: 2px;
+  background: var(--green-pale); border: 1px solid var(--green-line); color: var(--green-deep);
+  border-radius: 999px; padding: 2px 6px 2px 10px; font-weight: 700; max-width: 100%;
+}
+.chip.plain { background: transparent; border-color: var(--line); color: var(--ink); font-weight: 400; padding-right: 10px; }
+.chip-x { border: 0; background: transparent; color: var(--green-deep); font-size: 1.1rem; line-height: 1; padding: 0 4px; }
+.chip-x:hover { color: var(--miss); }
+.btn.small { padding: 4px 12px; font-size: .85rem; }
+.filter-form { margin-top: 10px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); display: grid; gap: 8px; }
+.filter-form[hidden] { display: none; }
+.ac { position: relative; display: grid; grid-template-columns: 140px 1fr; align-items: center; gap: 8px; font-size: .9rem; }
+.ac input { font: inherit; padding: 7px 10px; border: 1.5px solid var(--line); border-radius: 8px; width: 100%; min-width: 0; background: #fff; }
+.ac input.chosen { border-color: var(--green); background: var(--green-pale); }
+.sugg { position: absolute; left: 148px; right: 0; top: 100%; z-index: 20; margin: 2px 0 0; padding: 4px 0; list-style: none; background: #fff; border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,.12); max-height: 220px; overflow: auto; }
+.sugg[hidden] { display: none; }
+.sugg li { padding: 6px 10px; cursor: pointer; font-size: .9rem; }
+.sugg li small { display: block; color: var(--muted); font-size: .75rem; }
+.sugg li:hover { background: var(--green-pale); }
+.sugg li.none { color: var(--muted); cursor: default; }
+@media (max-width: 520px) {
+  .ac { grid-template-columns: 1fr; gap: 2px; }
+  .sugg { left: 0; }
+}
+
 /* ---- photo carousel ---- */
 .photo-card { position: relative; overflow: hidden; }
 .carousel {
@@ -172,6 +202,11 @@ main { max-width: 760px; margin: 0 auto; padding: 12px 16px 24px; }
 .signin { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); font-size: .9rem; }
 .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--ink); color: #fff; padding: 8px 16px; border-radius: 999px; z-index: 60; }
 .toast[hidden] { display: none; }
+
+/* ---- species tree card (stats modal) ---- */
+.treecard { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; background: var(--green-pale); border: 1px solid var(--green-line); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; font-size: .9rem; }
+.treelinks { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.treelinks a.btn { text-decoration: none; }
 
 /* ---- about ---- */
 .about { max-width: 760px; margin: 0 auto; padding: 4px 16px 20px; font-size: .92rem; color: var(--muted); }

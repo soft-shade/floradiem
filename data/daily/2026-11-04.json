@@ -202,6 +202,62 @@
    "obs": "https://www.inaturalist.org/observations/204466561",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
    "observed": "2024-03-29"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/692556225/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/378606193",
+   "attribution": "(c) Paul Foth, some rights reserved (CC BY-NC)",
+   "observed": "2026-07-05",
+   "user": "paulrfoth"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/692556249/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/378606193",
+   "attribution": "(c) Paul Foth, some rights reserved (CC BY-NC)",
+   "observed": "2026-07-05",
+   "user": "paulrfoth"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/353231325/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/200231628",
+   "attribution": "(c) robin robinson, all rights reserved",
+   "observed": "2024-02-23",
+   "user": "robinrobinson"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/257537612/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/149454809",
+   "attribution": "(c) trientalid, some rights reserved (CC BY-NC)",
+   "observed": "2023-02-21",
+   "user": "trientalid"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/259415066/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/150443724",
+   "attribution": "(c) Hannah Burman, all rights reserved",
+   "observed": "2023-03-06",
+   "user": "hannahb33"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/259421218/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/150443724",
+   "attribution": "(c) Hannah Burman, all rights reserved",
+   "observed": "2023-03-06",
+   "user": "hannahb33"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/462808233/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/257991757",
+   "attribution": "(c) Moe Meikle, some rights reserved (CC BY-NC)",
+   "observed": "2025-01-09",
+   "user": "moemeikle"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/462808244/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/257991757",
+   "attribution": "(c) Moe Meikle, some rights reserved (CC BY-NC)",
+   "observed": "2025-01-09",
+   "user": "moemeikle"
   }
  ]
 }

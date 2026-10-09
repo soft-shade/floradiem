@@ -7,9 +7,13 @@
     python build_dailies.py --replace DATE TAXON   # rebuild one day with another species
     python build_dailies.py --swap DATE RANK OLD_ID CLASHES_WITH_ID "why"
                                                    # record a conflict, replace that option
+    python build_dailies.py --photos               # top up days with < PHOTO_MIN photos
 
 writes data/daily/YYYY-MM-DD.json (species, answer options at each rank,
 photo list) and downloads that day's photos to assets/daily/YYYY-MM-DD/.
+When softshade's photos number fewer than PHOTO_MIN, the list is topped up
+with other observers' research-grade photos of the species (BC first, then
+anywhere), linked straight from iNaturalist rather than copied here.
 Species already used by an existing daily file are never picked again.
 Explanations are researched separately into data/explanations/.
 """
@@ -33,6 +37,7 @@ EPOCH = dt.date(2026, 10, 5)       # puzzle #1
 KINGDOMS = {47126: ("Plantae", "Plants"), 48222: ("Chromista", "kelp, diatoms, and allies"),
             47170: ("Fungi", "Fungi Including Lichens"), 47686: ("Protozoa", "protozoans")}
 PHOTO_MAX = 1280
+PHOTO_MIN = 10                     # every daily shows at least this many photos
 
 tree = json.load(open(os.path.join(ROOT, "data", "bc_tree.json")))["taxa"]
 tree = {int(k): v for k, v in tree.items()}
@@ -162,7 +167,42 @@ def download_photos(sid, day):
             photos.append({"src": f"assets/daily/{day}/{n:02d}.jpg",
                            "obs": o["uri"], "attribution": credit(p["attribution"]),
                            "observed": o.get("observed_on")})
+    return top_up_photos(sid, photos)
+
+
+def top_up_photos(sid, photos):
+    """Add other observers' photos (at most two per observation, best-voted
+    first, BC before the rest of the world) until there are PHOTO_MIN."""
+    seen = {p["src"] for p in photos}
+    for place in (BC_PLACE, None):
+        if len(photos) >= PHOTO_MIN:
+            break
+        params = dict(taxon_id=sid, quality_grade="research", photos="true",
+                      not_user_id=USER, order_by="votes", per_page=30)
+        if place:
+            params["place_id"] = place
+        for o in get("observations", **params)["results"]:
+            for p in o["photos"][:2]:
+                src = p["url"].replace("/square.", "/large.")
+                if src in seen or len(photos) >= PHOTO_MIN:
+                    continue
+                seen.add(src)
+                photos.append({"src": src, "obs": o["uri"], "attribution": p["attribution"],
+                               "observed": o.get("observed_on"), "user": o["user"]["login"]})
     return photos
+
+
+def top_up_all():
+    """Bring every existing day up to PHOTO_MIN photos."""
+    for f in sorted(glob.glob(os.path.join(ROOT, "data", "daily", "*.json"))):
+        p = json.load(open(f))
+        before = len(p["photos"])
+        if before >= PHOTO_MIN:
+            continue
+        p["photos"] = top_up_photos(p["species"]["id"], p["photos"])
+        with open(f, "w") as fh:
+            json.dump(p, fh, indent=1, ensure_ascii=False)
+        print(p["date"], p["species"]["name"], before, "->", len(p["photos"]), "photos")
 
 
 def main(start, n_days):
@@ -224,6 +264,8 @@ def write_index():
 if __name__ == "__main__":
     if sys.argv[1] == "--fill":
         fill_short_ranks()
+    elif sys.argv[1] == "--photos":
+        top_up_all()
     elif sys.argv[1] == "--check":
         check_all()
     elif sys.argv[1] == "--replace":

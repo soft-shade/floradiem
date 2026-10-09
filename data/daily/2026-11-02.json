@@ -196,6 +196,69 @@
    "obs": "https://www.inaturalist.org/observations/189512758",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
    "observed": "2023-10-30"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/396777475/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/223905027",
+   "attribution": "(c) Ashley Parshyn, all rights reserved",
+   "observed": "2024-06-19",
+   "user": "aparshyn"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/562776828/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/311740900",
+   "attribution": "(c) Tyson Ehlers, some rights reserved (CC BY-NC)",
+   "observed": "2025-09-05",
+   "user": "tyson_ehlers"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/404437187/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/227944637",
+   "attribution": "(c) Darcy Kehler, some rights reserved (CC BY-NC)",
+   "observed": "2024-07-06",
+   "user": "lophopanopeus"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/427687678/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/240085235",
+   "attribution": "(c) Quirien Mulder ten Kate, some rights reserved (CC BY-NC)",
+   "observed": "2024-09-05",
+   "user": "qmulder"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/398665139/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/224900106",
+   "attribution": "(c) Jeffrey Jackson, some rights reserved (CC BY-NC)",
+   "observed": "2024-06-24",
+   "user": "orchids_bc"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/283986690/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/164148404",
+   "attribution": "(c) J Rocky Slat, all rights reserved",
+   "observed": "2023-05-27",
+   "user": "j-rockyslat"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/283986822/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/164148404",
+   "attribution": "(c) J Rocky Slat, all rights reserved",
+   "observed": "2023-05-27",
+   "user": "j-rockyslat"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/207801238/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/122714918",
+   "attribution": "(c) Leigh M, all rights reserved",
+   "observed": "2022-06-20",
+   "user": "leigh_m"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/481675504/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/267997143",
+   "attribution": "(c) ravenedw, some rights reserved (CC BY-NC)",
+   "observed": "2025-03-31",
+   "user": "ravenedw"
   }
  ]
 }

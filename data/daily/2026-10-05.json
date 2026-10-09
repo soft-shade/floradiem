@@ -238,6 +238,20 @@
    "obs": "https://www.inaturalist.org/observations/198249824",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
    "observed": "2024-02-02"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/381832226/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/215934972",
+   "attribution": "(c) konalu, some rights reserved (CC BY-NC)",
+   "observed": "2024-05-15",
+   "user": "konalu"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/30951674/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/20047159",
+   "attribution": "(c) Jason Headley, some rights reserved (CC BY-NC)",
+   "observed": "2019-02-02",
+   "user": "jasonheadley"
   }
  ]
 }

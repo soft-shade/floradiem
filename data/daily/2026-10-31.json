@@ -214,6 +214,48 @@
    "obs": "https://www.inaturalist.org/observations/208331980",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
    "observed": "2024-04-20"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/263806644/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/152792088",
+   "attribution": "(c) Summer Thomas, all rights reserved",
+   "observed": "2023-03-29",
+   "user": "tardigrayed"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/634862864/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/348131354",
+   "attribution": "(c) amylovemountain, some rights reserved (CC BY-NC)",
+   "observed": "2026-04-07",
+   "user": "amylovemountain"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/643114309/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/352358870",
+   "attribution": "(c) sugaress, some rights reserved (CC BY-NC)",
+   "observed": "2026-04-23",
+   "user": "sugaress"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/270493232/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/156428017",
+   "attribution": "(c) Justine Fafard, all rights reserved",
+   "observed": "2023-04-24",
+   "user": "justinefafard"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/275232641/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/159306822",
+   "attribution": "(c) aashley, some rights reserved (CC BY-NC)",
+   "observed": "2023-05-02",
+   "user": "aashley"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/272583953/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/157669871",
+   "attribution": "no rights reserved",
+   "observed": "2023-04-29",
+   "user": "saintaardvark"
   }
  ]
 }

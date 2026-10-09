@@ -196,6 +196,69 @@
    "obs": "https://www.inaturalist.org/observations/221626145",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
    "observed": "2024-06-09"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/246598040/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/143755388",
+   "attribution": "(c) Amber Fill, some rights reserved (CC BY-NC)",
+   "observed": "2022-12-05",
+   "user": "amberhazel"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/246598053/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/143755388",
+   "attribution": "(c) Amber Fill, some rights reserved (CC BY-NC)",
+   "observed": "2022-12-05",
+   "user": "amberhazel"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/210231258/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/124055907",
+   "attribution": "(c) Laren Pudek, all rights reserved",
+   "observed": "2022-06-29",
+   "user": "laren_pudek"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/33562639/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/21676456",
+   "attribution": "(c) Bridget Spencer, some rights reserved (CC BY-NC)",
+   "observed": "2019-03-27",
+   "user": "bridgetspencer"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/33562628/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/21676456",
+   "attribution": "(c) Bridget Spencer, some rights reserved (CC BY-NC)",
+   "observed": "2019-03-27",
+   "user": "bridgetspencer"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/130761465/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/79817368",
+   "attribution": "(c) peterhaddon, some rights reserved (CC BY-NC)",
+   "observed": "2021-05-22",
+   "user": "peterhaddon"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/130755849/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/79814164",
+   "attribution": "(c) peterhaddon, some rights reserved (CC BY-NC)",
+   "observed": "2021-05-22",
+   "user": "peterhaddon"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/582657187/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/322117677",
+   "attribution": "(c) Kalin Antonio Ocaña, some rights reserved (CC BY-NC)",
+   "observed": "2025-10-20",
+   "user": "kalinocana"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/582657222/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/322117677",
+   "attribution": "(c) Kalin Antonio Ocaña, some rights reserved (CC BY-NC)",
+   "observed": "2025-10-20",
+   "user": "kalinocana"
   }
  ]
 }

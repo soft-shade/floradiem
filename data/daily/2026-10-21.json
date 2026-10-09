@@ -202,6 +202,62 @@
    "obs": "https://www.inaturalist.org/observations/367095058",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
    "observed": "2026-05-31"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/306299734/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/176206514",
+   "attribution": "(c) John D Reynolds, some rights reserved (CC BY-NC)",
+   "observed": "2023-07-29",
+   "user": "johndreynolds"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/120212123/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/73619480",
+   "attribution": "(c) James Miskelly, some rights reserved (CC BY-NC)",
+   "observed": "2021-04-10",
+   "user": "jimmylegs"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/503602072/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/280401791",
+   "attribution": "(c) Quirien Mulder ten Kate, some rights reserved (CC BY-NC)",
+   "observed": "2025-05-11",
+   "user": "qmulder"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/363922603/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/205795464",
+   "attribution": "(c) Darcy Kehler, some rights reserved (CC BY-NC)",
+   "observed": "2024-04-06",
+   "user": "lophopanopeus"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/490889884/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/272852954",
+   "attribution": "(c) Quirien Mulder ten Kate, some rights reserved (CC BY-NC)",
+   "observed": "2025-04-24",
+   "user": "qmulder"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/40689816/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/26216805",
+   "attribution": "no rights reserved",
+   "observed": "2019-02-14",
+   "user": "benkeen"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/40689829/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/26216805",
+   "attribution": "no rights reserved",
+   "observed": "2019-02-14",
+   "user": "benkeen"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/591035643/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/326348927",
+   "attribution": "(c) Elora, some rights reserved (CC BY-NC)",
+   "observed": "2025-06-23",
+   "user": "eloraa"
   }
  ]
 }

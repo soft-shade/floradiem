@@ -196,6 +196,69 @@
    "obs": "https://www.inaturalist.org/observations/223586398",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
    "observed": "2024-06-18"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/619173939/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/340262599",
+   "attribution": "(c) Steve Ansell, some rights reserved (CC BY-NC)",
+   "observed": "2020-07-23",
+   "user": "steveansell"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/45863498/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/29388447",
+   "attribution": "(c) alschencks, some rights reserved (CC BY-NC)",
+   "observed": "2019-07-23",
+   "user": "alschencks"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/46443850/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/29388447",
+   "attribution": "(c) alschencks, some rights reserved (CC BY-NC)",
+   "observed": "2019-07-23",
+   "user": "alschencks"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/405292383/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/228393447",
+   "attribution": "(c) islandfox, all rights reserved",
+   "observed": "2024-07-09",
+   "user": "islandfox"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/405292409/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/228393447",
+   "attribution": "(c) islandfox, all rights reserved",
+   "observed": "2024-07-09",
+   "user": "islandfox"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/50283612/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/32082835",
+   "attribution": "(c) Lena Dietz Chiasson, some rights reserved (CC BY-NC)",
+   "observed": "2019-08-15",
+   "user": "lenachiasson"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/50283599/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/32082835",
+   "attribution": "(c) Lena Dietz Chiasson, some rights reserved (CC BY-NC)",
+   "observed": "2019-08-15",
+   "user": "lenachiasson"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/40714344/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/26231697",
+   "attribution": "(c) Kat, some rights reserved (CC BY-NC)",
+   "observed": "2019-06-01",
+   "user": "katlmartin"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/134509539/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/81980830",
+   "attribution": "(c) Adrian de Groot, some rights reserved (CC BY-NC)",
+   "observed": "2021-05-15",
+   "user": "adriandeg"
   }
  ]
 }

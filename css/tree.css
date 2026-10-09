@@ -1,0 +1,28 @@
+/* Floradiem — the personal species-tree page (tree.html). */
+.tree-page { --tree-bg: #000; --tree-fg: #fff; }
+.tree-page.light { --tree-bg: #fff; --tree-fg: #111; }
+.tree-page main { max-width: none; padding: 10px 12px 20px; }
+.tree-top { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-bottom: 8px; }
+.tree-top h1 { font-size: 1.15rem; margin: 0; color: var(--green-deep); }
+.tree-top .note { margin: 0; }
+.tree-top .spacer { flex: 1; }
+.tree-pick { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: .9rem; }
+.tree-pick a, .tree-pick span.cur { padding: 3px 10px; border-radius: 999px; border: 1.5px solid var(--green); color: var(--green-dark); text-decoration: none; font-weight: 700; }
+.tree-pick span.cur { background: var(--green); color: #fff; }
+.tree-tools { display: flex; gap: 6px; flex-wrap: wrap; }
+.tree-tools .btn { padding: 5px 12px; font-size: .85rem; }
+.tree-wrap { position: relative; background: var(--tree-bg); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+.tree-wrap svg { display: block; width: 100%; height: min(88vh, 100vw); touch-action: none; cursor: grab; user-select: none; }
+.tree-wrap svg:active { cursor: grabbing; }
+.tree-wrap svg text { font-family: Lato, "Helvetica Neue", Arial, sans-serif; }
+.tree-wrap .zoom { position: absolute; right: 10px; top: 10px; display: grid; gap: 4px; }
+.tree-wrap .zoom button { width: 32px; height: 32px; border-radius: 6px; border: 1px solid rgba(128,128,128,.5); background: var(--tree-bg); color: var(--tree-fg); font-weight: 900; }
+.tree-empty { padding: 40px 16px; text-align: center; color: var(--muted); }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 10px 0 0; font-size: .82rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 5px; }
+.legend i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.legend.ondark i { box-shadow: inset 0 0 0 1px rgba(0,0,0,.2); }
+.tree-foot { font-size: .82rem; color: var(--muted); margin-top: 8px; }
+@media (max-width: 520px) {
+  .tree-top h1 { font-size: 1rem; }
+}

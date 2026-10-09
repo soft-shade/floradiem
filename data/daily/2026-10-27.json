@@ -208,6 +208,55 @@
    "obs": "https://www.inaturalist.org/observations/204211906",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
    "observed": "2024-03-27"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/253393553/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/147275531",
+   "attribution": "(c) Aimee Pelletier, some rights reserved (CC BY-NC)",
+   "observed": "2022-10-02",
+   "user": "aimeepelletier"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/253393564/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/147275531",
+   "attribution": "(c) Aimee Pelletier, some rights reserved (CC BY-NC)",
+   "observed": "2022-10-02",
+   "user": "aimeepelletier"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/414746939/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/233377275",
+   "attribution": "(c) J Straka, some rights reserved (CC BY)",
+   "observed": "2024-08-02",
+   "user": "jstraka"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/414746956/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/233377275",
+   "attribution": "(c) J Straka, some rights reserved (CC BY)",
+   "observed": "2024-08-02",
+   "user": "jstraka"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/326181977/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/186625558",
+   "attribution": "(c) Terry M, some rights reserved (CC BY-NC)",
+   "observed": "2023-10-07",
+   "user": "sidalcea"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/326181998/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/186625558",
+   "attribution": "(c) Terry M, some rights reserved (CC BY-NC)",
+   "observed": "2023-10-07",
+   "user": "sidalcea"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/502480887/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/279805125",
+   "attribution": "(c) Jack Bindernagel, some rights reserved (CC BY-NC)",
+   "observed": "2025-05-01",
+   "user": "jbindernagel"
   }
  ]
 }

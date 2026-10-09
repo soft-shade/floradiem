@@ -202,6 +202,62 @@
    "obs": "https://www.inaturalist.org/observations/225955010",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
    "observed": "2024-06-29"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/520063246/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/289159781",
+   "attribution": "(c) Alex Melnychuk, some rights reserved (CC BY)",
+   "observed": "2025-06-12",
+   "user": "alexmelnychuk"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/520063280/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/289159781",
+   "attribution": "(c) Alex Melnychuk, some rights reserved (CC BY)",
+   "observed": "2025-06-12",
+   "user": "alexmelnychuk"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/216382579/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/127454230",
+   "attribution": "(c) Rachel, some rights reserved (CC BY-NC)",
+   "observed": "2022-07-19",
+   "user": "hipa"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/206908145/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/122220132",
+   "attribution": "(c) Terry M, some rights reserved (CC BY-NC)",
+   "observed": "2022-06-14",
+   "user": "sidalcea"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/206908167/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/122220132",
+   "attribution": "(c) Terry M, some rights reserved (CC BY-NC)",
+   "observed": "2022-06-14",
+   "user": "sidalcea"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/211242726/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/124619431",
+   "attribution": "(c) julianheavyside, all rights reserved",
+   "observed": "2022-06-26",
+   "user": "julianheavyside"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/454258409/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/253673119",
+   "attribution": "(c) Warren Layberry, some rights reserved (CC BY-NC)",
+   "observed": "2024-11-30",
+   "user": "warrenlayberry"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/443740194/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/248358255",
+   "attribution": "(c) Rand Rudland, all rights reserved",
+   "observed": "2024-10-20",
+   "user": "randrudland"
   }
  ]
 }

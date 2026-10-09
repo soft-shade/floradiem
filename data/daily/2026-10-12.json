@@ -202,6 +202,62 @@
    "obs": "https://www.inaturalist.org/observations/294901761",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
    "observed": "2025-07-03"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/462937762/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/258056394",
+   "attribution": "(c) Julia Carr, some rights reserved (CC BY-NC)",
+   "observed": "2024-09-22",
+   "user": "juliakcarr"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/462937763/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/258056394",
+   "attribution": "(c) Julia Carr, some rights reserved (CC BY-NC)",
+   "observed": "2024-09-22",
+   "user": "juliakcarr"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/576193505/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/318797863",
+   "attribution": "(c) Julia Carr, some rights reserved (CC BY-NC)",
+   "observed": "2025-09-30",
+   "user": "juliakcarr"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/572140936/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/316657391",
+   "attribution": "(c) John D Reynolds, some rights reserved (CC BY-NC)",
+   "observed": "2025-09-25",
+   "user": "johndreynolds"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/572140948/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/316657391",
+   "attribution": "(c) John D Reynolds, some rights reserved (CC BY-NC)",
+   "observed": "2025-09-25",
+   "user": "johndreynolds"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/573088800/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/317164157",
+   "attribution": "(c) stjayaaa, some rights reserved (CC BY-NC)",
+   "observed": "2025-09-27",
+   "user": "stjayaaa"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/573088680/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/317164157",
+   "attribution": "(c) stjayaaa, some rights reserved (CC BY-NC)",
+   "observed": "2025-09-27",
+   "user": "stjayaaa"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/572631494/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/316922406",
+   "attribution": "(c) spencerh17, some rights reserved (CC BY-NC)",
+   "observed": "2025-09-26",
+   "user": "spencerh17"
   }
  ]
 }

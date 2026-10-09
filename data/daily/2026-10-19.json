@@ -226,6 +226,34 @@
    "obs": "https://www.inaturalist.org/observations/191313261",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
    "observed": "2023-11-17"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/243581569/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/142106714",
+   "attribution": "(c) caitlin_galbraith, some rights reserved (CC BY-NC)",
+   "observed": "2022-11-15",
+   "user": "caitlin_galbraith"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/492115512/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/273636683",
+   "attribution": "(c) Nicole N, all rights reserved",
+   "observed": "2025-04-25",
+   "user": "biophiliabc"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/492115466/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/273636683",
+   "attribution": "(c) Nicole N, all rights reserved",
+   "observed": "2025-04-25",
+   "user": "biophiliabc"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/40712745/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/26231610",
+   "attribution": "(c) Kat, some rights reserved (CC BY-NC)",
+   "observed": "2019-05-31",
+   "user": "katlmartin"
   }
  ]
 }

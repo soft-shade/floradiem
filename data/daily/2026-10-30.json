@@ -208,6 +208,55 @@
    "obs": "https://www.inaturalist.org/observations/234901625",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
    "observed": "2024-08-10"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/125614245/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/76803081",
+   "attribution": "(c) Robyn Worcester, some rights reserved (CC BY-NC)",
+   "observed": "2021-05-02",
+   "user": "rworcest"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/369631181/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/208888250",
+   "attribution": "no rights reserved",
+   "observed": "2024-04-23",
+   "user": "carolynprentice"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/367205868/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/207587934",
+   "attribution": "(c) jessek, some rights reserved (CC BY-NC)",
+   "observed": "2024-04-16",
+   "user": "jessek"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/626867158/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/344070835",
+   "attribution": "(c) Andrew Bowler, all rights reserved",
+   "observed": "2026-03-20",
+   "user": "abowler01"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/187103785/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/110873554",
+   "attribution": "(c) cwf_michellep, some rights reserved (CC BY-NC)",
+   "observed": "2022-04-09",
+   "user": "cwf_michellep"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/621651139/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/341476135",
+   "attribution": "(c) hannahlister03, some rights reserved (CC BY-NC)",
+   "observed": "2026-03-04",
+   "user": "hannahlister03"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/621651140/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/341476135",
+   "attribution": "(c) hannahlister03, some rights reserved (CC BY-NC)",
+   "observed": "2026-03-04",
+   "user": "hannahlister03"
   }
  ]
 }

@@ -56,7 +56,7 @@
           "alternateName": "Floradiem — Daily Plant ID Game",
           "url": "https://soft-shade.github.io/floradiem/",
           "image": "https://soft-shade.github.io/floradiem/assets/og-image.png",
-          "description": "A free daily plant identification game. Study photos of a British Columbia plant and work down the tree of life — kingdom, phylum, class, order, family, genus, species — with notes on what sets each group apart. A new plant every day, plus an unlimited mode drawing on research-grade iNaturalist observations.",
+          "description": "A free daily plant identification game. Study photos of a British Columbia plant and work down the tree of life — kingdom, phylum, class, order, family, genus, species — with notes on what sets each group apart. A new plant every day, plus an unlimited mode drawing on research-grade iNaturalist observations worldwide, filterable by place, observer or project.",
           "applicationCategory": "GameApplication",
           "applicationSubCategory": "Educational game",
           "genre": ["Educational", "Puzzle", "Trivia", "Nature"],
@@ -83,8 +83,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
-    <script>window.PD_VER = '20261009b';</script>
-    <link rel="stylesheet" href="css/style.css?v=20261009b">
+    <script>window.PD_VER = '20261010a';</script>
+    <link rel="stylesheet" href="css/style.css?v=20261010a">
 
     <!-- Firebase: shared with worm-game (project worm-game-bdd29). Floradiem
          only touches its own collections: plantdiem_stats/{uid} and
@@ -150,6 +150,7 @@
 
     <main id="app">
       <section id="daily-picker" class="picker" aria-label="Available daily puzzles"></section>
+      <section id="unl-filter" class="filter" aria-label="Unlimited species filter" hidden></section>
 
       <section class="card photo-card">
         <div class="carousel" id="carousel" tabindex="0" aria-label="Observation photos"></div>
@@ -172,8 +173,9 @@
          Every answer comes with short notes on what sets that group apart, so each puzzle is a small botany lesson.</p>
       <p>A wrong pick doesn't end the game: the option turns red with its notes and you try again at the same rank for
          reduced points. Puzzles from the past week can be replayed as practice, and <strong>Unlimited mode</strong> serves
-         random species from all research-grade BC observations on iNaturalist. Sign in to keep your stats across devices
-         and see how your score compares with other players.</p>
+         random species from research-grade iNaturalist observations worldwide, or narrowed to a place, an iNaturalist
+         user or a project. Every puzzle you solve grows your own <a href="tree.html">tree of life</a>, with your points
+         beside each species. Sign in to keep your stats across devices and see how your score compares with other players.</p>
     </section>
 
     <footer class="foot">
@@ -190,6 +192,7 @@
     </div>
     <div class="toast" id="toast" hidden></div>
 
-    <script src="js/app.js?v=20261009b"></script>
+    <script src="js/common.js?v=20261010a"></script>
+    <script src="js/app.js?v=20261010a"></script>
   </body>
 </html>

@@ -208,6 +208,55 @@
    "obs": "https://www.inaturalist.org/observations/195941378",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
    "observed": "2024-01-06"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/371086451/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/209733080",
+   "attribution": "(c) Katrina Winthrop, some rights reserved (CC BY-NC)",
+   "observed": "2024-04-26",
+   "user": "katrina610"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/371086574/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/209733080",
+   "attribution": "(c) Katrina Winthrop, some rights reserved (CC BY-NC)",
+   "observed": "2024-04-26",
+   "user": "katrina610"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/69863526/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/44061115",
+   "attribution": "(c) balisally, some rights reserved (CC BY-NC)",
+   "observed": "2020-04-27",
+   "user": "balisally"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/39077182/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/25242338",
+   "attribution": "(c) paulwhacker, some rights reserved (CC BY-NC)",
+   "observed": "2019-05-16",
+   "user": "paulwhacker"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/187104236/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/110873779",
+   "attribution": "(c) cwf_michellep, some rights reserved (CC BY-NC)",
+   "observed": "2022-04-09",
+   "user": "cwf_michellep"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/68612968/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/43228125",
+   "attribution": "(c) Corvi Zeman, some rights reserved (CC BY)",
+   "observed": "2020-04-24",
+   "user": "corvi"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/37883300/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/24499372",
+   "attribution": "(c) Kat, some rights reserved (CC BY-NC)",
+   "observed": "2019-05-03",
+   "user": "katlmartin"
   }
  ]
 }

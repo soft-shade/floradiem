@@ -196,6 +196,69 @@
    "obs": "https://www.inaturalist.org/observations/225962031",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
    "observed": "2024-06-29"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/416754558/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/234429678",
+   "attribution": "(c) Homo dieterensis, some rights reserved (CC BY-NC)",
+   "observed": "2024-07-04",
+   "user": "homo_dieterensis"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/341012757/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/194059378",
+   "attribution": "(c) Radu Scurtescu, all rights reserved",
+   "observed": "2023-12-15",
+   "user": "outdoorobserver"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/341012765/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/194059378",
+   "attribution": "(c) Radu Scurtescu, all rights reserved",
+   "observed": "2023-12-15",
+   "user": "outdoorobserver"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/343991985/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/195520250",
+   "attribution": "(c) Jackson W.F. Chu, all rights reserved",
+   "observed": "2024-01-01",
+   "user": "jackson_chu"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/486809333/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/270673781",
+   "attribution": "(c) fionabrown11, some rights reserved (CC BY-NC)",
+   "observed": "2025-04-15",
+   "user": "fionabrown11"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/354487561/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/200873840",
+   "attribution": "(c) Laura, some rights reserved (CC BY-NC)",
+   "observed": "2024-02-29",
+   "user": "laurabee44"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/494806338/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/275344296",
+   "attribution": "(c) deevlish, all rights reserved",
+   "observed": "2025-04-27",
+   "user": "deevlish"
+  },
+  {
+   "src": "https://static.inaturalist.org/photos/494806436/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/275344296",
+   "attribution": "(c) deevlish, all rights reserved",
+   "observed": "2025-04-27",
+   "user": "deevlish"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/92959690/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/58239787",
+   "attribution": "(c) Trevor Van Loon, some rights reserved (CC BY-NC)",
+   "observed": "2020-08-30",
+   "user": "trevvan"
   }
  ]
 }

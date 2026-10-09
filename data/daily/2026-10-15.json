@@ -202,6 +202,62 @@
    "obs": "https://www.inaturalist.org/observations/224753904",
    "attribution": "Photo: softshade, no rights reserved (CC0)",
    "observed": "2024-06-23"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/294335932/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/169755174",
+   "attribution": "(c) sarahwilton, some rights reserved (CC BY-NC)",
+   "observed": "2023-06-26",
+   "user": "sarahwilton"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/294335951/large.jpeg",
+   "obs": "https://www.inaturalist.org/observations/169755174",
+   "attribution": "(c) sarahwilton, some rights reserved (CC BY-NC)",
+   "observed": "2023-06-26",
+   "user": "sarahwilton"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/156875254/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/94560077",
+   "attribution": "(c) Stan Shebs, some rights reserved (CC BY-SA)",
+   "observed": "2005-07-14",
+   "user": "stanshebs"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/526405195/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/292513518",
+   "attribution": "(c) bcchilliwacker123, some rights reserved (CC BY-NC)",
+   "observed": "2025-06-08",
+   "user": "bcchilliwacker123"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/248801598/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/144900136",
+   "attribution": "(c) wyliethomas, some rights reserved (CC BY-NC)",
+   "observed": "2022-06-07",
+   "user": "wyliethomas"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/400074092/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/224308034",
+   "attribution": "(c) lizbpayne, some rights reserved (CC BY-NC)",
+   "observed": "2024-06-21",
+   "user": "lizbpayne"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/97623790/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/61048136",
+   "attribution": "(c) Jason Headley, some rights reserved (CC BY-NC)",
+   "observed": "2020-06-28",
+   "user": "jasonheadley"
+  },
+  {
+   "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/97624138/large.jpg",
+   "obs": "https://www.inaturalist.org/observations/61048136",
+   "attribution": "(c) Jason Headley, some rights reserved (CC BY-NC)",
+   "observed": "2020-06-28",
+   "user": "jasonheadley"
   }
  ]
 }

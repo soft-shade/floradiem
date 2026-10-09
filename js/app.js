@@ -9,21 +9,28 @@
  *
  * The daily puzzle only counts on its own date. Puzzles from the past week can
  * be replayed as practice, which never touches the score or stats.
+ *
+ * Unlimited draws its species live from iNaturalist: by default from research-
+ * grade observations worldwide (weighted toward often-observed species), or
+ * narrowed to a place, an observer or a project. Every solved puzzle is added
+ * to the player's species tree (tree.html); see common.js.
  */
 (function () {
   'use strict';
 
+  const C = window.PDC;
+  const { RANKS, STATS_KEY, cap, esc, round3, fmtScore, shortName } = C;
   const VER = window.PD_VER || '';
-  const RANKS = ['kingdom', 'phylum', 'class', 'order', 'family', 'genus', 'species'];
   const WINDOW_DAYS = 7;          // how long a daily stays in the picker (for practice)
   const TZ = 'America/Vancouver';
   const SITE = 'https://soft-shade.github.io/floradiem/';
-  // Storage keys and Firestore collections keep the game's original name
-  // (Plantdiem) so existing progress and security rules carry over.
-  const STATS_KEY = 'plantdiem_stats';
-  const BC_PLACE = 7085;
-  const SOFTSHADE_SHARE = 0.8;   // Unlimited: chance of drawing from softshade's identifications
+  const FILTER_KEY = 'plantdiem_unl_filter';
   const API = 'https://api.inaturalist.org/v1/';
+  const POOL_TAXA = '47126,47170,48222,47686';   // Plantae, Fungi (incl. lichens), Chromista, Protozoa
+  const PHOTO_MIN = 10;           // Unlimited: a species needs at least this many photos
+  const PHOTO_MAX = 16;
+  const PAGE = 500;               // species_counts page size
+  const WORLD_CAP = 100000;       // worldwide pool: the most-observed species, this many deep
   const KINGDOMS = [
     { id: 47126, name: 'Plantae', common: 'Plants' },
     { id: 48222, name: 'Chromista', common: 'kelp, diatoms, and allies' },
@@ -32,9 +39,6 @@
   ];
 
   const $ = (id) => document.getElementById(id);
-  const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
-  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) =>
-    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const track = (name, params) => { try { window.gtag && gtag('event', name, params); } catch (e) {} };
 
   // ---------------------------------------------------------------- dates
@@ -68,8 +72,6 @@
   }
 
   // ---------------------------------------------------------------- scoring
-  const round3 = (x) => Math.round(x * 1000) / 1000;
-  const fmtScore = (x) => (x == null ? '—' : String(round3(x)));
   const pointLabel = (misses) => (misses ? `1/${misses + 1} pt` : '1 pt');
 
   // Walk a run's guesses in order. A correct guess scores 1/(misses so far + 1)
@@ -95,53 +97,15 @@
   const runEmoji = (run) => run.marks.map((m) => (m ? '🌿' : '🍂')).join('');
 
   // ---------------------------------------------------------------- stats
-  const defaultStats = () => ({
-    version: 2,
-    daily: { history: {}, streak: 0, best_streak: 0, last_play_date: null },
-    unlimited: { games: 0, perfect: 0, total_score: 0, distribution: {} },
-  });
-
-  // Per-puzzle record: { guesses: [ids], done, score, aggregate_contributed }.
-  // Records from the old attempts-per-day scheme are converted: the puzzle-day
-  // run (1 point per rank before the first miss) is exactly what the new rules
-  // would have scored, so it carries over; later-day retries are dropped.
-  function upgradeRecord(r) {
-    if (!r) return null;
-    if (r.guesses) return r;
-    const a0 = r.attempts && r.attempts[0];
-    if (!a0) return null;
-    const out = { guesses: (a0.picks || []).slice(), done: !!a0.done, aggregate_contributed: !!r.aggregate_contributed };
-    const depth = r.depth0 != null ? r.depth0 : r.digits && r.digits[0] != null ? r.digits[0] : null;
-    if (out.done && depth != null) out.score = depth;
-    return out;
-  }
-  function upgradeStats(s) {
-    s.daily = s.daily || { history: {} };
-    const h = s.daily.history = s.daily.history || {};
-    for (const k of Object.keys(h)) { const u = upgradeRecord(h[k]); if (u) h[k] = u; else delete h[k]; }
-    const u = s.unlimited = s.unlimited || { games: 0, perfect: 0, distribution: {} };
-    if (u.total_score == null) u.total_score = u.total_correct || 0;
-    delete u.total_correct;
-    s.version = 2;
-    return s;
-  }
-
-  let stats = loadStats();
+  let stats = C.loadStats();
   let authUser = null;
 
-  function loadStats() {
-    try {
-      const s = JSON.parse(localStorage.getItem(STATS_KEY));
-      if (s && s.daily && s.unlimited) return upgradeStats(s);
-    } catch (e) {}
-    return defaultStats();
-  }
   // Another tab (or an old one left open) may have saved newer results, so
   // merge what's on disk before writing; a stale tab can only add, never erase.
   function saveStats(now) {
     try {
       const disk = JSON.parse(localStorage.getItem(STATS_KEY));
-      if (disk && disk.daily) mergeInto(stats, disk);
+      if (disk && disk.daily) C.mergeInto(stats, disk);
       localStorage.setItem(STATS_KEY, JSON.stringify(stats));
     } catch (e) {}
     saveStatsRemote(now);
@@ -152,7 +116,7 @@
     if (e.key !== STATS_KEY || !e.newValue) return;
     try {
       const other = JSON.parse(e.newValue);
-      if (other && other.daily) mergeInto(stats, other);
+      if (other && other.daily) C.mergeInto(stats, other);
       if (game.mode === 'daily' && game.index) renderPicker(todayISO());
       refreshModal();
     } catch (err) {}
@@ -181,7 +145,7 @@
       const remote = snap.exists() ? snap.data() : null;
       if (remote && remote.daily) {
         delete remote.last_write;
-        mergeInto(stats, remote);
+        C.mergeInto(stats, remote);
         try { localStorage.setItem(STATS_KEY, JSON.stringify(stats)); } catch (e) {}
       }
       await A.setDoc(ref, Object.assign({}, stats, { last_write: A.serverTimestamp() }));
@@ -192,35 +156,6 @@
   }
   addEventListener('pagehide', () => { if (remoteTimer) writeRemote(); });
   document.addEventListener('visibilitychange', () => { if (document.hidden && remoteTimer) writeRemote(); });
-
-  // Merge another copy of the stats into `target` in place (in place so that
-  // records other code is holding stay live). A result recorded in either
-  // copy survives: finished runs beat unfinished ones, longer beat shorter.
-  function mergeInto(target, src) {
-    const copy = (x) => JSON.parse(JSON.stringify(x));
-    src = upgradeStats(copy(src));
-    upgradeStats(target);
-    const ht = target.daily.history;
-    for (const [date, rs] of Object.entries(src.daily.history)) {
-      const rt = ht[date];
-      if (!rt) { ht[date] = copy(rs); continue; }
-      rt.guesses = rt.guesses || [];
-      if (!rt.done && (rs.done || (rs.guesses || []).length > rt.guesses.length)) {
-        rt.guesses = copy(rs.guesses || []);
-        rt.done = !!rs.done;
-        if (rs.score != null) rt.score = rs.score; else delete rt.score;
-      }
-      if (rt.done && rt.score == null && rs.done && rs.score != null) rt.score = rs.score;
-      rt.aggregate_contributed = !!(rt.aggregate_contributed || rs.aggregate_contributed);
-    }
-    const dt = target.daily, ds = src.daily;
-    if ((ds.last_play_date || '') > (dt.last_play_date || '')) { dt.last_play_date = ds.last_play_date; dt.streak = ds.streak; }
-    else if (ds.last_play_date && ds.last_play_date === dt.last_play_date) dt.streak = Math.max(dt.streak || 0, ds.streak || 0);
-    dt.best_streak = Math.max(dt.best_streak || 0, ds.best_streak || 0);
-    // Unlimited totals can't be merged without double counting; keep the larger.
-    if ((src.unlimited.games || 0) > (target.unlimited.games || 0)) Object.assign(target.unlimited, copy(src.unlimited));
-    return target;
-  }
 
   function initAuth() {
     const A = window.PD_AUTH;
@@ -235,16 +170,17 @@
           if (remote && remote.daily) {
             delete remote.last_write;
             const before = JSON.stringify(remote);
-            mergeInto(stats, remote);
+            C.mergeInto(stats, remote);
             if (JSON.stringify(stats) !== before) saveStatsRemote(true);   // push back what only this device had
           } else {
             saveStatsRemote(true);   // first sign-in: seed the doc with local progress
           }
           try { localStorage.setItem(STATS_KEY, JSON.stringify(stats)); } catch (e) {}
           if (game.mode === 'daily') openDaily(game.puzzle && game.puzzle.date);
+          backfillDailyTree();
         } catch (e) { console.warn('remote stats fetch failed', e); }
       } else if (!user && was) {
-        stats = loadStats();
+        stats = C.loadStats();
       }
       refreshModal();
     });
@@ -280,6 +216,35 @@
     } catch (e) { console.warn('aggregate write failed', e); }
   }
 
+  // ---------------------------------------------------------------- species trees
+  // The answer at each rank of the current run, kingdom first.
+  const answerLine = () => game.ranks.map((r) => r.options.find((o) => o.id === r.answer) || { id: r.answer, name: '', common: '' });
+
+  function addDailyEntry(puzzle, score) {
+    const line = puzzle.ranks.map((r) => r.options.find((o) => o.id === r.answer) || { id: r.answer, name: '', common: '' });
+    return C.addEntry(stats, 'daily', { t: Date.parse(puzzle.date + 'T12:00:00Z'), id: puzzle.species.id, score, line, date: puzzle.date });
+  }
+
+  // Dailies solved before trees existed (or on another device that hasn't
+  // caught up) are added from their puzzle files.
+  let backfilled = false;
+  async function backfillDailyTree() {
+    if (backfilled) return;
+    try { await loadIndex(); } catch (e) { return; }
+    backfilled = true;
+    const have = new Set(stats.trees.daily.map(C.entryKey));
+    const h = stats.daily.history;
+    const missing = Object.keys(h).filter((d) => h[d].done && h[d].score != null && !have.has(d) && game.index.days.includes(d)).sort();
+    let added = false;
+    for (const d of missing) {
+      try {
+        const p = await getJSON(`data/daily/${d}.json?v=${VER}`);
+        if (addDailyEntry(p, h[d].score)) added = true;
+      } catch (e) {}
+    }
+    if (added) { saveStats(); refreshModal(); }
+  }
+
   // ---------------------------------------------------------------- state
   const game = {
     mode: 'daily',
@@ -290,9 +255,11 @@
     replayN: 0,           // reshuffles options on each replay
     ranks: [],            // [{rank, answer, options:[{id,name,common}]}]
     guesses: [],          // every pick of the run, in order
-    tree: null,           // bc_tree.json (unlimited)
-    children: null,
-    uSpecies: null,
+    conflicts: null,      // curated pairs that never share a question
+    filter: loadFilter(), // Unlimited: {place, user, project} or nulls
+    pools: {},            // Unlimited: cached species_counts pages per filter
+    siblings: {},         // Unlimited: cached taxa?taxon_id=..&rank=.. results
+    uSerial: 0,           // bumps on every new Unlimited puzzle (stale fetches bail out)
   };
   const currentRun = () => walkRun(game.guesses, game.ranks);
 
@@ -356,12 +323,6 @@
     }).join('');
   }
 
-  // Species are shown with the genus abbreviated, field-guide style: "E. cicutarium".
-  const shortName = (name, rank) => {
-    const w = name.split(' ');
-    return rank === 'species' && w.length > 1 ? `${w[0][0]}. ${w.slice(1).join(' ')}` : name;
-  };
-
   function optionHTML(o, i, stateCls, rank) {
     const tip = o.common ? cap(o.common) : '';
     const locked = /locked/.test(stateCls);
@@ -370,7 +331,7 @@
     </div>`;
   }
 
-  const modeNote = () => game.mode === 'daily' ? (game.replay ? 'Practice' : 'Daily') : 'Unlimited';
+  const modeNote = () => game.mode === 'daily' ? (game.replay ? 'Practice' : 'Daily') : 'Unlimited · ' + filterSummary();
 
   // The question for the current rank. Options already guessed wrong stay
   // red and disabled, with their notes below, and the player picks again.
@@ -466,9 +427,11 @@
   }
 
   // ---------------------------------------------------------------- daily mode
+  let indexLoading = null;
   async function loadIndex() {
-    if (!game.index) game.index = await getJSON('data/daily_index.json?v=' + VER);
-    return game.index;
+    if (game.index) return game.index;
+    indexLoading = indexLoading || getJSON('data/daily_index.json?v=' + VER).catch((e) => { indexLoading = null; throw e; });
+    return (game.index = await indexLoading);
   }
 
   function availableDailies(today) {
@@ -494,6 +457,8 @@
 
   async function openDaily(date) {
     game.mode = 'daily';
+    game.uSerial++;
+    $('unl-filter').hidden = true;
     const today = todayISO();
     try { await loadIndex(); } catch (e) { $('stage').innerHTML = '<p>Could not load puzzles.</p>'; return; }
     const days = availableDailies(today);
@@ -509,6 +474,7 @@
       getJSON(`data/daily/${date}.json?v=${VER}`),
       getJSON(`data/explanations/${date}.json?v=${VER}`).catch(() => null),
     ]);
+    if (game.mode !== 'daily') return;
     game.puzzle = puzzle;
     game.explain = explain;
     game.ranks = puzzle.ranks;
@@ -558,12 +524,15 @@
         rec.done = true;
         rec.score = run.score;
         bumpStreak(today);
+        addDailyEntry(p, run.score);
         saveStats(true);
         track('pd_daily', { puzzle: p.number, score: run.score, misses: run.misses });
         contributeAggregate(p, Math.floor(run.score));
       } else if (rec.score !== run.score) {
         rec.score = run.score;   // old records cache their score once the puzzle is loaded
         saveStats();
+      } else if (rec.score != null && addDailyEntry(p, rec.score)) {
+        saveStats();             // solved before trees existed
       }
     }
     renderLadder(true);
@@ -574,6 +543,7 @@
     const missNote = run.misses ? `${run.misses} miss${run.misses > 1 ? 'es' : ''}` : 'No misses — perfect!';
     const foot = game.replay ? "Practice run — it doesn't count toward your score or stats."
       : 'New puzzle at midnight Pacific time.';
+    const n = stats.trees.daily.length;
     $('stage').innerHTML = `
       <div class="result">
         <div class="note">Floradiem #${p.number} · ${game.replay ? 'practice' : 'your score'}</div>
@@ -581,6 +551,7 @@
         <div class="emoji">${runEmoji(run)}</div>
         <p class="note">${esc(missNote)}</p>
         <p class="species">It was <i>${esc(sp.name)}</i>${sp.common ? ` — ${esc(cap(sp.common))}` : ''}.</p>
+        ${game.replay ? '' : `<p class="note">${treeLine('daily', n)}</p>`}
         <p class="note">${esc(foot)}</p>
         <div class="actions" style="justify-content:center">
           <button class="btn" id="btn-share">Share</button>
@@ -593,6 +564,13 @@
     $('btn-review').onclick = () => review();
     $('btn-replay').onclick = startReplay;
     $('btn-unl').onclick = () => switchMode('unlimited');
+  }
+
+  // "Added to your Daily tree (12 / 250)" with a link to it.
+  function treeLine(mode, n) {
+    const k = C.treeCount(stats.trees[mode]);
+    const inTree = n - (k - 1) * C.TREE_CAP;
+    return `<a href="tree.html?mode=${mode}&n=${k}">Your ${cap(mode)} tree</a>${k > 1 ? ` #${k}` : ''}: ${inTree} / ${C.TREE_CAP} species`;
   }
 
   // Re-show the explanations for every rank answered in this run.
@@ -624,115 +602,274 @@
     clearTimeout(t._h); t._h = setTimeout(() => { t.hidden = true; }, 1800);
   }
 
-  // ---------------------------------------------------------------- unlimited mode
-  async function loadTree() {
-    if (game.tree) return;
-    const [data, pairs, mine] = await Promise.all([
-      getJSON('data/bc_tree.json?v=' + VER),
-      getJSON('data/conflicts.json?v=' + VER).catch(() => []),
-      getJSON('data/softshade_ids.json?v=' + VER).catch(() => []),
-    ]);
-    game.conflicts = new Set(pairs.map((p) => [p.a, p.b].sort().join('|')));
-    game.tree = data.taxa;
-    game.children = {};
-    for (const [id, t] of Object.entries(data.taxa)) {
-      (game.children[t[3]] = game.children[t[3]] || []).push(+id);
+  // ---------------------------------------------------------------- unlimited: species filter
+  // {place: {id, name}, user: {id, login}, project: {id, title}} — any subset.
+  function loadFilter() {
+    try {
+      const f = JSON.parse(localStorage.getItem(FILTER_KEY)) || {};
+      return { place: f.place || null, user: f.user || null, project: f.project || null };
+    } catch (e) { return { place: null, user: null, project: null }; }
+  }
+  function saveFilter() { try { localStorage.setItem(FILTER_KEY, JSON.stringify(game.filter)); } catch (e) {} }
+  const filterActive = () => !!(game.filter.place || game.filter.user || game.filter.project);
+  const filterLabel = (kind) => {
+    const f = game.filter[kind];
+    return !f ? '' : kind === 'place' ? f.name : kind === 'user' ? f.login : f.title;
+  };
+  function filterSummary() {
+    const parts = ['user', 'place', 'project'].map(filterLabel).filter(Boolean);
+    return parts.length ? parts.join(' · ') : 'worldwide';
+  }
+  // Query-string parameters that narrow iNaturalist searches to the filter.
+  function filterParams() {
+    const p = {};
+    if (game.filter.user) p.user_id = game.filter.user.id;
+    if (game.filter.place) p.place_id = game.filter.place.id;
+    if (game.filter.project) p.project_id = game.filter.project.id;
+    return p;
+  }
+  const qs = (o) => Object.entries(o).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join('&');
+
+  let pending = null;   // the form's unsaved choices
+  function renderFilterBar() {
+    const box = $('unl-filter');
+    box.hidden = false;
+    const chips = ['user', 'place', 'project'].filter((k) => game.filter[k]).map((k) =>
+      `<span class="chip" title="${esc(cap(k))}">${k === 'user' ? '@' : ''}${esc(filterLabel(k))}<button class="chip-x" data-kind="${k}" aria-label="Remove ${k} filter">×</button></span>`).join('');
+    box.innerHTML = `
+      <div class="filter-row">
+        <span class="filter-label">Species from</span>
+        ${chips || '<span class="chip plain">anywhere on iNaturalist</span>'}
+        <button class="btn ghost small" id="filter-edit">${filterActive() ? 'Change' : 'Narrow down'}</button>
+      </div>
+      <form class="filter-form" id="filter-form" hidden>
+        ${['place', 'user', 'project'].map((k) => `
+        <label class="ac">
+          <span>${{ place: 'Place', user: 'iNaturalist user', project: 'Project' }[k]}</span>
+          <input type="search" autocomplete="off" data-kind="${k}" placeholder="${{ place: 'e.g. Serbia, Stanley Park', user: 'e.g. softshade', project: 'e.g. City Nature Challenge' }[k]}">
+          <ul class="sugg" hidden></ul>
+        </label>`).join('')}
+        <p class="note">Species come from research-grade observations matching every field you fill in; photos from those observations are shown first.</p>
+        <div class="actions">
+          <button type="submit" class="btn">Apply</button>
+          <button type="button" class="btn ghost" id="filter-clear">Anywhere</button>
+          <button type="button" class="btn ghost" id="filter-cancel">Cancel</button>
+        </div>
+      </form>`;
+    box.querySelectorAll('.chip-x').forEach((b) => { b.onclick = () => { game.filter[b.dataset.kind] = null; applyFilter(); }; });
+    $('filter-edit').onclick = () => openFilterForm();
+    $('filter-clear').onclick = () => { game.filter = { place: null, user: null, project: null }; applyFilter(); };
+    $('filter-cancel').onclick = () => { $('filter-form').hidden = true; };
+    $('filter-form').onsubmit = (e) => { e.preventDefault(); game.filter = pending; applyFilter(); };
+    box.querySelectorAll('input[data-kind]').forEach(wireAutocomplete);
+  }
+  function openFilterForm() {
+    pending = Object.assign({}, game.filter);
+    const form = $('filter-form');
+    form.hidden = false;
+    form.querySelectorAll('input[data-kind]').forEach((inp) => { inp.value = filterLabel(inp.dataset.kind); inp.classList.toggle('chosen', !!pending[inp.dataset.kind]); });
+    form.querySelector('input').focus();
+  }
+  function applyFilter() {
+    saveFilter();
+    track('pd_filter', { place: !!game.filter.place, user: !!game.filter.user, project: !!game.filter.project });
+    newUnlimited();
+  }
+
+  // Suggestions from iNaturalist's autocomplete endpoints while typing.
+  function wireAutocomplete(inp) {
+    const kind = inp.dataset.kind;
+    const list = inp.parentNode.querySelector('.sugg');
+    let timer = null, seq = 0;
+    const choose = (item) => {
+      pending[kind] = item;
+      inp.value = kind === 'user' ? item.login : item.name || item.title;
+      inp.classList.add('chosen');
+      list.hidden = true;
+    };
+    inp.oninput = () => {
+      pending[kind] = null;
+      inp.classList.remove('chosen');
+      clearTimeout(timer);
+      const q = inp.value.trim();
+      if (q.length < 2) { list.hidden = true; return; }
+      timer = setTimeout(async () => {
+        const my = ++seq;
+        let items = [];
+        try {
+          const d = await getJSON(`${API}${kind}s/autocomplete?q=${encodeURIComponent(q)}&per_page=6`);
+          items = d.results.map((r) => kind === 'place' ? { id: r.id, name: r.display_name || r.name }
+            : kind === 'user' ? { id: r.id, login: r.login, name: r.name || '', count: r.observations_count || 0 }
+            : { id: r.id, title: r.title });
+        } catch (e) {}
+        if (my !== seq) return;
+        list.innerHTML = items.length ? items.map((it, i) => `<li data-i="${i}">${
+          kind === 'user' ? `<b>${esc(it.login)}</b>${it.name ? ` · ${esc(it.name)}` : ''}<small>${it.count.toLocaleString()} observations</small>`
+          : esc(it.name || it.title)}</li>`).join('') : '<li class="none">No matches</li>';
+        list.hidden = false;
+        list.querySelectorAll('li[data-i]').forEach((li) => { li.onmousedown = (e) => { e.preventDefault(); choose(items[+li.dataset.i]); }; });
+      }, 250);
+    };
+    inp.onblur = () => setTimeout(() => { list.hidden = true; }, 150);
+    inp.onkeydown = (e) => {
+      if (e.key === 'Enter' && !list.hidden) { const li = list.querySelector('li[data-i]'); if (li) { e.preventDefault(); li.onmousedown(e); } }
+    };
+  }
+
+  // ---------------------------------------------------------------- unlimited: picking a species
+  // The species pool is iNaturalist's species_counts for the filter (research
+  // grade, plants/fungi/chromists/protozoa), most-observed first. A draw is
+  // weighted toward the top: index = N · u³ for uniform u, so a tenth of
+  // draws come from the 1% most-observed species and about half from the
+  // commonest 10%, while the long tail still turns up.
+  async function poolPage(page) {
+    const key = JSON.stringify(filterParams());
+    const pool = game.pools[key] = game.pools[key] || { pages: {} };
+    if (!pool.pages[page]) {
+      pool.pages[page] = getJSON(`${API}observations/species_counts?${qs(Object.assign({
+        taxon_id: POOL_TAXA, quality_grade: 'research', per_page: PAGE, page }, filterParams()))}`);
+      pool.pages[page].catch(() => { delete pool.pages[page]; });
     }
-    game.uSpecies = Object.keys(data.taxa).filter((id) => data.taxa[id][2] === 6 && lineage(+id).length === 7).map(Number);
-    const usable = new Set(game.uSpecies);
-    game.uMine = mine.filter((id) => usable.has(id));
+    const d = await pool.pages[page];
+    pool.total = Math.min(d.total_results, WORLD_CAP);
+    return d.results;
   }
-  function lineage(id) {
-    const out = [];
-    while (id) { out.unshift(id); id = game.tree[id][3]; }
-    return out;
+  async function drawSpecies() {
+    const first = await poolPage(1);
+    const total = game.pools[JSON.stringify(filterParams())].total;
+    if (!total) return null;
+    const idx = Math.min(total - 1, Math.floor(total * Math.pow(Math.random(), 3)));
+    const page = Math.floor(idx / PAGE) + 1;
+    const results = page === 1 ? first : await poolPage(page);
+    const r = results[idx % PAGE] || results[Math.floor(Math.random() * results.length)];
+    return r ? r.taxon : null;
   }
-  const treeOpt = (id) => ({ id, name: game.tree[id][0], common: game.tree[id][1] });
+
+  // Full main-rank lineage of a taxon from iNaturalist, kingdom first, or null
+  // when a rank is missing or the leaf is below species (a subspecies turns
+  // into its species).
+  async function fetchLineage(id) {
+    const d = await getJSON(`${API}taxa/${id}`);
+    let t = d.results[0];
+    if (!t) return null;
+    if (t.rank !== 'species') {
+      const sp = (t.ancestors || []).find((a) => a.rank === 'species');
+      if (!sp || t.rank_level >= 10) return null;
+      return fetchLineage(sp.id);
+    }
+    game.uWiki[t.id] = t;
+    const by = {};
+    for (const a of t.ancestors || []) by[a.rank] = a;
+    by.species = t;
+    const line = RANKS.map((rk) => by[rk]);
+    if (line.some((x) => !x)) return null;
+    return line.map((x) => ({ id: x.id, name: x.name, common: x.preferred_common_name || '' }));
+  }
+
+  // Photos for a species: from the filter's own observations first (the
+  // user's, the place's, the project's), topped up from everyone's until
+  // there are at least PHOTO_MIN. Fewer than that and the species is skipped.
+  async function fetchPhotos(sid) {
+    const photos = [], seen = new Set();
+    const add = (obs) => {
+      for (const o of obs.results) for (const ph of o.photos.slice(0, 2)) {
+        if (seen.has(ph.id) || photos.length >= PHOTO_MAX) continue;
+        seen.add(ph.id);
+        photos.push({ src: ph.url.replace('/square.', '/large.'), attribution: ph.attribution, obs: o.uri });
+      }
+    };
+    const base = { taxon_id: sid, quality_grade: 'research', photos: 'true', per_page: 12, order_by: 'votes' };
+    if (filterActive()) {
+      try { add(await getJSON(`${API}observations?${qs(Object.assign({}, base, filterParams()))}`)); } catch (e) {}
+    }
+    if (photos.length < PHOTO_MIN) add(await getJSON(`${API}observations?${qs(base)}`));
+    return photos.length >= PHOTO_MIN ? photos : null;
+  }
+
+  async function loadConflicts() {
+    if (game.conflicts) return;
+    const pairs = await getJSON('data/conflicts.json?v=' + VER).catch(() => []);
+    game.conflicts = new Set(pairs.map((p) => [p.a, p.b].sort().join('|')));
+  }
   const pickRandom = (arr, n) => seededShuffle(arr, String(Math.random())).slice(0, n);
 
-  async function buildUnlimitedRanks(sid) {
+  async function buildUnlimitedRanks(line) {
     const ranks = [];
-    const line = lineage(sid);
     for (let i = 0; i < line.length; i++) {
-      const id = line[i];
-      const wrong = i === 0 ? KINGDOMS.filter((k) => k.id !== id) : await wrongOptions(id, i);
-      const answer = i === 0 ? KINGDOMS.find((k) => k.id === id) || treeOpt(id) : treeOpt(id);
-      ranks.push({ rank: RANKS[i], answer: id, options: pickRandom([answer, ...wrong], 4) });
+      const answer = i === 0 ? KINGDOMS.find((k) => k.id === line[i].id) || line[i] : line[i];
+      const wrong = i === 0 ? KINGDOMS.filter((k) => k.id !== answer.id) : await wrongOptions(line, i);
+      ranks.push({ rank: RANKS[i], answer: answer.id, options: pickRandom([answer, ...wrong], 4) });
     }
     return ranks;
   }
 
-  // Siblings that grow in BC (common ones first), then worldwide siblings;
-  // when the group has no other members, cousins from the next group up.
-  // Arguable duplicates (shared common name, or a curated pair where a regional
-  // flora lumps what iNaturalist splits) never appear in the same question.
+  // Wrong answers: other members of the same group worldwide, drawn at random
+  // from the dozen most observed; when the group has too few, cousins from
+  // the next group up. Arguable duplicates (shared common name, or a curated
+  // pair where a regional flora lumps what iNaturalist splits) never appear in
+  // the same question.
   const commonKey = (s) => (s || '').toLowerCase().replace(/[^a-z]/g, '');
   function clash(a, b) {
     if (game.conflicts.has([a.id, b.id].sort().join('|'))) return true;
     const ca = commonKey(a.common);
     return !!ca && ca === commonKey(b.common);
   }
-
-  async function wrongOptions(id, rankI) {
-    const line = lineage(id);
-    const taken = new Set([id]);
+  async function wrongOptions(line, rankI) {
+    const answer = line[rankI];
+    const taken = new Set([answer.id]);
     const out = [];
-    const ok = (o) => !taken.has(o.id) && ![treeOpt(id), ...out].some((x) => clash(o, x));
-    const members = Object.keys(game.tree).map(Number).filter((t) => game.tree[t][2] === rankI);
-    for (let k = line.length - 2; k >= 0 && out.length < 3; k--) {
-      const anc = line[k];
-      const bc = members.filter((t) => !taken.has(t) && lineage(t).includes(anc))
-        .sort((a, b) => game.tree[b][4] - game.tree[a][4]).slice(0, 8);
-      for (const t of pickRandom(bc, bc.length)) {
-        if (out.length < 3 && ok(treeOpt(t))) { out.push(treeOpt(t)); taken.add(t); }
-      }
-      if (out.length < 3) {
-        for (const o of await worldMembers(anc, rankI, taken, 12)) {
-          if (out.length < 3 && ok(o)) { out.push(o); taken.add(o.id); }
-        }
-      }
+    const ok = (o) => !taken.has(o.id) && ![answer, ...out].some((x) => clash(o, x));
+    for (let k = rankI - 1; k >= 0 && out.length < 3; k--) {
+      const members = await groupMembers(line[k].id, rankI);
+      const cands = [...pickRandom(members.slice(0, 12), 12), ...members.slice(12)];
+      for (const o of cands) if (out.length < 3 && ok(o)) { out.push(o); taken.add(o.id); }
     }
     return out;
   }
-  async function worldMembers(anc, rankI, taken, n) {
-    try {
-      const d = await getJSON(`${API}taxa?taxon_id=${anc}&rank=${RANKS[rankI]}&is_active=true&order_by=observations_count&per_page=12`);
-      return d.results.filter((t) => !taken.has(t.id) && t.rank === RANKS[rankI]).slice(0, n)
-        .map((t) => ({ id: t.id, name: t.name, common: t.preferred_common_name || '' }));
-    } catch (e) { return []; }
+  async function groupMembers(anc, rankI) {
+    const key = `${anc}:${rankI}`;
+    if (!game.siblings[key]) {
+      game.siblings[key] = getJSON(`${API}taxa?taxon_id=${anc}&rank=${RANKS[rankI]}&is_active=true&order_by=observations_count&per_page=30`)
+        .then((d) => d.results.filter((t) => t.rank === RANKS[rankI]).map((t) => ({ id: t.id, name: t.name, common: t.preferred_common_name || '' })))
+        .catch(() => { delete game.siblings[key]; return []; });
+    }
+    return game.siblings[key];
   }
 
   async function newUnlimited() {
     game.mode = 'unlimited';
     game.replay = false;
+    const serial = ++game.uSerial;
     $('daily-picker').innerHTML = '';
     $('ladder').innerHTML = '';
     setPhotos([], false);
-    $('stage').innerHTML = '<p class="note">Finding a species…</p>';
-    try { await loadTree(); } catch (e) { $('stage').innerHTML = '<p>Could not load the species list.</p>'; return; }
-    for (let tries = 0; tries < 5; tries++) {
-      // 80% of the time, something softshade has identified; otherwise any BC species.
-      const pool = game.uMine.length && Math.random() < SOFTSHADE_SHARE ? game.uMine : game.uSpecies;
-      const sid = pool[Math.floor(Math.random() * pool.length)];
-      let obs;
+    renderFilterBar();
+    $('stage').innerHTML = `<p class="note">Finding a species (${esc(filterSummary())})…</p>`;
+    try { await loadConflicts(); } catch (e) {}
+    let empty = false;
+    for (let tries = 0; tries < 6 && serial === game.uSerial; tries++) {
       try {
-        obs = await getJSON(`${API}observations?taxon_id=${sid}&place_id=${BC_PLACE}&quality_grade=research&photos=true&per_page=12&order_by=votes`);
-      } catch (e) { continue; }
-      const photos = [];
-      for (const o of obs.results) for (const ph of o.photos.slice(0, 2)) {
-        photos.push({ src: ph.url.replace('/square.', '/large.'), attribution: ph.attribution, obs: o.uri });
-      }
-      if (!photos.length) continue;
-      if (game.mode !== 'unlimited') return;
-      game.uSid = sid;
-      game.uPhotos = photos.slice(0, 16);
-      game.uWiki = {};
-      game.ranks = await buildUnlimitedRanks(sid);
-      game.guesses = [];
-      setPhotos(game.uPhotos, false);
-      return renderQuestion();
+        game.uWiki = {};
+        const taxon = await drawSpecies();
+        if (!taxon) { empty = true; break; }
+        const line = await fetchLineage(taxon.id);
+        if (!line) continue;
+        const photos = await fetchPhotos(line[6].id);
+        if (!photos) continue;
+        const ranks = await buildUnlimitedRanks(line);
+        if (serial !== game.uSerial) return;
+        game.uLine = line;
+        game.uPhotos = photos;
+        game.ranks = ranks;
+        game.guesses = [];
+        setPhotos(game.uPhotos, false);
+        return renderQuestion();
+      } catch (e) { console.warn('unlimited draw failed', e); }
     }
-    $('stage').innerHTML = '<p>iNaturalist did not answer — check your connection and try again.</p>' +
+    if (serial !== game.uSerial) return;
+    $('stage').innerHTML = (empty
+      ? `<p>No research-grade plants, fungi, seaweeds or slime molds found for <b>${esc(filterSummary())}</b>. Try another filter.</p>`
+      : '<p>iNaturalist did not answer — check your connection and try again.</p>') +
       '<div class="actions"><button class="btn" id="btn-again">Try again</button></div>';
     $('btn-again').onclick = newUnlimited;
   }
@@ -780,11 +917,12 @@
     if (run.misses === 0) u.perfect += 1;
     const bucket = Math.floor(run.score);
     u.distribution[bucket] = (u.distribution[bucket] || 0) + 1;
+    const sp = game.uLine[6];
+    C.addEntry(stats, 'unlimited', { t: Date.now(), id: sp.id, score: run.score, line: answerLine() });
     saveStats(true);
-    track('pd_unlimited', { score: run.score, misses: run.misses });
+    track('pd_unlimited', { score: run.score, misses: run.misses, filtered: filterActive() });
     renderLadder();
     setPhotos(game.uPhotos, true);
-    const sp = treeOpt(game.uSid);
     const missNote = run.misses ? `${run.misses} miss${run.misses > 1 ? 'es' : ''}` : 'No misses — perfect!';
     $('stage').innerHTML = `
       <div class="result">
@@ -794,6 +932,7 @@
         <p class="note">${esc(missNote)}</p>
         <p class="species">It was <i>${esc(sp.name)}</i>${sp.common ? ` — ${esc(cap(sp.common))}` : ''}.
           <a href="https://www.inaturalist.org/taxa/${sp.id}" target="_blank" rel="noopener">About this species ↗</a></p>
+        <p class="note">${treeLine('unlimited', stats.trees.unlimited.length)}</p>
         <div class="actions" style="justify-content:center">
           <button class="btn" id="btn-again">Next species</button>
           <button class="btn ghost" id="btn-share">Share</button>
@@ -851,6 +990,22 @@
     }).join('') + '</div>';
   }
 
+  // The species-tree card in the stats modal: how full the current tree is,
+  // with links to it and to any earlier, completed trees.
+  function treeCard(mode) {
+    const list = stats.trees[mode];
+    const k = C.treeCount(list);
+    const inTree = list.length - (k - 1) * C.TREE_CAP;
+    const past = [];
+    for (let i = 1; i < k; i++) past.push(`<a href="tree.html?mode=${mode}&n=${i}">#${i}</a>`);
+    return `<div class="treecard">
+      <div><b>Your ${cap(mode)} species tree</b>${k > 1 ? ` #${k}` : ''}<br>
+        <span class="note">${inTree} / ${C.TREE_CAP} species${list.length ? '' : ' — solve a puzzle to plant it'}</span></div>
+      <div class="treelinks"><a class="btn small" href="tree.html?mode=${mode}&n=${k}">View tree</a>
+        ${past.length ? `<span class="note">Earlier: ${past.join(' ')}</span>` : ''}</div>
+    </div>`;
+  }
+
   function statsView() {
     const tabs = ['daily', 'unlimited', 'world'].map((t) =>
       `<button data-tab="${t}" class="${statsTab === t ? 'active' : ''}">${cap(t)}</button>`).join('');
@@ -874,6 +1029,7 @@
           <div><b>${stats.daily.last_play_date && daysBetween(stats.daily.last_play_date, today) <= 1 ? stats.daily.streak : 0}</b><span>Streak</span></div>
           <div><b>${stats.daily.best_streak}</b><span>Best streak</span></div>
         </div>
+        ${treeCard('daily')}
         <h3>Scores</h3>${bars(dist)}
         ${rows.length ? `<table class="history"><tr><th>Date</th><th>#</th><th>Score</th></tr>${rows.slice(0, 14).join('')}</table>` : ''}`;
     } else if (statsTab === 'unlimited') {
@@ -883,7 +1039,7 @@
           <div><b>${u.games ? fmtScore((u.total_score || 0) / u.games) : '—'}</b><span>Avg score</span></div>
           <div><b>${u.perfect}</b><span>Perfect</span></div>
           <div><b>${u.games ? Math.round((100 * u.perfect) / u.games) + '%' : '—'}</b><span>Perfect %</span></div>
-        </div><h3>Scores</h3>${bars(u.distribution)}`;
+        </div>${treeCard('unlimited')}<h3>Scores</h3>${bars(u.distribution)}`;
     } else {
       const mine = stats.daily.history[today];
       body = !world ? '<p class="note">Loading…</p>'
@@ -922,8 +1078,13 @@
       <p>The daily puzzle counts on its own day only. Puzzles from the past week stay available to <b>replay as practice</b>,
          which never changes your score or stats.</p>
       <h3>Unlimited</h3>
-      <p>Random plants, fungi, lichens, seaweeds and slime molds from all research-grade BC observations on iNaturalist, as many as you like,
-         scored the same way.</p>
+      <p>Random plants, fungi, lichens, seaweeds and slime molds from research-grade iNaturalist observations anywhere in the
+         world, as many as you like, scored the same way. Often-observed species come up more. Narrow the pool to a
+         <b>place</b>, an <b>iNaturalist user</b> or a <b>project</b> — their own photos are shown first.</p>
+      <h3>Your species trees</h3>
+      <p>Every puzzle you solve is added to your personal tree of life — one tree for Daily, one for Unlimited — with the
+         points you earned beside each species. A tree holds ${C.TREE_CAP} species; after that a new one starts and the old
+         ones stay on your <a href="tree.html">tree page</a>.</p>
       <p class="note">New daily puzzle at midnight Pacific time.</p>`;
   }
   $('btn-help').onclick = () => openModal(helpView);
@@ -941,5 +1102,8 @@
   try {
     if (localStorage.getItem('plantdiem_seen_help') !== '2') { localStorage.setItem('plantdiem_seen_help', '2'); openModal(helpView); }
   } catch (e) {}
-  openDaily();
+  // ?mode=unlimited opens straight into Unlimited (links from the tree page).
+  switchMode(new URLSearchParams(location.search).get('mode') === 'unlimited' ? 'unlimited' : 'daily');
+  backfillDailyTree();
+  window.PD_DEBUG = { game, stats: () => stats };   // console / test harness access
 })();
