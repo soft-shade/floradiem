@@ -12,6 +12,7 @@
   --panel: #fafafa;
   --miss: #c0392b;
   --miss-pale: #fbeceA;
+  --retry: #b08a00;
   --radius: 10px;
 }
 
@@ -95,6 +96,7 @@ main { max-width: 760px; margin: 0 auto; padding: 12px 16px 24px; }
 .ladder li.current { outline: 2px solid var(--green); background: #fff; color: var(--ink); }
 .ladder li.ok { background: var(--green); color: #fff; }
 .ladder li.miss { background: var(--miss); color: #fff; }
+.ladder li.ok.retry { background: var(--retry); }
 
 /* ---- question ---- */
 .prompt { font-size: 1.5rem; font-weight: 900; margin: 4px 0 10px; color: var(--green-deep); }
@@ -112,6 +114,8 @@ main { max-width: 760px; margin: 0 auto; padding: 12px 16px 24px; }
 .opt.correct { border-color: var(--green); background: var(--green); }
 .opt.correct .opt-main, .opt.correct .opt-main .common { color: #fff; }
 .opt.chosen-wrong { border-color: var(--miss); background: var(--miss-pale); }
+.opt.chosen-wrong .opt-main { color: var(--miss); text-decoration: line-through; }
+.opt.chosen-wrong .opt-main .common { color: var(--miss); opacity: .8; }
 .opt.locked .opt-main { cursor: default; }
 
 /* ---- explanation ---- */
@@ -140,6 +144,7 @@ main { max-width: 760px; margin: 0 auto; padding: 12px 16px 24px; }
 /* ---- results ---- */
 .result { text-align: center; padding: 6px 0; }
 .result .big { font-size: 2.4rem; font-weight: 900; color: var(--green-dark); line-height: 1.1; }
+.result .emoji { font-size: 1.4rem; letter-spacing: 1px; margin: 4px 0; word-break: break-all; }
 .result .attempts { display: inline-grid; grid-template-columns: auto auto auto; gap: 2px 12px; margin: 10px auto; font-size: .9rem; text-align: left; }
 .result .species { font-size: 1.2rem; }
 .result .species i { font-weight: 700; }

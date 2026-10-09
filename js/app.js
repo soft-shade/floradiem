@@ -1,17 +1,21 @@
 /* Floradiem — daily plant identification game.
  *
- * Daily scoring: a puzzle can be attempted once per day for 7 days, starting
- * on its own date. Attempt j (0 = puzzle day) is a full run from Kingdom; the
- * number of ranks answered correctly before the first miss becomes decimal
- * digit j of the score, so 1 then 2 then 2 ... reads 1.22... A perfect 7 ends
- * the puzzle. The score is final once solved or after the 7th day.
+ * Scoring (Daily and Unlimited alike): a run always goes from Kingdom down to
+ * Species. Every correct answer scores 1 point until the first miss. A miss
+ * doesn't end the run or reveal the answer: that option turns red with notes
+ * on why it isn't the one, and you pick again at the same rank. After one miss
+ * each correct answer is worth 1/2, after two 1/3, then 1/4 and so on. Scores
+ * are rounded to three decimals; 7 is perfect.
+ *
+ * The daily puzzle only counts on its own date. Puzzles from the past week can
+ * be replayed as practice, which never touches the score or stats.
  */
 (function () {
   'use strict';
 
   const VER = window.PD_VER || '';
   const RANKS = ['kingdom', 'phylum', 'class', 'order', 'family', 'genus', 'species'];
-  const MAX_ATTEMPTS = 7;
+  const WINDOW_DAYS = 7;          // how long a daily stays in the picker (for practice)
   const TZ = 'America/Vancouver';
   const SITE = 'https://soft-shade.github.io/floradiem/';
   // Storage keys and Firestore collections keep the game's original name
@@ -47,7 +51,7 @@
   const daysBetween = (a, b) => Math.round((Date.parse(b + 'T12:00:00Z') - Date.parse(a + 'T12:00:00Z')) / 864e5);
   const prettyDate = (iso) => new Date(iso + 'T12:00:00Z').toLocaleDateString(undefined, { month: 'short', day: 'numeric', timeZone: 'UTC' });
 
-  // Seeded shuffle so an attempt's option order survives a reload.
+  // Seeded shuffle so a run's option order survives a reload.
   function seededShuffle(arr, seedStr) {
     let h = 2166136261;
     for (const c of seedStr) h = Math.imul(h ^ c.charCodeAt(0), 16777619);
@@ -63,12 +67,64 @@
     return r.json();
   }
 
+  // ---------------------------------------------------------------- scoring
+  const round3 = (x) => Math.round(x * 1000) / 1000;
+  const fmtScore = (x) => (x == null ? '—' : String(round3(x)));
+  const pointLabel = (misses) => (misses ? `1/${misses + 1} pt` : '1 pt');
+
+  // Walk a run's guesses in order. A correct guess scores 1/(misses so far + 1)
+  // and moves down a rank; a wrong one adds a miss and stays at the same rank.
+  function walkRun(guesses, ranks) {
+    let level = 0, misses = 0, score = 0;
+    const marks = [];                                   // per guess: correct?
+    const wrongHere = [];                               // wrong ids at the current rank
+    const wrongsAt = ranks.map(() => 0);                // misses per rank
+    for (const id of guesses || []) {
+      if (level >= ranks.length) break;
+      const ok = id === ranks[level].answer;
+      marks.push(ok);
+      if (ok) { score += 1 / (misses + 1); level++; wrongHere.length = 0; }
+      else { misses++; wrongsAt[level]++; wrongHere.push(id); }
+    }
+    return {
+      level, misses, score: round3(score), marks, wrongHere, wrongsAt,
+      done: level === ranks.length,
+      last: marks.length ? marks[marks.length - 1] : null,
+    };
+  }
+  const runEmoji = (run) => run.marks.map((m) => (m ? '🌿' : '🍂')).join('');
+
   // ---------------------------------------------------------------- stats
   const defaultStats = () => ({
-    version: 1,
+    version: 2,
     daily: { history: {}, streak: 0, best_streak: 0, last_play_date: null },
-    unlimited: { games: 0, perfect: 0, total_correct: 0, distribution: {} },
+    unlimited: { games: 0, perfect: 0, total_score: 0, distribution: {} },
   });
+
+  // Per-puzzle record: { guesses: [ids], done, score, aggregate_contributed }.
+  // Records from the old attempts-per-day scheme are converted: the puzzle-day
+  // run (1 point per rank before the first miss) is exactly what the new rules
+  // would have scored, so it carries over; later-day retries are dropped.
+  function upgradeRecord(r) {
+    if (!r) return null;
+    if (r.guesses) return r;
+    const a0 = r.attempts && r.attempts[0];
+    if (!a0) return null;
+    const out = { guesses: (a0.picks || []).slice(), done: !!a0.done, aggregate_contributed: !!r.aggregate_contributed };
+    const depth = r.depth0 != null ? r.depth0 : r.digits && r.digits[0] != null ? r.digits[0] : null;
+    if (out.done && depth != null) out.score = depth;
+    return out;
+  }
+  function upgradeStats(s) {
+    s.daily = s.daily || { history: {} };
+    const h = s.daily.history = s.daily.history || {};
+    for (const k of Object.keys(h)) { const u = upgradeRecord(h[k]); if (u) h[k] = u; else delete h[k]; }
+    const u = s.unlimited = s.unlimited || { games: 0, perfect: 0, distribution: {} };
+    if (u.total_score == null) u.total_score = u.total_correct || 0;
+    delete u.total_correct;
+    s.version = 2;
+    return s;
+  }
 
   let stats = loadStats();
   let authUser = null;
@@ -76,7 +132,7 @@
   function loadStats() {
     try {
       const s = JSON.parse(localStorage.getItem(STATS_KEY));
-      if (s && s.daily && s.unlimited) return s;
+      if (s && s.daily && s.unlimited) return upgradeStats(s);
     } catch (e) {}
     return defaultStats();
   }
@@ -139,31 +195,30 @@
 
   // Merge another copy of the stats into `target` in place (in place so that
   // records other code is holding stay live). A result recorded in either
-  // copy survives: finished attempts beat unfinished ones, solved stays solved.
+  // copy survives: finished runs beat unfinished ones, longer beat shorter.
   function mergeInto(target, src) {
     const copy = (x) => JSON.parse(JSON.stringify(x));
-    target.daily = target.daily || { history: {} };
-    const ht = target.daily.history = target.daily.history || {};
-    for (const [date, rs] of Object.entries((src.daily && src.daily.history) || {})) {
+    src = upgradeStats(copy(src));
+    upgradeStats(target);
+    const ht = target.daily.history;
+    for (const [date, rs] of Object.entries(src.daily.history)) {
       const rt = ht[date];
       if (!rt) { ht[date] = copy(rs); continue; }
-      rt.attempts = rt.attempts || {};
-      for (const [j, att] of Object.entries(rs.attempts || {})) {
-        const cur = rt.attempts[j];
-        if (!cur || (!cur.done && (att.done || att.picks.length > cur.picks.length))) rt.attempts[j] = copy(att);
+      rt.guesses = rt.guesses || [];
+      if (!rt.done && (rs.done || (rs.guesses || []).length > rt.guesses.length)) {
+        rt.guesses = copy(rs.guesses || []);
+        rt.done = !!rs.done;
+        if (rs.score != null) rt.score = rs.score; else delete rt.score;
       }
-      rt.solved = !!(rt.solved || rs.solved);
+      if (rt.done && rt.score == null && rs.done && rs.score != null) rt.score = rs.score;
       rt.aggregate_contributed = !!(rt.aggregate_contributed || rs.aggregate_contributed);
-      if (rs.digits) rt.digits = rs.digits.map((d, k) => Math.max(d || 0, (rt.digits || [])[k] || 0));
-      if (rt.depth0 == null && rs.depth0 != null) rt.depth0 = rs.depth0;
     }
-    const dt = target.daily, ds = src.daily || {};
+    const dt = target.daily, ds = src.daily;
     if ((ds.last_play_date || '') > (dt.last_play_date || '')) { dt.last_play_date = ds.last_play_date; dt.streak = ds.streak; }
     else if (ds.last_play_date && ds.last_play_date === dt.last_play_date) dt.streak = Math.max(dt.streak || 0, ds.streak || 0);
     dt.best_streak = Math.max(dt.best_streak || 0, ds.best_streak || 0);
     // Unlimited totals can't be merged without double counting; keep the larger.
-    target.unlimited = target.unlimited || { games: 0, perfect: 0, total_correct: 0, distribution: {} };
-    if (((src.unlimited || {}).games || 0) > (target.unlimited.games || 0)) Object.assign(target.unlimited, copy(src.unlimited));
+    if ((src.unlimited.games || 0) > (target.unlimited.games || 0)) Object.assign(target.unlimited, copy(src.unlimited));
     return target;
   }
 
@@ -196,33 +251,9 @@
   }
   if (window.PD_AUTH) initAuth(); else window.addEventListener('pd-auth-ready', initAuth, { once: true });
 
-  // Per-puzzle record: { attempts: { j: { picks: [ids], done } }, solved }
   function record(date) {
     const h = stats.daily.history;
-    return h[date] || (h[date] = { attempts: {}, solved: false });
-  }
-  const runDepth = (picks, ranks) => {
-    let d = 0;
-    while (d < picks.length && picks[d] === ranks[d].answer) d++;
-    return d;
-  };
-  function attemptDigits(date, ranks) {
-    const rec = stats.daily.history[date];
-    const digits = [];
-    for (let j = 0; j < MAX_ATTEMPTS; j++) {
-      const a = rec && rec.attempts[j];
-      digits.push(a && a.done ? runDepth(a.picks, ranks) : null);
-    }
-    return digits;
-  }
-  // Score as a string built from digits, so it never shows float noise.
-  function scoreString(digits) {
-    const d = digits.map((x) => x || 0);
-    let frac = d.slice(1).join('').replace(/0+$/, '');
-    return d[0] + (frac ? '.' + frac : '.0');
-  }
-  function puzzleFinal(date, digits, today) {
-    return digits.includes(7) || daysBetween(date, today) >= MAX_ATTEMPTS - 1;
+    return h[date] || (h[date] = { guesses: [], done: false });
   }
 
   function bumpStreak(today) {
@@ -233,14 +264,15 @@
     d.last_play_date = today;
   }
 
-  async function contributeAggregate(puzzle, depth) {
+  // World stats: how players' scores spread, bucketed by whole point (7 = perfect).
+  async function contributeAggregate(puzzle, bucket) {
     const A = window.PD_AUTH;
     const rec = record(puzzle.date);
     if (!authUser || !A || rec.aggregate_contributed) return;
     try {
       await A.setDoc(A.doc(A.db, 'plantdiem_aggregates', puzzle.date), {
         date: puzzle.date, puzzle_number: puzzle.number,
-        distribution: { [String(depth)]: A.increment(1) },
+        distribution: { [String(bucket)]: A.increment(1) },
         total_plays: A.increment(1), last_updated: A.serverTimestamp(),
       }, { merge: true });
       rec.aggregate_contributed = true;
@@ -254,14 +286,15 @@
     index: null,          // daily_index.json
     puzzle: null,         // current daily puzzle
     explain: null,        // its explanations file (or null)
-    attempt: 0,           // attempt index j for the current daily
+    replay: false,        // practice run: nothing is saved
+    replayN: 0,           // reshuffles options on each replay
     ranks: [],            // [{rank, answer, options:[{id,name,common}]}]
-    picks: [],
-    showingExplain: false,
+    guesses: [],          // every pick of the run, in order
     tree: null,           // bc_tree.json (unlimited)
     children: null,
     uSpecies: null,
   };
+  const currentRun = () => walkRun(game.guesses, game.ranks);
 
   // ---------------------------------------------------------------- carousel
   function setPhotos(photos, revealLinks) {
@@ -305,22 +338,23 @@
   });
 
   // ---------------------------------------------------------------- ladder + question
-  function renderLadder() {
-    const depthDone = game.picks.length;
+  // `closed`: the run is over even though it didn't reach Species (old records).
+  function renderLadder(closed) {
+    const run = currentRun();
     $('ladder').innerHTML = RANKS.map((r, i) => {
       let cls = '', label = '·';
-      if (i < depthDone) {
-        const ok = game.picks[i] === game.ranks[i].answer;
-        cls = ok ? 'ok' : 'miss';
-        const ans = game.ranks[i].options.find((o) => o.id === game.ranks[i].answer);
+      const ans = game.ranks[i] && game.ranks[i].options.find((o) => o.id === game.ranks[i].answer);
+      if (i < run.level) {
+        cls = run.wrongsAt[i] ? 'ok retry' : 'ok';
         label = ans ? shortName(ans.name, RANKS[i]) : '';
-      } else if (i === depthDone && !runOver()) cls = 'current';
-      return `<li class="${cls}" title="${esc(cap(r))}"><b>${cap(r)}</b>${esc(label)}</li>`;
+      } else if (i === run.level && !run.done) {
+        if (closed) { cls = 'miss'; label = ans ? shortName(ans.name, RANKS[i]) : ''; }
+        else cls = 'current';
+      }
+      const tip = cap(r) + (i < run.level && run.wrongsAt[i] ? ` · ${run.wrongsAt[i]} miss${run.wrongsAt[i] > 1 ? 'es' : ''}` : '');
+      return `<li class="${cls}" title="${esc(tip)}"><b>${cap(r)}</b>${esc(label)}</li>`;
     }).join('');
   }
-  // A daily run ends at the first miss; an unlimited run always goes to Species.
-  const runOver = () => game.picks.length === RANKS.length || game.mode === 'daily' &&
-    game.picks.some((p, i) => p !== game.ranks[i].answer);
 
   // Species are shown with the genus abbreviated, field-guide style: "E. cicutarium".
   const shortName = (name, rank) => {
@@ -330,53 +364,83 @@
 
   function optionHTML(o, i, stateCls, rank) {
     const tip = o.common ? cap(o.common) : '';
+    const locked = /locked/.test(stateCls);
     return `<div class="opt ${stateCls}">
-      <button class="opt-main" data-i="${i}">${esc(shortName(o.name, rank))}${tip ? `<span class="common">${esc(tip)}</span>` : ''}</button>
+      <button class="opt-main" data-i="${i}" ${locked ? 'disabled' : ''}>${esc(shortName(o.name, rank))}${tip ? `<span class="common">${esc(tip)}</span>` : ''}</button>
     </div>`;
   }
 
-  function renderQuestion() {
+  const modeNote = () => game.mode === 'daily' ? (game.replay ? 'Practice' : 'Daily') : 'Unlimited';
+
+  // The question for the current rank. Options already guessed wrong stay
+  // red and disabled, with their notes below, and the player picks again.
+  async function renderQuestion() {
     renderLadder();
-    const level = game.picks.length;
+    const run = currentRun();
+    const level = run.level;
     const r = game.ranks[level];
     const opts = currentOptions(level);
-    const attemptNote = game.mode === 'daily'
-      ? `Attempt ${game.attempt + 1} of ${MAX_ATTEMPTS} · ${game.attempt ? (10 ** -game.attempt).toFixed(game.attempt) : 1} pt per rank`
-      : `Unlimited · rank ${level + 1} of 7`;
+    const wrong = new Set(run.wrongHere);
+    const note = `${modeNote()} · ${pointLabel(run.misses)} per correct answer`;
     $('stage').innerHTML = `
-      <div class="prompt">${cap(r.rank)}?<small>${esc(attemptNote)}</small></div>
-      <div class="options">${opts.map((o, i) => optionHTML(o, i, '', r.rank)).join('')}</div>`;
-    $('stage').querySelectorAll('.opt-main').forEach((b) => { b.onclick = () => choose(opts[+b.dataset.i]); });
+      <div class="prompt">${cap(r.rank)}?<small>${esc(note)}</small></div>
+      <div class="options">${opts.map((o, i) => optionHTML(o, i, wrong.has(o.id) ? 'locked chosen-wrong' : '', r.rank)).join('')}</div>
+      ${wrong.size ? `<div class="verdict miss">✗ Not quite — pick again. Correct answers are now worth ${pointLabel(run.misses)}.</div>
+      <div class="explain" id="explain"><p class="note">Loading notes…</p></div>` : ''}`;
+    $('stage').querySelectorAll('.opt-main:not([disabled])').forEach((b) => { b.onclick = () => choose(opts[+b.dataset.i]); });
+    if (!wrong.size) return;
+
+    const ex = game.mode === 'daily' ? dailyExplanation(level) : await unlimitedExplanation(level, true);
+    if (currentRun().level !== level || game.guesses.length !== run.marks.length || !$('explain')) return;
+    const order = run.wrongHere.map((id) => r.options.find((o) => o.id === id)).filter(Boolean);
+    $('explain').innerHTML = `<ul>${order.map((o) => explainItem(ex, o, 'is-chosen')).join('')}</ul>`;
   }
 
   function currentOptions(level) {
     const r = game.ranks[level];
-    if (game.mode === 'daily') return seededShuffle(r.options, `${game.puzzle.date}:${game.attempt}:${level}`);
+    if (game.mode === 'daily') return seededShuffle(r.options, `${game.puzzle.date}:${game.replay ? 'r' + game.replayN : 's'}:${level}`);
     return r.options;   // already shuffled when built
   }
 
   function choose(opt) {
-    const level = game.picks.length;
-    game.picks.push(opt.id);
-    if (game.mode === 'daily') persistDaily();
-    track('pd_pick', { mode: game.mode, rank: game.ranks[level].rank, correct: opt.id === game.ranks[level].answer });
-    renderExplanation(level, opt.id);
+    const level = currentRun().level;
+    game.guesses.push(opt.id);
+    const ok = opt.id === game.ranks[level].answer;
+    if (game.mode === 'daily' && !game.replay) persistDaily();
+    track('pd_pick', { mode: game.mode, rank: game.ranks[level].rank, correct: ok, replay: game.replay });
+    if (ok) renderExplanation(level, opt.id); else renderQuestion();
   }
 
   // ---------------------------------------------------------------- explanation
+  function explainItem(ex, o, cls) {
+    const note = ex.options[o.id] || ex.options[String(o.id)];
+    const extra = (ex.extra && ex.extra[o.id]) || '';   // pre-escaped HTML
+    const nm = ex.link
+      ? `<a class="nm" href="https://www.inaturalist.org/taxa/${o.id}" target="_blank" rel="noopener">${esc(o.name)}</a>`
+      : `<span class="nm">${esc(o.name)}</span>`;
+    return `<li class="${cls}">${nm}${o.common ? ` · ${esc(o.common)}` : ''}${note ? `<br>${esc(note)}` : ''}${extra}</li>`;
+  }
+
+  // Shown once the rank is answered correctly: every option locked, the
+  // answer in green, any wrong guesses in red, and the notes for all of them.
   async function renderExplanation(level, chosenId) {
     renderLadder();
     const r = game.ranks[level];
     const opts = currentOptions(level);
     const answer = r.options.find((o) => o.id === r.answer);
-    const ok = chosenId === r.answer;
-    const over = runOver();
+    const run = currentRun();
+    const over = run.done;
+    const wrongs = run.wrongsAt[level];
+    // Which options were guessed wrong at this rank, in order.
+    const tried = [];
+    { let lv = 0; for (const id of game.guesses) { if (id === game.ranks[lv].answer) lv++; else if (lv === level) tried.push(id); if (lv > level) break; } }
+    const wrongSet = new Set(tried);
 
     $('stage').innerHTML = `
       <div class="prompt">${cap(r.rank)}?</div>
       <div class="options">${opts.map((o, i) => optionHTML(o, i,
-        'locked ' + (o.id === r.answer ? 'correct' : o.id === chosenId ? 'chosen-wrong' : ''), r.rank)).join('')}</div>
-      <div class="verdict ${ok ? 'ok' : 'miss'}">${ok ? '✓ Correct' : '✗ Not quite'} — the ${r.rank} is
+        'locked ' + (o.id === r.answer ? 'correct' : wrongSet.has(o.id) ? 'chosen-wrong' : ''), r.rank)).join('')}</div>
+      <div class="verdict ok">✓ Correct${wrongs ? ` after ${wrongs} miss${wrongs > 1 ? 'es' : ''}` : ''} — the ${r.rank} is
         <i>${esc(answer.name)}</i>${answer.common ? ` (${esc(answer.common)})` : ''}.</div>
       <div class="actions"><button class="btn" id="btn-next">${over ? 'See results' : 'Next: ' + cap(RANKS[level + 1]) + ' →'}</button></div>
       <div class="explain" id="explain"><p class="note">Loading notes…</p></div>`;
@@ -384,24 +448,16 @@
 
     const ex = game.mode === 'daily' ? dailyExplanation(level) : await unlimitedExplanation(level);
     // The player may have moved on while the notes were loading.
-    if (game.picks.length !== level + 1 || !$('explain')) return;
-    const order = [answer, ...opts.filter((o) => o.id !== r.answer)];
+    if (game.guesses.length !== run.marks.length || !$('explain')) return;
+    const order = [answer, ...tried.map((id) => r.options.find((o) => o.id === id)), ...opts.filter((o) => o.id !== r.answer && !wrongSet.has(o.id))].filter(Boolean);
     $('explain').innerHTML = (ex.summary ? `<p>${esc(ex.summary)}</p>` : '') +
-      `<ul>${order.map((o) => {
-        const note = ex.options[o.id] || ex.options[String(o.id)];
-        const cls = o.id === r.answer ? 'is-answer' : o.id === chosenId ? 'is-chosen' : '';
-        const extra = (ex.extra && ex.extra[o.id]) || '';   // pre-escaped HTML
-        const nm = ex.link
-          ? `<a class="nm" href="https://www.inaturalist.org/taxa/${o.id}" target="_blank" rel="noopener">${esc(o.name)}</a>`
-          : `<span class="nm">${esc(o.name)}</span>`;
-        return `<li class="${cls}">${nm}${o.common ? ` · ${esc(o.common)}` : ''}${note ? `<br>${esc(note)}` : ''}${extra}</li>`;
-      }).join('')}</ul>` + (ex.footer || '');
+      `<ul>${order.map((o) => explainItem(ex, o, o.id === r.answer ? 'is-answer' : wrongSet.has(o.id) ? 'is-chosen' : '')).join('')}</ul>` + (ex.footer || '');
   }
 
   function dailyExplanation(level) {
     const e = game.explain && game.explain.ranks && game.explain.ranks[game.ranks[level].rank];
     if (!e) return { summary: '', options: {}, footer: '<p class="note">Notes for this puzzle are still being written.</p>' };
-    const srcs = level === RANKS.length - 1 || runOver() ? game.explain.sources || [] : [];
+    const srcs = level === RANKS.length - 1 ? game.explain.sources || [] : [];
     return {
       summary: e.summary, options: e.options || {},
       footer: srcs.length ? `<p class="src">Sources: ${srcs.map((s) =>
@@ -416,7 +472,7 @@
   }
 
   function availableDailies(today) {
-    return game.index.days.filter((d) => d <= today && daysBetween(d, today) < MAX_ATTEMPTS).sort().reverse();
+    return game.index.days.filter((d) => d <= today && daysBetween(d, today) < WINDOW_DAYS).sort().reverse();
   }
 
   function renderPicker(today) {
@@ -424,15 +480,13 @@
     const epoch = game.index.epoch;
     $('daily-picker').innerHTML = days.map((d) => {
       const rec = stats.daily.history[d];
-      const j = daysBetween(d, today);
-      const playedToday = rec && rec.attempts[j] && rec.attempts[j].done;
-      let sub;
-      if (rec && rec.solved) sub = 'Solved ✓';
-      else if (playedToday) sub = 'Done today';
-      else sub = j === 0 ? 'Play' : `Retry · ${j + 1}/7`;
-      const ready = !(rec && rec.solved) && !playedToday;
+      const isToday = d === today;
+      let sub, ready = false;
+      if (rec && rec.done) sub = `${fmtScore(rec.score)} pts${isToday ? '' : ' · Replay'}`;
+      else if (isToday) { sub = rec && rec.guesses.length ? 'In progress' : 'Play'; ready = true; }
+      else sub = 'Practice';
       return `<button class="pick ${ready ? 'ready' : ''} ${game.puzzle && game.puzzle.date === d ? 'active' : ''}" data-date="${d}">
-        <div class="p-title">#${daysBetween(epoch, d) + 1} · ${j === 0 ? 'Today' : prettyDate(d)}</div>
+        <div class="p-title">#${daysBetween(epoch, d) + 1} · ${isToday ? 'Today' : prettyDate(d)}</div>
         <div class="p-sub">${sub}</div></button>`;
     }).join('');
     $('daily-picker').querySelectorAll('.pick').forEach((b) => { b.onclick = () => openDaily(b.dataset.date); });
@@ -450,11 +504,7 @@
       $('stage').innerHTML = '<p>No daily puzzle is scheduled for today — try Unlimited mode!</p>';
       return;
     }
-    if (!date || !days.includes(date)) {
-      // Default: the first puzzle still waiting for today's attempt, else today's.
-      date = days.find((d) => { const r = stats.daily.history[d]; const j = daysBetween(d, today);
-        return !(r && (r.solved || (r.attempts[j] && r.attempts[j].done))); }) || days[0];
-    }
+    if (!date || !days.includes(date)) date = days[0];
     const [puzzle, explain] = await Promise.all([
       getJSON(`data/daily/${date}.json?v=${VER}`),
       getJSON(`data/explanations/${date}.json?v=${VER}`).catch(() => null),
@@ -462,108 +512,104 @@
     game.puzzle = puzzle;
     game.explain = explain;
     game.ranks = puzzle.ranks;
-    game.attempt = daysBetween(date, today);
-    const rec = record(date);
-    const cur = rec.attempts[game.attempt];
-    const solving = rec.solved && Object.values(rec.attempts).find((a) => a.done && runDepth(a.picks, game.ranks) === RANKS.length);
-    game.picks = cur ? cur.picks.slice() : solving ? solving.picks.slice() : [];
+    // Only the puzzle's own day counts; earlier puzzles are practice.
+    game.replay = date !== today;
+    game.replayN = 0;
+    const rec = game.replay ? null : record(date);
+    game.guesses = rec ? rec.guesses.slice() : [];
     renderPicker(today);
 
-    const digits = attemptDigits(date, game.ranks);
-    const final = puzzleFinal(date, digits, today);
-    setPhotos(puzzle.photos, rec.solved || final);
-    if (rec.solved || (cur && cur.done)) return finishRun(true);
-    if (game.picks.length && runOver()) return finishRun();
-    if (game.picks.length) return renderExplanation(game.picks.length - 1, game.picks[game.picks.length - 1]);
+    const run = currentRun();
+    const finished = run.done || !!(rec && rec.done);
+    setPhotos(puzzle.photos, finished);
+    if (finished) return finishRun(true);
+    if (run.last === true) return renderExplanation(run.level - 1, game.guesses[game.guesses.length - 1]);
     renderQuestion();
   }
 
   function persistDaily() {
     const rec = record(game.puzzle.date);
-    rec.attempts[game.attempt] = { picks: game.picks.slice(), done: false };
+    rec.guesses = game.guesses.slice();
+    rec.done = false;
     saveStats();
+  }
+
+  // Start a fresh practice run of the current daily; nothing is recorded.
+  function startReplay() {
+    game.replay = true;
+    game.replayN += 1;
+    game.guesses = [];
+    setPhotos(game.puzzle.photos, false);
+    renderPicker(todayISO());
+    renderQuestion();
   }
 
   // ---------------------------------------------------------------- results
   function finishRun(alreadySaved) {
     if (game.mode === 'unlimited') return finishUnlimited();
-    const depth = runDepth(game.picks, game.ranks);
-
+    const run = currentRun();
     const today = todayISO();
     const p = game.puzzle;
-    const rec = record(p.date);
-    if (!alreadySaved) {
-      const a = rec.attempts[game.attempt];
-      if (a && !a.done) {
-        a.done = true;
-        if (depth === RANKS.length) rec.solved = true;
+    let rec = null;
+    if (!game.replay) {
+      rec = record(p.date);
+      if (!rec.done) {
+        rec.guesses = game.guesses.slice();
+        rec.done = true;
+        rec.score = run.score;
         bumpStreak(today);
         saveStats(true);
-        track('pd_attempt', { puzzle: p.number, attempt: game.attempt + 1, depth });
-        if (game.attempt === 0) contributeAggregate(p, depth);
+        track('pd_daily', { puzzle: p.number, score: run.score, misses: run.misses });
+        contributeAggregate(p, Math.floor(run.score));
+      } else if (rec.score !== run.score) {
+        rec.score = run.score;   // old records cache their score once the puzzle is loaded
+        saveStats();
       }
     }
-    renderLadder();
-    const digits = attemptDigits(p.date, game.ranks);
-    const final = puzzleFinal(p.date, digits, today);
-    // Cache the digits on the record so the stats view needn't load every puzzle.
-    const cached = digits.map((d) => d || 0);
-    if (JSON.stringify(rec.digits) !== JSON.stringify(cached) || rec.depth0 !== digits[0]) {
-      rec.digits = cached;
-      rec.depth0 = digits[0];
-      saveStats();
-    }
-    setPhotos(p.photos, final);
+    renderLadder(true);
+    setPhotos(p.photos, true);
     renderPicker(today);
 
-    const rows = digits.map((d, j) => {
-      if (j > game.attempt && !(d != null)) return '';
-      const day = prettyDate(addDays(p.date, j));
-      return `<span>Day ${j + 1}</span><span>${day}</span><span>${d == null ? '—' : d + '/7'}</span>`;
-    }).join('');
     const sp = p.species;
-    const revealed = final
-      ? `<p class="species">It was <i>${esc(sp.name)}</i>${sp.common ? ` — ${esc(cap(sp.common))}` : ''}.</p>` : '';
-    const next = rec.solved ? 'Solved — well done!'
-      : final ? 'This puzzle is closed. Final score above.'
-      : `Come back tomorrow for attempt ${game.attempt + 2} (worth ${(10 ** -(game.attempt + 1)).toFixed(game.attempt + 1)} per rank).`;
-
+    const missNote = run.misses ? `${run.misses} miss${run.misses > 1 ? 'es' : ''}` : 'No misses — perfect!';
+    const foot = game.replay ? "Practice run — it doesn't count toward your score or stats."
+      : 'New puzzle at midnight Pacific time.';
     $('stage').innerHTML = `
       <div class="result">
-        <div class="note">Floradiem #${p.number} · ${final ? 'final score' : 'score so far'}</div>
-        <div class="big">${scoreString(digits)}</div>
-        <div class="attempts">${rows}</div>
-        ${revealed}
-        <p class="note">${esc(next)}</p>
+        <div class="note">Floradiem #${p.number} · ${game.replay ? 'practice' : 'your score'}</div>
+        <div class="big">${fmtScore(run.score)}</div>
+        <div class="emoji">${runEmoji(run)}</div>
+        <p class="note">${esc(missNote)}</p>
+        <p class="species">It was <i>${esc(sp.name)}</i>${sp.common ? ` — ${esc(cap(sp.common))}` : ''}.</p>
+        <p class="note">${esc(foot)}</p>
         <div class="actions" style="justify-content:center">
           <button class="btn" id="btn-share">Share</button>
           <button class="btn ghost" id="btn-review">Review answers</button>
+          <button class="btn ghost" id="btn-replay">Replay (practice)</button>
           <button class="btn ghost" id="btn-unl">Play Unlimited</button>
         </div>
       </div>`;
-    $('btn-share').onclick = () => share(shareDaily(p, digits, final));
+    $('btn-share').onclick = () => share(shareDaily(p, run));
     $('btn-review').onclick = () => review();
+    $('btn-replay').onclick = startReplay;
     $('btn-unl').onclick = () => switchMode('unlimited');
   }
 
-  // Re-show the explanations for every rank reached in this run.
+  // Re-show the explanations for every rank answered in this run.
   function review() {
-    const html = game.picks.map((_, level) => {
+    const run = currentRun();
+    const n = Math.min(RANKS.length, run.level + (run.done ? 0 : 1));
+    const html = RANKS.slice(0, n).map((_, level) => {
       const r = game.ranks[level];
       const ans = r.options.find((o) => o.id === r.answer);
       const ex = dailyExplanation(level);
       return `<h3>${cap(r.rank)}: <i>${esc(ans.name)}</i></h3>${ex.summary ? `<p>${esc(ex.summary)}</p>` : ''}`;
     }).join('');
-    openModal(() => `<h2>Your run</h2><div class="explain">${html}${dailyExplanation(game.picks.length - 1).footer}</div>`);
+    openModal(() => `<h2>Your run</h2><div class="explain">${html}${dailyExplanation(RANKS.length - 1).footer}</div>`);
   }
 
-  function ladderEmoji(depth, played) {
-    if (depth == null) return '';
-    return RANKS.map((_, i) => (i < depth ? '🌿' : i === depth ? '🍂' : '⬜')).join('');
-  }
-  function shareDaily(p, digits, final) {
-    const lines = digits.map((d, j) => (d == null ? null : `${ladderEmoji(d)} ${d}/7`)).filter(Boolean);
-    return `Floradiem #${p.number} — ${scoreString(digits)}${final ? '' : ' (so far)'}\n${lines.join('\n')}\n${SITE}`;
+  function shareDaily(p, run) {
+    return `Floradiem #${p.number} — ${fmtScore(run.score)}${game.replay ? ' (practice)' : ''}\n${runEmoji(run)}\n${SITE}`;
   }
   async function share(text) {
     try {
@@ -658,6 +704,7 @@
 
   async function newUnlimited() {
     game.mode = 'unlimited';
+    game.replay = false;
     $('daily-picker').innerHTML = '';
     $('ladder').innerHTML = '';
     setPhotos([], false);
@@ -681,7 +728,7 @@
       game.uPhotos = photos.slice(0, 16);
       game.uWiki = {};
       game.ranks = await buildUnlimitedRanks(sid);
-      game.picks = [];
+      game.guesses = [];
       setPhotos(game.uPhotos, false);
       return renderQuestion();
     }
@@ -691,8 +738,9 @@
   }
 
   // Unlimited explanations: iNaturalist's Wikipedia summaries, with deeper
-  // answers blanked out so a summary can't spoil the next question.
-  async function unlimitedExplanation(level) {
+  // answers blanked out so a summary can't spoil the next question. While the
+  // rank is still open (`hideAnswer`), this rank's answer is blanked too.
+  async function unlimitedExplanation(level, hideAnswer) {
     const r = game.ranks[level];
     const ids = r.options.map((o) => o.id).filter((id) => !(id in game.uWiki));
     if (ids.length) {
@@ -702,7 +750,7 @@
       } catch (e) {}
     }
     const deeper = [];
-    for (const dr of game.ranks.slice(level + 1)) {
+    for (const dr of game.ranks.slice(hideAnswer ? level : level + 1)) {
       const a = dr.options.find((o) => o.id === dr.answer);
       deeper.push(a.name, a.common, a.name.split(' ').pop());
     }
@@ -725,24 +773,25 @@
   const noSummaryLine = () => '<div class="facts"><em>No Wikipedia summary yet.</em></div>';
 
   function finishUnlimited() {
-    const marks = game.picks.map((p, i) => p === game.ranks[i].answer);
-    const correct = marks.filter(Boolean).length;
+    const run = currentRun();
     const u = stats.unlimited;
     u.games += 1;
-    u.total_correct = (u.total_correct || 0) + correct;
-    if (correct === 7) u.perfect += 1;
-    u.distribution[correct] = (u.distribution[correct] || 0) + 1;
+    u.total_score = round3((u.total_score || 0) + run.score);
+    if (run.misses === 0) u.perfect += 1;
+    const bucket = Math.floor(run.score);
+    u.distribution[bucket] = (u.distribution[bucket] || 0) + 1;
     saveStats(true);
-    track('pd_unlimited', { correct });
+    track('pd_unlimited', { score: run.score, misses: run.misses });
     renderLadder();
     setPhotos(game.uPhotos, true);
     const sp = treeOpt(game.uSid);
-    const emoji = marks.map((m) => (m ? '🌿' : '🍂')).join('');
+    const missNote = run.misses ? `${run.misses} miss${run.misses > 1 ? 'es' : ''}` : 'No misses — perfect!';
     $('stage').innerHTML = `
       <div class="result">
-        <div class="note">Unlimited · ranks correct</div>
-        <div class="big">${correct}/7</div>
-        <div style="font-size:1.4rem">${emoji}</div>
+        <div class="note">Unlimited · your score</div>
+        <div class="big">${fmtScore(run.score)}</div>
+        <div class="emoji">${runEmoji(run)}</div>
+        <p class="note">${esc(missNote)}</p>
         <p class="species">It was <i>${esc(sp.name)}</i>${sp.common ? ` — ${esc(cap(sp.common))}` : ''}.
           <a href="https://www.inaturalist.org/taxa/${sp.id}" target="_blank" rel="noopener">About this species ↗</a></p>
         <div class="actions" style="justify-content:center">
@@ -751,7 +800,7 @@
         </div>
       </div>`;
     $('btn-again').onclick = newUnlimited;
-    $('btn-share').onclick = () => share(`Floradiem Unlimited — ${correct}/7\n${emoji}\n${SITE}`);
+    $('btn-share').onclick = () => share(`Floradiem Unlimited — ${fmtScore(run.score)}\n${runEmoji(run)}\n${SITE}`);
   }
 
   // ---------------------------------------------------------------- modal: stats / help
@@ -791,11 +840,12 @@
     };
   }
 
-  function bars(dist, total, mine) {
+  // Score distribution by whole point: "6.x" is 6 up to 6.999, "7" is perfect.
+  function bars(dist, mine) {
     const max = Math.max(1, ...Object.values(dist));
     return '<div class="bars">' + RANKS.map((r, i) => i).concat(7).map((d) => {
       const n = dist[d] || 0;
-      const label = d === 7 ? 'Species ✓' : `${d}/7`;
+      const label = d === 7 ? 'Perfect 7' : `${d}.x`;
       return `<div class="bar ${mine === d ? 'me' : ''}"><span>${label}</span>
         <div class="fill" style="width:${Math.max(6, (n / max) * 100)}%">${n}</div></div>`;
     }).join('') + '</div>';
@@ -808,43 +858,37 @@
     const today = todayISO();
     if (statsTab === 'daily') {
       const h = stats.daily.history;
-      const dates = Object.keys(h).filter((d) => Object.values(h[d].attempts).some((a) => a.done)).sort().reverse();
+      const dates = Object.keys(h).filter((d) => h[d].done).sort().reverse();
       const dist = {};
-      const finals = [];
+      const scores = [];
       const rows = [];
       for (const d of dates) {
-        const a0 = h[d].attempts[0];
-        if (a0 && a0.done) {
-          const dep = h[d].depth0;
-          if (dep != null) dist[dep] = (dist[dep] || 0) + 1;
-        }
-        const digits = h[d].digits || [];
-        const s = digits.length ? scoreString(digits) : '…';
-        const fin = h[d].solved || daysBetween(d, today) >= MAX_ATTEMPTS - 1;
-        if (fin && digits.length) finals.push(parseFloat(s));
-        rows.push(`<tr><td>${prettyDate(d)}</td><td>#${game.index ? daysBetween(game.index.epoch, d) + 1 : ''}</td><td>${s}${fin ? '' : ' <span class="note">(open)</span>'}</td></tr>`);
+        const s = h[d].score;
+        if (s != null) { scores.push(s); dist[Math.floor(s)] = (dist[Math.floor(s)] || 0) + 1; }
+        rows.push(`<tr><td>${prettyDate(d)}</td><td>#${game.index ? daysBetween(game.index.epoch, d) + 1 : ''}</td><td>${s == null ? '…' : fmtScore(s)}</td></tr>`);
       }
-      const avg = finals.length ? (finals.reduce((a, b) => a + b, 0) / finals.length).toFixed(2) : '—';
+      const avg = scores.length ? fmtScore(scores.reduce((a, b) => a + b, 0) / scores.length) : '—';
       body = `<div class="statgrid">
           <div><b>${dates.length}</b><span>Played</span></div>
-          <div><b>${avg}</b><span>Avg final</span></div>
+          <div><b>${avg}</b><span>Avg score</span></div>
           <div><b>${stats.daily.last_play_date && daysBetween(stats.daily.last_play_date, today) <= 1 ? stats.daily.streak : 0}</b><span>Streak</span></div>
           <div><b>${stats.daily.best_streak}</b><span>Best streak</span></div>
         </div>
-        <h3>First-day depth</h3>${bars(dist, dates.length)}
+        <h3>Scores</h3>${bars(dist)}
         ${rows.length ? `<table class="history"><tr><th>Date</th><th>#</th><th>Score</th></tr>${rows.slice(0, 14).join('')}</table>` : ''}`;
     } else if (statsTab === 'unlimited') {
       const u = stats.unlimited;
       body = `<div class="statgrid">
           <div><b>${u.games}</b><span>Played</span></div>
-          <div><b>${u.games ? ((u.total_correct || 0) / u.games).toFixed(1) : '—'}</b><span>Avg correct</span></div>
+          <div><b>${u.games ? fmtScore((u.total_score || 0) / u.games) : '—'}</b><span>Avg score</span></div>
           <div><b>${u.perfect}</b><span>Perfect</span></div>
           <div><b>${u.games ? Math.round((100 * u.perfect) / u.games) + '%' : '—'}</b><span>Perfect %</span></div>
-        </div><h3>Ranks correct</h3>${bars(u.distribution, u.games)}`;
+        </div><h3>Scores</h3>${bars(u.distribution)}`;
     } else {
+      const mine = stats.daily.history[today];
       body = !world ? '<p class="note">Loading…</p>'
         : world.error ? `<p class="note">${esc(world.error)}</p>`
-        : `<p>Today's puzzle, first attempts: <b>${world.total_plays || 0}</b> players</p>${bars(world.distribution || {}, world.total_plays || 0, (stats.daily.history[today] || {}).depth0)}
+        : `<p>Today's puzzle: <b>${world.total_plays || 0}</b> players</p>${bars(world.distribution || {}, mine && mine.done && mine.score != null ? Math.floor(mine.score) : undefined)}
            <p class="note">Only signed-in players are counted.</p>`;
     }
     const signin = window.PD_AUTH
@@ -869,15 +913,17 @@
          <a href="https://www.inaturalist.org/people/softshade" target="_blank" rel="noopener">softshade</a> on iNaturalist.
          Swipe or use the arrows to see every photo.</p>
       <p>Work down the tree of life — <b>Kingdom, Phylum, Class, Order, Family, Genus, Species</b> — choosing from four options each time.
-         Hover (or tap <b>i</b>) to see a group's common name. After each pick you'll learn what sets the right group apart.</p>
-      <p>A wrong pick ends the run and reveals only that rank's answer.</p>
+         After each correct pick you'll learn what sets the right group apart.</p>
+      <p>A wrong pick doesn't end the run or give the answer away: that option turns red with notes on why it isn't the one, and you pick again.</p>
       <h3>Scoring</h3>
-      <p>Day one: <b>1 point</b> per rank you get right. Missed some? Come back the next day and try the same plant again from the top:
-         every rank is worth <b>0.1</b>. The day after, <b>0.01</b>, and so on for up to 7 days.
-         Each day's run becomes the next decimal digit — 1 → 1.2 → 1.22 → … A perfect 7 locks the puzzle.</p>
-      <p>Scores like <b>7.0</b> (perfect first try), <b>6.7</b> (nailed it on day two) or <b>1.224554</b> are all possible.</p>
+      <p>Every correct answer is worth <b>1 point</b> until your first miss. From then on each correct answer is worth <b>½</b> —
+         including the rank you missed on. After a second miss they're worth <b>⅓</b>, then <b>¼</b>, and so on.
+         Scores are rounded to three decimals; a run with no misses scores a perfect <b>7</b>.</p>
+      <p>The daily puzzle counts on its own day only. Puzzles from the past week stay available to <b>replay as practice</b>,
+         which never changes your score or stats.</p>
       <h3>Unlimited</h3>
-      <p>Random plants, fungi, lichens, seaweeds and slime molds from all research-grade BC observations on iNaturalist, as many as you like. A miss doesn't end the run: you see the right answer and keep going to Species, scoring one point per rank you get right.</p>
+      <p>Random plants, fungi, lichens, seaweeds and slime molds from all research-grade BC observations on iNaturalist, as many as you like,
+         scored the same way.</p>
       <p class="note">New daily puzzle at midnight Pacific time.</p>`;
   }
   $('btn-help').onclick = () => openModal(helpView);
@@ -891,9 +937,9 @@
   }
   document.querySelectorAll('.mode-tab').forEach((t) => { t.onclick = () => switchMode(t.dataset.mode); });
 
-  // First visit: show the rules once.
+  // First visit (or first visit since the rules changed): show them once.
   try {
-    if (!localStorage.getItem('plantdiem_seen_help')) { localStorage.setItem('plantdiem_seen_help', '1'); openModal(helpView); }
+    if (localStorage.getItem('plantdiem_seen_help') !== '2') { localStorage.setItem('plantdiem_seen_help', '2'); openModal(helpView); }
   } catch (e) {}
   openDaily();
 })();
