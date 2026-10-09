@@ -14,7 +14,9 @@ is worldwide, the 100,000 most-observed species, drawn with index = N·u³ so
 often-observed species come up more but the long tail still appears. The
 player can narrow it to a place, an iNaturalist user and/or a project
 (iNat autocomplete endpoints); photos from those observations are shown
-first, topped up from everyone's. A species needs at least 10 photos.
+first, topped up from everyone's. A species needs at least 10 photos, and
+species already on the player's current Unlimited tree are skipped until
+the pool has nothing else.
 Wrong answers are the most-observed worldwide members of the same group.
 
 Species trees (tree.html): every solved Daily and Unlimited puzzle is added

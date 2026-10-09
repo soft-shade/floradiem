@@ -649,7 +649,7 @@
           <input type="search" autocomplete="off" data-kind="${k}" placeholder="${{ place: 'e.g. Serbia, Stanley Park', user: 'e.g. softshade', project: 'e.g. City Nature Challenge' }[k]}">
           <ul class="sugg" hidden></ul>
         </label>`).join('')}
-        <p class="note">Species come from research-grade observations matching every field you fill in; photos from those observations are shown first.</p>
+        <p class="note">Species come from research-grade observations matching every field you fill in. A chosen user's photos come first, then the place's or project's, then everyone's.</p>
         <div class="actions">
           <button type="submit" class="btn">Apply</button>
           <button type="button" class="btn ghost" id="filter-clear">Anywhere</button>
@@ -734,15 +734,38 @@
     pool.total = Math.min(d.total_results, WORLD_CAP);
     return d.results;
   }
+  // Species already on the player's current Unlimited tree (the one still
+  // filling toward TREE_CAP) are not served again until the filter's pool
+  // has nothing else left.
+  function onCurrentTree() {
+    const list = stats.trees.unlimited;
+    return new Set(C.treeSlice(list, C.treeCount(list)).map((e) => e.id));
+  }
   async function drawSpecies() {
     const first = await poolPage(1);
     const total = game.pools[JSON.stringify(filterParams())].total;
     if (!total) return null;
-    const idx = Math.min(total - 1, Math.floor(total * Math.pow(Math.random(), 3)));
-    const page = Math.floor(idx / PAGE) + 1;
-    const results = page === 1 ? first : await poolPage(page);
-    const r = results[idx % PAGE] || results[Math.floor(Math.random() * results.length)];
-    return r ? r.taxon : null;
+    const seen = onCurrentTree();
+    const weighted = async () => {
+      const idx = Math.min(total - 1, Math.floor(total * Math.pow(Math.random(), 3)));
+      const page = Math.floor(idx / PAGE) + 1;
+      const results = page === 1 ? first : await poolPage(page);
+      const r = results[idx % PAGE] || results[Math.floor(Math.random() * results.length)];
+      return r ? r.taxon : null;
+    };
+    for (let i = 0; i < 15; i++) {
+      const t = await weighted();
+      if (t && !seen.has(t.id)) return { taxon: t, exhausted: false };
+    }
+    // Nearly everything drawn is on the tree: look through the pool for what isn't.
+    const pages = Math.ceil(total / PAGE);
+    if (pages <= 20) {
+      for (let p = 1; p <= pages; p++) {
+        const fresh = (await poolPage(p)).filter((r) => !seen.has(r.taxon.id));
+        if (fresh.length) return { taxon: fresh[Math.floor(Math.random() * fresh.length)].taxon, exhausted: false };
+      }
+    }
+    return { taxon: await weighted(), exhausted: true };   // the whole pool is on the tree: repeats allowed
   }
 
   // Full main-rank lineage of a taxon from iNaturalist, kingdom first, or null
@@ -766,23 +789,31 @@
     return line.map((x) => ({ id: x.id, name: x.name, common: x.preferred_common_name || '' }));
   }
 
-  // Photos for a species: from the filter's own observations first (the
-  // user's, the place's, the project's), topped up from everyone's until
-  // there are at least PHOTO_MIN. Fewer than that and the species is skipped.
+  // Photos for a species. With a user selected, every photo from that user's
+  // observations of it comes first; then photos from the place's or
+  // project's observations; then everyone's (two per observation, best-voted
+  // first) until there are at least PHOTO_MIN. Fewer and the species is skipped.
   async function fetchPhotos(sid) {
     const photos = [], seen = new Set();
-    const add = (obs) => {
-      for (const o of obs.results) for (const ph of o.photos.slice(0, 2)) {
+    const add = (obs, perObs) => {
+      for (const o of obs.results) for (const ph of o.photos.slice(0, perObs)) {
         if (seen.has(ph.id) || photos.length >= PHOTO_MAX) continue;
         seen.add(ph.id);
         photos.push({ src: ph.url.replace('/square.', '/large.'), attribution: ph.attribution, obs: o.uri });
       }
     };
     const base = { taxon_id: sid, quality_grade: 'research', photos: 'true', per_page: 12, order_by: 'votes' };
-    if (filterActive()) {
-      try { add(await getJSON(`${API}observations?${qs(Object.assign({}, base, filterParams()))}`)); } catch (e) {}
+    const fp = filterParams();
+    if (fp.user_id) {
+      try { add(await getJSON(`${API}observations?${qs(Object.assign({}, base, { user_id: fp.user_id }))}`), 99); } catch (e) {}
     }
-    if (photos.length < PHOTO_MIN) add(await getJSON(`${API}observations?${qs(base)}`));
+    if (photos.length < PHOTO_MIN && (fp.place_id || fp.project_id)) {
+      const scope = Object.assign({}, base);
+      if (fp.place_id) scope.place_id = fp.place_id;
+      if (fp.project_id) scope.project_id = fp.project_id;
+      try { add(await getJSON(`${API}observations?${qs(scope)}`), 2); } catch (e) {}
+    }
+    if (photos.length < PHOTO_MIN) add(await getJSON(`${API}observations?${qs(base)}`), 2);
     return photos.length >= PHOTO_MIN ? photos : null;
   }
 
@@ -847,13 +878,15 @@
     $('stage').innerHTML = `<p class="note">Finding a species (${esc(filterSummary())})…</p>`;
     try { await loadConflicts(); } catch (e) {}
     let empty = false;
-    for (let tries = 0; tries < 6 && serial === game.uSerial; tries++) {
+    const seen = onCurrentTree();
+    for (let tries = 0; tries < 10 && serial === game.uSerial; tries++) {
       try {
         game.uWiki = {};
-        const taxon = await drawSpecies();
-        if (!taxon) { empty = true; break; }
-        const line = await fetchLineage(taxon.id);
+        const drawn = await drawSpecies();
+        if (!drawn || !drawn.taxon) { empty = true; break; }
+        const line = await fetchLineage(drawn.taxon.id);
         if (!line) continue;
+        if (!drawn.exhausted && seen.has(line[6].id)) continue;   // a subspecies of a species already on the tree
         const photos = await fetchPhotos(line[6].id);
         if (!photos) continue;
         const ranks = await buildUnlimitedRanks(line);
