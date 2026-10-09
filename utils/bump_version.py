@@ -24,10 +24,13 @@ def current():
 
 
 def next_version(cur):
+    """Versions must sort upward (common.js reloads only for a greater one),
+    so if the current stamp is dated later than today, keep its date."""
     today = dt.datetime.now().strftime("%Y%m%d")
-    if cur.startswith(today) and cur[-1].isalpha() and cur[-1] < "z":
-        return today + chr(ord(cur[-1]) + 1)
-    return today + "a"
+    base = max(today, cur[:8])
+    if cur.startswith(base) and cur[-1].isalpha() and cur[-1] < "z":
+        return base + chr(ord(cur[-1]) + 1)
+    return base + "a"
 
 
 def main():

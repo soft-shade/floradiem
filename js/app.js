@@ -640,7 +640,7 @@
     $('btn-unl').onclick = () => switchMode('unlimited');
   }
 
-  const supportBtn = () => `<a class="btn support" href="${PATREON}" target="_blank" rel="noopener">♥ Support Softshade</a>`;
+  const supportBtn = () => `<a class="btn support" href="${PATREON}" target="_blank" rel="noopener"><span class="heart">♥</span> Support Softshade</a>`;
 
   // "Added to your Daily tree (12 / 250)" with a link to it.
   function treeLine(mode, n) {
