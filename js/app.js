@@ -238,16 +238,19 @@
     backfilled = true;
     const have = new Set(stats.trees.daily.map(C.entryKey));
     const h = stats.daily.history;
+    //  - a record from the original scoring that is done but never had its
+    //    score stored is scored from its picks (as the day-0 rules would).
     const dates = Object.keys(h).filter((d) => game.index.days.includes(d) &&
-      ((h[d].done && h[d].score != null && !have.has(d)) || (!h[d].done && (h[d].guesses || []).length >= RANKS.length))).sort();
+      ((h[d].done && (h[d].score == null || !have.has(d))) || (!h[d].done && (h[d].guesses || []).length >= RANKS.length))).sort();
     let changed = false;
     for (const d of dates) {
       try {
         const p = await getJSON(`data/daily/${d}.json?v=${VER}`);
         const rec = h[d];
-        if (!rec.done) {
+        if (!rec.done || rec.score == null) {
+          if (!(rec.guesses || []).length) continue;
           const run = walkRun(rec.guesses, p.ranks);
-          if (!run.done) continue;
+          if (!rec.done && !run.done) continue;
           rec.done = true;
           rec.score = run.score;
           changed = true;
