@@ -226,8 +226,11 @@
     return C.addEntry(stats, 'daily', { t: Date.parse(puzzle.date + 'T12:00:00Z'), id: puzzle.species.id, score, line, date: puzzle.date });
   }
 
-  // Dailies solved before trees existed (or on another device that hasn't
-  // caught up) are added from their puzzle files.
+  // Housekeeping from the puzzle files, once per session:
+  //  - a run whose saved guesses already reach Species but was never
+  //    finalised (the tab closed before "See results") gets its score;
+  //  - dailies solved before trees existed (or on another device that
+  //    hasn't caught up) are added to the tree.
   let backfilled = false;
   async function backfillDailyTree() {
     if (backfilled) return;
@@ -235,15 +238,40 @@
     backfilled = true;
     const have = new Set(stats.trees.daily.map(C.entryKey));
     const h = stats.daily.history;
-    const missing = Object.keys(h).filter((d) => h[d].done && h[d].score != null && !have.has(d) && game.index.days.includes(d)).sort();
-    let added = false;
-    for (const d of missing) {
+    const dates = Object.keys(h).filter((d) => game.index.days.includes(d) &&
+      ((h[d].done && h[d].score != null && !have.has(d)) || (!h[d].done && (h[d].guesses || []).length >= RANKS.length))).sort();
+    let changed = false;
+    for (const d of dates) {
       try {
         const p = await getJSON(`data/daily/${d}.json?v=${VER}`);
-        if (addDailyEntry(p, h[d].score)) added = true;
+        const rec = h[d];
+        if (!rec.done) {
+          const run = walkRun(rec.guesses, p.ranks);
+          if (!run.done) continue;
+          rec.done = true;
+          rec.score = run.score;
+          changed = true;
+        }
+        if (addDailyEntry(p, rec.score)) changed = true;
       } catch (e) {}
     }
-    if (added) { saveStats(); refreshModal(); }
+    if (changed) { saveStats(true); refreshModal(); if (game.mode === 'daily' && game.index) renderPicker(todayISO()); }
+  }
+
+  // Repair helper for the browser console (signed in): record a daily's
+  // score by hand and put it on the tree. PD_DEBUG.setDailyScore('2026-10-11', 6)
+  async function setDailyScore(date, score) {
+    await loadIndex();
+    if (!game.index.days.includes(date)) throw new Error('no puzzle on ' + date);
+    const p = await getJSON(`data/daily/${date}.json?v=${VER}`);
+    const rec = record(date);
+    rec.done = true;
+    rec.score = round3(score);
+    stats.trees.daily = stats.trees.daily.filter((e) => e.d !== date);   // replace any stale entry
+    addDailyEntry(p, rec.score);
+    saveStats(true);
+    refreshModal();
+    return rec;
   }
 
   // ---------------------------------------------------------------- state
@@ -440,7 +468,11 @@
     const level = currentRun().level;
     game.guesses.push(opt.id);
     const ok = opt.id === game.ranks[level].answer;
-    if (game.mode === 'daily' && !game.replay) persistDaily();
+    // The result is recorded the moment the last answer lands, not when
+    // "See results" is clicked, so closing the tab here loses nothing.
+    const run = currentRun();
+    if (game.mode === 'daily' && !game.replay) { if (run.done) recordDaily(run); else persistDaily(); }
+    if (game.mode === 'unlimited' && run.done) recordUnlimited(run);
     track('pd_pick', { mode: game.mode, rank: game.ranks[level].rank, correct: ok, replay: game.replay });
     if (ok) renderExplanation(level, opt.id); else renderQuestion();
   }
@@ -584,30 +616,35 @@
   }
 
   // ---------------------------------------------------------------- results
+  // Save a completed daily run: score, streak, tree entry, world aggregate.
+  // Safe to call more than once; only the first call for a date records.
+  function recordDaily(run) {
+    const p = game.puzzle;
+    const rec = record(p.date);
+    if (!rec.done) {
+      rec.guesses = game.guesses.slice();
+      rec.done = true;
+      rec.score = run.score;
+      bumpStreak(p.date);
+      addDailyEntry(p, run.score);
+      saveStats(true);
+      track('pd_daily', { puzzle: p.number, score: run.score, misses: run.misses });
+      contributeAggregate(p, Math.floor(run.score));
+    } else if (rec.score !== run.score && run.done) {
+      rec.score = run.score;   // old records cache their score once the puzzle is loaded
+      saveStats();
+    } else if (rec.score != null && addDailyEntry(p, rec.score)) {
+      saveStats();             // solved before trees existed
+    }
+    return rec;
+  }
+
   function finishRun(alreadySaved) {
     if (game.mode === 'unlimited') return finishUnlimited();
     const run = currentRun();
     const today = todayISO();
     const p = game.puzzle;
-    let rec = null;
-    if (!game.replay) {
-      rec = record(p.date);
-      if (!rec.done) {
-        rec.guesses = game.guesses.slice();
-        rec.done = true;
-        rec.score = run.score;
-        bumpStreak(today);
-        addDailyEntry(p, run.score);
-        saveStats(true);
-        track('pd_daily', { puzzle: p.number, score: run.score, misses: run.misses });
-        contributeAggregate(p, Math.floor(run.score));
-      } else if (rec.score !== run.score) {
-        rec.score = run.score;   // old records cache their score once the puzzle is loaded
-        saveStats();
-      } else if (rec.score != null && addDailyEntry(p, rec.score)) {
-        saveStats();             // solved before trees existed
-      }
-    }
+    if (!game.replay) recordDaily(run);
     renderLadder(true);
     setPhotos(p.photos, true);
     renderPicker(today);
@@ -975,6 +1012,7 @@
         game.uPhotos = photos;
         game.ranks = ranks;
         game.guesses = [];
+        game.uRecorded = false;
         setPhotos(game.uPhotos, false);
         return renderQuestion();
       } catch (e) { console.warn('unlimited draw failed', e); }
@@ -1022,8 +1060,9 @@
   // The option name already links to iNaturalist, so just say why the text is missing.
   const noSummaryLine = () => '<div class="facts"><em>No Wikipedia summary yet.</em></div>';
 
-  function finishUnlimited() {
-    const run = currentRun();
+  function recordUnlimited(run) {
+    if (game.uRecorded) return;
+    game.uRecorded = true;
     const u = stats.unlimited;
     u.games += 1;
     u.total_score = round3((u.total_score || 0) + run.score);
@@ -1034,6 +1073,12 @@
     C.addEntry(stats, 'unlimited', { t: Date.now(), id: sp.id, score: run.score, line: answerLine() });
     saveStats(true);
     track('pd_unlimited', { score: run.score, misses: run.misses, filtered: filterActive() });
+  }
+
+  function finishUnlimited() {
+    const run = currentRun();
+    recordUnlimited(run);
+    const sp = game.uLine[6];
     renderLadder();
     setPhotos(game.uPhotos, true);
     const missNote = run.misses ? `${run.misses} miss${run.misses > 1 ? 'es' : ''}` : 'No misses — perfect!';
@@ -1220,5 +1265,5 @@
   // ?mode=unlimited opens straight into Unlimited (links from the tree page).
   switchMode(new URLSearchParams(location.search).get('mode') === 'unlimited' ? 'unlimited' : 'daily');
   backfillDailyTree();
-  window.PD_DEBUG = { game, stats: () => stats };   // console / test harness access
+  window.PD_DEBUG = { game, stats: () => stats, setDailyScore };   // console / test harness access
 })();
